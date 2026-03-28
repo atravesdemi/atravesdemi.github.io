@@ -8,6 +8,28 @@
 <meta property="og:title" content="A través de Mí — Psicofísica, Astrología y Tarot">
 <meta property="og:description" content="Herramientas de autoconocimiento guiadas por una profesional matriculada. No predigo tu futuro. Te ayudo a entender tu presente.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta name="keywords" content="psicofisica, armonizacion psicofisica, tarot evolutivo, carta natal, registros akashicos, equilibrio energetico, astrologia, Buenos Aires, bienestar animal, resonancia schumann, tarot buenos aires">
+<meta name="author" content="A traves de Mi">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://atravesdemi.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "A traves de Mi",
+  "description": "Profesional matriculada en Psicofisica. Servicios de armonizacion psicofisica, tarot evolutivo, carta natal, registros akashicos y equilibrio energetico en Buenos Aires.",
+  "url": "https://atravesdemi.github.io/",
+  "telephone": "+5491176065606",
+  "address": {"@type": "PostalAddress","addressLocality": "Buenos Aires","addressCountry": "AR"},
+  "geo": {"@type": "GeoCoordinates","latitude": -34.6037,"longitude": -58.3816},
+  "areaServed": {"@type": "City","name": "Buenos Aires"},
+  "serviceType": ["Psicofisica", "Armonizacion energetica", "Tarot evolutivo", "Carta natal", "Registros akashicos", "Bienestar animal"],
+  "priceRange": "$",
+  "openingHours": "Mo-Fr 10:00-20:00",
+  "sameAs": ["https://www.instagram.com/a.traves.demi"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -17,85 +39,62 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 a{text-decoration:none;color:inherit}
 button{font-family:inherit}
 .container{max-width:960px;margin:0 auto;width:100%}
-
 header{padding:14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:.5px solid var(--gr);position:sticky;top:0;background:var(--w);z-index:100}
 header .logo{display:flex;align-items:center;gap:10px}
 header .logo span{font-size:14px;font-weight:300;color:var(--co);letter-spacing:-.3px}
 header nav{display:flex;gap:20px}
 header nav a{font-size:12px;color:var(--ch);transition:color .2s;padding-bottom:4px;border-bottom:2px solid transparent}
 header nav a:hover,header nav a.active{color:var(--a);border-bottom-color:var(--a);font-weight:500}
-
 .marquee{overflow:hidden;background:var(--co);padding:10px 0;white-space:nowrap}
 .marquee-inner{display:inline-flex;gap:32px;animation:scroll 25s linear infinite}
 .marquee span{font-size:11px;color:var(--lv);letter-spacing:1.5px;text-transform:uppercase;opacity:.7}
 .marquee .dot{color:var(--g);margin:0 12px}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-33.33%)}}
-
 .hero{padding:64px 32px 40px;text-align:center}
 .hero .tag{font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:3px;margin-bottom:20px}
 .hero h1{font-size:clamp(26px,5vw,34px);font-weight:300;color:var(--co);letter-spacing:-.8px;line-height:1.1;margin-bottom:20px}
 .hero p{font-size:15px;color:var(--ch);opacity:.55;line-height:1.6;max-width:420px;margin:0 auto 32px}
 .hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-
 .btn{display:inline-block;padding:14px 36px;border-radius:28px;font-size:14px;font-weight:500;cursor:pointer;letter-spacing:.3px;border:none;transition:all .2s}
 .btn:hover{transform:translateY(-1px);opacity:.9}
 .btn-primary{background:var(--g);color:#fff}
 .btn-ghost{background:transparent;color:var(--g);border:1.5px solid var(--g)}
 .btn-sm{padding:8px 20px;font-size:12px}
 .btn-full{display:block;width:100%}
-
 .section{padding:0 24px 40px}
 .section-title{font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:16px}
 .section-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
 .section-link{font-size:12px;color:var(--a);background:none;border:none;cursor:pointer}
-
 .moon-card{background:var(--co);border-radius:16px;padding:32px 28px;text-align:center;position:relative;overflow:hidden;margin:0 24px 40px}
 .moon-card .moon-icon{position:absolute;top:12px;right:16px;opacity:.5}
 .moon-card .tag{font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px}
 .moon-card .date{font-size:20px;font-weight:300;color:var(--w);margin-bottom:20px}
 .moon-card .divider{width:40px;height:.5px;background:var(--lv);margin:20px auto 16px;opacity:.3}
 .moon-card .desc{font-size:12px;color:var(--lv);opacity:.7;line-height:1.5;margin-bottom:14px}
-
 .countdown{display:flex;gap:20px;justify-content:center}
 .countdown-unit{text-align:center}
 .countdown-num{font-size:28px;font-weight:300;color:var(--a);line-height:1}
 .countdown-label{font-size:10px;color:var(--ch);opacity:.5;margin-top:2px}
 .countdown-sep{font-size:28px;font-weight:200;color:var(--gr)}
-
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .service-card-mini{background:#fff;border:.5px solid var(--gr);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .2s}
 .service-card-mini:hover{border-color:var(--lv);transform:translateY(-2px)}
 .service-card-mini .icon{width:36px;height:36px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
 .service-card-mini h3{font-size:14px;font-weight:400;margin-bottom:3px}
 .service-card-mini p{font-size:11px;color:var(--ch);opacity:.5}
-
 .lead-magnet{background:var(--mo);border-radius:16px;padding:28px 24px;text-align:center;margin:0 24px 40px}
 .lead-magnet .icon-wrap{width:40px;height:40px;border-radius:20px;background:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
 .lead-magnet h3{font-size:18px;font-weight:300;color:var(--co);margin-bottom:6px}
 .lead-magnet .subtitle{font-size:13px;color:var(--ch);opacity:.7;line-height:1.5;margin-bottom:6px}
 .lead-magnet .small{font-size:11px;color:var(--ch);opacity:.4;margin-bottom:18px}
-
-.posts-scroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.posts-scroll::-webkit-scrollbar{display:none}
-.post-card{min-width:220px;max-width:260px;background:#fff;border:.5px solid var(--gr);border-radius:14px;padding:18px 16px;flex-shrink:0;cursor:pointer;transition:all .2s}
-.post-card:hover{border-color:var(--lv);transform:translateY(-2px)}
-.post-card .cat-row{display:flex;align-items:center;gap:6px;margin-bottom:10px}
-.post-card .cat-dot{width:8px;height:8px;border-radius:4px}
-.post-card .cat-name{font-size:10px;text-transform:uppercase;letter-spacing:1.5px}
-.post-card h4{font-size:13px;font-weight:400;color:var(--co);line-height:1.4;margin-bottom:8px}
-.post-card .meta{font-size:10px;color:var(--ch);opacity:.4}
-
 .testimonial{background:#fff;border:.5px solid var(--gr);border-radius:14px;padding:18px 20px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
 .testimonial .avatar{width:40px;height:40px;border-radius:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:300;color:var(--a)}
 .testimonial .quote{font-size:13px;color:var(--ch);line-height:1.55;font-style:italic;margin-bottom:8px}
 .testimonial .who{font-size:11px;color:var(--a);font-weight:500}
-
 .cta-band{background:var(--co);padding:44px 32px;text-align:center}
 .cta-band h2{font-size:22px;font-weight:300;color:var(--w);line-height:1.2;margin-bottom:10px}
 .cta-band p{font-size:13px;color:var(--lv);opacity:.7;margin-bottom:24px}
-
 .join-band{padding:32px 24px;text-align:center}
-
 .service-accordion{background:#fff;border:.5px solid var(--gr);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:all .3s}
 .service-accordion.featured{border:1.5px solid var(--a)}
 .service-head{padding:20px;cursor:pointer;display:flex;gap:14px;align-items:flex-start}
@@ -121,11 +120,9 @@ header nav a:hover,header nav a.active{color:var(--a);border-bottom-color:var(--
 .pill{font-size:11px;background:var(--mo);color:var(--a);padding:4px 12px;border-radius:6px}
 .note{background:rgba(143,168,154,.07);padding:12px 14px;border-left:3px solid var(--sg);margin-bottom:16px}
 .note p{font-size:12px;color:var(--ch);line-height:1.6}
-
 .blog-item{background:#fff;border:.5px solid var(--gr);border-radius:14px;padding:20px;margin-bottom:12px;display:flex;gap:16px;align-items:center;cursor:pointer;transition:all .2s}
 .blog-item:hover{border-color:var(--lv);transform:translateY(-1px)}
 .blog-item .thumb{width:56px;height:56px;border-radius:12px;background:var(--mo);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-
 .article-back{background:none;border:none;font-size:12px;color:var(--a);cursor:pointer;display:flex;align-items:center;gap:4px;padding:16px 24px 0}
 article{padding:24px 28px 48px}
 article h1{font-size:clamp(24px,4.5vw,30px);font-weight:300;letter-spacing:-.5px;line-height:1.15;margin-bottom:12px}
@@ -146,7 +143,6 @@ article .ritual-step .num{font-size:20px;font-weight:300;color:var(--g)}
 article .ritual-step h4{font-size:14px;font-weight:500;display:inline;margin-left:8px}
 article .ritual-step p{font-size:13px;color:var(--ch);opacity:.7;margin-top:4px;line-height:1.5}
 article .subscribe-card{margin-top:32px;padding:24px;background:var(--mo);border-radius:14px;text-align:center}
-
 .taller-card{background:#fff;border:.5px solid var(--gr);border-radius:14px;padding:22px 20px;margin-bottom:14px}
 .taller-card h3{font-size:17px;font-weight:400;margin-bottom:4px}
 .taller-card .desc{font-size:12px;color:var(--ch);opacity:.7;line-height:1.5;margin-bottom:12px}
@@ -156,7 +152,6 @@ article .subscribe-card{margin-top:32px;padding:24px;background:var(--mo);border
 .taller-card .status{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
 .taller-card .status.open{color:#2D7A4F}
 .taller-card .status.soon{color:var(--ch);opacity:.5}
-
 footer{padding:28px 24px;border-top:.5px solid var(--gr);text-align:center}
 footer .name{font-size:12px;font-weight:300;margin:8px 0 3px}
 footer .sub{font-size:9px;color:var(--g);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
@@ -164,10 +159,11 @@ footer .links{display:flex;justify-content:center;gap:18px;margin-bottom:12px}
 footer .links a{font-size:11px;color:var(--ch);opacity:.45;transition:opacity .2s}
 footer .links a:hover{opacity:1}
 footer .copy{font-size:10px;color:var(--ch);opacity:.25}
-
 .page{display:none}
 .page.active{display:block}
-
+.quien-soy{display:flex;background:#fff;border:.5px solid var(--gr);border-radius:16px;overflow:hidden;margin:0 24px 40px}
+.quien-soy-text{flex:1;padding:32px 28px;display:flex;flex-direction:column;justify-content:center}
+.quien-soy-img{width:280px;background:var(--mo);flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 @media(max-width:640px){
   header nav{gap:12px}
   header nav a{font-size:11px}
@@ -182,6 +178,8 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
   article h1{font-size:24px}
   .service-head{padding:16px}
   .service-body{padding:0 16px 20px}
+  .quien-soy{flex-direction:column;margin:0 16px 32px}
+  .quien-soy-img{width:100%;min-height:220px}
 }
 </style>
 </head>
@@ -200,12 +198,12 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 </nav>
 </header>
 
-<!-- ========== HOME ========== -->
 <div class="page active" id="page-home">
-
 <div class="marquee"><div class="marquee-inner" id="marquee"></div></div>
 
 <section class="hero">
+<svg width="64" height="58" viewBox="0 0 48 44" fill="none" style="display:block;margin:0 auto 16px"><path d="M6 42L6 14C6 4 12 0 24 0C36 0 42 4 42 14L42 42" stroke="#5B3F8C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="18" r="2.2" fill="#C9A84C"/><line x1="24" y1="20.5" x2="24" y2="29" stroke="#C9A84C" stroke-width=".7" stroke-linecap="round"/><line x1="20" y1="26" x2="24" y2="22.5" stroke="#C9A84C" stroke-width=".7" stroke-linecap="round"/><line x1="28" y1="26" x2="24" y2="22.5" stroke="#C9A84C" stroke-width=".7" stroke-linecap="round"/></svg>
+<p style="font-size:28px;font-weight:300;color:#1E1433;letter-spacing:-.8px;margin-bottom:24px">A traves de Mi</p>
 <div style="width:48px;height:1.5px;background:var(--g);margin:0 auto 20px;opacity:.5"></div>
 <p class="tag">Psicofisica · Astrologia · Tarot</p>
 <h1>El camino hacia vos<br>empieza aca.</h1>
@@ -232,22 +230,10 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 <button class="section-link" onclick="showPage('servicios')">Ver todos ›</button>
 </div>
 <div class="services-grid">
-<div class="service-card-mini" onclick="showPage('servicios')">
-<div class="icon" style="background:#5B3F8C"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FAF8F5" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-<h3>Armonizacion psicofisica</h3><p>Equilibra tu campo energetico</p>
-</div>
-<div class="service-card-mini" onclick="showPage('servicios')">
-<div class="icon" style="background:#F0EBF5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26Z"/></svg></div>
-<h3>Tarot evolutivo</h3><p>Un espejo, no una prediccion</p>
-</div>
-<div class="service-card-mini" onclick="showPage('servicios')">
-<div class="icon" style="background:#F0EBF5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-<h3>Carta natal</h3><p>Tu mapa en las estrellas</p>
-</div>
-<div class="service-card-mini" onclick="showPage('servicios')">
-<div class="icon" style="background:#F0EBF5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
-<h3>Registros akashicos</h3><p>La memoria de tu alma</p>
-</div>
+<div class="service-card-mini" onclick="showPage('servicios')"><div class="icon" style="background:#5B3F8C"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FAF8F5" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Armonizacion psicofisica</h3><p>Equilibra tu campo energetico</p></div>
+<div class="service-card-mini" onclick="showPage('servicios')"><div class="icon" style="background:#F0EBF5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26Z"/></svg></div><h3>Tarot evolutivo</h3><p>Un espejo, no una prediccion</p></div>
+<div class="service-card-mini" onclick="showPage('servicios')"><div class="icon" style="background:#F0EBF5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Carta natal</h3><p>Tu mapa en las estrellas</p></div>
+<div class="service-card-mini" onclick="showPage('servicios')"><div class="icon" style="background:#F0EBF5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div><h3>Registros akashicos</h3><p>La memoria de tu alma</p></div>
 </div>
 </section>
 
@@ -270,7 +256,24 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 <svg width="40" height="37" viewBox="0 0 48 44" fill="none"><path d="M6 42L6 14C6 4 12 0 24 0C36 0 42 4 42 14L42 42" stroke="#C4ABE0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="18" r="2" fill="#C9A84C"/><line x1="24" y1="20" x2="24" y2="29" stroke="#C9A84C" stroke-width=".6" stroke-linecap="round"/><line x1="20" y1="26" x2="24" y2="22.5" stroke="#C9A84C" stroke-width=".6" stroke-linecap="round"/><line x1="28" y1="26" x2="24" y2="22.5" stroke="#C9A84C" stroke-width=".6" stroke-linecap="round"/></svg>
 <h2 style="margin-top:16px">No tenes que saber que necesitas.<br>Solo tenes que dar el primer paso.</h2>
 <p>Charlar no tiene costo.</p>
-<a href="https://wa.me/TUNUMERO" class="btn btn-primary">Escribime por WhatsApp</a>
+<a href="https://wa.me/5491176065606" class="btn btn-primary">Escribime por WhatsApp</a>
+</div>
+
+<!-- QUIEN SOY -->
+<div class="quien-soy">
+<div class="quien-soy-text">
+<p style="font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin:0 0 10px">Quien soy</p>
+<p style="font-size:24px;font-weight:300;color:var(--co);letter-spacing:-.3px;margin:0 0 4px;line-height:1.2">Mayra</p>
+<p style="font-size:12px;color:var(--a);margin:0 0 20px;font-weight:500">Profesional matriculada en Psicofisica</p>
+<p style="font-size:13px;color:var(--ch);line-height:1.7;margin:0 0 14px">Desde chica descubri que podia percibir lo que muchos no veian. Lo que al principio me trajo dudas, con el tiempo se transformo en mi mayor fortaleza.</p>
+<p style="font-size:13px;color:var(--ch);line-height:1.7;margin:0 0 14px">Me forme en distintas terapias para canalizar esa sensibilidad. Hoy mi mision es acompanarte en tu camino de sanacion y claridad.</p>
+<div style="width:32px;height:1px;background:var(--g);margin:6px 0 16px;opacity:.4"></div>
+<p style="font-size:12px;color:var(--ch);opacity:.6;line-height:1.6;margin:0 0 16px">Liberar bloqueos. Equilibrar tu energia. Reconectar con tu esencia. Para que vivas mas liviana, en paz y en armonia.</p>
+<p style="font-size:13px;color:var(--ch);font-style:italic;opacity:.5;margin:0">"Uniendo lo invisible con lo visible"</p>
+</div>
+<div class="quien-soy-img">
+<img src="mayra.jpg" alt="Mayra - A traves de Mi" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+</div>
 </div>
 
 <div class="join-band">
@@ -280,7 +283,6 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 </div>
 </div>
 
-<!-- ========== SERVICIOS ========== -->
 <div class="page" id="page-servicios">
 <section class="hero">
 <p class="tag">Servicios</p>
@@ -288,15 +290,12 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 <p>Profesional matriculada en Psicofisica. Cada servicio es un camino distinto hacia el mismo lugar: vos.</p>
 <div style="width:40px;height:1.5px;background:var(--g);margin:0 auto"></div>
 </section>
-
 <div class="lead-magnet" style="margin-bottom:20px">
 <p style="font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:4px">No sabes por donde empezar?</p>
 <p style="font-size:13px;color:var(--ch);opacity:.7;margin-bottom:16px;line-height:1.5">Contame que te pasa y te sugiero el camino ideal</p>
 <a href="https://wa.me/5491176065606" class="btn btn-primary">Escribime por WhatsApp</a>
 </div>
-
 <section class="section" id="servicios-list"></section>
-
 <div class="cta-band">
 <h2>Cada camino empieza<br>con un paso.</h2>
 <p>Charlar no tiene costo.</p>
@@ -304,7 +303,6 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 </div>
 </div>
 
-<!-- ========== TALLERES ========== -->
 <div class="page" id="page-talleres">
 <section class="hero">
 <p class="tag">Cursos y talleres</p>
@@ -320,7 +318,6 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 </div>
 </div>
 
-<!-- ========== BLOG ========== -->
 <div class="page" id="page-blog">
 <div id="blog-list">
 <section class="hero">
@@ -346,7 +343,6 @@ footer .copy{font-size:10px;color:var(--ch);opacity:.25}
 </footer>
 
 <script>
-// ===== NAVIGATION =====
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
@@ -355,12 +351,10 @@ function showPage(id){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// ===== MARQUEE =====
 const mq=document.getElementById('marquee');
 const items=["Psicofisica matriculada","Tarot evolutivo","Carta natal","Registros akashicos","Equilibrio energetico","Bienestar animal","Buenos Aires"];
 for(let r=0;r<3;r++)items.forEach(i=>{mq.innerHTML+=`<span>${i} <span class="dot">·</span></span>`});
 
-// ===== LUNAR CALENDAR AUTO =====
 const lunarEvents=[
 {date:"2026-04-02T02:12:00Z",type:"Luna llena",sign:"Libra",msg:"Un momento ideal para soltar lo que ya no te sirve y buscar equilibrio interior."},
 {date:"2026-04-16T02:12:00Z",type:"Luna nueva",sign:"Aries",msg:"Energia de inicio. Planta semillas de lo que queres crear en tu vida."},
@@ -369,7 +363,7 @@ const lunarEvents=[
 {date:"2026-05-31T08:45:00Z",type:"Luna llena",sign:"Sagitario",msg:"Expansion y busqueda de sentido. Ideal para soltar creencias limitantes."},
 {date:"2026-06-14T22:33:00Z",type:"Luna nueva",sign:"Geminis",msg:"Comunicacion, curiosidad y nuevas ideas. Escucha lo que el universo quiere decirte."},
 {date:"2026-06-29T21:57:00Z",type:"Luna llena",sign:"Capricornio",msg:"Revision de estructuras. Que estas sosteniendo que ya no necesitas?"},
-{date:"2026-07-14T09:44:00Z",type:"Luna nueva",sign:"Cancer",msg:"Nutricion emocional. Volvé a casa, a tu centro, a lo que te cuida."},
+{date:"2026-07-14T09:44:00Z",type:"Luna nueva",sign:"Cancer",msg:"Nutricion emocional. Volve a casa, a tu centro, a lo que te cuida."},
 {date:"2026-07-29T08:36:00Z",type:"Luna llena",sign:"Acuario",msg:"Libertad y autenticidad. Soltar lo que haces solo por cumplir."},
 {date:"2026-08-12T20:37:00Z",type:"Luna nueva",sign:"Leo",msg:"Brilla. Conecta con tu poder creativo y tu capacidad de liderazgo interior."},
 {date:"2026-08-27T16:49:00Z",type:"Luna llena",sign:"Piscis",msg:"Intuicion al maximo. Confia en lo que sentis aunque no lo puedas explicar."},
@@ -382,222 +376,39 @@ const lunarEvents=[
 {date:"2026-12-08T20:52:00Z",type:"Luna nueva",sign:"Sagitario",msg:"Vision amplia. Conecta con tu proposito mas grande."},
 {date:"2026-12-23T02:28:00Z",type:"Luna llena",sign:"Cancer",msg:"Cierre emocional del ano. Honra tu camino recorrido."},
 {date:"2027-01-07T10:24:00Z",type:"Luna nueva",sign:"Capricornio",msg:"Cimientos nuevos. Construi desde la solidez interior."},
-{date:"2027-01-22T12:17:00Z",type:"Luna llena",sign:"Leo",msg:"Celebracion y autoexpresion. Permítete ser vista."},
+{date:"2027-01-22T12:17:00Z",type:"Luna llena",sign:"Leo",msg:"Celebracion y autoexpresion. Permitete ser vista."},
 {date:"2027-02-06T00:56:00Z",type:"Luna nueva",sign:"Acuario",msg:"Innovacion y desapego. Animate a pensar diferente."},
 {date:"2027-02-20T23:24:00Z",type:"Luna llena",sign:"Virgo",msg:"Purificacion. Soltar lo que ya no suma, con amor."},
 {date:"2027-03-07T15:30:00Z",type:"Luna nueva",sign:"Piscis",msg:"Entrega y espiritualidad. Confia en el fluir."},
 {date:"2027-03-22T10:44:00Z",type:"Luna llena",sign:"Libra",msg:"Equilibrio y justicia interior. Busca tu centro."},
 ];
-
-function getNextLunar(){
-  const now=new Date();
-  return lunarEvents.find(e=>new Date(e.date)>now)||lunarEvents[lunarEvents.length-1];
-}
-
-function formatLunarDate(dateStr){
-  const d=new Date(dateStr);
-  const meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-  return `${d.getDate()} de ${meses[d.getMonth()]}, ${d.getFullYear()}`;
-}
-
-function updateMoonCard(){
-  const next=getNextLunar();
-  const moonTag=document.querySelector('.moon-card .tag');
-  const moonDate=document.querySelector('.moon-card .date');
-  const moonDesc=document.querySelector('.moon-card .desc');
-  if(moonTag)moonTag.textContent=`Proxima ${next.type} en ${next.sign}`;
-  if(moonDate)moonDate.textContent=formatLunarDate(next.date);
-  if(moonDesc)moonDesc.textContent=next.msg;
-}
-
-function updateCountdown(){
-  const next=getNextLunar();
-  const t=new Date(next.date)-new Date();
-  const d=Math.max(0,Math.floor(t/864e5)),h=Math.max(0,Math.floor(t%864e5/36e5)),m=Math.max(0,Math.floor(t%36e5/6e4));
-  document.getElementById('countdown').innerHTML=
-    `<div class="countdown-unit"><div class="countdown-num">${String(d).padStart(2,'0')}</div><div class="countdown-label">dias</div></div>`+
-    `<span class="countdown-sep">:</span>`+
-    `<div class="countdown-unit"><div class="countdown-num">${String(h).padStart(2,'0')}</div><div class="countdown-label">horas</div></div>`+
-    `<span class="countdown-sep">:</span>`+
-    `<div class="countdown-unit"><div class="countdown-num">${String(m).padStart(2,'0')}</div><div class="countdown-label">min</div></div>`;
-}
+function getNextLunar(){const now=new Date();return lunarEvents.find(e=>new Date(e.date)>now)||lunarEvents[lunarEvents.length-1]}
+function formatLunarDate(ds){const d=new Date(ds);const m=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];return `${d.getDate()} de ${m[d.getMonth()]}, ${d.getFullYear()}`}
+function updateMoonCard(){const n=getNextLunar();const t=document.querySelector('.moon-card .tag'),d=document.querySelector('.moon-card .date'),ds=document.querySelector('.moon-card .desc');if(t)t.textContent=`Proxima ${n.type} en ${n.sign}`;if(d)d.textContent=formatLunarDate(n.date);if(ds)ds.textContent=n.msg}
+function updateCountdown(){const n=getNextLunar();const t=new Date(n.date)-new Date();const d=Math.max(0,Math.floor(t/864e5)),h=Math.max(0,Math.floor(t%864e5/36e5)),m=Math.max(0,Math.floor(t%36e5/6e4));document.getElementById('countdown').innerHTML=`<div class="countdown-unit"><div class="countdown-num">${String(d).padStart(2,'0')}</div><div class="countdown-label">dias</div></div><span class="countdown-sep">:</span><div class="countdown-unit"><div class="countdown-num">${String(h).padStart(2,'0')}</div><div class="countdown-label">horas</div></div><span class="countdown-sep">:</span><div class="countdown-unit"><div class="countdown-num">${String(m).padStart(2,'0')}</div><div class="countdown-label">min</div></div>`}
 updateMoonCard();updateCountdown();setInterval(()=>{updateCountdown();updateMoonCard()},60000);
 
-// ===== SERVICES =====
 const services=[
-{icon:'zap',num:'01',name:'Armonizacion psicofisica',badge:'Matriculada',hook:'Equilibra tu campo energetico en una sola sesion',featured:true,
-desc:'Metodo profesional que diagnostica, neutraliza y armoniza tus campos energeticos — emocional, sensorial, intelectual y fisico. Propiedad intelectual registrada, desarrollado por el Prof. Luis C. Schweitzer.',
-includes:['Calibrado segun Resonancia Schumann','Tratamiento emocional (estres, angustia, fobias, bloqueos)','Complemento de enfermedades somaticas y psicosomaticas','Neutralizacion de dolores y malestares','Limpieza de energias nocivas externas'],
-forYou:['Tension, ansiedad o agotamiento sin causa medica','Dolores de cabeza, mareos o falta de concentracion','Necesitas complementar un tratamiento medico','Tu mascota tambien necesita equilibrio'],
-tags:['Presencial','15-20 min','A distancia','Animales'],extra:'Se complementa con todas las terapias medicas, psicologicas y psiquiatricas. Resultados evidentes desde la primera sesion.'},
-{icon:'star',num:'02',name:'Tarot evolutivo',hook:'Un espejo, no una prediccion',
-desc:'Las cartas te muestran patrones, bloqueos y caminos que tu mente consciente no ve. Es autoconocimiento, no adivinacion.',
-forYou:['Estas en un punto muerto','Tenes que tomar una decision importante','Repetis patrones y no sabes por que'],
-tags:['Individual','Online o presencial','60 min']},
-{icon:'clock',num:'03',name:'Carta natal y revolucion solar',hook:'Tu mapa escrito en las estrellas',
-desc:'El mapa del cielo en tu nacimiento. Tus dones, desafios, patrones karmicos y ciclos actuales.',
-forYou:['Queres conocerte mas profundo','Nuevo ciclo o cumpleanos','Entender desafios recurrentes'],
-tags:['Personalizada','Fecha hora y lugar de nacimiento']},
-{icon:'book',num:'04',name:'Registros akashicos',hook:'La memoria de tu alma tiene respuestas',
-desc:'El archivo energetico de tu alma: proposito, vidas pasadas y patrones que se repiten.',
-forYou:['Algo mas que no podes explicar','Entender tu proposito','Sanar patrones profundos'],
-tags:['Individual','Online o presencial']},
+{icon:'zap',num:'01',name:'Armonizacion psicofisica',badge:'Matriculada',hook:'Equilibra tu campo energetico en una sola sesion',featured:true,desc:'Metodo profesional que diagnostica, neutraliza y armoniza tus campos energeticos — emocional, sensorial, intelectual y fisico. Propiedad intelectual registrada, desarrollado por el Prof. Luis C. Schweitzer.',includes:['Calibrado segun Resonancia Schumann','Tratamiento emocional (estres, angustia, fobias, bloqueos)','Complemento de enfermedades somaticas y psicosomaticas','Neutralizacion de dolores y malestares','Limpieza de energias nocivas externas'],forYou:['Tension, ansiedad o agotamiento sin causa medica','Dolores de cabeza, mareos o falta de concentracion','Necesitas complementar un tratamiento medico','Tu mascota tambien necesita equilibrio'],tags:['Presencial','45-60 min','A distancia','Animales'],extra:'Se complementa con todas las terapias medicas, psicologicas y psiquiatricas. Resultados evidentes desde la primera sesion.'},
+{icon:'star',num:'02',name:'Tarot evolutivo',hook:'Un espejo, no una prediccion',desc:'Las cartas te muestran patrones, bloqueos y caminos que tu mente consciente no ve. Es autoconocimiento, no adivinacion.',forYou:['Estas en un punto muerto','Tenes que tomar una decision importante','Repetis patrones y no sabes por que'],tags:['Individual','Online o presencial','60 min']},
+{icon:'clock',num:'03',name:'Carta natal y revolucion solar',hook:'Tu mapa escrito en las estrellas',desc:'El mapa del cielo en tu nacimiento. Tus dones, desafios, patrones karmicos y ciclos actuales.',forYou:['Queres conocerte mas profundo','Nuevo ciclo o cumpleanos','Entender desafios recurrentes'],tags:['Personalizada','Fecha hora y lugar de nacimiento']},
+{icon:'book',num:'04',name:'Registros akashicos',hook:'La memoria de tu alma tiene respuestas',desc:'El archivo energetico de tu alma: proposito, vidas pasadas y patrones que se repiten.',forYou:['Algo mas que no podes explicar','Entender tu proposito','Sanar patrones profundos'],tags:['Individual','Online o presencial']},
 ];
-
-const iconSvg={
-zap:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
-star:'<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26Z"/>',
-clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
-book:'<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>',
-check:'<polyline points="20 6 9 17 4 12" stroke-width="2"/>'
-};
+const iconSvg={zap:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',star:'<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26Z"/>',clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',book:'<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>',check:'<polyline points="20 6 9 17 4 12" stroke-width="2"/>'};
 function ic(name,color='#5B3F8C',size=20){return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${iconSvg[name]}</svg>`}
 
 const sl=document.getElementById('servicios-list');
-services.forEach((s,i)=>{
-  const div=document.createElement('div');
-  div.className=`service-accordion${s.featured?' featured':''}`;
-  div.innerHTML=`
-  <div class="service-head" onclick="this.parentElement.classList.toggle('open');this.querySelector('.toggle').classList.toggle('open')">
-    <div class="icon" style="background:${s.featured?'#5B3F8C':'#F0EBF5'}">${ic(s.icon,s.featured?'#FAF8F5':'#5B3F8C')}</div>
-    <div class="meta">
-      <div><span class="num">${s.num}</span>${s.badge?`<span class="badge">${s.badge}</span>`:''}</div>
-      <h3>${s.name}</h3>
-      <p class="hook">${s.hook}</p>
-    </div>
-    <div class="toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3A3540" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-  </div>
-  <div class="service-body">
-    <p class="desc">${s.desc}</p>
-    ${s.includes?`<p class="sub">Que incluye</p><div style="margin-bottom:18px">${s.includes.map(x=>`<div class="check-item">${ic('check','#8FA89A',16)}<p>${x}</p></div>`).join('')}</div>`:''}
-    <p class="sub">Es para vos si...</p>
-    <div style="margin-bottom:18px">${s.forYou.map(f=>`<div class="dot-item"><div class="dot"></div><p>${f}</p></div>`).join('')}</div>
-    <div class="pills">${s.tags.map(t=>`<span class="pill">${t}</span>`).join('')}</div>
-    ${s.extra?`<div class="note"><p>${s.extra}</p></div>`:''}
-    <a href="https://wa.me/5491176065606?text=Hola%20quiero%20agendar%20una%20sesion%20de%20${encodeURIComponent(s.name)}" class="btn btn-primary">Agendar sesion</a>
-  </div>`;
-  sl.appendChild(div);
-});
+services.forEach((s,i)=>{const div=document.createElement('div');div.className=`service-accordion${s.featured?' featured':''}`;div.innerHTML=`<div class="service-head" onclick="this.parentElement.classList.toggle('open');this.querySelector('.toggle').classList.toggle('open')"><div class="icon" style="background:${s.featured?'#5B3F8C':'#F0EBF5'}">${ic(s.icon,s.featured?'#FAF8F5':'#5B3F8C')}</div><div class="meta"><div><span class="num">${s.num}</span>${s.badge?`<span class="badge">${s.badge}</span>`:''}</div><h3>${s.name}</h3><p class="hook">${s.hook}</p></div><div class="toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3A3540" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="service-body"><p class="desc">${s.desc}</p>${s.includes?`<p class="sub">Que incluye</p><div style="margin-bottom:18px">${s.includes.map(x=>`<div class="check-item">${ic('check','#8FA89A',16)}<p>${x}</p></div>`).join('')}</div>`:''}<p class="sub">Es para vos si...</p><div style="margin-bottom:18px">${s.forYou.map(f=>`<div class="dot-item"><div class="dot"></div><p>${f}</p></div>`).join('')}</div><div class="pills">${s.tags.map(t=>`<span class="pill">${t}</span>`).join('')}</div>${s.extra?`<div class="note"><p>${s.extra}</p></div>`:''}<a href="https://wa.me/5491176065606?text=Hola%20quiero%20agendar%20una%20sesion%20de%20${encodeURIComponent(s.name)}" class="btn btn-primary">Agendar sesion</a></div>`;sl.appendChild(div)});
 
-// ===== TALLERES =====
-const talleres=[
-{name:'Conecta con tu guia interior',desc:'Taller vivencial de 3 encuentros',date:'Abril 2026',slots:'8 lugares',st:'open'},
-{name:'Intro al tarot evolutivo',desc:'Aprende a leer cartas como autoconocimiento',date:'Mayo 2026',slots:'12 lugares',st:'soon'}
-];
+const talleres=[{name:'Conecta con tu guia interior',desc:'Taller vivencial de 3 encuentros',date:'Abril 2026',slots:'8 lugares',st:'open'},{name:'Intro al tarot evolutivo',desc:'Aprende a leer cartas como autoconocimiento',date:'Mayo 2026',slots:'12 lugares',st:'soon'}];
 const tl=document.getElementById('talleres-list');
-talleres.forEach(t=>{
-  tl.innerHTML+=`<div class="taller-card">
-    <h3>${t.name}</h3><p class="desc">${t.desc}</p>
-    <div class="pills"><span class="pill pill-date">${t.date}</span><span class="pill">${t.slots}</span></div>
-    <div class="bottom">
-      <span class="status ${t.st}">${t.st==='open'?'Inscripciones abiertas':'Proximamente'}</span>
-      ${t.st==='open'?`<a href="https://wa.me/5491176065606?text=Quiero%20inscribirme%20al%20taller%20${encodeURIComponent(t.name)}" class="btn btn-primary btn-sm">Inscribirme</a>`:`<button class="btn btn-ghost btn-sm">Avisame</button>`}
-    </div></div>`;
-});
+talleres.forEach(t=>{tl.innerHTML+=`<div class="taller-card"><h3>${t.name}</h3><p class="desc">${t.desc}</p><div class="pills"><span class="pill pill-date">${t.date}</span><span class="pill">${t.slots}</span></div><div class="bottom"><span class="status ${t.st}">${t.st==='open'?'Inscripciones abiertas':'Proximamente'}</span>${t.st==='open'?`<a href="https://wa.me/5491176065606?text=Quiero%20inscribirme%20al%20taller%20${encodeURIComponent(t.name)}" class="btn btn-primary btn-sm">Inscribirme</a>`:`<button class="btn btn-ghost btn-sm">Avisame</button>`}</div></div>`});
 
-// ===== BLOG =====
-const blogPosts=[
-{cat:'Psicofisica',title:'Que es la Resonancia Schumann y como te afecta',type:'Educativo',color:'#8FA89A',icon:'zap'},
-{cat:'Tarot',title:'Las 3 cartas que mas asustan (y no deberian)',type:'Educativo',color:'#C9A84C',icon:'star'},
-{cat:'Astrologia',title:'Mercurio retrogrado: guia de supervivencia',type:'Herramienta',color:'#7BA3C9',icon:'clock',hasArticle:true},
-{cat:'Energia',title:'Ritual de luna llena para soltar',type:'Herramienta',color:'#C4ABE0',icon:'star'},
-];
+const blogPosts=[{cat:'Psicofisica',title:'Que es la Resonancia Schumann y como te afecta',type:'Educativo',color:'#8FA89A',icon:'zap'},{cat:'Tarot',title:'Las 3 cartas que mas asustan (y no deberian)',type:'Educativo',color:'#C9A84C',icon:'star'},{cat:'Astrologia',title:'Mercurio retrogrado: guia de supervivencia',type:'Herramienta',color:'#7BA3C9',icon:'clock',hasArticle:true},{cat:'Energia',title:'Ritual de luna llena para soltar',type:'Herramienta',color:'#C4ABE0',icon:'star'}];
 const bi=document.getElementById('blog-items');
-blogPosts.forEach((p,i)=>{
-  bi.innerHTML+=`<div class="blog-item" ${p.hasArticle?'onclick="showArticle()"':''}>
-    <div class="thumb">${ic(p.icon,p.color,24)}</div>
-    <div style="flex:1">
-      <div class="cat-row"><div class="cat-dot" style="background:${p.color}"></div><span class="cat-name" style="color:${p.color}">${p.cat}</span></div>
-      <h4>${p.title}</h4><span class="meta">${p.type} · 5 min lectura</span>
-    </div>
-    ${p.hasArticle?'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E6E2DC" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>':''}
-  </div>`;
-});
+blogPosts.forEach((p,i)=>{bi.innerHTML+=`<div class="blog-item" ${p.hasArticle?'onclick="showArticle()"':''}><div class="thumb">${ic(p.icon,p.color,24)}</div><div style="flex:1"><div class="cat-row"><div class="cat-dot" style="background:${p.color}"></div><span class="cat-name" style="color:${p.color}">${p.cat}</span></div><h4>${p.title}</h4><span class="meta">${p.type} · 5 min lectura</span></div>${p.hasArticle?'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E6E2DC" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>':''}</div>`});
 
-// ===== ARTICLE =====
-function showArticle(){
-  document.getElementById('blog-list').style.display='none';
-  const a=document.getElementById('blog-article');
-  a.style.display='block';
-  a.innerHTML=`
-  <button class="article-back" onclick="document.getElementById('blog-list').style.display='block';document.getElementById('blog-article').style.display='none';window.scrollTo({top:0,behavior:'smooth'})">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg> Volver al blog
-  </button>
-  <article>
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
-      <div style="width:8px;height:8px;border-radius:4px;background:#7BA3C9"></div>
-      <span style="font-size:10px;color:#7BA3C9;text-transform:uppercase;letter-spacing:2px">Astrologia</span>
-      <span style="font-size:10px;color:var(--ch);opacity:.3;margin:0 4px">·</span>
-      <span style="font-size:10px;color:var(--ch);opacity:.4">Herramienta · 5 min</span>
-    </div>
-    <h1>Mercurio retrogrado:<br>guia de supervivencia</h1>
-    <p style="font-size:14px;color:var(--ch);opacity:.5;margin-bottom:28px;line-height:1.5">No es el fin del mundo. Es una invitacion a frenar, revisar y reconectar.</p>
-    <div class="author-row">
-      <div style="width:36px;height:36px;border-radius:18px;background:var(--mo);display:flex;align-items:center;justify-content:center">
-        <svg width="20" height="18" viewBox="0 0 48 44" fill="none"><path d="M6 42L6 14C6 4 12 0 24 0C36 0 42 4 42 14L42 42" stroke="#5B3F8C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="18" r="2" fill="#C9A84C"/></svg>
-      </div>
-      <div><p style="font-size:13px;font-weight:500;margin:0">A traves de Mi</p><p style="font-size:11px;color:var(--ch);opacity:.5;margin:0">27 de Marzo, 2026</p></div>
-    </div>
-    <div class="date-card">
-      <p style="font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px">Proximo mercurio retrogrado</p>
-      <p style="font-size:22px;font-weight:300;color:#FAF8F5;margin-bottom:4px">7 al 31 de Julio, 2026</p>
-      <p style="font-size:12px;color:var(--lv);opacity:.7">En Cancer — emociones, hogar, familia</p>
-    </div>
-    <h2>Que es realmente Mercurio retrogrado?</h2>
-    <p class="body-text">Desde la Tierra, parece que Mercurio "retrocede" en su orbita. No es que el planeta realmente vaya para atras — es una ilusion optica. Pero en astrologia, esa ilusion tiene un efecto muy real: todo lo que Mercurio rige (comunicacion, tecnologia, contratos, viajes) tiende a ralentizarse, trabarse o revisarse.</p>
-    <p class="body-text">Esto no es necesariamente malo. Pensalo asi: es como si el universo te pusiera en modo avion por unas semanas. Te obliga a frenar. Y cuando frenas, podes ver cosas que en la velocidad del dia a dia se te escapan.</p>
-    <div class="avoid-card">
-      <p style="font-size:10px;color:var(--a);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;font-weight:500">Que evitar durante el retrogrado</p>
-      <div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">✕</span><p>Firmar contratos importantes sin releerlos dos veces</p></div>
-      <div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">✕</span><p>Comprar tecnologia cara (celulares, computadoras)</p></div>
-      <div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">✕</span><p>Empezar relaciones o proyectos desde la impulsividad</p></div>
-      <div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">✕</span><p>Dar por sentado que el otro entendio lo que quisiste decir</p></div>
-    </div>
-    <div class="do-card">
-      <p style="font-size:10px;color:var(--sg);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;font-weight:500">Que si hacer (y aprovechar)</p>
-      <div class="check-item">${ic('check','#8FA89A',16)}<p>Revisar proyectos pendientes y cerrar ciclos abiertos</p></div>
-      <div class="check-item">${ic('check','#8FA89A',16)}<p>Reconectar con personas del pasado que te hacen bien</p></div>
-      <div class="check-item">${ic('check','#8FA89A',16)}<p>Meditar, journalear, escuchar a tu cuerpo</p></div>
-      <div class="check-item">${ic('check','#8FA89A',16)}<p>Hacer backup de tus archivos y revisar tus finanzas</p></div>
-      <div class="check-item">${ic('check','#8FA89A',16)}<p>Practicar la paciencia como ejercicio espiritual</p></div>
-    </div>
-    <h2>Este retrogrado en Cancer</h2>
-    <p class="body-text">Cuando Mercurio retrograda en Cancer, los temas que se revisan son emocionales: la relacion con tu familia, tu hogar, tus raices, y esas conversaciones que nunca tuviste pero necesitas tener. Es probable que surjan memorias, nostalgia, o que algo de tu historia familiar pida atencion.</p>
-    <p class="body-text">No lo resistas. Cancer te pide que te cuides, que te des permiso de sentir, y que honres de donde venis. Es un momento poderoso para la armonizacion emocional.</p>
-    <div class="cta-card">
-      <div style="width:40px;height:40px;border-radius:20px;background:var(--mo);display:flex;align-items:center;justify-content:center;margin:0 auto 12px">${ic('zap','#5B3F8C',20)}</div>
-      <h3 style="font-size:16px;font-weight:400;margin-bottom:6px">Queres prepararte para este retrogrado?</h3>
-      <p style="font-size:13px;color:var(--ch);opacity:.6;margin-bottom:16px;line-height:1.5">Una sesion de Armonizacion Psicofisica te ayuda a limpiar cargas emocionales acumuladas.</p>
-      <button class="btn btn-primary" onclick="showPage('servicios')">Ver Armonizacion Psicofisica</button>
-    </div>
-    <h2>Un ritual simple para Mercurio retrogrado</h2>
-    <p class="body-text">Este es un ritual que podes hacer en tu casa. Solo vos y un momento de silencio.</p>
-    <div class="ritual-steps">
-      <div class="ritual-step"><span class="num">1</span><h4>Elegi un momento tranquilo</h4><p>Antes de dormir o al despertar. Apaga el celular.</p></div>
-      <div class="ritual-step"><span class="num">2</span><h4>Escribi tres cosas que queres soltar</h4><p>Pensamientos, habitos, relaciones, miedos. No las juzgues.</p></div>
-      <div class="ritual-step"><span class="num">3</span><h4>Escribi tres cosas que queres revisar</h4><p>Que dejaste pendiente? Que conversacion te debes?</p></div>
-      <div class="ritual-step"><span class="num">4</span><h4>Lee las dos listas en voz alta</h4><p>Escucharte a vos misma tiene un poder que subestimamos.</p></div>
-      <div class="ritual-step"><span class="num">5</span><h4>Quema o rompe la primera lista</h4><p>Lo que soltas, lo soltas. La segunda la revisas al terminar el retrogrado.</p></div>
-    </div>
-    <div class="related-card">
-      <p style="font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:8px">Contenido relacionado</p>
-      <p style="font-size:16px;font-weight:300;color:#FAF8F5;margin-bottom:4px">Como afecta este retrogrado a tu signo?</p>
-      <p style="font-size:12px;color:var(--lv);opacity:.7;margin-bottom:16px">Puedo hacerte una lectura personalizada de tarot o carta natal.</p>
-      <button class="btn btn-primary" onclick="showPage('servicios')">Agendar lectura de tarot</button>
-    </div>
-    <div class="tags">
-      <span class="pill" style="background:rgba(123,163,201,.1);color:#7BA3C9">Mercurio retrogrado</span>
-      <span class="pill" style="background:rgba(123,163,201,.1);color:#7BA3C9">Cancer</span>
-      <span class="pill" style="background:rgba(123,163,201,.1);color:#7BA3C9">Astrologia 2026</span>
-    </div>
-    <div class="subscribe-card">
-      <p style="font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px">No te pierdas el proximo articulo</p>
-      <p style="font-size:13px;color:var(--ch);opacity:.7;margin-bottom:16px;line-height:1.5">Recibi herramientas y guias directo en tu WhatsApp</p>
-      <a href="https://wa.me/5491176065606?text=Quiero%20recibir%20articulos" class="btn btn-primary">Sumarme a la lista</a>
-    </div>
-  </article>`;
-  window.scrollTo({top:0,behavior:'smooth'});
-}
+function showArticle(){document.getElementById('blog-list').style.display='none';const a=document.getElementById('blog-article');a.style.display='block';a.innerHTML=`<button class="article-back" onclick="document.getElementById('blog-list').style.display='block';document.getElementById('blog-article').style.display='none';window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg> Volver al blog</button><article><div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><div style="width:8px;height:8px;border-radius:4px;background:#7BA3C9"></div><span style="font-size:10px;color:#7BA3C9;text-transform:uppercase;letter-spacing:2px">Astrologia</span><span style="font-size:10px;color:var(--ch);opacity:.3;margin:0 4px">·</span><span style="font-size:10px;color:var(--ch);opacity:.4">Herramienta · 5 min</span></div><h1>Mercurio retrogrado:<br>guia de supervivencia</h1><p style="font-size:14px;color:var(--ch);opacity:.5;margin-bottom:28px;line-height:1.5">No es el fin del mundo. Es una invitacion a frenar, revisar y reconectar.</p><div class="author-row"><div style="width:36px;height:36px;border-radius:18px;background:var(--mo);display:flex;align-items:center;justify-content:center"><svg width="20" height="18" viewBox="0 0 48 44" fill="none"><path d="M6 42L6 14C6 4 12 0 24 0C36 0 42 4 42 14L42 42" stroke="#5B3F8C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="18" r="2" fill="#C9A84C"/></svg></div><div><p style="font-size:13px;font-weight:500;margin:0">A traves de Mi</p><p style="font-size:11px;color:var(--ch);opacity:.5;margin:0">27 de Marzo, 2026</p></div></div><div class="date-card"><p style="font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px">Proximo mercurio retrogrado</p><p style="font-size:22px;font-weight:300;color:#FAF8F5;margin-bottom:4px">7 al 31 de Julio, 2026</p><p style="font-size:12px;color:var(--lv);opacity:.7">En Cancer — emociones, hogar, familia</p></div><h2>Que es realmente Mercurio retrogrado?</h2><p class="body-text">Desde la Tierra, parece que Mercurio "retrocede" en su orbita. No es que el planeta realmente vaya para atras — es una ilusion optica. Pero en astrologia, esa ilusion tiene un efecto muy real: todo lo que Mercurio rige (comunicacion, tecnologia, contratos, viajes) tiende a ralentizarse, trabarse o revisarse.</p><p class="body-text">Esto no es necesariamente malo. Pensalo asi: es como si el universo te pusiera en modo avion por unas semanas. Te obliga a frenar. Y cuando frenas, podes ver cosas que en la velocidad del dia a dia se te escapan.</p><div class="avoid-card"><p style="font-size:10px;color:var(--a);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;font-weight:500">Que evitar durante el retrogrado</p><div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">x</span><p>Firmar contratos importantes sin releerlos dos veces</p></div><div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">x</span><p>Comprar tecnologia cara (celulares, computadoras)</p></div><div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">x</span><p>Empezar relaciones o proyectos desde la impulsividad</p></div><div class="dot-item"><span style="color:#C25050;font-weight:500;margin-right:4px;flex-shrink:0">x</span><p>Dar por sentado que el otro entendio lo que quisiste decir</p></div></div><div class="do-card"><p style="font-size:10px;color:var(--sg);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;font-weight:500">Que si hacer (y aprovechar)</p><div class="check-item">${ic('check','#8FA89A',16)}<p>Revisar proyectos pendientes y cerrar ciclos abiertos</p></div><div class="check-item">${ic('check','#8FA89A',16)}<p>Reconectar con personas del pasado que te hacen bien</p></div><div class="check-item">${ic('check','#8FA89A',16)}<p>Meditar, journalear, escuchar a tu cuerpo</p></div><div class="check-item">${ic('check','#8FA89A',16)}<p>Hacer backup de tus archivos y revisar tus finanzas</p></div><div class="check-item">${ic('check','#8FA89A',16)}<p>Practicar la paciencia como ejercicio espiritual</p></div></div><h2>Este retrogrado en Cancer</h2><p class="body-text">Cuando Mercurio retrograda en Cancer, los temas que se revisan son emocionales: la relacion con tu familia, tu hogar, tus raices, y esas conversaciones que nunca tuviste pero necesitas tener.</p><p class="body-text">No lo resistas. Cancer te pide que te cuides, que te des permiso de sentir, y que honres de donde venis. Es un momento poderoso para la armonizacion emocional.</p><div class="cta-card"><div style="width:40px;height:40px;border-radius:20px;background:var(--mo);display:flex;align-items:center;justify-content:center;margin:0 auto 12px">${ic('zap','#5B3F8C',20)}</div><h3 style="font-size:16px;font-weight:400;margin-bottom:6px">Queres prepararte para este retrogrado?</h3><p style="font-size:13px;color:var(--ch);opacity:.6;margin-bottom:16px;line-height:1.5">Una sesion de Armonizacion Psicofisica te ayuda a limpiar cargas emocionales acumuladas.</p><button class="btn btn-primary" onclick="showPage('servicios')">Ver Armonizacion Psicofisica</button></div><h2>Un ritual simple para Mercurio retrogrado</h2><p class="body-text">Este es un ritual que podes hacer en tu casa. Solo vos y un momento de silencio.</p><div class="ritual-steps"><div class="ritual-step"><span class="num">1</span><h4>Elegi un momento tranquilo</h4><p>Antes de dormir o al despertar. Apaga el celular.</p></div><div class="ritual-step"><span class="num">2</span><h4>Escribi tres cosas que queres soltar</h4><p>Pensamientos, habitos, relaciones, miedos. No las juzgues.</p></div><div class="ritual-step"><span class="num">3</span><h4>Escribi tres cosas que queres revisar</h4><p>Que dejaste pendiente? Que conversacion te debes?</p></div><div class="ritual-step"><span class="num">4</span><h4>Lee las dos listas en voz alta</h4><p>Escucharte a vos misma tiene un poder que subestimamos.</p></div><div class="ritual-step"><span class="num">5</span><h4>Quema o rompe la primera lista</h4><p>Lo que soltas, lo soltas. La segunda la revisas al terminar el retrogrado.</p></div></div><div class="related-card"><p style="font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:8px">Contenido relacionado</p><p style="font-size:16px;font-weight:300;color:#FAF8F5;margin-bottom:4px">Como afecta este retrogrado a tu signo?</p><p style="font-size:12px;color:var(--lv);opacity:.7;margin-bottom:16px">Puedo hacerte una lectura personalizada de tarot o carta natal.</p><button class="btn btn-primary" onclick="showPage('servicios')">Agendar lectura de tarot</button></div><div class="tags"><span class="pill" style="background:rgba(123,163,201,.1);color:#7BA3C9">Mercurio retrogrado</span><span class="pill" style="background:rgba(123,163,201,.1);color:#7BA3C9">Cancer</span><span class="pill" style="background:rgba(123,163,201,.1);color:#7BA3C9">Astrologia 2026</span></div><div class="subscribe-card"><p style="font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px">No te pierdas el proximo articulo</p><p style="font-size:13px;color:var(--ch);opacity:.7;margin-bottom:16px;line-height:1.5">Recibi herramientas y guias directo en tu WhatsApp</p><a href="https://wa.me/5491176065606?text=Quiero%20recibir%20articulos" class="btn btn-primary">Sumarme a la lista</a></div></article>`;window.scrollTo({top:0,behavior:'smooth'})}
 </script>
 </body>
 </html>
