@@ -1,0 +1,293 @@
+===============================================================
+  GUIA DE EDICION DEL CODIGO — A TRAVES DE MI
+  Landing page: index.html
+  Ultima actualizacion: Marzo 2026
+===============================================================
+
+Abri el archivo index.html en cualquier editor de texto
+(VS Code, Sublime, Notepad++) y busca las secciones que
+necesites editar. Usa Ctrl+F (o Cmd+F en Mac) para buscar
+los textos clave que te indico abajo.
+
+
+===============================================================
+1. EDITAR SERVICIOS
+===============================================================
+
+BUSCAR EN EL CODIGO: const services=[
+
+Vas a encontrar un array con 4 objetos. Cada objeto es un
+servicio. La estructura es:
+
+{
+  icon:'zap',
+    ^ Icono: 'zap' (rayo), 'star' (estrella),
+      'clock' (reloj), 'book' (libro), 'heart' (corazon)
+
+  num:'01',
+    ^ Numero que aparece arriba del nombre
+
+  name:'Armonizacion psicofisica',
+    ^ Nombre del servicio
+
+  badge:'Matriculada',
+    ^ Etiqueta verde al lado del numero
+      (borrar toda la linea si no queres badge)
+
+  hook:'Equilibra tu campo energetico en una sola sesion',
+    ^ Frase corta que aparece debajo del nombre
+
+  featured:true,
+    ^ true = borde violeta destacado
+      Solo el primer servicio deberia ser true
+
+  desc:'Metodo profesional que...',
+    ^ Descripcion larga cuando se expande la card
+
+  includes:['Calibrado segun...','Tratamiento emocional...'],
+    ^ Lista de "Que incluye la sesion"
+      (borrar toda la linea si no aplica al servicio)
+
+  forYou:['Tension, ansiedad...','Dolores de cabeza...'],
+    ^ Lista de "Es para vos si..."
+
+  tags:['Presencial','15-20 min','A distancia','Animales'],
+    ^ Etiquetas violetas con info practica
+
+  extra:'Se complementa con...'
+    ^ Nota verde al final de la card
+      (borrar toda la linea si no aplica)
+},
+
+
+PARA EDITAR UN SERVICIO EXISTENTE:
+  Simplemente cambia el texto entre las comillas simples ' '
+
+PARA AGREGAR UN NUEVO SERVICIO:
+  Copia un bloque completo (desde { hasta },) y pegalo
+  despues del ultimo. Cambia los textos.
+
+PARA ELIMINAR UN SERVICIO:
+  Borra todo el bloque desde { hasta }, (con la coma final)
+
+EJEMPLO — cambiar el nombre del servicio 2:
+  Buscar:     name:'Tarot evolutivo'
+  Cambiar por: name:'Lectura de Tarot Evolutivo'
+
+
+===============================================================
+2. EDITAR CURSOS Y TALLERES
+===============================================================
+
+BUSCAR EN EL CODIGO: const talleres=[
+
+Cada taller tiene esta estructura:
+
+{
+  name:'Conecta con tu guia interior',
+    ^ Nombre del taller
+
+  desc:'Taller vivencial de 3 encuentros',
+    ^ Descripcion corta
+
+  date:'Abril 2026',
+    ^ Fecha que aparece en la etiqueta amarilla
+
+  slots:'8 lugares',
+    ^ Cupos disponibles
+
+  st:'open'
+    ^ Estado del taller:
+      'open' = muestra boton "Inscribirme" dorado
+               y texto "Inscripciones abiertas" en verde
+      'soon' = muestra boton "Avisame" transparente
+               y texto "Proximamente" en gris
+},
+
+
+PARA AGREGAR UN TALLER NUEVO:
+  Copia un bloque y pegalo antes del ];
+  Ejemplo:
+
+  {name:'Registros Akashicos nivel 1',desc:'Taller intensivo de un dia',date:'Junio 2026',slots:'6 lugares',st:'open'},
+
+PARA ELIMINAR UN TALLER:
+  Borra toda la linea (desde { hasta },)
+
+PARA CAMBIAR DE "PROXIMAMENTE" A "INSCRIPCIONES ABIERTAS":
+  Busca el taller y cambia st:'soon' por st:'open'
+
+
+===============================================================
+3. EDITAR POSTS DEL BLOG
+===============================================================
+
+BUSCAR EN EL CODIGO: const blogPosts=[
+
+Cada post tiene esta estructura:
+
+{
+  cat:'Psicofisica',
+    ^ Categoria (aparece como etiqueta de color)
+
+  title:'Que es la Resonancia Schumann y como te afecta',
+    ^ Titulo del post
+
+  type:'Educativo',
+    ^ Tipo: 'Educativo' o 'Herramienta'
+
+  color:'#8FA89A',
+    ^ Color de la categoria (ver tabla abajo)
+
+  icon:'zap',
+    ^ Icono del thumbnail
+
+  hasArticle:true
+    ^ true = se puede clickear y abre el articulo completo
+      false o no ponerlo = solo aparece en la lista
+},
+
+
+COLORES POR CATEGORIA:
+  Psicofisica  -->  #8FA89A  (verde sage)
+  Tarot        -->  #C9A84C  (dorado)
+  Astrologia   -->  #7BA3C9  (azul celeste)
+  Energia      -->  #C4ABE0  (lavender)
+
+
+PARA AGREGAR UN POST NUEVO A LA LISTA:
+  Agrega un objeto nuevo dentro del array. Ejemplo:
+
+  {cat:'Tarot',title:'Como hacer tu primera tirada de 3 cartas',type:'Herramienta',color:'#C9A84C',icon:'star'},
+
+
+IMPORTANTE SOBRE hasArticle:
+  Si pones hasArticle:true, el post necesita un articulo
+  completo programado en HTML (como el de Mercurio retrogrado).
+  Esto requiere escribir codigo adicional en la funcion
+  showArticle(). Si no sabes hacerlo, pedile a Claude que te
+  lo genere pasandole el contenido del articulo.
+
+  Si no pones hasArticle o pones false, el post aparece en
+  la lista pero no se puede clickear. Esto sirve para posts
+  que todavia no tienen contenido completo.
+
+
+===============================================================
+4. EDITAR TESTIMONIOS
+===============================================================
+
+BUSCAR EN EL CODIGO: class="testimonial"
+
+Vas a encontrar 3 bloques de testimonios en el HTML.
+Cada uno tiene esta forma:
+
+<div class="testimonial">
+  <div class="avatar" style="background:#F0EBF5">L</div>
+  <div>
+    <p class="quote">"Aca va el texto del testimonio."</p>
+    <p class="who">Nombre, edad — Servicio</p>
+  </div>
+</div>
+
+Para editar: cambia el texto dentro de las comillas.
+La letra del avatar es la inicial del nombre.
+
+Para agregar uno nuevo: copia un bloque entero
+(desde <div class="testimonial"> hasta </div></div>)
+y pegalo despues del ultimo. Cambia los textos.
+
+
+===============================================================
+5. EDITAR LUNAS (ya es automatico, pero por si necesitas)
+===============================================================
+
+BUSCAR EN EL CODIGO: const lunarEvents=[
+
+Cada luna tiene:
+
+{
+  date:"2026-04-02T02:12:00Z",
+    ^ Fecha y hora UTC exacta
+
+  type:"Luna llena",
+    ^ "Luna llena" o "Luna nueva"
+
+  sign:"Libra",
+    ^ Signo zodiacal
+
+  msg:"Un momento ideal para..."
+    ^ Mensaje que aparece debajo del countdown
+},
+
+El sistema busca automaticamente la proxima luna futura.
+Cuando pasa una, salta a la siguiente solo.
+
+Ya estan cargadas todas las lunas hasta marzo 2027.
+Si necesitas agregar lunas de 2028 en adelante, agrega
+mas objetos al final del array antes del ];
+
+
+===============================================================
+REGLAS PARA NO ROMPER NADA
+===============================================================
+
+1. NUNCA borres las comillas simples ' ' que rodean textos
+
+2. NUNCA borres las comas , entre campos ni entre objetos
+
+3. NO uses comillas simples DENTRO de los textos
+   MAL:  'it's a test'
+   BIEN: 'it is a test'
+
+4. NO uses acentos ni enie dentro del JavaScript
+   (en el HTML de arriba si se puede, pero en el
+   JavaScript de abajo es mas seguro sin tildes)
+
+5. SIEMPRE hace backup antes de editar
+   Copia el archivo entero antes de hacer cambios
+
+6. Para PROBAR antes de subir:
+   Abri el index.html directo en tu navegador
+   (doble click en el archivo) y verifica que se vea bien
+
+7. Si algo se ROMPIO:
+   Volve al backup o descarga de nuevo desde Claude
+
+
+===============================================================
+COMO SUBIR LOS CAMBIOS A GITHUB
+===============================================================
+
+OPCION A — Editar directo en GitHub:
+  1. Anda a tu repositorio en github.com
+  2. Click en el archivo index.html
+  3. Click en el icono de lapiz (editar)
+  4. Hace los cambios
+  5. Click en "Commit changes"
+  6. En 1-2 minutos se actualiza solo
+
+OPCION B — Reemplazar el archivo completo:
+  1. Anda a tu repositorio en github.com
+  2. Click en el archivo index.html
+  3. Click en el icono de lapiz (editar)
+  4. Selecciona todo (Ctrl+A) y borra
+  5. Pega el contenido nuevo completo
+  6. Click en "Commit changes"
+  7. En 1-2 minutos se actualiza solo
+
+
+===============================================================
+CONTACTO WHATSAPP CONFIGURADO
+===============================================================
+
+Numero actual: 5491176065606
+
+Si cambia el numero en el futuro, busca en el codigo
+"5491176065606" y reemplaza todas las apariciones por
+el numero nuevo (con codigo de pais, sin + ni espacios).
+
+
+===============================================================
+FIN DE LA GUIA
+===============================================================
