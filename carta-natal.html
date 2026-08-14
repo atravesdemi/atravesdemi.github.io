@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E1433" media="(prefers-color-scheme: dark)">
+
+<title>Tu carta natal gratis — Rueda del cielo | A través de Mí</title>
+<meta name="description" content="Calculá tu carta natal gratis: rueda zodiacal, planetas, Quirón, nodos y Lilith. Tu Sol, Luna y Ascendente explicados. Online, sin registro.">
+<link rel="canonical" href="https://atravesdemi.com/carta-natal.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:site_name" content="A través de Mí">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://atravesdemi.com/carta-natal.html">
+<meta property="og:title" content="Tu carta natal gratis — Rueda del cielo">
+<meta property="og:description" content="Cargá tu fecha, hora y lugar de nacimiento y mirá tu carta natal completa. Sin registro y sin costo.">
+<meta property="og:image" content="https://atravesdemi.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
+
+<style>
+:root{
+  --navy:#1E1433;--purple:#5B3F8C;--purple-d:#48306F;--lav:#C4ABE0;--mist:#F0EBF5;--cream:#FAF8F5;
+  --gold:#C9A84C;--gold-d:#8B6914;--gold-soft:#F7F0DC;
+  --ink:#2A2530;--ink-2:#5C5666;--ink-3:#6E6879;--line:#E4DFDA;--line-2:#EFEBE6;
+  --sage:#4F7A63;--sage-soft:#EDF3EF;--blue:#3F6E97;--blue-soft:#EAF1F7;--rose:#A8545A;
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;--s5:3rem;--s6:4rem;
+  --r1:10px;--r2:16px;--r3:24px;--pill:999px;
+  --sh:0 1px 2px rgba(30,20,51,.04),0 10px 28px -14px rgba(30,20,51,.14);
+  --sh-lg:0 2px 6px rgba(30,20,51,.05),0 28px 56px -24px rgba(30,20,51,.22);
+  --ff-d:'Fraunces',Georgia,serif;--ff-b:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --maxw:1080px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{font-family:var(--ff-b);font-size:16px;line-height:1.7;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--purple);color:#fff;padding:12px 20px;border-radius:0 0 var(--r1) 0;font-size:14px;font-weight:500}
+.skip:focus{left:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3);width:100%}
+
+/* Header / footer, iguales al sitio */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line-2)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:60px;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-name{font-family:var(--ff-d);font-size:1rem;font-weight:500;color:var(--navy);white-space:nowrap}
+.nav{display:flex;gap:var(--s3)}
+.nav a{font-size:.875rem;color:var(--ink-2)}
+.nav a:hover{color:var(--navy)}
+.ftr{background:var(--navy);color:var(--lav);padding-block:var(--s5) var(--s4);text-align:center;margin-top:var(--s6)}
+.ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin:12px 0 4px}
+.ftr-tag{font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s3)}
+.ftr-nav{display:flex;justify-content:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s3);font-size:.875rem}
+.ftr-nav a{color:var(--lav);opacity:.8}
+.ftr-copy{font-size:.75rem;color:var(--lav);opacity:.5}
+
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:10px}
+h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2.1rem,1.4rem + 2.8vw,3.2rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:14px}
+.h2{font-family:var(--ff-d);font-weight:400;font-size:clamp(1.6rem,1.2rem + 1.7vw,2.2rem);line-height:1.15;letter-spacing:-.015em}
+.lead{font-size:1.0625rem;color:var(--ink-2);max-width:58ch}
+.hero{text-align:center;padding-block:var(--s5) var(--s4);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-30% 0 auto;height:130%;background:radial-gradient(60% 46% at 50% 20%,rgba(196,171,224,.28),rgba(250,248,245,0) 70%);pointer-events:none}
+.hero>*{position:relative}
+.hero .lead{margin-inline:auto}
+.trust{display:flex;justify-content:center;gap:10px var(--s3);flex-wrap:wrap;margin-top:var(--s3);font-size:.8125rem;color:var(--ink-2);list-style:none}
+.trust li{display:flex;align-items:center;gap:6px}
+.trust svg{color:var(--sage);flex-shrink:0}
+
+/* Formulario */
+form{background:#fff;border:1px solid var(--line-2);border-radius:var(--r3);padding:var(--s3);box-shadow:var(--sh);max-width:820px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--s2)}
+label{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);margin-bottom:5px}
+input,select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:var(--r1);font-family:inherit;font-size:.9375rem;background:var(--cream);color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--purple);outline-offset:1px;border-color:transparent}
+.hint{font-size:.75rem;color:var(--ink-3);margin-top:5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:var(--pill);font-size:.9375rem;font-weight:500;cursor:pointer;font-family:inherit;text-align:center;line-height:1.2;transition:transform .18s,background-color .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 6px 18px -8px rgba(91,63,140,.7)}
+.btn-primary:hover{background:var(--purple-d)}
+.btn-outline{border:1.5px solid var(--purple);color:var(--purple);background:transparent}
+.btn-outline:hover{background:var(--purple);color:#fff}
+.btn-block{display:flex;width:100%}
+.form-foot{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s3);padding-top:var(--s3);border-top:1px solid var(--line-2)}
+.err{color:var(--rose);font-size:.875rem;font-weight:500}
+
+/* ── Buscador de ciudad ────────────────────────────────────── */
+.ciudad-box{position:relative}
+.ciudad-box input{padding-right:36px}
+.ciudad-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:var(--ink-3)}
+.ciudad-x:hover{background:var(--mist);color:var(--navy)}
+.ciudad-lista{position:absolute;z-index:40;top:calc(100% + 6px);left:0;right:0;max-height:264px;overflow-y:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r1);box-shadow:var(--sh-lg);list-style:none;padding:5px}
+.ciudad-lista li{padding:9px 11px;border-radius:7px;font-size:.9375rem;cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.ciudad-lista li:hover,.ciudad-lista li[aria-selected="true"]{background:var(--mist)}
+.ciudad-lista li .pais{font-size:.75rem;color:var(--ink-3);flex-shrink:0}
+.ciudad-lista .vacio{color:var(--ink-3);font-size:.875rem;cursor:default;display:block}
+.ciudad-lista .vacio:hover{background:none}
+.ciudad-sel{font-size:.8125rem;color:var(--sage);font-weight:500;margin-top:6px;min-height:1.2em}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:var(--s2)}
+.chips button{font-size:.8125rem;padding:6px 13px;border-radius:var(--pill);border:1px solid var(--line);background:#fff;color:var(--ink-2);transition:all .16s}
+.chips button:hover{border-color:var(--purple);color:var(--purple)}
+.chips button[aria-pressed="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+.chips .otra{border-style:dashed;color:var(--ink-3)}
+
+/* Resultado */
+.meta-bar{background:var(--mist);border-radius:var(--r2);padding:14px 18px;font-size:.875rem;color:var(--ink-2);margin-bottom:var(--s3);display:flex;gap:var(--s3);flex-wrap:wrap}
+.meta-bar b{color:var(--navy);font-weight:500}
+/* La rueda manda: se lleva ~62% del ancho y su alto define la fila.
+   La tabla se estira a la misma altura y scrollea adentro si hace falta. */
+.chart-row{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);gap:var(--s3);align-items:stretch}
+.chart-col{display:flex;flex-direction:column;min-width:0}
+.chart-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--r3);padding:var(--s2);box-shadow:var(--sh)}
+svg.wheel{width:100%;height:auto;display:block}
+.leyenda{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;font-size:.75rem;color:var(--ink-3);padding:var(--s2) 0 4px}
+.leyenda i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:5px}
+.tabla-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);padding:var(--s3) var(--s2);box-shadow:var(--sh);display:flex;flex-direction:column;min-height:0}
+.tabla-scroll{flex:1;min-height:0;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:.8125rem}
+caption{text-align:left;font-family:var(--ff-d);font-size:1.05rem;font-weight:500;margin-bottom:10px;color:var(--navy);padding-inline:6px}
+th{text-align:left;font-size:.625rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);padding:0 6px 7px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+td{padding:6px 6px 6px 0;border-bottom:1px solid var(--line-2);color:var(--ink-2)}
+td.glifo{font-size:1rem;color:var(--purple);width:22px;padding-left:6px}
+td.nom{color:var(--ink);font-weight:500}
+td.gr{font-variant-numeric:tabular-nums;white-space:nowrap}
+.rx{color:var(--rose);font-weight:600}
+
+/* ── Tarjetas de lectura ───────────────────────────────────── */
+.lectura{margin-top:var(--s5)}
+.lectura-head{text-align:center;max-width:56ch;margin:0 auto var(--s3)}
+.lectura-head h2{font-family:var(--ff-d);font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem);font-weight:400;line-height:1.15;margin-bottom:8px}
+.lectura-head p{font-size:.9375rem;color:var(--ink-2)}
+/* Carrusel: 3 tarjetas por vista en escritorio, 2 en tablet, 1 en celular.
+   Con scroll-snap el arrastre táctil funciona solo; las flechas mueven
+   exactamente un ancho de vista. Todas las tarjetas quedan a la misma altura
+   porque comparten una única fila de grid. */
+.carrusel{position:relative}
+.cards{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - var(--s2)*2)/3);gap:var(--s2);
+       overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+       scrollbar-width:none;-ms-overflow-style:none;padding:2px 2px 6px}
+.cards::-webkit-scrollbar{display:none}
+.card{scroll-snap-align:start;background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);padding:var(--s3);position:relative;display:flex;flex-direction:column}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:var(--s2);margin-top:var(--s2)}
+.car-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--purple);display:grid;place-items:center;transition:border-color .16s,background-color .16s,opacity .16s}
+.car-btn:hover:not([disabled]){border-color:var(--purple);background:var(--mist)}
+.car-btn[disabled]{opacity:.3;cursor:default}
+.car-pos{font-size:.8125rem;color:var(--ink-3);font-variant-numeric:tabular-nums;min-width:112px;text-align:center}
+@media(max-width:900px){ .cards{grid-auto-columns:calc((100% - var(--s2))/2)} }
+@media(max-width:640px){ .cards{grid-auto-columns:100%} }
+.card-h{display:flex;gap:11px;align-items:flex-start;margin-bottom:10px}
+.card .g{font-size:1.35rem;color:var(--purple);line-height:1.1;flex-shrink:0;width:26px;text-align:center;font-weight:600}
+.card h3{font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.25}
+.card .pos{font-size:.75rem;color:var(--ink-3);margin-top:2px}
+.card p{font-size:.9375rem;line-height:1.6;color:var(--ink-2)}
+.card.abierta{box-shadow:var(--sh)}
+.card.abierta::before{content:'';position:absolute;left:0;top:var(--s3);bottom:var(--s3);width:3px;border-radius:0 3px 3px 0;background:var(--sage)}
+
+/* Bloqueada: el encabezado y qué rige son reales; lo tapado son barras,
+   no texto falso — si alguien mira el inspector no encuentra relleno inventado. */
+.card.lock{background:linear-gradient(180deg,#fff,#FCFBFA)}
+.card.lock .rige{font-size:.875rem;line-height:1.55;color:var(--ink-2);margin-bottom:14px}
+.skel{display:grid;gap:8px;filter:blur(3.5px);opacity:.5;user-select:none;pointer-events:none;margin-bottom:14px}
+.skel span{display:block;height:9px;border-radius:5px;background:linear-gradient(90deg,var(--mist),var(--line-2))}
+.skel span:nth-child(2){width:92%}
+.skel span:nth-child(3){width:74%}
+.lock-pie{display:flex;align-items:center;gap:7px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-d);margin-top:auto}
+.lock-pie svg{flex-shrink:0}
+.desbloquear{text-align:center;margin-top:var(--s3)}
+.desbloquear a{font-size:.9375rem;font-weight:500;color:var(--purple);border-bottom:1.5px solid var(--purple);padding-bottom:2px}
+.desbloquear a:hover{color:var(--purple-d)}
+
+/* ============================================================
+   OFERTA — un solo bloque de decisión, dos caminos
+   ============================================================ */
+.oferta{background:var(--navy);color:var(--cream);border-radius:var(--r3);padding:var(--s5) var(--s3);margin-top:var(--s4);position:relative;overflow:hidden}
+.oferta::before{content:'';position:absolute;inset:0;background:radial-gradient(70% 50% at 50% 0%,rgba(196,171,224,.16),transparent 70%)}
+.oferta>*{position:relative}
+.oferta-head{text-align:center;max-width:60ch;margin:0 auto var(--s4)}
+.oferta-head .eyebrow{color:var(--gold)}
+.oferta-head .h2{color:var(--cream);margin-bottom:12px}
+.oferta-head p{color:var(--lav);opacity:.9;font-size:1.0625rem;line-height:1.6}
+.falta{list-style:none;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:var(--s3)}
+.falta li{font-size:.8125rem;color:var(--lav);background:rgba(196,171,224,.12);border:1px solid rgba(196,171,224,.22);padding:6px 14px;border-radius:var(--pill)}
+.falta b{color:var(--gold);font-weight:600}
+
+.planes{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:var(--s3);max-width:860px;margin:0 auto;align-items:start}
+.plan{background:#fff;color:var(--ink);border-radius:var(--r3);padding:var(--s4) var(--s3) var(--s3);display:flex;flex-direction:column;gap:12px;position:relative}
+.plan-dest{box-shadow:0 0 0 2px var(--gold),var(--sh-lg)}
+.plan-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:var(--pill);white-space:nowrap}
+.plan-kicker{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d)}
+.plan h3{font-family:var(--ff-d);font-size:1.3rem;font-weight:500;line-height:1.2}
+.plan .que{font-size:.9375rem;color:var(--ink-2);line-height:1.55}
+.plan .precio{font-family:var(--ff-d);font-size:1.75rem;font-weight:500;color:var(--purple);line-height:1.1;margin-top:4px}
+.plan .precio small{display:block;font-family:var(--ff-b);font-size:.8125rem;font-weight:400;color:var(--ink-3);margin-top:3px}
+.plan ul{list-style:none;display:grid;gap:9px;margin:6px 0 var(--s2)}
+.plan li{display:flex;gap:9px;align-items:flex-start;font-size:.9375rem;line-height:1.5;color:var(--ink-2)}
+.plan li svg{flex-shrink:0;margin-top:4px;color:var(--sage)}
+.plan li.mas{color:var(--navy);font-weight:500}
+.plan .btn{margin-top:auto}
+.plan .micro{font-size:.75rem;color:var(--ink-3);text-align:center;margin-top:10px}
+
+.oferta-foot{max-width:60ch;margin:var(--s4) auto 0;text-align:center}
+.oferta-foot p{font-size:.875rem;color:var(--lav);opacity:.75;line-height:1.6}
+.prueba{background:rgba(255,255,255,.06);border:1px solid rgba(196,171,224,.18);border-radius:var(--r2);padding:var(--s3);max-width:56ch;margin:var(--s4) auto 0;text-align:center}
+.prueba blockquote{font-family:var(--ff-d);font-size:1.0625rem;line-height:1.5;color:var(--cream)}
+.prueba figcaption{font-size:.8125rem;color:var(--lav);opacity:.8;margin-top:10px}
+
+@media(max-width:860px){ .chart-row{grid-template-columns:1fr} }
+@media(max-width:720px){
+  .brand-name{display:none}
+  .nav{gap:var(--s2)}
+  .nav a{font-size:.8125rem}
+  .wrap{padding-inline:var(--s2)}
+  .oferta{padding:var(--s4) var(--s2);border-radius:var(--r2)}
+}
+@media(prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} .btn:hover{transform:none} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
+      <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+      <span class="brand-name">A través de Mí</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#/">Inicio</a>
+      <a href="index.html#/servicios">Servicios</a>
+      <a href="index.html#/herramientas">Herramientas</a>
+      <a href="index.html#/blog">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Herramienta gratuita</span>
+      <h1>Tu carta natal, dibujada en un minuto.</h1>
+      <p class="lead">Cargá tu fecha, hora y lugar de nacimiento y mirá el mapa del cielo exacto del momento en que llegaste. Sin registro, sin costo, sin dejar tu mail.</p>
+      <ul class="trust">
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Se calcula en tu navegador: tus datos no viajan a ningún lado</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Incluye Quirón, nodos lunares y Lilith</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <form id="f">
+      <div class="grid">
+        <div>
+          <label for="fecha">Fecha de nacimiento</label>
+          <input type="date" id="fecha" required value="" min="1900-01-01" max="2035-12-31">
+        </div>
+        <div>
+          <label for="hora">Hora de nacimiento</label>
+          <input type="time" id="hora" required value="12:00">
+          <p class="hint">Buscala en tu partida de nacimiento. Cada 4 minutos de error mueven 1° tu Ascendente.</p>
+        </div>
+        <div>
+          <label for="ciudad-q">Lugar de nacimiento</label>
+          <div class="ciudad-box">
+            <input type="text" id="ciudad-q" autocomplete="off" spellcheck="false"
+                   role="combobox" aria-expanded="false" aria-controls="ciudad-lista" aria-autocomplete="list"
+                   placeholder="Escribí las primeras letras…">
+            <button type="button" class="ciudad-x" id="ciudad-x" aria-label="Borrar" hidden>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+            <ul class="ciudad-lista" id="ciudad-lista" role="listbox" aria-label="Ciudades" hidden></ul>
+          </div>
+          <p class="ciudad-sel" id="ciudad-sel" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="chips" id="ciudad-chips" aria-label="Ciudades más elegidas"></div>
+
+      <div class="grid" id="manual" hidden style="margin-top:var(--s2)">
+        <div>
+          <label for="lat">Latitud</label>
+          <input type="number" id="lat" step="0.0001" placeholder="-34.6037">
+          <p class="hint">Sur en negativo</p>
+        </div>
+        <div>
+          <label for="lon">Longitud</label>
+          <input type="number" id="lon" step="0.0001" placeholder="-58.3816">
+          <p class="hint">Oeste en negativo</p>
+        </div>
+      </div>
+      <div class="form-foot">
+        <button type="submit" class="btn btn-primary" id="go">Ver mi carta natal</button>
+        <span class="err" id="err" role="alert"></span>
+      </div>
+    </form>
+  </section>
+
+  <section class="wrap" id="out" hidden style="margin-top:var(--s5)">
+    <div class="meta-bar" id="meta"></div>
+
+    <div class="chart-row">
+      <div class="chart-col">
+        <div class="chart-card"><svg class="wheel" id="wheel" viewBox="0 0 660 660" role="img" aria-label="Rueda zodiacal con las posiciones planetarias"></svg></div>
+        <div class="leyenda">
+          <span><i style="background:#8B6914"></i>Conjunción</span>
+          <span><i style="background:#A8545A"></i>Oposición</span>
+          <span><i style="border-top:2px dashed #A8545A;height:0"></i>Cuadratura</span>
+          <span><i style="background:#3F6E97"></i>Trígono</span>
+          <span><i style="border-top:2px dashed #4F7A63;height:0"></i>Sextil</span>
+        </div>
+      </div>
+      <div class="tabla-card">
+        <div class="tabla-scroll">
+          <table id="t-cuerpos"><caption>Tus planetas y puntos</caption>
+            <thead><tr><th></th><th>Cuerpo</th><th>Signo y grado</th><th>Casa</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="lectura" id="lectura"></div>
+
+    <!-- ══════════════ OFERTA ══════════════ -->
+    <section class="oferta" id="oferta" style="scroll-margin-top:76px">
+      <div class="oferta-head">
+        <span class="eyebrow">Hasta acá llega lo automático</span>
+        <h2 class="h2" id="of-titulo">Viste tres piezas. Tu carta tiene catorce.</h2>
+        <p id="of-bajada">Sol, Luna y Ascendente cuentan quién sos. Lo que todavía no viste es cómo dialogan tus planetas entre sí y en qué parte concreta de tu vida se juega cada uno. Eso no lo puede escribir un algoritmo.</p>
+        <ul class="falta" id="of-falta"></ul>
+      </div>
+
+      <div class="planes">
+        <article class="plan">
+          <span class="plan-kicker">Opción 1</span>
+          <h3>Tu carta escrita</h3>
+          <p class="que">Mayra lee tu carta completa y te la devuelve en un documento personalizado, para que lo tengas y lo releas cuando quieras.</p>
+          <p class="precio" id="p1-precio">A consultar<small id="p1-nota">Te paso el valor por WhatsApp</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Tus aspectos: qué tensiones y qué facilidades traés de fábrica</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Las 12 casas: vínculos, trabajo, dinero, familia, cuerpo</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Quirón, nodos y Lilith: la herida, el camino y lo que escondés</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span id="p1-entrega">Lo recibís por WhatsApp o mail</span></li>
+          </ul>
+          <a class="btn btn-outline btn-block" id="cta-doc" href="#">Quiero mi carta escrita</a>
+          <p class="micro">Sin turno: la escribe y te la manda.</p>
+        </article>
+
+        <article class="plan plan-dest">
+          <span class="plan-tag">La más elegida</span>
+          <span class="plan-kicker">Opción 2</span>
+          <h3>Tu carta, leída con vos</h3>
+          <p class="que">El documento completo <b>más</b> un encuentro uno a uno con Mayra para que le preguntes lo que quieras sobre tu carta.</p>
+          <p class="precio" id="p2-precio">A consultar<small id="p2-nota">Te paso el valor por WhatsApp</small></p>
+          <ul>
+            <li class="mas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Todo lo de la opción 1, y además:</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span id="p2-duracion">Una sesión de 30 a 45 minutos, uno a uno, online o presencial</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Traés tus preguntas: una decisión, un vínculo, algo que se repite</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Mayra te muestra dónde se ve eso en tu carta y qué hacer con eso</span></li>
+          </ul>
+          <a class="btn btn-primary btn-block" id="cta-sesion" href="#">Quiero la carta y la sesión</a>
+          <p class="micro">Coordinamos día y horario por WhatsApp.</p>
+        </article>
+      </div>
+
+      <div class="oferta-foot">
+        <p>Los dos empiezan igual: me escribís, te confirmo el valor vigente y las formas de pago, y recién ahí decidís. La primera charla no tiene costo ni te compromete a nada.</p>
+      </div>
+
+      <figure class="prueba">
+        <blockquote>Muchas piezas que no entendía de mi vida encajaron por primera vez.</blockquote>
+        <figcaption>Valentina, 34 · Carta natal</figcaption>
+      </figure>
+    </section>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <svg width="34" height="31" viewBox="0 0 48 44" fill="none" style="margin:0 auto" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+    <p class="ftr-name">A través de Mí</p>
+    <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+    <nav class="ftr-nav" aria-label="Pie de página">
+      <a href="index.html#/">Inicio</a>
+      <a href="index.html#/servicios">Servicios</a>
+      <a href="index.html#/herramientas">Herramientas</a>
+      <a href="index.html#/blog">Blog</a>
+    </nav>
+    <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span></p>
+    <p class="ftr-copy" style="margin-top:8px;max-width:56ch;margin-inline:auto">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+  </div>
+</footer>
+
+<script src="vendor/circular-natal-horoscope.js"></script>
+<script>
+(function(){
+'use strict';
+
+/* ══════════════════════════════════════════════════════════════
+   ⚙️ CONFIGURACIÓN
+   ══════════════════════════════════════════════════════════════ */
+var CONFIG = {
+  tel: '5493512040561',
+
+  // ⚠️ REVISAR CON MAYRA. Poné el número (ej: 35000) y aparece solo.
+  // Vacío = muestra "A consultar".
+  precioDocumento: '',
+  precioSesion: '',
+
+  // Textos de entrega. Ajustar a lo que Mayra pueda sostener.
+  entregaDocumento: 'Lo recibís por WhatsApp o mail',
+  duracionSesion: 'Una sesión de 30 a 45 minutos, uno a uno, online o presencial',
+
+  ga4: ''
+};
+
+var LIB = window.CNH || {};
+var Origin = LIB.Origin, Horoscope = LIB.Horoscope;
+
+/* ── Analytics ─────────────────────────────────────────────── */
+window.dataLayer = window.dataLayer || [];
+function track(n,p){ window.dataLayer.push(Object.assign({event:n}, p||{})); if(typeof window.gtag==='function') window.gtag('event',n,p||{}); }
+if(CONFIG.ga4){
+  var gs=document.createElement('script'); gs.async=true;
+  gs.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.ga4; document.head.appendChild(gs);
+  window.gtag=function(){window.dataLayer.push(arguments);};
+  window.gtag('js',new Date()); window.gtag('config',CONFIG.ga4);
+}
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href*="wa.me"]'); if(!a) return;
+  track('whatsapp_click',{ubicacion:a.id||'carta-natal'});
+});
+
+/* ── Ciudades ──────────────────────────────────────────────── */
+// CABA usa la coordenada del atlas astrológico (58°27'W / 34°36'S), la misma que astro.com.
+// El centro geográfico "de Google" está 6' más al este y eso alcanza para mover de casa a
+// un planeta que caiga pegado a una cúspide.
+var CIUDADES = [
+  ['Buenos Aires (CABA)',-34.6000,-58.4500],['La Plata',-34.9215,-57.9545],['Mar del Plata',-38.0055,-57.5426],
+  ['Bahía Blanca',-38.7183,-62.2661],['Tandil',-37.3217,-59.1332],['San Nicolás',-33.3339,-60.2118],
+  ['Córdoba',-31.4201,-64.1888],['Río Cuarto',-33.1301,-64.3499],['Villa María',-32.4075,-63.2400],
+  ['Villa Carlos Paz',-31.4241,-64.4978],['Rosario',-32.9442,-60.6505],['Santa Fe',-31.6333,-60.7000],
+  ['Rafaela',-31.2503,-61.4867],['Paraná',-31.7413,-60.5115],['Concordia',-31.3930,-58.0209],
+  ['Gualeguaychú',-33.0092,-58.5172],['Corrientes',-27.4692,-58.8306],['Resistencia',-27.4514,-58.9867],
+  ['Posadas',-27.3671,-55.8961],['Formosa',-26.1775,-58.1781],['Santiago del Estero',-27.7951,-64.2615],
+  ['San Miguel de Tucumán',-26.8083,-65.2176],['Salta',-24.7859,-65.4117],['San Salvador de Jujuy',-24.1858,-65.2995],
+  ['Catamarca',-28.4696,-65.7852],['La Rioja',-29.4131,-66.8558],['San Juan',-31.5375,-68.5364],
+  ['Mendoza',-32.8895,-68.8458],['San Rafael',-34.6177,-68.3301],['San Luis',-33.2950,-66.3356],
+  ['Villa Mercedes',-33.6757,-65.4578],['Santa Rosa (La Pampa)',-36.6167,-64.2833],['Neuquén',-38.9516,-68.0591],
+  ['San Carlos de Bariloche',-41.1335,-71.3103],['General Roca',-39.0333,-67.5833],['Viedma',-40.8135,-62.9967],
+  ['Rawson',-43.3002,-65.1023],['Trelew',-43.2489,-65.3051],['Puerto Madryn',-42.7692,-65.0385],
+  ['Comodoro Rivadavia',-45.8641,-67.4966],['Río Gallegos',-51.6230,-69.2168],['El Calafate',-50.3379,-72.2648],
+  ['Ushuaia',-54.8019,-68.3030],['Río Grande (TdF)',-53.7877,-67.7093],
+  ['— — —',null,null],
+  ['Montevideo, UY',-34.9011,-56.1645],['Santiago, CL',-33.4489,-70.6693],['Asunción, PY',-25.2637,-57.5759],
+  ['São Paulo, BR',-23.5505,-46.6333],['Lima, PE',-12.0464,-77.0428],['Bogotá, CO',4.7110,-74.0721],
+  ['Ciudad de México, MX',19.4326,-99.1332],['Madrid, ES',40.4168,-3.7038],['Barcelona, ES',41.3851,2.1734],
+  ['Miami, US',25.7617,-80.1918],['Nueva York, US',40.7128,-74.0060]
+];
+
+var SIGNOS = ['Aries','Tauro','Géminis','Cáncer','Leo','Virgo','Libra','Escorpio','Sagitario','Capricornio','Acuario','Piscis'];
+var VS = '︎';  // fuerza presentación de texto, si no salen como emoji
+var SIG_GLIFO = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'].map(function(g){return g+VS;});
+var GLIFO = {sun:'☉',moon:'☽',mercury:'☿',venus:'♀',mars:'♂',jupiter:'♃',saturn:'♄',uranus:'♅',
+  neptune:'♆',pluto:'♇',chiron:'⚷',northnode:'☊',southnode:'☋',lilith:'⚸'};
+Object.keys(GLIFO).forEach(function(k){ GLIFO[k]+=VS; });
+GLIFO.ascendant = 'AC';
+var NOMBRE = {sun:'Sol',moon:'Luna',ascendant:'Ascendente',mercury:'Mercurio',venus:'Venus',mars:'Marte',
+  jupiter:'Júpiter',saturn:'Saturno',uranus:'Urano',neptune:'Neptuno',pluto:'Plutón',chiron:'Quirón',
+  northnode:'Nodo Norte',southnode:'Nodo Sur',lilith:'Lilith'};
+// El Ascendente va tercero: es el dato que más busca la gente después de Sol y Luna
+var ORDEN = ['sun','moon','ascendant','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto','chiron','northnode','southnode','lilith'];
+var ABIERTOS = ['sun','moon','ascendant'];   // las tres tarjetas que se leen gratis
+
+/* ══════════════════════════════════════════════════════════════
+   TEXTOS DE LAS TARJETAS ABIERTAS
+   Un texto por signo para Sol, Luna y Ascendente (36 en total).
+   ⚠️ Son un primer borrador: reemplazar por la voz de Mayra.
+   ══════════════════════════════════════════════════════════════ */
+var TEXTO = {
+  sun: {
+    'Aries':'Viniste a aprender a arrancar. Tu energía se enciende cuando algo empieza y se apaga cuando hay que sostener la rutina. Tu desafío no es tener coraje: es tener paciencia.',
+    'Tauro':'Necesitás que las cosas tengan cuerpo: que se toquen, que duren, que se disfruten. Construís despacio y bien. Tu desafío es soltar lo que ya no sirve, aunque te haya costado conseguirlo.',
+    'Géminis':'Tu manera de existir es preguntando. Aprendés rápido, te aburrís rápido y conectás ideas que otros no ven juntas. Tu desafío es profundizar en algo antes de saltar a lo siguiente.',
+    'Cáncer':'Todo lo procesás desde el afecto: lo que sentís es tu forma de saber. Cuidás y contenés casi sin darte cuenta. Tu desafío es cuidarte a vos con esa misma dedicación.',
+    'Leo':'Necesitás crear algo que lleve tu marca y que alguien lo vea. No es vanidad, es tu manera de existir. Tu desafío es brillar sin depender de que te aplaudan.',
+    'Virgo':'Ves el detalle que falta y el error que nadie notó. Servís, ordenás, mejorás. Tu desafío es aceptar que algo puede estar bien sin estar perfecto. Sobre todo vos.',
+    'Libra':'Te construís en el vínculo: pensás mejor cuando hay alguien enfrente. Buscás justicia y belleza en partes iguales. Tu desafío es sostener tu posición aunque desarme la armonía.',
+    'Escorpio':'No te alcanza la superficie: necesitás saber qué hay abajo. Atravesás crisis que a otros los romperían y salís transformado. Tu desafío es confiar antes de tener todas las pruebas.',
+    'Sagitario':'Necesitás sentido: hacer algo solo porque toca te seca. Buscás horizonte, viaje, idea grande. Tu desafío es comprometerte con algo concreto sin sentir que perdés libertad.',
+    'Capricornio':'Tenés una meta aunque no la digas, y una paciencia que a otros les falta. Construís para que dure. Tu desafío es disfrutar el camino y no solamente el resultado.',
+    'Acuario':'Ves desde afuera lo que otros ven desde adentro. Te incomoda lo que se hace porque siempre fue así. Tu desafío es acercarte sin sentir que perdés independencia.',
+    'Piscis':'Percibís lo que no se dice. Tenés una sensibilidad que es don o desborde según cómo la cuides. Tu desafío es poner límites sin sentir que estás traicionando a alguien.'
+  },
+  moon: {
+    'Aries':'Necesitás actuar para calmarte. Te enojás rápido y se te pasa rápido, y te hace mal quedarte con algo guardado. Pedí espacio para moverte cuando algo te desborda.',
+    'Tauro':'Te calma lo concreto: comida rica, tu cama, una rutina que no cambie. Necesitás sentir que no te van a mover el piso. Los cambios bruscos te cuestan más de lo que admitís.',
+    'Géminis':'Necesitás hablar lo que sentís para entender qué estás sintiendo. El silencio te angustia más que el conflicto. Buscá a alguien que te deje pensar en voz alta.',
+    'Cáncer':'Sentís todo con una intensidad que a veces te sobrepasa, y tenés memoria emocional larga. Necesitás un lugar y personas donde no tengas que actuar de nada.',
+    'Leo':'Necesitás que te registren: que alguien note cómo estás sin que tengas que explicarlo. Cuando te sentís invisible te apagás, y ahí es justo cuando más necesitás que te busquen.',
+    'Virgo':'Ordenás para calmarte: cuando algo te angustia, resolvés tareas. Necesitás sentirte útil, y te cuesta pedir ayuda porque preferís no molestar a nadie.',
+    'Libra':'Necesitás paz en tus vínculos para estar bien. El conflicto te desestabiliza más de lo normal. Cuidado con ceder tanto que después no sepas qué era lo que querías.',
+    'Escorpio':'Sentís en profundidad o no sentís. Necesitás intimidad real, no charla de superficie. Te cuesta confiar, y cuando confiás lo hacés entero.',
+    'Sagitario':'Te calma el aire: salir, viajar, cambiar de escenario. Te ahoga sentirte atrapado. Necesitás creer que hay algo más grande que lo que estás viviendo ahora.',
+    'Capricornio':'Aprendiste temprano a arreglártelas y ahora te cuesta mostrarte frágil. Necesitás sentirte capaz. Pedir ayuda no te resta nada: te descansa.',
+    'Acuario':'Necesitás espacio. Cuando algo te desborda te desconectás para mirarlo desde afuera. No es frialdad, es tu manera de procesar, pero avisá que estás haciendo eso.',
+    'Piscis':'Absorbés el clima emocional de donde estés y no siempre distinguís qué es tuyo. Necesitás soledad, silencio o algo artístico para volver a tu centro.'
+  },
+  ascendant: {
+    'Aries':'Llegás con energía y vas de frente. Te leen decidido, a veces impaciente. Tu manera de entrar a los lugares es haciendo, no observando.',
+    'Tauro':'Transmitís calma y solidez. La gente se siente segura cerca tuyo y te cuenta cosas rápido. Te tomás tu tiempo para entrar en confianza, y eso también se nota.',
+    'Géminis':'Caés simpático y curioso: preguntás, conectás, hacés reír. Te leen liviano, aunque adentro estés procesando bastante más de lo que mostrás.',
+    'Cáncer':'Se te nota el cuidado. Te perciben cálido y protector, y suelen buscarte cuando están mal. Te cuesta el primer acercamiento, pero después no soltás.',
+    'Leo':'Entrás y se nota. Tenés presencia aunque no hagas nada especial. Te leen seguro y generoso, y esperan de vos más iniciativa de la que a veces querés dar.',
+    'Virgo':'Transmitís prolijidad y criterio: te consultan y confían en tu juicio. Podés parecer reservado al principio, pero no es distancia, es que estás observando.',
+    'Libra':'Caés bien casi sin intentarlo. Tenés registro del otro y sentido estético. El riesgo es que te lean complaciente cuando en realidad estás midiendo el terreno.',
+    'Escorpio':'Generás una impresión fuerte: o atraés o incomodás, rara vez pasás desapercibido. La gente intuye que hay más de lo que mostrás, y tiene razón.',
+    'Sagitario':'Llegás con humor y con ganas. Te leen optimista y directo, a veces demasiado directo. Transmitís que estás de paso aunque te quedes.',
+    'Capricornio':'Te leen serio y confiable antes de conocerte. Proyectás más edad y más autoridad de la que sentís tener. Aflojás recién cuando confiás.',
+    'Acuario':'Se nota que sos distinto y no te molesta. Te leen independiente y un poco inasible: cercano en el trato, reservado en lo íntimo.',
+    'Piscis':'Transmitís suavidad y la gente baja la guardia con vos. Te leen sensible y sin filo. Te camuflás en cada ambiente, y a veces te perdés ahí.'
+  }
+};
+
+/* Qué rige cada cuerpo — se muestra en las tarjetas bloqueadas */
+var RIGE = {
+  mercury:'cómo pensás, cómo aprendés y cómo decís lo que decís',
+  venus:'cómo querés, qué te gusta y de qué manera te vinculás',
+  mars:'cómo deseás, cómo peleás y cómo salís a buscar lo que querés',
+  jupiter:'por dónde crecés y dónde las cosas se te dan más fácil',
+  saturn:'dónde te exigís, dónde te cuesta y dónde madurás',
+  uranus:'dónde rompés con lo esperable y necesitás hacerlo a tu modo',
+  neptune:'dónde te inspirás y dónde también te confundís',
+  pluto:'dónde te transformás, aunque no lo elijas',
+  chiron:'tu herida más vieja y lo que justamente por eso podés sanar en otros',
+  northnode:'hacia dónde va tu camino en esta vida',
+  southnode:'lo que ya traés aprendido y te resulta cómodo',
+  lilith:'lo que reprimís y lo que no estás dispuesto a negociar'
+};
+var COLOR_ASP = {conjunction:'#8B6914',opposition:'#A8545A',square:'#A8545A',trine:'#3F6E97',sextile:'#4F7A63'};
+var DASH_ASP  = {square:'4 3',sextile:'4 3'};
+
+var $ = function(s){ return document.querySelector(s); };
+var RAD = Math.PI/180;
+function norm(d){ d%=360; return d<0?d+360:d; }
+function signoDe(l){ return Math.floor(norm(l)/30); }
+function gradoEnSigno(l){ return norm(l)%30; }
+function fmtGrado(l){ var g=gradoEnSigno(l),d=Math.floor(g),m=Math.round((g-d)*60); if(m===60){d+=1;m=0;} return d+'° '+String(m).padStart(2,'0')+"'"; }
+function wa(txt){ return 'https://wa.me/'+CONFIG.tel+'?text='+encodeURIComponent(txt); }
+function money(v){ return (v===''||v==null) ? null : '$'+Number(v).toLocaleString('es-AR'); }
+
+var seleccion = null;   // ciudad elegida: {i, nombre, lat, lon}
+
+(function(){
+  /* Buscador con filtrado por texto. Un <select> de 55 ítems obliga a barrer
+     toda la lista; escribiendo dos letras se llega en un gesto, y escala si
+     mañana hay 500 ciudades. Los chips cubren los casos más frecuentes. */
+  var ATAJOS = ['Buenos Aires (CABA)','Córdoba','Rosario','Mendoza','La Plata','Mar del Plata','San Miguel de Tucumán'];
+  var input=$('#ciudad-q'), lista=$('#ciudad-lista'), chips=$('#ciudad-chips'),
+      selTxt=$('#ciudad-sel'), btnX=$('#ciudad-x');
+  var idx=-1, filtradas=[];
+
+  // Índice sin tildes, para que "cordoba" encuentre "Córdoba"
+  var BUSCABLE = CIUDADES.map(function(c){
+    return c[1]===null ? null : c[0].normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  });
+
+  function elegir(i){
+    var c = CIUDADES[i];
+    seleccion = {i:i, nombre:c[0], lat:c[1], lon:c[2]};
+    input.value = c[0];
+    selTxt.textContent = '✓ ' + c[0];
+    cerrar();
+    btnX.hidden = false;
+    $('#manual').hidden = true;
+    Array.prototype.forEach.call(chips.querySelectorAll('button[data-i]'), function(b){
+      b.setAttribute('aria-pressed', String(+b.dataset.i === i));
+    });
+  }
+  function cerrar(){ lista.hidden = true; input.setAttribute('aria-expanded','false'); idx = -1; }
+
+  function abrir(q){
+    var s = (q||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+    filtradas = [];
+    BUSCABLE.forEach(function(b,i){ if(b!==null && (!s || b.indexOf(s)!==-1)) filtradas.push(i); });
+    if(!filtradas.length){
+      lista.innerHTML = '<li class="vacio">No encontré esa ciudad. Podés cargar las coordenadas a mano.</li>';
+    }else{
+      lista.innerHTML = filtradas.slice(0,60).map(function(i){
+        var n = CIUDADES[i][0], p = n.indexOf(', ')>-1 ? n.split(', ')[1] : 'AR';
+        return '<li role="option" data-i="'+i+'" aria-selected="false">'+
+               '<span>'+n.replace(/, [A-Z]{2}$/,'')+'</span><span class="pais">'+p+'</span></li>';
+      }).join('');
+    }
+    lista.hidden = false;
+    input.setAttribute('aria-expanded','true');
+    idx = -1;
+  }
+
+  function marcar(){
+    var items = lista.querySelectorAll('li[data-i]');
+    Array.prototype.forEach.call(items, function(li,n){ li.setAttribute('aria-selected', String(n===idx)); });
+    if(idx>=0 && items[idx]) items[idx].scrollIntoView({block:'nearest'});
+  }
+
+  input.addEventListener('input', function(){ btnX.hidden = !input.value; selTxt.textContent=''; seleccion=null; abrir(input.value); });
+  input.addEventListener('focus', function(){ if(!seleccion) abrir(input.value); });
+  input.addEventListener('keydown', function(e){
+    var items = lista.querySelectorAll('li[data-i]');
+    if(e.key==='ArrowDown'){ e.preventDefault(); if(lista.hidden) abrir(input.value); idx=Math.min(idx+1,items.length-1); marcar(); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); idx=Math.max(idx-1,0); marcar(); }
+    else if(e.key==='Enter'){ if(!lista.hidden && idx>=0){ e.preventDefault(); elegir(+items[idx].dataset.i); } }
+    else if(e.key==='Escape'){ cerrar(); }
+  });
+  lista.addEventListener('mousedown', function(e){
+    var li = e.target.closest('li[data-i]');
+    if(li){ e.preventDefault(); elegir(+li.dataset.i); }
+  });
+  btnX.addEventListener('click', function(){
+    input.value=''; selTxt.textContent=''; seleccion=null; btnX.hidden=true;
+    Array.prototype.forEach.call(chips.querySelectorAll('button[data-i]'),function(b){ b.setAttribute('aria-pressed','false'); });
+    input.focus(); abrir('');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.ciudad-box')) cerrar();
+  });
+
+  chips.innerHTML = ATAJOS.map(function(n){
+    var i = CIUDADES.findIndex(function(c){ return c[0]===n; });
+    return i>-1 ? '<button type="button" data-i="'+i+'" aria-pressed="false">'+n.replace(' (CABA)','')+'</button>' : '';
+  }).join('') + '<button type="button" class="otra" id="chip-otra">Otra ciudad…</button>';
+
+  chips.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    if(b.id==='chip-otra'){
+      $('#manual').hidden = false;
+      seleccion = null; input.value=''; selTxt.textContent='';
+      $('#lat').focus();
+      return;
+    }
+    elegir(+b.dataset.i);
+  });
+
+  elegir(0);   // Buenos Aires por defecto
+})();
+
+/* ── Rueda ─────────────────────────────────────────────────── */
+var CX=330, CY=330, R_EXT=300, R_ZOD=258, R_PLA=222, R_CAS=178, R_ASP=170, ascLon=0;
+function ang(l){ return (180 + (norm(l)-ascLon))*RAD; }
+function pt(l,r){ var a=ang(l); return [CX+r*Math.cos(a), CY-r*Math.sin(a)]; }
+function el(t,a,x){ var e=document.createElementNS('http://www.w3.org/2000/svg',t); for(var k in a) e.setAttribute(k,a[k]); if(x!=null) e.textContent=x; return e; }
+function linea(l1,r1,l2,r2,a){ var p=pt(l1,r1),q=pt(l2,r2); return el('line',Object.assign({x1:p[0],y1:p[1],x2:q[0],y2:q[1]},a)); }
+function sector(a1l,a2l,ri,ro,fill){
+  var a1=ang(a1l),a2=ang(a2l);
+  var p=[CX+ro*Math.cos(a1),CY-ro*Math.sin(a1),CX+ro*Math.cos(a2),CY-ro*Math.sin(a2),
+         CX+ri*Math.cos(a2),CY-ri*Math.sin(a2),CX+ri*Math.cos(a1),CY-ri*Math.sin(a1)];
+  return el('path',{d:'M'+p[0]+' '+p[1]+' A'+ro+' '+ro+' 0 0 0 '+p[2]+' '+p[3]+' L'+p[4]+' '+p[5]+' A'+ri+' '+ri+' 0 0 1 '+p[6]+' '+p[7]+' Z',fill:fill});
+}
+function separar(items,min){
+  var arr=items.slice().sort(function(a,b){return a.lon-b.lon;});
+  arr.forEach(function(i){ i.draw=norm(i.lon); });
+  for(var k=0;k<60;k++){
+    var movio=false;
+    for(var i=0;i<arr.length;i++){
+      var a=arr[i], b=arr[(i+1)%arr.length], gap=norm(b.draw-a.draw);
+      if(gap<min){ var p=(min-gap)/2; a.draw=norm(a.draw-p); b.draw=norm(b.draw+p); movio=true; }
+    }
+    if(!movio) break;
+  }
+  return arr;
+}
+function dibujar(cuerpos,casas,aspectos){
+  var svg=$('#wheel'); svg.innerHTML=''; var g=el('g',{}); svg.appendChild(g);
+  for(var s=0;s<12;s++){
+    g.appendChild(sector(s*30,s*30+30,R_ZOD,R_EXT, s%2?'#FFFFFF':'#F7F4F9'));
+    g.appendChild(linea(s*30,R_ZOD,s*30,R_EXT,{stroke:'#E4DFDA','stroke-width':1}));
+    var c=pt(s*30+15,(R_ZOD+R_EXT)/2);
+    g.appendChild(el('text',{x:c[0],y:c[1],'text-anchor':'middle','dominant-baseline':'central','font-size':22,fill:'#8B6914'},SIG_GLIFO[s]));
+  }
+  [R_EXT,R_ZOD,R_CAS,R_ASP].forEach(function(r){ g.appendChild(el('circle',{cx:CX,cy:CY,r:r,fill:'none',stroke:'#E4DFDA','stroke-width':1})); });
+  for(var d=0;d<360;d++){
+    var L=d%10===0?9:(d%5===0?6:3);
+    g.appendChild(linea(d,R_ZOD,d,R_ZOD-L,{stroke:'#E4DFDA','stroke-width':d%10===0?1:.6}));
+  }
+  casas.forEach(function(h){
+    var ang4=(h.id===1||h.id===4||h.id===7||h.id===10);
+    g.appendChild(linea(h.lon,R_ASP,h.lon,R_ZOD,{stroke:ang4?'#5B3F8C':'#E4DFDA','stroke-width':ang4?1.6:1,'stroke-dasharray':ang4?'':'3 3'}));
+    var nx=casas[h.id%12], mid=norm(h.lon+norm(nx.lon-h.lon)/2), p=pt(mid,R_CAS+14);
+    g.appendChild(el('text',{x:p[0],y:p[1],'text-anchor':'middle','dominant-baseline':'central','font-size':11,fill:'#6E6879'},h.id));
+  });
+  [[casas[0].lon,'AC'],[casas[9].lon,'MC']].forEach(function(x){
+    var p=pt(x[0],R_EXT+13);
+    g.appendChild(el('text',{x:p[0],y:p[1],'text-anchor':'middle','dominant-baseline':'central','font-size':11,'font-weight':600,fill:'#5B3F8C'},x[1]));
+  });
+  aspectos.forEach(function(a){
+    var p1=cuerpos.filter(function(c){return c.key===a.point1Key;})[0];
+    var p2=cuerpos.filter(function(c){return c.key===a.point2Key;})[0];
+    var col=COLOR_ASP[a.aspectKey];
+    if(!p1||!p2||!col) return;
+    g.appendChild(linea(p1.lon,R_ASP,p2.lon,R_ASP,{stroke:col,'stroke-width':1,'stroke-opacity':.55,'stroke-dasharray':DASH_ASP[a.aspectKey]||''}));
+  });
+  separar(cuerpos,7).forEach(function(c){
+    g.appendChild(linea(c.lon,R_ZOD-9,c.draw,R_PLA+13,{stroke:'#C4ABE0','stroke-width':1}));
+    var p=pt(c.draw,R_PLA);
+    g.appendChild(el('text',{x:p[0],y:p[1],'text-anchor':'middle','dominant-baseline':'central','font-size':19,fill:'#5B3F8C'},GLIFO[c.key]||'•'));
+    var q=pt(c.draw,R_PLA-21);
+    g.appendChild(el('text',{x:q[0],y:q[1],'text-anchor':'middle','dominant-baseline':'central','font-size':9.5,fill:'#6E6879'},Math.floor(gradoEnSigno(c.lon))+'°'+(c.retro?' ℞':'')));
+  });
+}
+
+/* ── Cálculo ───────────────────────────────────────────────── */
+$('#f').addEventListener('submit', function(e){
+  e.preventDefault();
+  var err=$('#err'); err.textContent='';
+  if(!Origin||!Horoscope){ err.textContent='No se pudo cargar el motor de cálculo. Recargá la página.'; return; }
+
+  var fecha=$('#fecha').value, hora=$('#hora').value;
+  if(!fecha||!hora){ err.textContent='Completá fecha y hora.'; return; }
+
+  var lat,lon,lugar;
+  if(!$('#manual').hidden){
+    lat=parseFloat($('#lat').value); lon=parseFloat($('#lon').value);
+    if(isNaN(lat)||isNaN(lon)){ err.textContent='Cargá latitud y longitud.'; $('#lat').focus(); return; }
+    lugar=lat.toFixed(4)+', '+lon.toFixed(4);
+  }else if(seleccion){
+    lat=seleccion.lat; lon=seleccion.lon; lugar=seleccion.nombre;
+  }else{
+    err.textContent='Elegí tu lugar de nacimiento de la lista.'; $('#ciudad-q').focus(); return;
+  }
+
+  var f=fecha.split('-').map(Number), h=hora.split(':').map(Number), origin, hz;
+  try{
+    origin=new Origin({year:f[0],month:f[1]-1,date:f[2],hour:h[0],minute:h[1],latitude:lat,longitude:lon});
+    hz=new Horoscope({origin:origin,houseSystem:'placidus',zodiac:'tropical',
+      aspectPoints:['bodies','points','angles'],aspectWithPoints:['bodies','points','angles'],
+      aspectTypes:['major'],language:'es'});
+  }catch(ex){ err.textContent='No se pudo calcular: '+ex.message; return; }
+
+  var lista=[];
+  hz.CelestialBodies.all.concat(hz.CelestialPoints.all||[]).forEach(function(b){
+    var k=String(b.key||'').toLowerCase().replace(/[^a-z]/g,'');
+    if(ORDEN.indexOf(k)===-1) return;
+    lista.push({key:k,nombre:NOMBRE[k],lon:b.ChartPosition.Ecliptic.DecimalDegrees,
+                casa:b.House?b.House.id:null,retro:!!b.isRetrograde});
+  });
+  lista.sort(function(a,b){ return ORDEN.indexOf(a.key)-ORDEN.indexOf(b.key); });
+
+  var casas=hz.Houses.map(function(x){ return {id:x.id,lon:x.ChartPosition.StartPosition.Ecliptic.DecimalDegrees}; })
+                     .sort(function(a,b){ return a.id-b.id; });
+  ascLon=casas[0].lon;
+
+  var aspectos=hz.Aspects.all||[];
+  // La rueda usa solo los cuerpos: el Ascendente ya está dibujado como eje AC
+  dibujar(lista,casas,aspectos);
+
+  // A partir de acá el Ascendente entra en la lista, tercero
+  lista.push({key:'ascendant',nombre:'Ascendente',lon:ascLon,casa:1,retro:false});
+  lista.sort(function(a,b){ return ORDEN.indexOf(a.key)-ORDEN.indexOf(b.key); });
+
+  $('#meta').innerHTML='<span><b>'+lugar+'</b></span>'+
+    '<span>Nacimiento: <b>'+fecha.split('-').reverse().join('/')+' '+hora+'</b></span>'+
+    '<span>Zona horaria: <b>'+((origin.timezone&&origin.timezone.name)||'—')+'</b></span>';
+
+  $('#t-cuerpos').querySelector('tbody').innerHTML = lista.map(function(c){
+    return '<tr><td class="glifo">'+(GLIFO[c.key]||'')+'</td><td class="nom">'+c.nombre+'</td>'+
+      '<td class="gr">'+SIG_GLIFO[signoDe(c.lon)]+' '+SIGNOS[signoDe(c.lon)]+' '+fmtGrado(c.lon)+
+      (c.retro?' <span class="rx">℞</span>':'')+'</td><td>'+(c.casa||'—')+'</td></tr>';
+  }).join('');
+
+  var sol=lista.filter(function(x){return x.key==='sun';})[0];
+  var luna=lista.filter(function(x){return x.key==='moon';})[0];
+  var sSol=SIGNOS[signoDe(sol.lon)], sLuna=SIGNOS[signoDe(luna.lon)], sAsc=SIGNOS[signoDe(ascLon)];
+
+  /* ── Tarjetas: 3 abiertas, el resto bloqueadas ─────────────── */
+  var SUBT = {sun:'Tu esencia', moon:'Tu mundo emocional', ascendant:'Tu primera impresión'};
+  var candado = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>';
+
+  $('#lectura').innerHTML =
+    '<div class="lectura-head">'+
+      '<h2>Tu carta, pieza por pieza</h2>'+
+      '<p>Estas tres se leen solas. Las demás necesitan a alguien que las cruce con tu vida.</p>'+
+    '</div>'+
+    '<div class="carrusel"><div class="cards" id="cards" tabindex="0" role="group" aria-label="Tarjetas de tu carta, deslizables">'+
+    lista.map(function(c){
+      var sg = SIGNOS[signoDe(c.lon)];
+      var pos = sg+' '+fmtGrado(c.lon)+(c.casa?' · casa '+c.casa:'')+(c.retro?' · retrógrado':'');
+      var enc = '<div class="card-h"><span class="g">'+(GLIFO[c.key]||'')+'</span>'+
+                '<div><h3>'+c.nombre+' en '+sg+'</h3><div class="pos">'+pos+'</div></div></div>';
+      if(ABIERTOS.indexOf(c.key) !== -1){
+        return '<article class="card abierta">'+enc+
+          '<div class="pos" style="margin:-4px 0 8px 37px;color:var(--sage);font-weight:600">'+SUBT[c.key]+'</div>'+
+          '<p>'+TEXTO[c.key][sg]+'</p></article>';
+      }
+      return '<article class="card lock">'+enc+
+        '<p class="rige">'+c.nombre+' habla de '+(RIGE[c.key]||'una parte de tu carta')+'.</p>'+
+        '<div class="skel" aria-hidden="true"><span></span><span></span><span></span></div>'+
+        '<p class="lock-pie">'+candado+' Se desbloquea con tu lectura</p></article>';
+    }).join('')+
+    '</div>'+
+    '<div class="car-nav">'+
+      '<button type="button" class="car-btn" id="car-prev" aria-label="Anteriores" aria-controls="cards" disabled>'+
+        '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>'+
+      '<span class="car-pos" id="car-pos" role="status" aria-live="polite"></span>'+
+      '<button type="button" class="car-btn" id="car-next" aria-label="Siguientes" aria-controls="cards">'+
+        '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>'+
+    '</div></div>'+
+    '<p class="desbloquear"><a href="#oferta">Ver cómo desbloquear las '+(lista.length-ABIERTOS.length)+' restantes ↓</a></p>';
+
+  /* ── Carrusel ─────────────────────────────────────────────── */
+  (function(){
+    var track=$('#cards'), prev=$('#car-prev'), next=$('#car-next'), pos=$('#car-pos');
+    function porVista(){
+      var card = track.querySelector('.card');
+      if(!card) return 1;
+      var w = card.getBoundingClientRect().width + 16;   // ancho + gap
+      return Math.max(1, Math.round(track.clientWidth / w));
+    }
+    function actualizar(){
+      var max = track.scrollWidth - track.clientWidth;
+      prev.disabled = track.scrollLeft < 8;
+      next.disabled = track.scrollLeft >= max - 8;
+      var n = porVista();
+      var desde = Math.round(track.scrollLeft / (track.clientWidth/n)) + 1;
+      pos.textContent = Math.min(desde, lista.length) + '–' + Math.min(desde+n-1, lista.length) + ' de ' + lista.length;
+    }
+    prev.addEventListener('click', function(){ track.scrollBy({left:-track.clientWidth, behavior:'smooth'}); });
+    next.addEventListener('click', function(){ track.scrollBy({left: track.clientWidth, behavior:'smooth'}); });
+    track.addEventListener('scroll', actualizar, {passive:true});
+    window.addEventListener('resize', actualizar);
+    actualizar();
+  })();
+
+  /* ── Oferta, personalizada con los datos reales de esta carta ── */
+  var nAsp = aspectos.length;
+  $('#of-titulo').textContent = 'Viste 3 piezas. Tu carta tiene ' + lista.length + '.';
+  $('#of-bajada').innerHTML = 'Tu Sol en <b style="color:var(--gold)">'+sSol+'</b>, tu Luna en <b style="color:var(--gold)">'+sLuna+
+    '</b> y tu Ascendente en <b style="color:var(--gold)">'+sAsc+'</b> cuentan quién sos. Lo que todavía no viste es cómo dialogan tus planetas entre sí y en qué parte concreta de tu vida se juega cada uno. Eso no lo puede escribir un algoritmo.';
+  $('#of-falta').innerHTML =
+    '<li>Tus <b>'+nAsp+'</b> aspectos</li>'+
+    '<li>Las <b>12</b> casas</li>'+
+    '<li>Quirón, nodos y Lilith</li>'+
+    '<li>Tu año en curso</li>';
+
+  var pd=money(CONFIG.precioDocumento), ps=money(CONFIG.precioSesion);
+  if(pd){ $('#p1-precio').firstChild.nodeValue=pd; $('#p1-nota').textContent='pago único'; }
+  if(ps){ $('#p2-precio').firstChild.nodeValue=ps; $('#p2-nota').textContent='documento + sesión'; }
+  $('#p1-entrega').textContent = CONFIG.entregaDocumento;
+  $('#p2-duracion').textContent = CONFIG.duracionSesion;
+
+  var firma = 'Sol en '+sSol+', Luna en '+sLuna+', Ascendente en '+sAsc+
+              ' (nacimiento '+fecha.split('-').reverse().join('/')+' '+hora+', '+lugar+')';
+  $('#cta-doc').href    = wa('Hola Mayra, calculé mi carta natal en la web y quiero la lectura escrita. '+firma+'.');
+  $('#cta-sesion').href = wa('Hola Mayra, calculé mi carta natal en la web y quiero la lectura escrita más la sesión con vos. '+firma+'.');
+
+  track('carta_calculada',{sol:sSol,luna:sLuna,ascendente:sAsc,aspectos:nAsp});
+
+  $('#out').hidden=false;
+  $('#out').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+$('#year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
