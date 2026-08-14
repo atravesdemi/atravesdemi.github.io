@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E1433" media="(prefers-color-scheme: dark)">
+
+<title>Contame tu experiencia | A través de Mí</title>
+<meta name="description" content="Si ya tuviste una sesión conmigo, contame cómo te fue. Son unos minutos y me ayuda muchísimo.">
+<link rel="canonical" href="https://atravesdemi.com/recomendaciones.html">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:site_name" content="A través de Mí">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://atravesdemi.com/recomendaciones.html">
+<meta property="og:title" content="Contame tu experiencia">
+<meta property="og:description" content="Si ya tuviste una sesión conmigo, me encantaría saber cómo te fue.">
+<meta property="og:image" content="https://atravesdemi.com/og-image.jpg">
+
+<link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
+
+<style>
+:root{
+  --navy:#1E1433;--purple:#5B3F8C;--purple-d:#48306F;--lav:#C4ABE0;--mist:#F0EBF5;--cream:#FAF8F5;
+  --gold:#C9A84C;--gold-d:#8B6914;--gold-soft:#F7F0DC;
+  --ink:#2A2530;--ink-2:#5C5666;--ink-3:#6E6879;--line:#E4DFDA;--line-2:#EFEBE6;
+  --sage:#4F7A63;--sage-soft:#EDF3EF;--rose:#A8545A;
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;--s5:3rem;--s6:4rem;
+  --r1:10px;--r2:16px;--r3:24px;--pill:999px;
+  --sh:0 1px 2px rgba(30,20,51,.04),0 10px 28px -14px rgba(30,20,51,.14);
+  --sh-lg:0 2px 6px rgba(30,20,51,.05),0 28px 56px -24px rgba(30,20,51,.22);
+  --ff-d:'Fraunces',Georgia,serif;--ff-b:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --maxw:1080px;--prose:660px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{font-family:var(--ff-b);font-size:16px;line-height:1.7;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--purple);color:#fff;padding:12px 20px;border-radius:0 0 var(--r1) 0;font-size:14px;font-weight:500}
+.skip:focus{left:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3);width:100%}
+.prose{max-width:var(--prose);margin-inline:auto}
+
+.hdr{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line-2)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:60px;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-name{font-family:var(--ff-d);font-size:1rem;font-weight:500;color:var(--navy);white-space:nowrap}
+.nav{display:flex;gap:var(--s3)}
+.nav a{font-size:.875rem;color:var(--ink-2)}
+.nav a:hover{color:var(--navy)}
+.ftr{background:var(--navy);color:var(--lav);padding-block:var(--s5) var(--s4);text-align:center;margin-top:var(--s6)}
+.ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin:12px 0 4px}
+.ftr-tag{font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s3)}
+.ftr-nav{display:flex;justify-content:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s3);font-size:.875rem}
+.ftr-nav a{color:var(--lav);opacity:.8}
+.ftr-copy{font-size:.75rem;color:var(--lav);opacity:.5}
+
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:10px}
+h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2rem,1.4rem + 2.5vw,3rem);line-height:1.07;letter-spacing:-.02em;margin-bottom:14px}
+.lead{font-size:1.0625rem;color:var(--ink-2)}
+.hero{text-align:center;padding-block:var(--s5) var(--s3);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-30% 0 auto;height:130%;background:radial-gradient(60% 46% at 50% 20%,rgba(196,171,224,.28),rgba(250,248,245,0) 70%);pointer-events:none}
+.hero>*{position:relative}
+.hero .lead{margin-inline:auto;max-width:52ch}
+.tiempo{display:inline-flex;align-items:center;gap:7px;font-size:.8125rem;color:var(--sage);background:var(--sage-soft);padding:6px 14px;border-radius:var(--pill);margin-top:var(--s3);font-weight:500}
+
+/* ── Formulario ────────────────────────────────────────────── */
+form{background:#fff;border:1px solid var(--line-2);border-radius:var(--r3);padding:var(--s4) var(--s3);box-shadow:var(--sh)}
+.campo{margin-bottom:var(--s4)}
+.campo:last-of-type{margin-bottom:var(--s3)}
+.q{display:block;font-family:var(--ff-d);font-size:1.125rem;font-weight:500;line-height:1.3;color:var(--navy);margin-bottom:4px}
+.q .n{color:var(--gold-d);font-size:.875rem;font-weight:600;margin-right:8px;font-family:var(--ff-b)}
+.ayuda{font-size:.8125rem;color:var(--ink-3);margin-bottom:10px}
+.opcional{font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:var(--mist);padding:2px 8px;border-radius:var(--pill);margin-left:8px;vertical-align:2px}
+textarea,input[type=text],input[type=email],input[type=number],select{
+  width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r1);
+  font-family:inherit;font-size:1rem;line-height:1.6;background:var(--cream);color:var(--ink);resize:vertical}
+textarea{min-height:96px}
+textarea:focus,input:focus,select:focus{outline:2px solid var(--purple);outline-offset:1px;border-color:transparent;background:#fff}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tres input{text-align:center}
+.dosc{display:grid;grid-template-columns:2fr 1fr;gap:var(--s2)}
+label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);margin-bottom:5px}
+.radios{display:grid;gap:8px;margin-top:6px}
+.radios label{display:flex;gap:10px;align-items:flex-start;font-size:.9375rem;color:var(--ink-2);padding:11px 13px;border:1px solid var(--line);border-radius:var(--r1);cursor:pointer;transition:border-color .16s,background-color .16s}
+.radios label:hover{border-color:var(--lav)}
+.radios input{margin-top:4px;accent-color:var(--purple);flex-shrink:0}
+.radios input:checked ~ span{color:var(--navy);font-weight:500}
+.radios label:has(input:checked){border-color:var(--purple);background:var(--mist)}
+.permiso{background:var(--sage-soft);border-radius:var(--r2);padding:var(--s3);margin-top:var(--s3)}
+.permiso label{display:flex;gap:11px;align-items:flex-start;font-size:.9375rem;line-height:1.55;color:var(--ink-2);cursor:pointer}
+.permiso input{margin-top:5px;accent-color:var(--sage);flex-shrink:0;width:17px;height:17px}
+.permiso .nota{font-size:.8125rem;color:var(--ink-3);margin-top:10px;padding-left:28px}
+.sep{height:1px;background:var(--line-2);margin:var(--s4) 0}
+.sec-t{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);margin-bottom:var(--s2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 32px;border-radius:var(--pill);font-size:1rem;font-weight:500;cursor:pointer;font-family:inherit;transition:transform .18s,background-color .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 6px 18px -8px rgba(91,63,140,.7)}
+.btn-primary:hover{background:var(--purple-d)}
+.btn-block{display:flex;width:100%}
+.btn[disabled]{opacity:.6;cursor:default;transform:none}
+.err-campo{color:var(--rose);font-size:.8125rem;font-weight:500;margin-top:6px}
+.err-global{color:var(--rose);font-size:.9375rem;font-weight:500;text-align:center;margin-top:var(--s2)}
+.micro{font-size:.8125rem;color:var(--ink-3);text-align:center;margin-top:12px}
+.campo.mal textarea,.campo.mal input[type=text]{border-color:var(--rose)}
+
+/* ── Gracias ───────────────────────────────────────────────── */
+.gracias{background:#fff;border:1px solid var(--line-2);border-radius:var(--r3);padding:var(--s6) var(--s3);text-align:center;box-shadow:var(--sh)}
+.gracias .ico{width:64px;height:64px;border-radius:50%;background:var(--sage-soft);display:grid;place-items:center;margin:0 auto var(--s3)}
+.gracias h2{font-family:var(--ff-d);font-size:1.75rem;font-weight:400;margin-bottom:12px}
+.gracias p{font-size:1.0625rem;color:var(--ink-2);max-width:44ch;margin:0 auto var(--s3)}
+
+@media(max-width:640px){
+  .brand-name{display:none}
+  .wrap{padding-inline:var(--s2)}
+  form{padding:var(--s3) var(--s2)}
+  .dosc{grid-template-columns:1fr}
+  .tres{grid-template-columns:1fr;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
+      <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+      <span class="brand-name">A través de Mí</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#/">Inicio</a>
+      <a href="index.html#/servicios">Servicios</a>
+      <a href="index.html#/herramientas">Herramientas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap prose">
+      <span class="eyebrow">Tu experiencia</span>
+      <h1>Contame cómo te fue.</h1>
+      <p class="lead">Si ya tuvimos una sesión, me encantaría leer con tus palabras qué te pasó. Me sirve para seguir mejorando, y a quien está dudando le sirve todavía más.</p>
+      <p class="tiempo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Unos 3 minutos · respondé solo lo que quieras
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap prose" style="padding-bottom:var(--s5)">
+    <form id="f" novalidate>
+
+      <div class="campo">
+        <label class="q" for="servicio"><span class="n">01</span>¿Qué hicimos juntos?</label>
+        <select id="servicio" name="servicio">
+          <option value="">Elegí una opción…</option>
+          <option>Método ATM</option>
+          <option>Psicofísica</option>
+          <option>Tarot evolutivo</option>
+          <option>Carta natal</option>
+          <option>Taller grupal</option>
+          <option>Varias cosas</option>
+          <option>Otra</option>
+        </select>
+      </div>
+
+      <div class="campo" data-req>
+        <label class="q" for="motivo"><span class="n">02</span>¿Qué te llevó a consultar conmigo?</label>
+        <p class="ayuda">Qué estaba pasando en tu vida cuando decidiste escribirme.</p>
+        <textarea id="motivo" name="motivo" required></textarea>
+      </div>
+
+      <div class="campo">
+        <label class="q" for="antes"><span class="n">03</span>¿Cómo te sentías antes de la sesión?<span class="opcional">Opcional</span></label>
+        <textarea id="antes" name="antes"></textarea>
+      </div>
+
+      <div class="campo">
+        <label class="q" for="p1"><span class="n">04</span>¿Podés describir en tres palabras tu experiencia?<span class="opcional">Opcional</span></label>
+        <p class="ayuda">Las primeras que se te vengan. No lo pienses mucho.</p>
+        <div class="tres">
+          <input type="text" id="p1" name="palabra1" maxlength="24" placeholder="Primera" aria-label="Primera palabra">
+          <input type="text" id="p2" name="palabra2" maxlength="24" placeholder="Segunda" aria-label="Segunda palabra">
+          <input type="text" id="p3" name="palabra3" maxlength="24" placeholder="Tercera" aria-label="Tercera palabra">
+        </div>
+      </div>
+
+      <div class="campo" data-req>
+        <label class="q" for="aporte"><span class="n">05</span>¿Qué fue lo que más te aportó?</label>
+        <textarea id="aporte" name="aporte" required></textarea>
+      </div>
+
+      <div class="campo">
+        <label class="q" for="cambio"><span class="n">06</span>¿Hubo algún cambio en vos, o en cómo veías tu situación, después?<span class="opcional">Opcional</span></label>
+        <textarea id="cambio" name="cambio"></textarea>
+      </div>
+
+      <div class="campo">
+        <label class="q" for="mensaje"><span class="n">07</span>¿Qué le dirías a la persona que eras antes de la sesión?<span class="opcional">Opcional</span></label>
+        <p class="ayuda">Escribile a esa vos de antes, la que todavía dudaba.</p>
+        <textarea id="mensaje" name="mensaje"></textarea>
+      </div>
+
+      <div class="sep"></div>
+
+      <p class="sec-t">Para saber quién sos</p>
+      <div class="campo">
+        <div class="dosc">
+          <div>
+            <label class="sub" for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="given-name">
+          </div>
+          <div>
+            <label class="sub" for="edad">Edad <span style="font-weight:400;color:var(--ink-3)">(opcional)</span></label>
+            <input type="number" id="edad" name="edad" min="14" max="110" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label class="sub">Si publico tu experiencia, ¿cómo querés aparecer?</label>
+        <div class="radios">
+          <label><input type="radio" name="mostrar" value="Nombre y edad" checked><span>Con mi nombre y mi edad — <i style="color:var(--ink-3);font-style:normal">"Lucía, 35"</i></span></label>
+          <label><input type="radio" name="mostrar" value="Solo nombre"><span>Solo mi nombre — <i style="color:var(--ink-3);font-style:normal">"Lucía"</i></span></label>
+          <label><input type="radio" name="mostrar" value="Inicial"><span>Solo mi inicial — <i style="color:var(--ink-3);font-style:normal">"L."</i></span></label>
+          <label><input type="radio" name="mostrar" value="Anonimo"><span>Anónimo, sin ningún dato mío</span></label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label class="sub" for="contacto">Email o WhatsApp <span style="font-weight:400;color:var(--ink-3)">(opcional, por si quiero repreguntarte algo)</span></label>
+        <input type="text" id="contacto" name="contacto" autocomplete="email">
+      </div>
+
+      <div class="permiso" data-req>
+        <label>
+          <input type="checkbox" id="permiso" name="permiso" value="Sí" required>
+          <span>Sí, Mayra puede publicar mi experiencia en su web y redes, de la forma que elegí arriba.</span>
+        </label>
+        <p class="nota">Si no marcás esta casilla igual me llega y la leo, pero no la publico. Podés pedirme que la saque cuando quieras.</p>
+        <p class="err-campo" id="err-permiso" hidden>Necesito tu permiso o tu nombre para seguir.</p>
+      </div>
+
+      <div style="margin-top:var(--s4)">
+        <button type="submit" class="btn btn-primary btn-block" id="enviar">Enviar mi experiencia</button>
+        <p class="err-global" id="err" role="alert"></p>
+        <p class="micro">Gracias por tomarte el rato. De verdad.</p>
+      </div>
+    </form>
+
+    <div class="gracias" id="gracias" hidden>
+      <div class="ico">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2>Gracias, de corazón.</h2>
+      <p id="gracias-txt">Ya me llegó. Leer esto es de las mejores partes de lo que hago.</p>
+      <a class="btn btn-primary" href="index.html#/">Volver al inicio</a>
+    </div>
+  </section>
+</main>
+
+<!-- El formulario postea acá adentro: sin CORS, sin JavaScript de por medio -->
+<iframe name="rec-sink" id="rec-sink" style="display:none" title="destino del envío" aria-hidden="true"></iframe>
+
+<footer class="ftr">
+  <div class="wrap">
+    <svg width="34" height="31" viewBox="0 0 48 44" fill="none" style="margin:0 auto" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+    <p class="ftr-name">A través de Mí</p>
+    <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+    <nav class="ftr-nav" aria-label="Pie de página">
+      <a href="index.html#/">Inicio</a>
+      <a href="index.html#/servicios">Servicios</a>
+      <a href="index.html#/herramientas">Herramientas</a>
+      <a href="carta-natal.html">Carta natal</a>
+    </nav>
+    <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ══════════════════════════════════════════════════════════════
+   ⚙️ CONFIGURACIÓN
+   ══════════════════════════════════════════════════════════════ */
+var CONFIG = {
+  tel: '5493512040561',
+
+  // ⚠️ PEGAR ACÁ la URL del Web App de Google Apps Script.
+  // Termina en /exec — por ejemplo:
+  // 'https://script.google.com/macros/s/AKfycb.../exec'
+  // Mientras esté vacío, el formulario arma un mensaje de WhatsApp
+  // con las respuestas, así funciona igual desde el día uno.
+  endpoint: ''
+};
+
+var $ = function(s){ return document.querySelector(s); };
+var form = $('#f'), err = $('#err'), btn = $('#enviar');
+
+function val(n){ var e = form.elements[n]; return e ? String(e.value || '').trim() : ''; }
+function marcarMal(campo, mal){ if(campo) campo.classList.toggle('mal', !!mal); }
+
+function validar(){
+  var problemas = [];
+  ['motivo','aporte','nombre'].forEach(function(n){
+    var e = form.elements[n], campo = e.closest('.campo');
+    var vacio = !String(e.value||'').trim();
+    marcarMal(campo, vacio);
+    if(vacio) problemas.push(e);
+  });
+  if(problemas.length){
+    err.textContent = 'Faltan algunas respuestas: revisá lo marcado en rojo.';
+    problemas[0].focus();
+    problemas[0].scrollIntoView({behavior:'smooth', block:'center'});
+    return false;
+  }
+  err.textContent = '';
+  return true;
+}
+
+function armarTexto(){
+  var l = [];
+  l.push('Mi experiencia con Mayra');
+  l.push('');
+  if(val('servicio')) l.push('Servicio: ' + val('servicio'));
+  l.push('Nombre: ' + val('nombre') + (val('edad') ? ', ' + val('edad') : ''));
+  var m = form.querySelector('input[name="mostrar"]:checked');
+  l.push('Cómo aparecer: ' + (m ? m.value : '—'));
+  l.push('Permiso para publicar: ' + ($('#permiso').checked ? 'Sí' : 'No'));
+  l.push('');
+  l.push('¿Qué me llevó a consultar?');   l.push(val('motivo'));
+  if(val('antes')){ l.push(''); l.push('¿Cómo me sentía antes?'); l.push(val('antes')); }
+  var p = [val('palabra1'), val('palabra2'), val('palabra3')].filter(Boolean);
+  if(p.length){ l.push(''); l.push('En tres palabras: ' + p.join(', ')); }
+  l.push(''); l.push('¿Qué fue lo que más me aportó?'); l.push(val('aporte'));
+  if(val('cambio')){ l.push(''); l.push('¿Qué cambió?'); l.push(val('cambio')); }
+  if(val('mensaje')){ l.push(''); l.push('Lo que le diría a quien era antes:'); l.push(val('mensaje')); }
+  if(val('contacto')){ l.push(''); l.push('Contacto: ' + val('contacto')); }
+  return l.join('\n');
+}
+
+function agradecer(porWhatsapp){
+  form.hidden = true;
+  if(porWhatsapp){
+    $('#gracias-txt').textContent = 'Te abrí WhatsApp con tus respuestas listas para enviar. Dale a mandar y me llega.';
+  }
+  $('#gracias').hidden = false;
+  $('#gracias').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!validar()) return;
+
+  if(!CONFIG.endpoint){
+    // Sin endpoint configurado: se manda por WhatsApp
+    window.open('https://wa.me/' + CONFIG.tel + '?text=' + encodeURIComponent(armarTexto()), '_blank', 'noopener');
+    agradecer(true);
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Enviando…';
+
+  // Envío nativo hacia el iframe oculto: no hay fetch, no hay CORS,
+  // y funciona igual aunque el navegador bloquee scripts de terceros.
+  form.action = CONFIG.endpoint;
+  form.method = 'POST';
+  form.target = 'rec-sink';
+  form.setAttribute('enctype', 'application/x-www-form-urlencoded');
+
+  var listo = false;
+  var sink = $('#rec-sink');
+  function ok(){ if(listo) return; listo = true; agradecer(false); }
+  sink.addEventListener('load', ok, {once:true});
+  setTimeout(ok, 6000);   // por si el iframe no dispara load
+
+  form.submit();
+});
+
+$('#year').textContent = new Date().getFullYear();
+
+// Permite prellenar el servicio desde el link: recomendaciones.html?servicio=Carta%20natal
+(function(){
+  var p = new URLSearchParams(location.search).get('servicio');
+  if(!p) return;
+  var sel = $('#servicio');
+  Array.prototype.forEach.call(sel.options, function(o){
+    if(o.value.toLowerCase() === p.toLowerCase()) sel.value = o.value;
+  });
+})();
+})();
+</script>
+</body>
+</html>
