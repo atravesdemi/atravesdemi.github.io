@@ -359,83 +359,6 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 }
 
 /* ============================================================
-   MENSAJE DEL DÍA — ritual de 10 s + carta del oráculo
-   ============================================================ */
-.mdd{display:flex;gap:var(--s3);align-items:center;background:linear-gradient(135deg,#241740,#1E1433 60%);border-radius:var(--r3);padding:var(--s4) var(--s3);color:var(--cream);position:relative;overflow:hidden}
-.mdd::before{content:'';position:absolute;inset:0;background:radial-gradient(50% 70% at 85% 20%,rgba(201,168,76,.18),transparent 65%)}
-.mdd>*{position:relative}
-.mdd-txt{flex:1;min-width:0}
-.mdd-txt .soon-tag{background:rgba(79,122,99,.22);color:#9FD3B4;margin-bottom:8px;display:inline-block}
-.mdd-txt .eyebrow{color:var(--gold);display:block;margin-bottom:8px}
-.mdd-h{display:block;font-family:var(--ff-d);font-size:1.5rem;font-weight:500;line-height:1.2;margin-bottom:6px}
-.mdd-p{display:block;font-size:.9375rem;line-height:1.6;color:var(--lav);opacity:.9;max-width:52ch}
-.mdd-mini{display:flex;gap:6px;flex-shrink:0}
-.mdd-mini i{display:block;width:44px;height:66px;border-radius:6px;background:var(--dorso);border:1px solid rgba(201,168,76,.35);transform:rotate(-8deg)}
-.mdd-mini i:nth-child(2){transform:rotate(2deg) translateY(-4px)}
-.mdd-mini i:nth-child(3){transform:rotate(11deg)}
-@media(max-width:760px){ .mdd{flex-direction:column;align-items:flex-start} .mdd-mini{order:-1} }
-
-/* dorso de carta, dibujado con CSS: no hace falta subir imagen */
-:root{--dorso:
-  radial-gradient(circle at 50% 32%, rgba(201,168,76,.55) 0 1.5px, transparent 2px),
-  radial-gradient(circle at 25% 62%, rgba(201,168,76,.35) 0 1px, transparent 1.5px),
-  radial-gradient(circle at 75% 62%, rgba(201,168,76,.35) 0 1px, transparent 1.5px),
-  linear-gradient(150deg,#3A2A63,#1E1433 70%)}
-
-.mdd-modal{border:none;padding:0;margin:auto;background:transparent;color:var(--cream);width:100%;max-width:min(460px,calc(100vw - 2rem))}
-.mdd-modal::backdrop{background:rgba(16,10,30,.82);backdrop-filter:blur(6px)}
-.mdd-in{position:relative;background:linear-gradient(160deg,#26183F,#1A1029);border:1px solid rgba(196,171,224,.18);border-radius:var(--r3);padding:var(--s4) var(--s3) var(--s3);text-align:center;box-shadow:0 30px 80px -30px #000}
-.mdd-x{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--lav);opacity:.6}
-.mdd-x:hover{opacity:1;background:rgba(255,255,255,.07)}
-.mdd-in h3{font-family:var(--ff-d);font-size:1.5rem;font-weight:400;color:var(--cream);margin:6px 0 8px}
-.mdd-in .sub{font-size:.9375rem;line-height:1.55;color:var(--lav);opacity:.85;max-width:34ch;margin:0 auto}
-
-.mdd-escena{position:relative;height:210px;margin:var(--s3) 0 var(--s2)}
-.mdd-mazo{position:absolute;inset:0}
-.mdd-mazo b{position:absolute;left:50%;top:50%;width:96px;height:144px;margin:-72px 0 0 -48px;border-radius:9px;
-            background:var(--dorso);border:1px solid rgba(201,168,76,.4);box-shadow:0 12px 30px -12px #000}
-.mdd-mazo.mezclando b{animation:mezcla 1.15s ease-in-out infinite}
-.mdd-mazo.mezclando b:nth-child(2){animation-delay:.09s}
-.mdd-mazo.mezclando b:nth-child(3){animation-delay:.18s}
-.mdd-mazo.mezclando b:nth-child(4){animation-delay:.27s}
-.mdd-mazo.mezclando b:nth-child(5){animation-delay:.36s}
-@keyframes mezcla{
-  0%,100%{transform:rotate(0) translate(0,0)}
-  22%{transform:rotate(-15deg) translate(-42px,-12px)}
-  48%{transform:rotate(10deg) translate(36px,8px)}
-  74%{transform:rotate(-6deg) translate(-16px,12px)}
-}
-.mdd-chispas{position:absolute;inset:-10%;pointer-events:none}
-.mdd-chispas s{position:absolute;width:11px;height:11px;text-decoration:none;opacity:0;
-  background:radial-gradient(circle,#F2DF9E 0 22%,transparent 24%);animation:chispa 1.9s ease-in-out infinite}
-.mdd-chispas s::before{content:'';position:absolute;inset:0;
-  background:linear-gradient(#F2DF9E,#F2DF9E) center/1.5px 100% no-repeat,
-             linear-gradient(#F2DF9E,#F2DF9E) center/100% 1.5px no-repeat}
-@keyframes chispa{0%{opacity:0;transform:scale(.2) rotate(0)}45%{opacity:.95;transform:scale(1) rotate(70deg)}100%{opacity:0;transform:scale(.3) rotate(150deg)}}
-
-.mdd-timer{font-family:var(--ff-d);font-size:2.75rem;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
-.mdd-timer small{display:block;font-family:var(--ff-b);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lav);opacity:.6;margin-top:8px}
-
-.mdd-carta{perspective:1200px;width:min(240px,62vw);aspect-ratio:2/3;margin:0 auto var(--s3)}
-.mdd-flip{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.2,.85,.25,1)}
-.mdd-flip.girada{transform:rotateY(180deg)}
-.mdd-flip>*{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;overflow:hidden}
-.mdd-dorso{background:var(--dorso);border:1px solid rgba(201,168,76,.4)}
-.mdd-cara{transform:rotateY(180deg);background:var(--mist);border:1px solid rgba(201,168,76,.5);display:grid;place-items:center}
-.mdd-cara img{width:100%;height:100%;object-fit:cover;display:block}
-.mdd-cara .ph{padding:var(--s2);text-align:center;color:var(--purple)}
-.mdd-cara .ph b{display:block;font-family:var(--ff-d);font-size:1.05rem;margin-top:8px}
-.mdd-cara .ph span{display:block;font-size:.6875rem;color:var(--ink-3);margin-top:6px}
-.mdd-nombre{font-family:var(--ff-d);font-size:1.35rem;color:var(--gold);margin-bottom:var(--s2)}
-.mdd-nota{font-size:.8125rem;color:var(--lav);opacity:.6;margin-top:12px}
-
-@media(prefers-reduced-motion:reduce){
-  .mdd-mazo.mezclando b{animation:none}
-  .mdd-chispas{display:none}
-  .mdd-flip{transition:none}
-}
-
-/* ============================================================
    MODAL (herramientas) — usa <dialog>: foco y Escape gratis
    ============================================================ */
 /* margin:auto es lo que centra un <dialog>; el reset global lo pisa, hay que reponerlo */
@@ -788,7 +711,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
         </button>
         <div class="nav-drop-menu" id="nav-drop-herr" role="menu" hidden>
           <a href="carta-natal.html" role="menuitem"><b>Carta natal</b><span>Tu rueda del cielo completa, gratis</span></a>
-          <a href="#/herramientas" role="menuitem"><b>Tirada de tarot <i class="pronto">Pronto</i></b><span>Tres cartas y una lectura inicial</span></a>
+          <a href="tarot.html" role="menuitem"><b>Las cartas</b><span>Mensaje del día y tirada de tarot</span></a>
           <a href="calendario-lunar.html" role="menuitem"><b>Calendario lunar</b><span>Fases, signos y retrógrados, mes a mes</span></a>
         </div>
       </div>
@@ -1083,57 +1006,23 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
     </div>
   </section>
 
-  <!-- MENSAJE DEL DÍA -->
+  <!-- LAS CARTAS (mensaje del día + tirada de tarot, en tarot.html) -->
   <section class="sec-tight" style="padding-top:0">
     <div class="wrap" data-reveal>
-      <div class="mdd">
-        <div class="mdd-mini" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="mdd-txt">
+      <a class="tool-hero" href="tarot.html" data-loc="herramienta-tarot">
+        <span class="tool-hero-ico">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="11" height="16" rx="2"/><path d="M17.5 5.6 21 6.9a1.6 1.6 0 0 1 1 2l-3.4 9.6a1.6 1.6 0 0 1-2 1L14 18.5"/></svg>
+        </span>
+        <span class="tool-hero-txt">
           <span class="soon-tag is-live">Disponible</span>
-          <span class="mdd-h">Mensaje del día</span>
-          <span class="mdd-p">Tomate diez segundos para formular tu pregunta mientras se mezcla el mazo. Después, una carta del oráculo se da vuelta para vos. Una por día.</span>
-        </div>
-        <button class="tool-hero-cta" id="mdd-abrir" type="button" aria-haspopup="dialog">Sacar mi carta
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-      </div>
+          <span class="tool-hero-h">Las cartas</span>
+          <span class="tool-hero-p">Diez segundos para tu pregunta mientras se mezcla el mazo. Después elegís: un mensaje del oráculo para hoy, o un arcano mayor del tarot de Marsella para lo que estás atravesando.</span>
+        </span>
+        <span class="tool-hero-cta">Sacar mi carta <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
     </div>
   </section>
 
-  <dialog class="mdd-modal" id="mdd-modal" aria-labelledby="mdd-titulo">
-    <div class="mdd-in">
-      <button class="mdd-x" type="button" id="mdd-cerrar" aria-label="Cerrar">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-
-      <div id="mdd-ritual">
-        <span class="eyebrow" style="color:var(--gold)">Mensaje del día</span>
-        <h3 id="mdd-titulo">Pensá tu pregunta</h3>
-        <p class="sub">Formulá en silencio eso que necesitás saber hoy. No hace falta que sea nada grande.</p>
-        <div class="mdd-escena">
-          <div class="mdd-mazo mezclando" id="mdd-mazo" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
-          <div class="mdd-chispas" id="mdd-chispas" aria-hidden="true"></div>
-        </div>
-        <p class="mdd-timer"><span id="mdd-n">10</span><small>Respirá</small></p>
-      </div>
-
-      <div id="mdd-reveal" hidden>
-        <span class="eyebrow" style="color:var(--gold)">Tu mensaje de hoy</span>
-        <div class="mdd-carta">
-          <div class="mdd-flip" id="mdd-flip">
-            <div class="mdd-dorso"></div>
-            <div class="mdd-cara" id="mdd-cara"></div>
-          </div>
-        </div>
-        <p class="mdd-nombre" id="mdd-nombre"></p>
-        <p class="sub" id="mdd-bajada">Dejala descansar un rato antes de sacar conclusiones. Lo que primero te molesta suele ser lo que más tenía para decirte.</p>
-        <div style="margin-top:var(--s3)">
-          <a class="btn btn-primary btn-block" id="mdd-cta" href="#">Quiero profundizar en esto</a>
-        </div>
-        <p class="mdd-nota">Mañana te espera otra carta.</p>
-      </div>
-    </div>
-  </dialog>
 
   <!-- LUNA + GUÍA (movidos desde la home) -->
   <section class="sec-tight" style="padding-top:0">
@@ -1326,26 +1215,6 @@ const services = [
     tags:['Presencial','15–20 min','Online','Animales'],
     nota:'Se complementa con todas las terapias médicas, psicológicas y psiquiátricas: no las reemplaza. Los resultados suelen ser evidentes desde la primera sesión.'
   },
-  {
-    id:'tarot', icon:'cards', num:'03',
-    name:'Tarot evolutivo',
-    hook:'Un espejo, no una predicción',
-    short:'Un espejo, no una predicción',
-    precio:'', duracion:'60 min', modalidad:'Online o presencial',
-    desc:'Las cartas te muestran patrones, bloqueos y caminos que tu mente consciente no ve. Es autoconocimiento, no adivinación: no te digo qué va a pasar, te ayudo a leer dónde estás.',
-    paraVos:['Estás en un punto muerto','Tenés que tomar una decisión importante','Repetís patrones y no sabés por qué'],
-    tags:['Individual','Online o presencial','60 min']
-  },
-  {
-    id:'carta-natal', icon:'planet', num:'04',
-    name:'Carta natal y revolución solar',
-    hook:'Tu mapa escrito en las estrellas',
-    short:'Tu mapa en las estrellas',
-    precio:'', duracion:'75 min', modalidad:'Online o presencial',
-    desc:'El mapa del cielo en el momento exacto de tu nacimiento: tus dones, tus desafíos, tus patrones kármicos y el ciclo que estás transitando ahora.',
-    paraVos:['Querés conocerte más profundamente','Empezás un ciclo nuevo o se acerca tu cumpleaños','Querés entender desafíos que se repiten'],
-    tags:['Personalizada','Fecha, hora y lugar de nacimiento','Online o presencial']
-  }
 ];
 
 const talleres = [
@@ -1777,152 +1646,17 @@ function renderArticle(post){
 })();
 
 /* ══════════════════════════════════════════════════════════════
-   MENSAJE DEL DÍA
-   ⚠️ COMPLETAR: una entrada por carta del oráculo.
-      f = nombre del archivo dentro de MDD.carpeta
-      n = nombre de la carta (va en el alt para lectores de pantalla,
-          cuando la imagen no carga, y en el mensaje de WhatsApp)
-   Mientras la lista esté vacía se usan cartas de prueba, para poder
-   ver el ritual funcionando antes de subir las imágenes.
-   ══════════════════════════════════════════════════════════════ */
-const MDD = {
-  carpeta: 'cartas/oraculo/',
-  // El mensaje viene impreso en la imagen; `n` es un nombre corto sacado de
-  // cada carta, para el texto alternativo y para el mensaje de WhatsApp.
-  cartas: [
-    {f:'01.jpg', n:'El cambio y la coherencia'},
-    {f:'02.jpg', n:'Cada cosa a su tiempo'},
-    {f:'03.jpg', n:'Crear lo que te propongas'},
-    {f:'04.jpg', n:'Aun quieto estás evolucionando'},
-    {f:'05.jpg', n:'Mirarte a vos primero'},
-    {f:'06.jpg', n:'Estás a la altura del desafío'},
-    {f:'07.jpg', n:'Un paso a la vez'},
-    {f:'08.jpg', n:'La incomodidad es parte del proceso'},
-    {f:'09.jpg', n:'Tu certeza interna'},
-    {f:'10.jpg', n:'Expandí tus alas'},
-    {f:'11.jpg', n:'Tu camino es único'},
-    {f:'12.jpg', n:'La gratitud abre puertas'},
-    {f:'13.jpg', n:'Hundirse para florecer'},
-    {f:'14.jpg', n:'La bondad te rodea'},
-    {f:'15.jpg', n:'Crear a tu tiempo'},
-    {f:'16.jpg', n:'Tu valor es incomparable'},
-    {f:'17.jpg', n:'Cuidar o soltar'},
-    {f:'18.jpg', n:'Permeable a la emoción'},
-    {f:'19.jpg', n:'La empatía está en vos'},
-    {f:'20.jpg', n:'Reconocer tu lugar'},
-    {f:'21.jpg', n:'Estás protegida'},
-    {f:'22.jpg', n:'Calmar la mente'},
-    {f:'23.jpg', n:'Tomar la iniciativa'},
-    {f:'24.jpg', n:'Vas acompañada'}
-  ]
-};
-
-(function(){
-  var abrir = $('#mdd-abrir'), modal = $('#mdd-modal');
-  if(!abrir || !modal) return;
-
-  var demo = MDD.cartas.length === 0;
-  var mazo = demo
-    ? Array.from({length:8}, function(_,i){ return {f:'', n:'Carta de prueba '+(i+1)}; })
-    : MDD.cartas;
-
-  // Chispas repartidas a mano: posiciones fijas para que no bailen en cada apertura
-  $('#mdd-chispas').innerHTML = [[12,18],[78,10],[46,4],[88,44],[6,52],[30,72],[70,80],[92,68],[20,38],[58,26],[40,90],[82,26]]
-    .map(function(p,i){ return '<s style="left:'+p[0]+'%;top:'+p[1]+'%;animation-delay:'+(i*0.16).toFixed(2)+'s"></s>'; }).join('');
-
-  function hoy(){ var d = new Date(); return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
-
-  // Una carta por día: se guarda en el navegador y se repite hasta mañana
-  function cartaDeHoy(){
-    var guardado = null;
-    try{ guardado = JSON.parse(localStorage.getItem('atm_mdd') || 'null'); }catch(e){}
-    if(guardado && guardado.d === hoy() && mazo[guardado.i]) return {carta: mazo[guardado.i], repetida: true};
-    var i = Math.floor(Math.random() * mazo.length);
-    try{ localStorage.setItem('atm_mdd', JSON.stringify({d: hoy(), i: i})); }catch(e){}
-    return {carta: mazo[i], repetida: false};
-  }
-
-  function pintarCara(c){
-    var cara = $('#mdd-cara');
-    if(c.f){
-      cara.innerHTML = '<img src="'+MDD.carpeta+c.f+'" alt="'+esc(c.n)+'">';
-      cara.querySelector('img').addEventListener('error', function(){ cara.innerHTML = placeholder(c); });
-    }else{
-      cara.innerHTML = placeholder(c);
-    }
-  }
-  function placeholder(c){
-    return '<div class="ph">'+ic('sparkle','#5B3F8C',30)+'<b>'+esc(c.n)+'</b>'+
-           (demo ? '<span>Faltan las imágenes del oráculo</span>' : '')+'</div>';
-  }
-
-  function revelar(c, repetida){
-    pintarCara(c);
-    $('#mdd-ritual').hidden = true;
-    $('#mdd-reveal').hidden = false;
-    $('#mdd-nombre').textContent = c.n;
-    if(repetida) $('#mdd-bajada').textContent = 'Esta es la carta que sacaste hoy. Volvé mañana y el mazo se mezcla de nuevo.';
-    $('#mdd-cta').href = waLink('Hola Mayra, saqué "'+c.n+'" en el mensaje del día y me quedé pensando. Quiero profundizar en esto.');
-    // La carta pasa de oculta a visible: sin esta pausa el navegador no
-    // tiene un estado inicial del cual transicionar y el giro no se ve.
-    setTimeout(function(){ $('#mdd-flip').classList.add('girada'); }, 80);
-    track('mensaje_del_dia', {carta: c.n, repetida: !!repetida});
-  }
-
-  var cuenta = null;
-  function arrancar(){
-    var r = cartaDeHoy();
-    if(r.carta.f) (new Image()).src = MDD.carpeta + r.carta.f;   // precarga
-
-    $('#mdd-flip').classList.remove('girada');
-    $('#mdd-reveal').hidden = true;
-    $('#mdd-ritual').hidden = false;
-    $('#mdd-mazo').classList.add('mezclando');
-
-    var n = reduceMotion ? 4 : 10;
-    $('#mdd-n').textContent = n;
-    clearInterval(cuenta);
-    cuenta = setInterval(function(){
-      n--;
-      $('#mdd-n').textContent = Math.max(0, n);
-      if(n <= 0){
-        clearInterval(cuenta);
-        $('#mdd-mazo').classList.remove('mezclando');
-        setTimeout(function(){ revelar(r.carta, r.repetida); }, reduceMotion ? 0 : 420);
-      }
-    }, 1000);
-  }
-
-  abrir.addEventListener('click', function(){
-    if(modal.showModal) modal.showModal();
-    arrancar();
-  });
-  $('#mdd-cerrar').addEventListener('click', function(){ modal.close(); });
-  modal.addEventListener('click', function(e){ if(e.target === modal) modal.close(); });
-  modal.addEventListener('close', function(){ clearInterval(cuenta); });
-})();
-
-/* ══════════════════════════════════════════════════════════════
    HERRAMIENTAS EN CAMINO — tarjeta + modal explicando cómo será
    ══════════════════════════════════════════════════════════════ */
+// Ya no queda ninguna herramienta anunciada: las tres están publicadas.
 const tools = [
-  {
-    id:'tarot', icon:'cards',
-    name:'Tirada de tarot',
-    short:'Elegís tus cartas y recibís una lectura inicial en pantalla.',
-    lead:'Una tirada de tres cartas, sin turno y sin costo, para cuando necesitás una pista rápida sobre algo que te está dando vueltas.',
-    pasos:[
-      'Escribís la pregunta o el tema que te preocupa',
-      'Barajás y sacás tres cartas ahí mismo, en pantalla',
-      'Leés qué significa cada carta y qué dice la tirada completa',
-      'Te llevás el resumen para releerlo cuando quieras'
-    ],
-    nota:'La lectura en pantalla es una primera pista. Cruzarla con tu momento y tus decisiones concretas es trabajo de una sesión.'
-  },
-  // La carta natal ya está publicada: vive arriba, junto a la luna y la guía,
-  // no en "Lo que viene". Su tarjeta está en el HTML de la página.
 ];
 
+// Sin herramientas pendientes, la sección entera se oculta
+if(!tools.length){
+  var secVacia = $('#tools-grid') && $('#tools-grid').closest('section');
+  if(secVacia) secVacia.hidden = true;
+}
 $('#tools-grid').innerHTML = tools.map(function(t){
   var contenido = '<span class="ico">'+ic(t.icon,'#5B3F8C',19)+'</span>'+
     '<h3>'+esc(t.name)+'</h3>'+

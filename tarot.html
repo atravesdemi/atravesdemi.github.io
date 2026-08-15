@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E1433" media="(prefers-color-scheme: dark)">
+
+<title>Tirada de tarot y mensaje del día — gratis | A través de Mí</title>
+<meta name="description" content="Sacá tu carta gratis: un mensaje del oráculo para hoy o un arcano mayor del tarot de Marsella para tu pregunta. Sin registro.">
+<link rel="canonical" href="https://atravesdemi.com/tarot.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:site_name" content="A través de Mí">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://atravesdemi.com/tarot.html">
+<meta property="og:title" content="Sacá tu carta — mensaje del día y tirada de tarot">
+<meta property="og:description" content="Diez segundos para tu pregunta y una carta se da vuelta para vos. Gratis, sin registro.">
+<meta property="og:image" content="https://atravesdemi.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
+
+<style>
+:root{
+  --navy:#1E1433;--purple:#5B3F8C;--purple-d:#48306F;--lav:#C4ABE0;--mist:#F0EBF5;--cream:#FAF8F5;
+  --gold:#C9A84C;--gold-d:#8B6914;--gold-soft:#F7F0DC;
+  --ink:#2A2530;--ink-2:#5C5666;--ink-3:#6E6879;--line:#E4DFDA;--line-2:#EFEBE6;
+  --sage:#4F7A63;--sage-soft:#EDF3EF;--rose:#A8545A;
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;--s5:3rem;--s6:4rem;
+  --r1:10px;--r2:16px;--r3:24px;--pill:999px;
+  --sh:0 1px 2px rgba(30,20,51,.04),0 10px 28px -14px rgba(30,20,51,.14);
+  --sh-lg:0 2px 6px rgba(30,20,51,.05),0 28px 56px -24px rgba(30,20,51,.22);
+  --ff-d:'Fraunces',Georgia,serif;--ff-b:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --maxw:1080px;
+  --dorso:
+    radial-gradient(circle at 50% 32%, rgba(201,168,76,.55) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 25% 62%, rgba(201,168,76,.35) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 75% 62%, rgba(201,168,76,.35) 0 1px, transparent 1.5px),
+    linear-gradient(150deg,#3A2A63,#1E1433 70%);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{font-family:var(--ff-b);font-size:16px;line-height:1.7;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--purple);color:#fff;padding:12px 20px;border-radius:0 0 var(--r1) 0;font-size:14px;font-weight:500}
+.skip:focus{left:0}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3);width:100%}
+
+.hdr{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line-2)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:60px;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-name{font-family:var(--ff-d);font-size:1rem;font-weight:500;color:var(--navy);white-space:nowrap}
+.nav{display:flex;gap:var(--s3)}
+.nav a{font-size:.875rem;color:var(--ink-2)}
+.ftr{background:var(--navy);color:var(--lav);padding-block:var(--s5) var(--s4);text-align:center;margin-top:var(--s6)}
+.ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin:12px 0 4px}
+.ftr-tag{font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s3)}
+.ftr-nav{display:flex;justify-content:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s3);font-size:.875rem}
+.ftr-nav a{color:var(--lav);opacity:.8}
+.ftr-copy{font-size:.75rem;color:var(--lav);opacity:.5}
+
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:10px}
+h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2rem,1.4rem + 2.5vw,3rem);line-height:1.07;letter-spacing:-.02em;margin-bottom:14px}
+.lead{font-size:1.0625rem;color:var(--ink-2);max-width:52ch}
+.hero{text-align:center;padding-block:var(--s5) var(--s3);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-30% 0 auto;height:130%;background:radial-gradient(60% 46% at 50% 20%,rgba(196,171,224,.28),rgba(250,248,245,0) 70%);pointer-events:none}
+.hero>*{position:relative}
+.hero .lead{margin-inline:auto}
+
+/* ── Las dos tiradas ───────────────────────────────────────── */
+.tiradas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s3);align-items:stretch}
+.tirada{background:linear-gradient(150deg,#26183F,#1A1029);border:1px solid rgba(196,171,224,.16);border-radius:var(--r3);
+        padding:var(--s4) var(--s3);color:var(--cream);display:flex;flex-direction:column;text-align:center;position:relative;overflow:hidden}
+.tirada::before{content:'';position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 0%,rgba(201,168,76,.14),transparent 65%)}
+.tirada>*{position:relative}
+.tirada .sello{align-self:center;font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+               padding:4px 12px;border-radius:var(--pill);margin-bottom:var(--s2)}
+.sello-libre{background:rgba(79,122,99,.25);color:#9FD3B4}
+.sello-arcano{background:rgba(201,168,76,.18);color:var(--gold)}
+.tirada h2{font-family:var(--ff-d);font-size:1.5rem;font-weight:500;line-height:1.2;margin-bottom:8px}
+.tirada p{font-size:.9375rem;line-height:1.6;color:var(--lav);opacity:.88;margin-bottom:var(--s3);max-width:34ch;margin-inline:auto}
+.mini{display:flex;gap:7px;justify-content:center;margin-bottom:var(--s3)}
+.mini i{display:block;width:44px;height:74px;border-radius:6px;background:var(--dorso);border:1px solid rgba(201,168,76,.35);transform:rotate(-8deg)}
+.mini i:nth-child(2){transform:rotate(2deg) translateY(-5px)}
+.mini i:nth-child(3){transform:rotate(11deg)}
+.tirada .btn{margin-top:auto}
+.tirada .micro{font-size:.75rem;color:var(--lav);opacity:.6;margin-top:10px;margin-bottom:0}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:var(--pill);
+     font-size:.9375rem;font-weight:500;cursor:pointer;font-family:inherit;text-align:center;line-height:1.2;
+     transition:transform .18s,background-color .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#D8B95E}
+.btn-lav{background:var(--purple);color:#fff}
+.btn-lav:hover{background:var(--purple-d)}
+.btn-block{display:flex;width:100%}
+
+/* ── Modal del ritual ──────────────────────────────────────── */
+.modal{border:none;padding:0;margin:auto;background:transparent;color:var(--cream);width:100%;max-width:min(460px,calc(100vw - 2rem))}
+.modal::backdrop{background:rgba(16,10,30,.84);backdrop-filter:blur(6px)}
+.modal-in{position:relative;background:linear-gradient(160deg,#26183F,#1A1029);border:1px solid rgba(196,171,224,.18);
+          border-radius:var(--r3);padding:var(--s4) var(--s3) var(--s3);text-align:center;box-shadow:0 30px 80px -30px #000;
+          max-height:88vh;overflow-y:auto}
+.modal-x{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--lav);opacity:.6}
+.modal-x:hover{opacity:1;background:rgba(255,255,255,.07)}
+.modal-in h3{font-family:var(--ff-d);font-size:1.5rem;font-weight:400;color:var(--cream);margin:6px 0 8px}
+.modal-in .sub{font-size:.9375rem;line-height:1.55;color:var(--lav);opacity:.85;max-width:34ch;margin:0 auto}
+
+.preg{margin:var(--s3) auto 0;max-width:32ch;text-align:left}
+.preg label{display:block;font-size:.8125rem;color:var(--lav);opacity:.8;margin-bottom:6px}
+.preg input{width:100%;padding:11px 13px;border:1px solid rgba(196,171,224,.28);border-radius:var(--r1);
+            background:rgba(255,255,255,.06);color:var(--cream);font-family:inherit;font-size:.9375rem}
+.preg input::placeholder{color:var(--lav);opacity:.45}
+.preg input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:transparent}
+.preg .op{font-size:.75rem;color:var(--lav);opacity:.55;margin-top:6px}
+
+.escena{position:relative;height:210px;margin:var(--s3) 0 var(--s2)}
+.mazo{position:absolute;inset:0}
+.mazo b{position:absolute;left:50%;top:50%;width:92px;height:150px;margin:-75px 0 0 -46px;border-radius:9px;
+        background:var(--dorso);border:1px solid rgba(201,168,76,.4);box-shadow:0 12px 30px -12px #000}
+.mazo.mezclando b{animation:mezcla 1.15s ease-in-out infinite}
+.mazo.mezclando b:nth-child(2){animation-delay:.09s}
+.mazo.mezclando b:nth-child(3){animation-delay:.18s}
+.mazo.mezclando b:nth-child(4){animation-delay:.27s}
+.mazo.mezclando b:nth-child(5){animation-delay:.36s}
+@keyframes mezcla{0%,100%{transform:rotate(0) translate(0,0)}22%{transform:rotate(-15deg) translate(-42px,-12px)}
+  48%{transform:rotate(10deg) translate(36px,8px)}74%{transform:rotate(-6deg) translate(-16px,12px)}}
+.chispas{position:absolute;inset:-10%;pointer-events:none}
+.chispas s{position:absolute;width:11px;height:11px;text-decoration:none;opacity:0;
+  background:radial-gradient(circle,#F2DF9E 0 22%,transparent 24%);animation:chispa 1.9s ease-in-out infinite}
+.chispas s::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(#F2DF9E,#F2DF9E) center/1.5px 100% no-repeat,
+             linear-gradient(#F2DF9E,#F2DF9E) center/100% 1.5px no-repeat}
+@keyframes chispa{0%{opacity:0;transform:scale(.2) rotate(0)}45%{opacity:.95;transform:scale(1) rotate(70deg)}100%{opacity:0;transform:scale(.3) rotate(150deg)}}
+.timer{font-family:var(--ff-d);font-size:2.75rem;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.timer small{display:block;font-family:var(--ff-b);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lav);opacity:.6;margin-top:8px}
+
+/* La carta: el oráculo es 2:3 y el tarot de Marsella 1:1,94 */
+.carta{perspective:1200px;margin:0 auto var(--s3);width:min(230px,58vw);aspect-ratio:2/3}
+.carta.arcano{aspect-ratio:78/151}
+.flip{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.2,.85,.25,1)}
+.flip.girada{transform:rotateY(180deg)}
+.flip>*{position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;overflow:hidden}
+.dorso{background:var(--dorso);border:1px solid rgba(201,168,76,.4)}
+.cara{transform:rotateY(180deg);background:#fff;border:1px solid rgba(201,168,76,.5);display:grid;place-items:center}
+.cara img{width:100%;height:100%;object-fit:cover;display:block}
+.cara .ph{padding:var(--s2);text-align:center;color:var(--purple);font-size:.8125rem}
+.nombre{font-family:var(--ff-d);font-size:1.5rem;color:var(--gold);margin-bottom:6px;line-height:1.15}
+.num{font-size:.75rem;letter-spacing:.18em;color:var(--lav);opacity:.6;margin-bottom:10px}
+.clave{font-size:.9375rem;line-height:1.55;color:var(--cream);max-width:32ch;margin:0 auto var(--s3)}
+.tu-preg{font-size:.8125rem;color:var(--lav);opacity:.75;font-style:italic;margin-bottom:var(--s3);max-width:32ch;margin-inline:auto}
+.nota{font-size:.75rem;color:var(--lav);opacity:.55;margin-top:12px}
+
+/* ── Escalera de precios ───────────────────────────────────── */
+.escalera{margin-top:var(--s6)}
+.escalera-head{text-align:center;max-width:52ch;margin:0 auto var(--s4)}
+.escalera-head h2{font-family:var(--ff-d);font-size:clamp(1.6rem,1.2rem + 1.6vw,2.2rem);font-weight:400;line-height:1.15;margin-bottom:10px}
+.escalera-head p{color:var(--ink-2)}
+.planes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--s3);align-items:start}
+.plan{background:#fff;border:1px solid var(--line-2);border-radius:var(--r3);padding:var(--s4) var(--s3) var(--s3);
+      display:flex;flex-direction:column;gap:10px;position:relative}
+.plan-dest{box-shadow:0 0 0 2px var(--gold),var(--sh-lg)}
+.plan-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);
+          font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:var(--pill);white-space:nowrap}
+.plan h3{font-family:var(--ff-d);font-size:1.2rem;font-weight:500}
+.plan .que{font-size:.9375rem;color:var(--ink-2);line-height:1.55}
+.plan .precio{font-family:var(--ff-d);font-size:1.6rem;font-weight:500;color:var(--purple);line-height:1.1;margin-top:2px}
+.plan .precio small{display:block;font-family:var(--ff-b);font-size:.8125rem;font-weight:400;color:var(--ink-3);margin-top:3px}
+.plan ul{list-style:none;display:grid;gap:8px;margin:4px 0 var(--s2)}
+.plan li{display:flex;gap:9px;align-items:flex-start;font-size:.9375rem;line-height:1.5;color:var(--ink-2)}
+.plan li svg{flex-shrink:0;margin-top:4px;color:var(--sage)}
+.plan .btn{margin-top:auto}
+.escalera-pie{text-align:center;font-size:.875rem;color:var(--ink-3);margin-top:var(--s3);max-width:52ch;margin-inline:auto}
+
+@media(max-width:560px){
+  .brand-name{display:none}
+  .wrap{padding-inline:var(--s2)}
+  .tirada{padding:var(--s3) var(--s2)}
+}
+@media(prefers-reduced-motion:reduce){
+  .mazo.mezclando b{animation:none}
+  .chispas{display:none}
+  .flip{transition:none}
+  *{transition:none!important}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
+      <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+      <span class="brand-name">A través de Mí</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#/">Inicio</a>
+      <a href="index.html#/servicios">Servicios</a>
+      <a href="index.html#/herramientas">Herramientas</a>
+      <a href="carta-natal.html">Carta natal</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Herramienta gratuita</span>
+      <h1>Las cartas</h1>
+      <p class="lead">Dos formas de preguntar. Las dos empiezan igual: diez segundos de silencio mientras se mezcla el mazo, y una carta que se da vuelta para vos.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="tiradas">
+
+      <article class="tirada">
+        <span class="sello sello-libre">Gratis · una por día</span>
+        <div class="mini" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h2>Mensaje del día</h2>
+        <p>Una carta del oráculo con su mensaje escrito, para acompañar el día que estás transitando.</p>
+        <button class="btn btn-lav btn-block" id="ab-oraculo" type="button" aria-haspopup="dialog">Sacar mi carta</button>
+        <p class="micro">Mañana te espera otra.</p>
+      </article>
+
+      <article class="tirada">
+        <span class="sello sello-arcano">Arcanos mayores</span>
+        <div class="mini" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h2>Tirada de tarot</h2>
+        <p>Un arcano mayor del tarot de Marsella para la pregunta que traés. Te digo cuál salió y qué representa; qué significa para tu caso lo vemos juntos.</p>
+        <button class="btn btn-gold btn-block" id="ab-tarot" type="button" aria-haspopup="dialog">Sacar mi arcano</button>
+        <p class="micro">Una por día, para que pese.</p>
+      </article>
+
+    </div>
+
+    <!-- ══════════════ ESCALERA ══════════════ -->
+    <section class="escalera" id="escalera">
+      <div class="escalera-head">
+        <span class="eyebrow">Cuando quieras ir más hondo</span>
+        <h2>La carta te dice qué. Falta el para qué.</h2>
+        <p>Saber que salió La Torre no es lo mismo que entender qué se está cayendo en tu vida y qué hacer con eso.</p>
+      </div>
+      <div class="planes">
+        <article class="plan">
+          <h3>La tirada</h3>
+          <p class="que">Lo que acabás de hacer: sacás tu carta y ves qué representa.</p>
+          <p class="precio">Gratis<small>una por día</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>El arcano y su arquetipo</span></li>
+          </ul>
+          <a class="btn btn-lav btn-block" href="#main">Sacar otra mañana</a>
+        </article>
+
+        <article class="plan">
+          <h3>La carta, explicada</h3>
+          <p class="que">Mayra lee tu arcano cruzado con tu pregunta y te lo devuelve escrito.</p>
+          <p class="precio" id="p-informe">A consultar<small>pago único</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Qué dice ese arcano sobre lo que preguntaste</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Qué conviene mirar y qué conviene soltar</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Te queda por escrito para releerlo</span></li>
+          </ul>
+          <a class="btn btn-lav btn-block" id="cta-informe" href="#">Quiero mi carta explicada</a>
+        </article>
+
+        <article class="plan plan-dest">
+          <span class="plan-tag">La más elegida</span>
+          <h3>La sesión completa</h3>
+          <p class="que">Un encuentro uno a uno con Mayra, donde la tirada se abre de verdad.</p>
+          <p class="precio" id="p-sesion">A consultar<small>incluye todo lo anterior</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Todo lo de la opción anterior, y además:</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Una tirada completa, no una sola carta</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Preguntás en el momento y ella responde</span></li>
+          </ul>
+          <a class="btn btn-gold btn-block" id="cta-sesion" href="#">Quiero la sesión</a>
+        </article>
+      </div>
+      <p class="escalera-pie">Los tres empiezan igual: me escribís, te confirmo el valor y las formas de pago, y recién ahí decidís.</p>
+    </section>
+  </section>
+</main>
+
+<dialog class="modal" id="modal" aria-labelledby="m-titulo">
+  <div class="modal-in">
+    <button class="modal-x" type="button" id="cerrar" aria-label="Cerrar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Paso 1: la pregunta (solo tarot) -->
+    <div id="paso-preg" hidden>
+      <span class="eyebrow" style="color:var(--gold)">Tirada de tarot</span>
+      <h3 id="m-titulo">¿Qué querés preguntar?</h3>
+      <p class="sub">Escribila si querés. Le llega a Mayra junto con tu carta, y ahí la conversación arranca sabiendo de qué se trata.</p>
+      <div class="preg">
+        <label for="preg">Tu pregunta</label>
+        <input type="text" id="preg" maxlength="140" placeholder="¿Me conviene dejar el trabajo ahora?" autocomplete="off">
+        <p class="op">Podés dejarlo en blanco y pensarla en silencio.</p>
+      </div>
+      <div style="margin-top:var(--s3)">
+        <button class="btn btn-gold btn-block" id="ir-ritual" type="button">Mezclar el mazo</button>
+      </div>
+    </div>
+
+    <!-- Paso 2: el ritual -->
+    <div id="paso-ritual" hidden>
+      <span class="eyebrow" style="color:var(--gold)" id="r-kicker">Mensaje del día</span>
+      <h3>Pensá tu pregunta</h3>
+      <p class="sub">Formulá en silencio eso que necesitás saber. No hace falta que sea nada grande.</p>
+      <div class="escena">
+        <div class="mazo mezclando" id="mazo" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="chispas" id="chispas" aria-hidden="true"></div>
+      </div>
+      <p class="timer"><span id="n">10</span><small>Respirá</small></p>
+    </div>
+
+    <!-- Paso 3: la revelación -->
+    <div id="paso-reveal" hidden>
+      <span class="eyebrow" style="color:var(--gold)" id="rev-kicker">Tu carta</span>
+      <div class="carta" id="carta">
+        <div class="flip" id="flip">
+          <div class="dorso"></div>
+          <div class="cara" id="cara"></div>
+        </div>
+      </div>
+      <p class="nombre" id="rev-nombre"></p>
+      <p class="num" id="rev-num" hidden></p>
+      <p class="tu-preg" id="rev-preg" hidden></p>
+      <p class="clave" id="rev-clave"></p>
+      <a class="btn btn-gold btn-block" id="rev-cta" href="#">Quiero profundizar en esto</a>
+      <p class="nota" id="rev-nota">Mañana te espera otra carta.</p>
+    </div>
+  </div>
+</dialog>
+
+<footer class="ftr">
+  <div class="wrap">
+    <svg width="34" height="31" viewBox="0 0 48 44" fill="none" style="margin:0 auto" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+    <p class="ftr-name">A través de Mí</p>
+    <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+    <nav class="ftr-nav" aria-label="Pie de página">
+      <a href="index.html#/">Inicio</a>
+      <a href="index.html#/herramientas">Herramientas</a>
+      <a href="carta-natal.html">Carta natal</a>
+      <a href="calendario-lunar.html">Calendario lunar</a>
+    </nav>
+    <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ══════════════════════════════════════════════════════════════
+   ⚙️ CONFIGURACIÓN
+   ══════════════════════════════════════════════════════════════ */
+var CONFIG = {
+  tel: '5493512040561',
+  // ⚠️ REVISAR CON MAYRA: poné el número (ej: 12000) y aparece solo.
+  precioInforme: '',
+  precioSesion: ''
+};
+
+/* Las 24 del oráculo: el mensaje viene impreso en la imagen */
+var ORACULO = {
+  carpeta: 'cartas/oraculo/',
+  cartas: [
+    {f:'01.jpg', n:'El cambio y la coherencia'},{f:'02.jpg', n:'Cada cosa a su tiempo'},
+    {f:'03.jpg', n:'Crear lo que te propongas'},{f:'04.jpg', n:'Aun quieto estás evolucionando'},
+    {f:'05.jpg', n:'Mirarte a vos primero'},{f:'06.jpg', n:'Estás a la altura del desafío'},
+    {f:'07.jpg', n:'Un paso a la vez'},{f:'08.jpg', n:'La incomodidad es parte del proceso'},
+    {f:'09.jpg', n:'Tu certeza interna'},{f:'10.jpg', n:'Expandí tus alas'},
+    {f:'11.jpg', n:'Tu camino es único'},{f:'12.jpg', n:'La gratitud abre puertas'},
+    {f:'13.jpg', n:'Hundirse para florecer'},{f:'14.jpg', n:'La bondad te rodea'},
+    {f:'15.jpg', n:'Crear a tu tiempo'},{f:'16.jpg', n:'Tu valor es incomparable'},
+    {f:'17.jpg', n:'Cuidar o soltar'},{f:'18.jpg', n:'Permeable a la emoción'},
+    {f:'19.jpg', n:'La empatía está en vos'},{f:'20.jpg', n:'Reconocer tu lugar'},
+    {f:'21.jpg', n:'Estás protegida'},{f:'22.jpg', n:'Calmar la mente'},
+    {f:'23.jpg', n:'Tomar la iniciativa'},{f:'24.jpg', n:'Vas acompañada'}
+  ]
+};
+
+/* Los 22 arcanos mayores. La palabra clave es el arquetipo tradicional:
+   damos el qué, la lectura aplicada a la pregunta es lo que se paga. */
+var TAROT = {
+  carpeta: 'cartas/tarot/',
+  cartas: [
+    {f:'00.jpg', n:'El Loco', r:'—',    c:'El salto sin garantías. Empezar de nuevo sin mapa y sin permiso.'},
+    {f:'01.jpg', n:'El Mago', r:'I',    c:'Tenés las herramientas sobre la mesa. Falta decidirte a usarlas.'},
+    {f:'02.jpg', n:'La Papisa', r:'II', c:'Lo que sabés en silencio y todavía no dijiste en voz alta.'},
+    {f:'03.jpg', n:'La Emperatriz', r:'III', c:'Crear, cuidar, hacer crecer algo con tus propias manos.'},
+    {f:'04.jpg', n:'El Emperador', r:'IIII', c:'Poner estructura y sostenerla, aunque cansé sostenerla.'},
+    {f:'05.jpg', n:'El Papa', r:'V',    c:'Buscar guía afuera, o darte cuenta de que la guía sos vos.'},
+    {f:'06.jpg', n:'Los Enamorados', r:'VI', c:'Elegir. Y que elegir signifique dejar algo afuera.'},
+    {f:'07.jpg', n:'El Carro', r:'VII', c:'Avanzar con fuerza, aunque los caballos tiren para lados distintos.'},
+    {f:'08.jpg', n:'La Justicia', r:'VIII', c:'Mirar sin adornos lo que te toca y lo que hiciste.'},
+    {f:'09.jpg', n:'El Ermitaño', r:'VIIII', c:'Bajar el ritmo, mirar para adentro, no apurar la respuesta.'},
+    {f:'10.jpg', n:'La Rueda de la Fortuna', r:'X', c:'Algo se mueve solo y no depende de vos. Tu parte es cómo lo recibís.'},
+    {f:'11.jpg', n:'La Fuerza', r:'XI', c:'La firmeza que no necesita gritar para imponerse.'},
+    {f:'12.jpg', n:'El Colgado', r:'XII', c:'Quedarte quieto a propósito y ver todo desde el otro lado.'},
+    {f:'13.jpg', n:'El arcano sin nombre', r:'XIII', c:'Lo que termina para que pueda empezar otra cosa. No es castigo, es corte.'},
+    {f:'14.jpg', n:'La Templanza', r:'XIIII', c:'Mezclar lo que parecía incompatible, sin apuro y sin forzar.'},
+    {f:'15.jpg', n:'El Diablo', r:'XV', c:'Lo que te ata y en el fondo elegís no soltar todavía.'},
+    {f:'16.jpg', n:'La Torre', r:'XVI', c:'Lo que se cae de golpe para dejar ver lo que había detrás.'},
+    {f:'17.jpg', n:'La Estrella', r:'XVII', c:'La esperanza después del derrumbe. Mostrarte sin escudo.'},
+    {f:'18.jpg', n:'La Luna', r:'XVIII', c:'Lo que todavía no se ve claro. El miedo y la imaginación mezclados.'},
+    {f:'19.jpg', n:'El Sol', r:'XVIIII', c:'La claridad y lo compartido. Alegría sin culpa.'},
+    {f:'20.jpg', n:'El Juicio', r:'XX', c:'Un llamado que te despierta y te pide responder.'},
+    {f:'21.jpg', n:'El Mundo', r:'XXI', c:'El ciclo que se cierra completo, antes de que empiece el siguiente.'}
+  ]
+};
+
+var $ = function(s){ return document.querySelector(s); };
+var esc = function(s){ return String(s).replace(/[&<>"']/g, function(m){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; }); };
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var modal = $('#modal'), modo = 'oraculo', cuenta = null, pregunta = '';
+
+function wa(t){ return 'https://wa.me/' + CONFIG.tel + '?text=' + encodeURIComponent(t); }
+function money(v){ return (v === '' || v == null) ? null : '$' + Number(v).toLocaleString('es-AR'); }
+
+$('#chispas').innerHTML = [[12,18],[78,10],[46,4],[88,44],[6,52],[30,72],[70,80],[92,68],[20,38],[58,26],[40,90],[82,26]]
+  .map(function(p,i){ return '<s style="left:'+p[0]+'%;top:'+p[1]+'%;animation-delay:'+(i*0.16).toFixed(2)+'s"></s>'; }).join('');
+
+function hoy(){ var d = new Date(); return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
+
+/* Una carta por día y por mazo: se guarda en el navegador */
+function cartaDelDia(clave, mazo){
+  var g = null;
+  try{ g = JSON.parse(localStorage.getItem(clave) || 'null'); }catch(e){}
+  if(g && g.d === hoy() && mazo[g.i]) return {carta: mazo[g.i], repetida: true};
+  var i = Math.floor(Math.random() * mazo.length);
+  try{ localStorage.setItem(clave, JSON.stringify({d: hoy(), i: i})); }catch(e){}
+  return {carta: mazo[i], repetida: false};
+}
+
+function pintarCara(carpeta, c){
+  var cara = $('#cara');
+  cara.innerHTML = '<img src="'+carpeta+c.f+'" alt="'+esc(c.n)+'">';
+  cara.querySelector('img').addEventListener('error', function(){
+    cara.innerHTML = '<div class="ph">'+esc(c.n)+'</div>';
+  });
+}
+
+function revelar(r){
+  var esTarot = (modo === 'tarot');
+  var c = r.carta;
+  $('#carta').classList.toggle('arcano', esTarot);
+  pintarCara(esTarot ? TAROT.carpeta : ORACULO.carpeta, c);
+
+  $('#rev-kicker').textContent = esTarot ? 'Tu arcano' : 'Tu mensaje de hoy';
+  $('#rev-nombre').textContent = c.n;
+  $('#rev-num').hidden = !esTarot;
+  if(esTarot) $('#rev-num').textContent = 'Arcano ' + c.r;
+
+  $('#rev-preg').hidden = !(esTarot && pregunta);
+  if(esTarot && pregunta) $('#rev-preg').textContent = '“' + pregunta + '”';
+
+  $('#rev-clave').textContent = esTarot
+    ? c.c
+    : (r.repetida
+        ? 'Esta es la carta que sacaste hoy. Volvé mañana y el mazo se mezcla de nuevo.'
+        : 'Dejala descansar un rato antes de sacar conclusiones. Lo que primero te molesta suele ser lo que más tenía para decirte.');
+
+  if(esTarot){
+    $('#rev-cta').textContent = 'Qué significa para mi pregunta';
+    $('#rev-cta').href = wa('Hola Mayra, saqué ' + c.n + ' en la tirada de tarot de la web.' +
+      (pregunta ? ' Mi pregunta fue: “' + pregunta + '”.' : '') + ' Quiero entender qué significa para mi caso.');
+    $('#rev-nota').textContent = 'Mañana podés sacar otro arcano.';
+  }else{
+    $('#rev-cta').textContent = 'Quiero profundizar en esto';
+    $('#rev-cta').href = wa('Hola Mayra, saqué "' + c.n + '" en el mensaje del día y me quedé pensando. Quiero profundizar en esto.');
+    $('#rev-nota').textContent = 'Mañana te espera otra carta.';
+  }
+
+  paso('reveal');
+  setTimeout(function(){ $('#flip').classList.add('girada'); }, 80);
+}
+
+function paso(cual){
+  ['preg','ritual','reveal'].forEach(function(p){ $('#paso-'+p).hidden = (p !== cual); });
+}
+
+function ritual(){
+  var mazo = (modo === 'tarot') ? TAROT.cartas : ORACULO.cartas;
+  var carpeta = (modo === 'tarot') ? TAROT.carpeta : ORACULO.carpeta;
+  var r = cartaDelDia(modo === 'tarot' ? 'atm_tarot' : 'atm_mdd', mazo);
+  (new Image()).src = carpeta + r.carta.f;                     // precarga
+
+  $('#r-kicker').textContent = (modo === 'tarot') ? 'Tirada de tarot' : 'Mensaje del día';
+  $('#flip').classList.remove('girada');
+  $('#mazo').classList.add('mezclando');
+  paso('ritual');
+
+  var n = reduceMotion ? 4 : 10;
+  $('#n').textContent = n;
+  clearInterval(cuenta);
+  cuenta = setInterval(function(){
+    n--;
+    $('#n').textContent = Math.max(0, n);
+    if(n <= 0){
+      clearInterval(cuenta);
+      $('#mazo').classList.remove('mezclando');
+      setTimeout(function(){ revelar(r); }, reduceMotion ? 0 : 420);
+    }
+  }, 1000);
+}
+
+function abrir(cual){
+  modo = cual;
+  pregunta = '';
+  $('#preg').value = '';
+  if(modal.showModal) modal.showModal();
+  if(cual === 'tarot') paso('preg'); else ritual();
+}
+
+$('#ab-oraculo').addEventListener('click', function(){ abrir('oraculo'); });
+$('#ab-tarot').addEventListener('click', function(){ abrir('tarot'); });
+$('#ir-ritual').addEventListener('click', function(){
+  pregunta = $('#preg').value.trim();
+  ritual();
+});
+$('#preg').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); $('#ir-ritual').click(); } });
+$('#cerrar').addEventListener('click', function(){ modal.close(); });
+modal.addEventListener('click', function(e){ if(e.target === modal) modal.close(); });
+modal.addEventListener('close', function(){ clearInterval(cuenta); });
+
+/* Escalera de precios */
+(function(){
+  var pi = money(CONFIG.precioInforme), ps = money(CONFIG.precioSesion);
+  if(pi) $('#p-informe').firstChild.nodeValue = pi;
+  if(ps) $('#p-sesion').firstChild.nodeValue = ps;
+  $('#cta-informe').href = wa('Hola Mayra, quiero la explicación escrita de mi carta.');
+  $('#cta-sesion').href  = wa('Hola Mayra, quiero una sesión completa de tarot.');
+})();
+
+$('#year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
