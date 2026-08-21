@@ -8,13 +8,13 @@
 
 <title>Calendario lunar — fases, signos y retrógrados | A través de Mí</title>
 <meta name="description" content="Calendario lunar mes a mes: fases de la Luna, por qué signo transita cada día, lunas nuevas y llenas, y qué planetas entran retrógrados. Horario de Argentina.">
-<link rel="canonical" href="https://atravesdemi.com/calendario-lunar.html">
+<link rel="canonical" href="https://atravesdemi.com/calendario-lunar">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <meta property="og:site_name" content="A través de Mí">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta property="og:url" content="https://atravesdemi.com/calendario-lunar.html">
+<meta property="og:url" content="https://atravesdemi.com/calendario-lunar">
 <meta property="og:title" content="Calendario lunar — fases, signos y retrógrados">
 <meta property="og:description" content="Las fases de la Luna mes a mes, por qué signo transita y qué planetas entran retrógrados.">
 <meta property="og:image" content="https://atravesdemi.com/og-image.jpg">
@@ -28,44 +28,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
 
+<link rel="stylesheet" href="estilos.css">
+
+<noscript><style>
+  #splash{display:none!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .js-only{display:none!important}
+</style></noscript>
+
 <style>
+/* Los tokens, el reset, el header y el pie viven en estilos.css.
+   Acá queda solo lo propio de esta página. */
 :root{
-  --navy:#1E1433;--purple:#5B3F8C;--purple-d:#48306F;--lav:#C4ABE0;--mist:#F0EBF5;--cream:#FAF8F5;
-  --gold:#C9A84C;--gold-d:#8B6914;--gold-soft:#F7F0DC;
-  --ink:#2A2530;--ink-2:#5C5666;--ink-3:#6E6879;--line:#E4DFDA;--line-2:#EFEBE6;
-  --sage:#4F7A63;--sage-soft:#EDF3EF;--rose:#A8545A;
-  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;--s5:3rem;--s6:4rem;
-  --r1:10px;--r2:16px;--r3:24px;--pill:999px;
-  --sh:0 1px 2px rgba(30,20,51,.04),0 10px 28px -14px rgba(30,20,51,.14);
-  --sh-lg:0 2px 6px rgba(30,20,51,.05),0 28px 56px -24px rgba(30,20,51,.22);
-  --ff-d:'Fraunces',Georgia,serif;--ff-b:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-  --maxw:1080px;
   --celda:rgba(196,171,224,.14);
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-[hidden]{display:none!important}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
-body{font-family:var(--ff-b);font-size:16px;line-height:1.7;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
-:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
-.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--purple);color:#fff;padding:12px 20px;border-radius:0 0 var(--r1) 0;font-size:14px;font-weight:500}
-.skip:focus{left:0}
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3);width:100%}
-
-.hdr{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line-2)}
-.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:60px;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3)}
-.brand{display:flex;align-items:center;gap:10px}
-.brand-name{font-family:var(--ff-d);font-size:1rem;font-weight:500;color:var(--navy);white-space:nowrap}
-.nav{display:flex;gap:var(--s3)}
-.nav a{font-size:.875rem;color:var(--ink-2)}
-.ftr{background:var(--navy);color:var(--lav);padding-block:var(--s5) var(--s4);text-align:center;margin-top:var(--s6)}
-.ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin:12px 0 4px}
-.ftr-tag{font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s3)}
-.ftr-nav{display:flex;justify-content:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s3);font-size:.875rem}
-.ftr-nav a{color:var(--lav);opacity:.8}
-.ftr-copy{font-size:.75rem;color:var(--lav);opacity:.5}
-
 .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:10px}
 h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2rem,1.4rem + 2.5vw,3rem);line-height:1.07;letter-spacing:-.02em;margin-bottom:14px}
 .lead{font-size:1.0625rem;color:var(--ink-2);max-width:56ch}
@@ -135,23 +111,135 @@ h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2rem,1.4rem + 2.5vw,3
   .dow span{font-size:.5625rem;letter-spacing:.04em}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}.btn:hover{transform:none}}
+
+/* ============================================================
+   FECHAS EN HTML — no las pinta el JavaScript a propósito.
+   Los rastreadores de IA no ejecutan JS: si estas fechas
+   estuvieran solo en el fetch, para ellos la página estaría vacía.
+   Se regeneran con datos/gen-eventos.py
+   ============================================================ */
+.doce{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s3) var(--s4);margin-top:var(--s3)}
+.mes-ev h3{font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;margin-bottom:8px;color:var(--purple)}
+.mes-ev ul{list-style:none;display:grid;gap:6px}
+.mes-ev li{font-size:.875rem;line-height:1.5;color:var(--ink-2);padding-left:11px;position:relative}
+.mes-ev li::before{content:'';position:absolute;left:0;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--gold-d)}
+.mes-ev li b{font-weight:500;color:var(--ink)}
+
+/* ============================================================
+   FAQ — <details> nativo: plega sin una línea de JavaScript
+   ============================================================ */
+.faq{display:grid;gap:12px;max-width:660px;margin-inline:auto}
+.faq details{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);overflow:hidden;transition:border-color .2s ease}
+.faq details:hover{border-color:var(--lav)}
+.faq summary{
+  display:flex;gap:14px;align-items:center;justify-content:space-between;
+  padding:var(--s2) var(--s3);cursor:pointer;list-style:none;
+  font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.35;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:focus-visible{outline:2px solid var(--purple);outline-offset:-3px}
+.faq summary::after{
+  content:'';flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);
+  background:no-repeat center/12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C5666' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");
+  transition:transform .28s cubic-bezier(.16,1,.3,1),background-color .2s ease;
+}
+.faq details[open] summary::after{transform:rotate(45deg);background-color:var(--mist);border-color:transparent}
+.faq .faq-a{padding:0 var(--s3) var(--s3);border-top:1px solid var(--line-2)}
+.faq .faq-a p{font-size:.9375rem;line-height:1.7;color:var(--ink-2)}
+.faq .faq-a p:first-child{margin-top:var(--s3)}
+.faq .faq-a p+p{margin-top:10px}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://atravesdemi.com/"},
+        {"@type":"ListItem","position":2,"name":"Herramientas","item":"https://atravesdemi.com/herramientas"},
+        {"@type":"ListItem","position":3,"name":"Calendario lunar","item":"https://atravesdemi.com/calendario-lunar"}
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://atravesdemi.com/calendario-lunar#app",
+      "name": "Calendario lunar",
+      "url": "https://atravesdemi.com/calendario-lunar",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Cualquier navegador web",
+      "browserRequirements": "Requiere JavaScript para navegar los meses. Las fechas principales están en el HTML.",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "description": "Calendario lunar de 2026 a 2030: la fase de la Luna cada día, por qué signo transita y a qué hora cambia, más lunas nuevas, llenas, cuartos y estaciones planetarias. Calculado en hora de Argentina (UTC−3).",
+      "featureList": [
+        "Fase de la Luna para cada día, de 2026 a 2030",
+        "Signo por el que transita la Luna y hora exacta del cambio",
+        "Lunas nuevas, llenas y cuartos con fecha y hora",
+        "Planetas que entran retrógrados y vuelven directos",
+        "Dibujos de la Luna orientados al hemisferio sur"
+      ],
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "ARS"},
+      "provider": {"@type":"ProfessionalService","name":"A través de Mí","url":"https://atravesdemi.com/"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://atravesdemi.com/calendario-lunar#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"¿En qué zona horaria están las fases de la Luna?","acceptedAnswer":{"@type":"Answer","text":"En hora de Argentina, UTC−3. Si estás en otro país hay que ajustar: en el centro de México son 3 horas menos, en Colombia y Perú 2 horas menos, en Chile 1 hora menos en invierno, y en España 5 horas más en verano y 4 en invierno."}},
+        {"@type":"Question","name":"¿Por qué el signo del día no coincide con otros calendarios?","acceptedAnswer":{"@type":"Answer","text":"Es una diferencia de convención, no de cálculo. Acá se muestra el signo en el que está la Luna al empezar el día, y una flecha marca a qué hora cambia. Muchos calendarios en cambio etiquetan el día con el signo entrante y redondean la hora hacia arriba."}},
+        {"@type":"Question","name":"¿Hasta qué año llega el calendario?","acceptedAnswer":{"@type":"Answer","text":"Hasta diciembre de 2030. Son 60 meses con la fase y el signo de cada día, y 345 eventos fechados entre lunaciones y estaciones planetarias."}},
+        {"@type":"Question","name":"¿Por qué la Luna se dibuja iluminada de este lado?","acceptedAnswer":{"@type":"Answer","text":"Porque está orientada al hemisferio sur. Desde Argentina, Chile o Uruguay la parte iluminada de la Luna creciente se ve del lado opuesto a como se ve desde España o México."}},
+        {"@type":"Question","name":"¿Sirve para saber cuándo cortarme el pelo o sembrar?","acceptedAnswer":{"@type":"Answer","text":"El calendario da el dato astronómico: la fase, el signo y la hora. Qué hacer con eso depende de la tradición que sigas. Lo que sí es exacto son las fechas."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 
+<!-- ══════ HEADER — idéntico en TODAS las páginas ══════
+     Si lo cambiás acá, hay que pegarlo igual en las demás.
+     Lo que varía por página (el ítem activo) lo pone sitio.js.
+
+     En desktop es una barra horizontal. En móvil, la hamburguesa
+     queda a la izquierda, el logo al medio, y el mismo <nav> se
+     despliega abajo como panel. Es el mismo HTML: solo cambia el CSS. -->
 <header class="hdr">
   <div class="hdr-in">
+    <button class="nav-hamb" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
       <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
       <span class="brand-name">A través de Mí</span>
     </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="index.html#/">Inicio</a>
-      <a href="index.html#/servicios">Servicios</a>
-      <a href="index.html#/herramientas">Herramientas</a>
-      <a href="carta-natal.html">Carta natal</a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html" data-nav="home">Inicio</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="servicios.html" data-nav="servicios">Servicios</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-servicios" aria-haspopup="true" aria-label="Ver los servicios"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-servicios" role="menu" hidden>
+          <a href="servicios.html" role="menuitem"><b>Individuales</b><span>Método ATM, armonización, tarot y carta natal</span></a>
+          <a href="talleres.html" role="menuitem"><b>Grupales</b><span>Talleres y encuentros con cupo limitado</span></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="herramientas.html" data-nav="herramientas">Herramientas</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-herramientas" aria-haspopup="true" aria-label="Ver las herramientas"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-herramientas" role="menu" hidden>
+          <a href="carta-natal.html" role="menuitem"><b>Carta natal</b><span>Tu rueda del cielo completa, gratis</span></a>
+          <a href="tarot.html" role="menuitem"><b>Las cartas</b><span>Mensaje del día y tirada de tarot</span></a>
+          <a href="calendario-lunar.html" role="menuitem"><b>Calendario lunar</b><span>Fases, signos y retrógrados, mes a mes</span></a>
+        </div>
+      </div>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a class="btn btn-primary btn-block nav-cta" data-wa data-loc="menu-movil" href="#">Escribime por WhatsApp</a>
     </nav>
+    <a class="btn btn-primary btn-sm hdr-cta" data-wa data-loc="header" href="#">Escribime</a>
   </div>
 </header>
 
@@ -191,6 +279,191 @@ h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2rem,1.4rem + 2.5vw,3
 
     <p class="cargando" id="cargando">Cargando el calendario…</p>
 
+    <!-- LAS FECHAS, EN HTML
+         Esta lista existe para que un rastreador que no ejecuta
+         JavaScript pueda leer las fechas. La grilla de arriba es
+         la versión navegable; esta es la que se puede citar. -->
+    <section class="sec-tight" style="padding-top:var(--s5)">
+      <div class="sec-head center">
+        <span class="eyebrow">Los próximos 12 meses</span>
+        <h2 class="h2">Lunaciones y retrógrados, fecha por fecha</h2>
+        <p class="lead">Hora de Argentina (UTC−3). La grilla de arriba llega hasta diciembre de 2030.</p>
+      </div>
+      <div class="doce">
+        <div class="mes-ev">
+          <h3>Agosto de 2026</h3>
+          <ul>
+          <li><b>Cuarto menguante en Tauro</b> — 5 de agosto de 2026, 23:23 h</li>
+          <li><b>Luna nueva en Leo</b> — 12 de agosto de 2026, 14:38 h</li>
+          <li><b>Cuarto creciente en Escorpio</b> — 19 de agosto de 2026, 23:48 h</li>
+          <li><b>Luna llena en Piscis</b> — 28 de agosto de 2026, 01:20 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Septiembre de 2026</h3>
+          <ul>
+          <li><b>Cuarto menguante en Géminis</b> — 4 de septiembre de 2026, 04:53 h</li>
+          <li><b>Urano entra retrógrado</b> — 10 de septiembre de 2026, 13:05 h</li>
+          <li><b>Luna nueva en Virgo</b> — 11 de septiembre de 2026, 00:29 h</li>
+          <li><b>Cuarto creciente en Sagitario</b> — 18 de septiembre de 2026, 17:45 h</li>
+          <li><b>Luna llena en Aries</b> — 26 de septiembre de 2026, 13:51 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Octubre de 2026</h3>
+          <ul>
+          <li><b>Venus entra retrógrado</b> — 3 de octubre de 2026, 04:15 h</li>
+          <li><b>Cuarto menguante en Cáncer</b> — 3 de octubre de 2026, 10:27 h</li>
+          <li><b>Luna nueva en Libra</b> — 10 de octubre de 2026, 12:52 h</li>
+          <li><b>Plutón vuelve directo</b> — 15 de octubre de 2026, 12:00 h</li>
+          <li><b>Plutón vuelve directo</b> — 16 de octubre de 2026, 00:57 h</li>
+          <li><b>Cuarto creciente en Capricornio</b> — 18 de octubre de 2026, 13:14 h</li>
+          <li><b>Mercurio entra retrógrado</b> — 24 de octubre de 2026, 04:10 h</li>
+          <li><b>Luna llena en Tauro</b> — 26 de octubre de 2026, 01:13 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Noviembre de 2026</h3>
+          <ul>
+          <li><b>Cuarto menguante en Leo</b> — 1 de noviembre de 2026, 17:30 h</li>
+          <li><b>Luna nueva en Escorpio</b> — 9 de noviembre de 2026, 04:04 h</li>
+          <li><b>Mercurio vuelve directo</b> — 13 de noviembre de 2026, 12:59 h</li>
+          <li><b>Venus vuelve directo</b> — 13 de noviembre de 2026, 21:31 h</li>
+          <li><b>Cuarto creciente en Acuario</b> — 17 de noviembre de 2026, 08:49 h</li>
+          <li><b>Luna llena en Géminis</b> — 24 de noviembre de 2026, 11:55 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Diciembre de 2026</h3>
+          <ul>
+          <li><b>Cuarto menguante en Virgo</b> — 1 de diciembre de 2026, 03:10 h</li>
+          <li><b>Luna nueva en Sagitario</b> — 8 de diciembre de 2026, 21:54 h</li>
+          <li><b>Saturno vuelve directo</b> — 10 de diciembre de 2026, 21:03 h</li>
+          <li><b>Neptuno vuelve directo</b> — 12 de diciembre de 2026, 21:18 h</li>
+          <li><b>Júpiter entra retrógrado</b> — 12 de diciembre de 2026, 21:48 h</li>
+          <li><b>Cuarto creciente en Piscis</b> — 17 de diciembre de 2026, 02:44 h</li>
+          <li><b>Luna llena en Cáncer</b> — 23 de diciembre de 2026, 22:30 h</li>
+          <li><b>Cuarto menguante en Libra</b> — 30 de diciembre de 2026, 16:01 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Enero de 2027</h3>
+          <ul>
+          <li><b>Luna nueva en Capricornio</b> — 7 de enero de 2027, 17:26 h</li>
+          <li><b>Marte entra retrógrado</b> — 10 de enero de 2027, 09:59 h</li>
+          <li><b>Cuarto creciente en Aries</b> — 15 de enero de 2027, 17:36 h</li>
+          <li><b>Luna llena en Leo</b> — 22 de enero de 2027, 09:19 h</li>
+          <li><b>Cuarto menguante en Escorpio</b> — 29 de enero de 2027, 07:57 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Febrero de 2027</h3>
+          <ul>
+          <li><b>Luna nueva en Acuario</b> — 6 de febrero de 2027, 12:58 h</li>
+          <li><b>Urano vuelve directo</b> — 8 de febrero de 2027, 10:19 h</li>
+          <li><b>Mercurio entra retrógrado</b> — 9 de febrero de 2027, 14:37 h</li>
+          <li><b>Cuarto creciente en Tauro</b> — 14 de febrero de 2027, 05:00 h</li>
+          <li><b>Luna llena en Virgo</b> — 20 de febrero de 2027, 20:25 h</li>
+          <li><b>Cuarto menguante en Sagitario</b> — 28 de febrero de 2027, 02:18 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Marzo de 2027</h3>
+          <ul>
+          <li><b>Mercurio vuelve directo</b> — 3 de marzo de 2027, 09:37 h</li>
+          <li><b>Luna nueva en Piscis</b> — 8 de marzo de 2027, 06:31 h</li>
+          <li><b>Cuarto creciente en Géminis</b> — 15 de marzo de 2027, 13:27 h</li>
+          <li><b>Luna llena en Libra</b> — 22 de marzo de 2027, 07:45 h</li>
+          <li><b>Cuarto menguante en Capricornio</b> — 29 de marzo de 2027, 21:56 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Abril de 2027</h3>
+          <ul>
+          <li><b>Marte vuelve directo</b> — 1 de abril de 2027, 11:21 h</li>
+          <li><b>Luna nueva en Aries</b> — 6 de abril de 2027, 20:53 h</li>
+          <li><b>Júpiter vuelve directo</b> — 12 de abril de 2027, 23:56 h</li>
+          <li><b>Cuarto creciente en Cáncer</b> — 13 de abril de 2027, 19:58 h</li>
+          <li><b>Luna llena en Escorpio</b> — 20 de abril de 2027, 19:29 h</li>
+          <li><b>Cuarto menguante en Acuario</b> — 28 de abril de 2027, 17:20 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Mayo de 2027</h3>
+          <ul>
+          <li><b>Luna nueva en Tauro</b> — 6 de mayo de 2027, 08:00 h</li>
+          <li><b>Plutón entra retrógrado</b> — 8 de mayo de 2027, 07:07 h</li>
+          <li><b>Cuarto creciente en Leo</b> — 13 de mayo de 2027, 01:46 h</li>
+          <li><b>Luna llena en Escorpio</b> — 20 de mayo de 2027, 08:01 h</li>
+          <li><b>Cuarto menguante en Piscis</b> — 28 de mayo de 2027, 11:00 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Junio de 2027</h3>
+          <ul>
+          <li><b>Luna nueva en Géminis</b> — 4 de junio de 2027, 16:42 h</li>
+          <li><b>Mercurio entra retrógrado</b> — 10 de junio de 2027, 15:17 h</li>
+          <li><b>Cuarto creciente en Virgo</b> — 11 de junio de 2027, 07:58 h</li>
+          <li><b>Luna llena en Sagitario</b> — 18 de junio de 2027, 21:46 h</li>
+          <li><b>Cuarto menguante en Aries</b> — 27 de junio de 2027, 01:56 h</li>
+          </ul>
+        </div>
+        <div class="mes-ev">
+          <h3>Julio de 2027</h3>
+          <ul>
+          <li><b>Luna nueva en Cáncer</b> — 4 de julio de 2027, 00:04 h</li>
+          <li><b>Mercurio vuelve directo</b> — 4 de julio de 2027, 16:40 h</li>
+          <li><b>Neptuno entra retrógrado</b> — 9 de julio de 2027, 15:28 h</li>
+          <li><b>Cuarto creciente en Libra</b> — 10 de julio de 2027, 15:41 h</li>
+          <li><b>Luna llena en Capricornio</b> — 18 de julio de 2027, 12:47 h</li>
+          <li><b>Cuarto menguante en Tauro</b> — 26 de julio de 2027, 13:57 h</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — el mismo texto que declara el FAQPage de arriba.
+         Google pide que las respuestas estén visibles en la página. -->
+    <section class="sec-tight" id="faq">
+      <div class="sec-head center">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="h2">Sobre este calendario</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>¿En qué zona horaria están las fases de la Luna?</summary>
+          <div class="faq-a">
+            <p>En hora de Argentina, UTC−3. Si estás en otro país hay que ajustar: en el centro de México son 3 horas menos, en Colombia y Perú 2 horas menos, en Chile 1 hora menos en invierno, y en España 5 horas más en verano y 4 en invierno.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Por qué el signo del día no coincide con otros calendarios?</summary>
+          <div class="faq-a">
+            <p>Es una diferencia de convención, no de cálculo. Acá se muestra el signo en el que está la Luna al <em>empezar</em> el día, y una flecha marca a qué hora cambia.</p>
+            <p>Muchos calendarios en cambio etiquetan el día con el signo entrante y redondean la hora hacia arriba. Los instantes son los mismos; lo que cambia es cómo se rotula.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Hasta qué año llega el calendario?</summary>
+          <div class="faq-a">
+            <p>Hasta diciembre de 2030. Son 60 meses con la fase y el signo de cada día, y 345 eventos fechados entre lunaciones y estaciones planetarias.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Por qué la Luna se dibuja iluminada de este lado?</summary>
+          <div class="faq-a">
+            <p>Porque está orientada al hemisferio sur. Desde Argentina, Chile o Uruguay la parte iluminada de la Luna creciente se ve del lado opuesto a como se ve desde España o México.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Sirve para saber cuándo cortarme el pelo o sembrar?</summary>
+          <div class="faq-a">
+            <p>El calendario da el dato astronómico: la fase, el signo y la hora. Qué hacer con eso depende de la tradición que sigas. Lo que sí es exacto son las fechas.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <section class="cta">
       <h2>¿Querés saber cómo te toca a vos?</h2>
       <p>La Luna le pega distinto a cada carta. Con tu mapa en la mano se ve qué área de tu vida mueve cada lunación.</p>
@@ -199,29 +472,83 @@ h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2rem,1.4rem + 2.5vw,3
   </section>
 </main>
 
-<footer class="ftr">
+<!-- ══════ PIE — idéntico en TODAS las páginas ══════
+     Cuatro columnas en escritorio, apiladas en móvil.
+     Además de orientar, reparte enlaces internos a las 10 páginas
+     desde cualquier página del sitio. -->
+<footer class="ftr on-dark">
   <div class="wrap">
-    <svg width="34" height="31" viewBox="0 0 48 44" fill="none" style="margin:0 auto" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
-    <p class="ftr-name">A través de Mí</p>
-    <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
-    <nav class="ftr-nav" aria-label="Pie de página">
-      <a href="index.html#/">Inicio</a>
-      <a href="index.html#/servicios">Servicios</a>
-      <a href="index.html#/herramientas">Herramientas</a>
-      <a href="carta-natal.html">Carta natal</a>
-    </nav>
-    <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span></p>
+    <div class="ftr-cols">
+
+      <div class="ftr-marca">
+        <svg width="34" height="31" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+        <p class="ftr-name">A través de Mí</p>
+        <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+        <p class="ftr-desc">Atiendo por videollamada a Latinoamérica y España. La primera charla no tiene costo.</p>
+        <div class="ftr-social" id="ftr-social">
+          <a href="https://instagram.com/a.traves.demi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a data-wa data-loc="footer" href="#" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="ftr-col" aria-label="Servicios">
+        <h2>Servicios</h2>
+        <ul>
+          <li><a href="servicios.html#metodo-atm">Método ATM</a></li>
+          <li><a href="servicios.html#psicofisica">Armonización</a></li>
+          <li><a href="talleres.html">Talleres grupales</a></li>
+          <li><a href="servicios.html#valores">Valores</a></li>
+          <li><a href="servicios.html#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Herramientas gratuitas">
+        <h2>Gratis y sin registro</h2>
+        <ul>
+          <li><a href="carta-natal.html">Tu carta natal</a></li>
+          <li><a href="tarot.html">Mensaje del día</a></li>
+          <li><a href="tarot.html#arcanos">Los 22 arcanos</a></li>
+          <li><a href="calendario-lunar.html">Calendario lunar</a></li>
+          <li><a href="herramientas.html">Ver todas</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Más">
+        <h2>Más</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#quien-soy">Quién soy</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="mercurio-retrogrado.html">Mercurio retrógrado</a></li>
+          <li><a href="recomendaciones.html">Dejá tu experiencia</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="ftr-pie">
+      <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span> · <a data-wa data-loc="footer-tel" id="ftr-tel" href="#">+54 9 351 204-0561</a></p>
+      <p class="ftr-legal">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+    </div>
   </div>
 </footer>
 
+<div class="mbar js-only" id="mbar">
+  <a class="btn btn-outline" href="servicios.html">Ver servicios</a>
+  <a class="btn btn-primary" data-wa data-loc="barra-movil" href="#">Escribime</a>
+</div>
+
+<script src="sitio.js"></script>
 <script>
 (function(){
 'use strict';
-var TEL='5493512040561';
 var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 var SIGNOS=['Aries','Tauro','Géminis','Cáncer','Leo','Virgo','Libra','Escorpio','Sagitario','Capricornio','Acuario','Piscis'];
 var GLIFO=['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'].map(function(g){return g+'︎';});
-var $=function(s){return document.querySelector(s);};
 var datos=null, actual=null, claves=[];
 
 /* Desde el hemisferio sur la Luna se ve espejada: creciente ilumina por la
@@ -299,7 +626,7 @@ function pintar(clave){
   $('#next').disabled = idx >= claves.length - 1;
 
   var txt = 'Hola Mayra, estuve mirando el calendario lunar de '+MESES[mesNum]+' y quiero entender cómo me toca a mí.';
-  $('#cta-wa').href = 'https://wa.me/'+TEL+'?text='+encodeURIComponent(txt);
+  $('#cta-wa').href = 'https://wa.me/'+CONFIG.tel+'?text='+encodeURIComponent(txt);
 }
 
 function mover(paso){

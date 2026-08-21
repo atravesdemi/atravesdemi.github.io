@@ -1,293 +1,235 @@
-===============================================================
-  GUIA DE EDICION DEL CODIGO — A TRAVES DE MI
-  Landing page: index.html
-  Ultima actualizacion: Marzo 2026
-===============================================================
-
-Abri el archivo index.html en cualquier editor de texto
-(VS Code, Sublime, Notepad++) y busca las secciones que
-necesites editar. Usa Ctrl+F (o Cmd+F en Mac) para buscar
-los textos clave que te indico abajo.
-
-
-===============================================================
-1. EDITAR SERVICIOS
-===============================================================
-
-BUSCAR EN EL CODIGO: const services=[
-
-Vas a encontrar un array con 4 objetos. Cada objeto es un
-servicio. La estructura es:
-
-{
-  icon:'zap',
-    ^ Icono: 'zap' (rayo), 'star' (estrella),
-      'clock' (reloj), 'book' (libro), 'heart' (corazon)
-
-  num:'01',
-    ^ Numero que aparece arriba del nombre
-
-  name:'Armonizacion psicofisica',
-    ^ Nombre del servicio
-
-  badge:'Matriculada',
-    ^ Etiqueta verde al lado del numero
-      (borrar toda la linea si no queres badge)
-
-  hook:'Equilibra tu campo energetico en una sola sesion',
-    ^ Frase corta que aparece debajo del nombre
-
-  featured:true,
-    ^ true = borde violeta destacado
-      Solo el primer servicio deberia ser true
-
-  desc:'Metodo profesional que...',
-    ^ Descripcion larga cuando se expande la card
-
-  includes:['Calibrado segun...','Tratamiento emocional...'],
-    ^ Lista de "Que incluye la sesion"
-      (borrar toda la linea si no aplica al servicio)
-
-  forYou:['Tension, ansiedad...','Dolores de cabeza...'],
-    ^ Lista de "Es para vos si..."
-
-  tags:['Presencial','15-20 min','A distancia','Animales'],
-    ^ Etiquetas violetas con info practica
-
-  extra:'Se complementa con...'
-    ^ Nota verde al final de la card
-      (borrar toda la linea si no aplica)
-},
-
-
-PARA EDITAR UN SERVICIO EXISTENTE:
-  Simplemente cambia el texto entre las comillas simples ' '
-
-PARA AGREGAR UN NUEVO SERVICIO:
-  Copia un bloque completo (desde { hasta },) y pegalo
-  despues del ultimo. Cambia los textos.
-
-PARA ELIMINAR UN SERVICIO:
-  Borra todo el bloque desde { hasta }, (con la coma final)
-
-EJEMPLO — cambiar el nombre del servicio 2:
-  Buscar:     name:'Tarot evolutivo'
-  Cambiar por: name:'Lectura de Tarot Evolutivo'
-
-
-===============================================================
-2. EDITAR CURSOS Y TALLERES
-===============================================================
-
-BUSCAR EN EL CODIGO: const talleres=[
-
-Cada taller tiene esta estructura:
-
-{
-  name:'Conecta con tu guia interior',
-    ^ Nombre del taller
-
-  desc:'Taller vivencial de 3 encuentros',
-    ^ Descripcion corta
-
-  date:'Abril 2026',
-    ^ Fecha que aparece en la etiqueta amarilla
-
-  slots:'8 lugares',
-    ^ Cupos disponibles
-
-  st:'open'
-    ^ Estado del taller:
-      'open' = muestra boton "Inscribirme" dorado
-               y texto "Inscripciones abiertas" en verde
-      'soon' = muestra boton "Avisame" transparente
-               y texto "Proximamente" en gris
-},
-
-
-PARA AGREGAR UN TALLER NUEVO:
-  Copia un bloque y pegalo antes del ];
-  Ejemplo:
-
-  {name:'Registros Akashicos nivel 1',desc:'Taller intensivo de un dia',date:'Junio 2026',slots:'6 lugares',st:'open'},
-
-PARA ELIMINAR UN TALLER:
-  Borra toda la linea (desde { hasta },)
-
-PARA CAMBIAR DE "PROXIMAMENTE" A "INSCRIPCIONES ABIERTAS":
-  Busca el taller y cambia st:'soon' por st:'open'
-
-
-===============================================================
-3. EDITAR POSTS DEL BLOG
-===============================================================
-
-BUSCAR EN EL CODIGO: const blogPosts=[
-
-Cada post tiene esta estructura:
-
-{
-  cat:'Psicofisica',
-    ^ Categoria (aparece como etiqueta de color)
-
-  title:'Que es la Resonancia Schumann y como te afecta',
-    ^ Titulo del post
-
-  type:'Educativo',
-    ^ Tipo: 'Educativo' o 'Herramienta'
-
-  color:'#8FA89A',
-    ^ Color de la categoria (ver tabla abajo)
-
-  icon:'zap',
-    ^ Icono del thumbnail
-
-  hasArticle:true
-    ^ true = se puede clickear y abre el articulo completo
-      false o no ponerlo = solo aparece en la lista
-},
-
-
-COLORES POR CATEGORIA:
-  Psicofisica  -->  #8FA89A  (verde sage)
-  Tarot        -->  #C9A84C  (dorado)
-  Astrologia   -->  #7BA3C9  (azul celeste)
-  Energia      -->  #C4ABE0  (lavender)
-
-
-PARA AGREGAR UN POST NUEVO A LA LISTA:
-  Agrega un objeto nuevo dentro del array. Ejemplo:
-
-  {cat:'Tarot',title:'Como hacer tu primera tirada de 3 cartas',type:'Herramienta',color:'#C9A84C',icon:'star'},
-
-
-IMPORTANTE SOBRE hasArticle:
-  Si pones hasArticle:true, el post necesita un articulo
-  completo programado en HTML (como el de Mercurio retrogrado).
-  Esto requiere escribir codigo adicional en la funcion
-  showArticle(). Si no sabes hacerlo, pedile a Claude que te
-  lo genere pasandole el contenido del articulo.
-
-  Si no pones hasArticle o pones false, el post aparece en
-  la lista pero no se puede clickear. Esto sirve para posts
-  que todavia no tienen contenido completo.
-
-
-===============================================================
-4. EDITAR TESTIMONIOS
-===============================================================
-
-BUSCAR EN EL CODIGO: class="testimonial"
-
-Vas a encontrar 3 bloques de testimonios en el HTML.
-Cada uno tiene esta forma:
-
-<div class="testimonial">
-  <div class="avatar" style="background:#F0EBF5">L</div>
-  <div>
-    <p class="quote">"Aca va el texto del testimonio."</p>
-    <p class="who">Nombre, edad — Servicio</p>
-  </div>
-</div>
-
-Para editar: cambia el texto dentro de las comillas.
-La letra del avatar es la inicial del nombre.
-
-Para agregar uno nuevo: copia un bloque entero
-(desde <div class="testimonial"> hasta </div></div>)
-y pegalo despues del ultimo. Cambia los textos.
-
-
-===============================================================
-5. EDITAR LUNAS (ya es automatico, pero por si necesitas)
-===============================================================
-
-BUSCAR EN EL CODIGO: const lunarEvents=[
-
-Cada luna tiene:
-
-{
-  date:"2026-04-02T02:12:00Z",
-    ^ Fecha y hora UTC exacta
-
-  type:"Luna llena",
-    ^ "Luna llena" o "Luna nueva"
-
-  sign:"Libra",
-    ^ Signo zodiacal
-
-  msg:"Un momento ideal para..."
-    ^ Mensaje que aparece debajo del countdown
-},
-
-El sistema busca automaticamente la proxima luna futura.
-Cuando pasa una, salta a la siguiente solo.
-
-Ya estan cargadas todas las lunas hasta marzo 2027.
-Si necesitas agregar lunas de 2028 en adelante, agrega
-mas objetos al final del array antes del ];
-
-
-===============================================================
-REGLAS PARA NO ROMPER NADA
-===============================================================
-
-1. NUNCA borres las comillas simples ' ' que rodean textos
-
-2. NUNCA borres las comas , entre campos ni entre objetos
-
-3. NO uses comillas simples DENTRO de los textos
-   MAL:  'it's a test'
-   BIEN: 'it is a test'
-
-4. NO uses acentos ni enie dentro del JavaScript
-   (en el HTML de arriba si se puede, pero en el
-   JavaScript de abajo es mas seguro sin tildes)
-
-5. SIEMPRE hace backup antes de editar
-   Copia el archivo entero antes de hacer cambios
-
-6. Para PROBAR antes de subir:
-   Abri el index.html directo en tu navegador
-   (doble click en el archivo) y verifica que se vea bien
-
-7. Si algo se ROMPIO:
-   Volve al backup o descarga de nuevo desde Claude
-
-
-===============================================================
-COMO SUBIR LOS CAMBIOS A GITHUB
-===============================================================
-
-OPCION A — Editar directo en GitHub:
-  1. Anda a tu repositorio en github.com
-  2. Click en el archivo index.html
-  3. Click en el icono de lapiz (editar)
-  4. Hace los cambios
-  5. Click en "Commit changes"
-  6. En 1-2 minutos se actualiza solo
-
-OPCION B — Reemplazar el archivo completo:
-  1. Anda a tu repositorio en github.com
-  2. Click en el archivo index.html
-  3. Click en el icono de lapiz (editar)
-  4. Selecciona todo (Ctrl+A) y borra
-  5. Pega el contenido nuevo completo
-  6. Click en "Commit changes"
-  7. En 1-2 minutos se actualiza solo
-
-
-===============================================================
-CONTACTO WHATSAPP CONFIGURADO
-===============================================================
-
-Numero actual: 5491176065606
-
-Si cambia el numero en el futuro, busca en el codigo
-"5491176065606" y reemplaza todas las apariciones por
-el numero nuevo (con codigo de pais, sin + ni espacios).
-
-
-===============================================================
-FIN DE LA GUIA
-===============================================================
+═══════════════════════════════════════════════════════════════
+  A TRAVÉS DE MÍ — guía de edición
+  Actualizada el 20 de agosto de 2026
+═══════════════════════════════════════════════════════════════
+
+Este sitio no tiene proceso de compilación. Editás un archivo, lo
+abrís con doble clic para probarlo, y lo subís a GitHub. Nada más.
+
+
+───────────────────────────────────────────────────────────────
+1. LA REGLA QUE ORDENA TODO
+───────────────────────────────────────────────────────────────
+
+  El contenido va en el HTML. El JavaScript solo agrega
+  comportamiento.
+
+Antes era al revés: los textos vivían en arrays de JavaScript y el
+JS los pintaba. Se cambió porque los rastreadores de ChatGPT, Claude
+y Perplexity NO ejecutan JavaScript: para ellos la página estaba
+vacía. Google sí lo ejecuta, pero los motores generativos no.
+
+Por eso, si vas a agregar un texto, escribilo en el HTML. Si lo
+metés en un array de JS, es invisible para las IA que citan.
+
+
+───────────────────────────────────────────────────────────────
+2. LOS ARCHIVOS
+───────────────────────────────────────────────────────────────
+
+  Compartidos por todas las páginas
+  ─────────────────────────────────
+  estilos.css     Tokens, reset, tipografía, botones, header, pie,
+                  barra móvil, splash. Si cambiás un color de marca,
+                  se cambia acá y afecta a todo el sitio.
+  sitio.js        CONFIG (teléfono, endpoints), los ayudantes, los
+                  desplegables del menú, el año del pie, los links
+                  de WhatsApp, el splash y los reveals.
+
+  Páginas
+  ───────
+  index.html                 la home + el redireccionador de links viejos
+  servicios.html             Método ATM y psicofísica, valores, FAQ
+  talleres.html              los dos talleres grupales
+  herramientas.html          la puerta a las tres herramientas
+  blog.html                  índice del blog
+  mercurio-retrogrado.html   el artículo
+  carta-natal.html           la calculadora de carta natal
+  tarot.html                 mensaje del día + tirada de tarot
+  calendario-lunar.html      el calendario
+  recomendaciones.html       el formulario de testimonios
+  404.html                   página de error
+
+  Para buscadores e IA
+  ────────────────────
+  robots.txt      permite todo, incluidos los bots de IA
+  sitemap.xml     las 10 URLs. Si agregás una página, va acá también
+  llms.txt        resumen del sitio para modelos de lenguaje
+  .nojekyll       le dice a GitHub Pages que no procese nada
+  CNAME           el dominio. NO TOCAR
+
+
+───────────────────────────────────────────────────────────────
+3. EL HEADER Y EL PIE ESTÁN DUPLICADOS (a propósito)
+───────────────────────────────────────────────────────────────
+
+Cada página tiene su propia copia del header y del pie, entre estos
+comentarios:
+
+    <!-- ══════ HEADER — idéntico en TODAS las páginas ══════
+    <!-- ══════ PIE — idéntico en TODAS las páginas ══════ -->
+
+Están duplicados porque la alternativa (Jekyll con includes, o
+inyectarlos por JavaScript) rompería el doble clic desde el disco,
+que es la única forma de probar el sitio antes de subirlo.
+
+  Si tocás el menú, hay que pegar el mismo bloque en las 10 páginas.
+
+El mismo <nav> sirve para las dos pantallas. En escritorio es una barra
+horizontal; en móvil (720 px o menos) la hamburguesa queda a la izquierda,
+el logo al medio, y ese mismo <nav> se despliega como panel a lo ancho.
+No hay un segundo menú que mantener: solo cambia el CSS.
+
+En "Servicios" y "Herramientas" el texto navega a su página y el chevrón
+despliega los subítems. Son dos elementos distintos a propósito: en una
+pantalla táctil, si el texto abriera el menú, no habría forma de entrar a
+la sección.
+
+El pie tiene cuatro columnas y 16 enlaces internos. Como está en las 10
+páginas, es lo que reparte enlaces a todo el sitio: si agregás una página
+importante, sumala ahí.
+
+Los 10 bloques son idénticos carácter por carácter. Lo único que
+varía por página lo pone sitio.js: el ítem activo del menú, el año
+del pie y los links de WhatsApp. No pongas nada variable ahí adentro
+o se rompe la simetría.
+
+
+───────────────────────────────────────────────────────────────
+4. CAMBIOS FRECUENTES: DÓNDE TOCAR
+───────────────────────────────────────────────────────────────
+
+  El teléfono de WhatsApp
+    sitio.js, arriba: CONFIG.tel y CONFIG.telVisible.
+    Cambiás una vez y se actualizan todos los links del sitio.
+    En 404.html el número está escrito a mano, porque esa página no
+    carga sitio.js: hay que cambiarlo también ahí.
+
+  Los precios
+    servicios.html: los textos "A consultar" en las fichas de
+    servicio y en las tarjetas de Valores.
+
+  Ojo con "Armonización"
+    El servicio se llama "Armonización" en todos los títulos visibles,
+    pero en las descripciones y en los datos estructurados dice
+    "armonización psicofísica". No es un descuido: "psicofísica" es el
+    término por el que la gente busca, y sacarlo de todas partes costaría
+    tráfico. Si lo cambiás, cambialo solo en los títulos.
+    tarot.html: los ids p-informe y p-sesion.
+    carta-natal.html: CONFIG.precioDocumento y CONFIG.precioSesion,
+    en el script de la página.
+
+  Un servicio nuevo
+    servicios.html: copiar un bloque <article class="svc"> completo.
+    Y agregar su nodo "Service" al JSON-LD del <head>.
+
+  Una pregunta frecuente
+    Van en <details><summary>. El acordeón funciona sin JavaScript.
+    IMPORTANTE: la misma pregunta y la misma respuesta tienen que
+    estar también en el bloque FAQPage del <head>. Si no coinciden,
+    Google lo toma como datos falsos.
+
+  Un artículo nuevo
+    1. Copiar mercurio-retrogrado.html y renombrarlo.
+    2. Cambiar title, description, canonical, og:url y el JSON-LD
+       (headline, datePublished, dateModified).
+    3. Agregar la tarjeta en blog.html y el nodo blogPost al JSON-LD.
+    4. Agregar la URL a sitemap.xml.
+
+  Un taller nuevo
+    talleres.html: copiar un <article class="taller"> y agregar su
+    nodo "Course" al JSON-LD. NO usar "Event": Event exige una fecha
+    exacta de inicio, y acá las fechas son "Abril 2026".
+
+
+───────────────────────────────────────────────────────────────
+5. LAS FECHAS ASTRONÓMICAS
+───────────────────────────────────────────────────────────────
+
+Todo lo lunar sale de datos/lunar.json: 60 meses (2026 a 2030) con
+la fase y el signo de cada día, y 345 eventos fechados. Está
+calculado en hora de Argentina, UTC−3.
+
+  Regenerar el JSON (si hay que extender más allá de 2030):
+    cd datos
+    cp ../vendor/circular-natal-horoscope.js ./cnh.js
+    node generador-lunar.cjs
+    (tarda unos 30 segundos)
+
+  Regenerar las fechas escritas en el HTML:
+    cd datos
+    python3 gen-eventos.py 2026 8
+
+  Eso produce dos fragmentos: los 4 eventos del mes para la caja de
+  herramientas.html, y los 12 meses para calendario-lunar.html. Hay
+  que pegarlos a mano donde dicen los comentarios del HTML.
+
+  ¿Por qué están escritos en el HTML si el JS ya los trae?
+  Porque el JS los trae con fetch(), y los rastreadores de IA no
+  ejecutan JavaScript. Escritas en el HTML, las fechas se pueden
+  citar. Y como son hechos pasados o futuros verificables, no se
+  vuelven falsas con el tiempo: solo quedan viejas.
+
+
+───────────────────────────────────────────────────────────────
+6. LOS LINKS VIEJOS (#/servicios)
+───────────────────────────────────────────────────────────────
+
+Hasta agosto de 2026 el sitio navegaba con #/servicios, #/blog, etc.
+Esos links siguen circulando por WhatsApp.
+
+Arriba del <head> de index.html hay un redireccionador de ~30 líneas
+que los manda a la URL nueva. Si agregás una página, sumá su entrada
+al objeto MAPA de ese script.
+
+  Eso se queda para siempre. No tiene fecha de vencimiento.
+
+Un aviso para no prometer de más: los links viejos ya compartidos
+tienen cacheado el preview del home en WhatsApp, y eso no va a
+cambiar, porque WhatsApp ignora el fragmento (#). Los previews por
+sección solo aparecen en links nuevos.
+
+
+───────────────────────────────────────────────────────────────
+7. ANTES DE SUBIR
+───────────────────────────────────────────────────────────────
+
+  [ ] Abrí la página con doble clic y mirala.
+  [ ] Abrí la consola del navegador (F12): tiene que estar limpia.
+      Un solo error de JavaScript apaga todo lo que viene después
+      en silencio: el menú, el splash, los links de WhatsApp.
+  [ ] Un solo <h1> por página.
+  [ ] Si agregaste una página: canonical propio, entrada en
+      sitemap.xml y link desde algún lugar del sitio.
+  [ ] Si tocaste el header: pegalo en las 10 páginas.
+
+
+───────────────────────────────────────────────────────────────
+8. DOS COSAS QUE NO SE HACEN
+───────────────────────────────────────────────────────────────
+
+  Nada de aggregateRating ni Review en los datos estructurados.
+  Los tres testimonios de la home son ilustrativos, no reseñas
+  reales. Marcarlos como reseñas es falsear datos estructurados y
+  Google lo penaliza. Cuando recomendaciones.html junte testimonios
+  reales con permiso, ahí sí corresponde.
+
+  Nada de contadores de descuento que se reinician.
+  Es urgencia falsa, la gente la detecta, y en un trabajo que se
+  sostiene sobre la confianza el costo reputacional supera lo que
+  rinde. Alternativas honestas: cupos reales por semana, precio de
+  lanzamiento con fecha de fin verdadera, o descuento para quien ya
+  usó una herramienta gratuita.
+
+
+───────────────────────────────────────────────────────────────
+9. NO GUARDAR EL REPO EN ~/Documents
+───────────────────────────────────────────────────────────────
+
+macOS protege ~/Documents con TCC y cada tanto bloquea archivos
+sueltos: dejan de poder leerse desde la terminal y desde los
+editores, con "Operation not permitted", aunque los permisos Unix
+estén bien. Pasó tres veces.
+
+  El repo vive en ~/Projects/atravesdemi/ por eso.
+  No lo muevas a ~/Documents, ~/Desktop ni ~/Downloads.

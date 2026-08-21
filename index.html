@@ -6,12 +6,11 @@
 <meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1433" media="(prefers-color-scheme: dark)">
 
-<title>A través de Mí — Psicofísica, Astrología y Tarot en Buenos Aires</title>
-<meta name="description" content="Profesional psicofísica. Método ATM, psicofísica, tarot evolutivo y carta natal. Online y presencial en Buenos Aires.">
+<title>A través de Mí — Psicofísica, Astrología y Tarot online</title>
+<meta name="description" content="Método ATM, armonización psicofísica, tarot evolutivo y carta natal. Sesiones por videollamada para Latinoamérica y España. La primera charla no tiene costo.">
 <link rel="canonical" href="https://atravesdemi.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="author" content="A través de Mí">
-<meta name="keywords" content="psicofísica, método ATM, tarot evolutivo, carta natal, astrología, equilibrio energético, autoconocimiento, Buenos Aires, bienestar animal">
+<meta name="author" content="Mayra — A través de Mí">
 
 <meta property="og:site_name" content="A través de Mí">
 <meta property="og:type" content="website">
@@ -28,6 +27,52 @@
 <meta name="twitter:description" content="Autoconocimiento, integración y transformación. No predigo tu futuro: te ayudo a entender tu presente.">
 <meta name="twitter:image" content="https://atravesdemi.com/og-image.jpg">
 
+<script>
+/* ══════════════════════════════════════════════════════════════
+   COMPATIBILIDAD CON LOS LINKS VIEJOS
+   ══════════════════════════════════════════════════════════════
+   Hasta agosto de 2026 el sitio navegaba con #/servicios, #/blog…
+   Esos links siguen circulando por WhatsApp. El fragmento (#) nunca
+   llega al servidor, así que atravesdemi.com/#/servicios SIEMPRE
+   carga esta página: la única forma de redirigir es desde acá.
+
+   Va INLINE y antes del CSS a propósito, para que el salto ocurra
+   antes de que se pinte la home. Y usa location.replace() en vez de
+   href: con href, el botón Atrás vuelve al hash y la persona queda
+   atrapada en un rebote.
+
+   Esto se queda para siempre. No tiene fecha de vencimiento.
+   ══════════════════════════════════════════════════════════════ */
+(function(){
+  var h = location.hash;
+  if(h.indexOf('#/') !== 0) return;      // #main, #experiencias… se dejan en paz
+
+  var resto = h.slice(2);                // "servicios#valores" · "blog/mercurio-retrogrado"
+  var corte = resto.indexOf('#');
+  var ancla = corte > -1 ? resto.slice(corte) : '';
+  var ruta  = corte > -1 ? resto.slice(0, corte) : resto;
+
+  var MAPA = {
+    '':                          '',                          // #/ → la home, sin recargar
+    'home':                      '',
+    'servicios':                 'servicios.html',
+    'talleres':                  'talleres.html',
+    'herramientas':              'herramientas.html',
+    'blog':                      'blog.html',
+    'blog/mercurio-retrogrado':  'mercurio-retrogrado.html'
+  };
+  var destino = MAPA[ruta];
+
+  // Ruta desconocida o la home misma: se limpia el hash y se queda acá.
+  if(!destino){
+    if(ancla) location.replace(ancla);
+    else if(history.replaceState) history.replaceState(null, '', location.pathname);
+    return;
+  }
+  location.replace(destino + ancla);
+})();
+</script>
+
 <link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -35,258 +80,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "@id": "https://atravesdemi.com/#business",
-  "name": "A través de Mí",
-  "description": "Profesional psicofísica. Método ATM, psicofísica, tarot evolutivo y carta natal. Online y presencial en Buenos Aires.",
-  "url": "https://atravesdemi.com/",
-  "image": "https://atravesdemi.com/og-image.jpg",
-  "telephone": "+5493512040561",
-  "address": {"@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressRegion": "CABA", "addressCountry": "AR"},
-  "geo": {"@type": "GeoCoordinates", "latitude": -34.6037, "longitude": -58.3816},
-  "areaServed": [{"@type": "City", "name": "Buenos Aires"}, {"@type": "Country", "name": "Argentina"}],
-  "priceRange": "$$",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "10:00", "closes": "20:00"
-  }],
-  "sameAs": ["https://www.instagram.com/a.traves.demi"],
-  "founder": {
-    "@type": "Person",
-    "name": "Mayra",
-    "jobTitle": "Profesional psicofísica",
-    "worksFor": {"@id": "https://atravesdemi.com/#business"}
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Servicios",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Método ATM", "description": "Acompañamiento integrativo que combina psicofísica, tarot, astrología y meditación según lo que cada persona necesita."}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Psicofísica", "description": "Diagnóstico, neutralización y armonización de los campos energéticos emocional, sensorial, intelectual y físico."}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tarot evolutivo", "description": "Lectura de cartas orientada al autoconocimiento, no a la adivinación."}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Carta natal y revolución solar", "description": "Interpretación del mapa astrológico de nacimiento y del ciclo anual."}}
-    ]
-  }
-}
-</script>
+<link rel="stylesheet" href="estilos.css">
 
 <noscript><style>
   #splash{display:none!important}
-  .page{display:block!important}
   [data-reveal]{opacity:1!important;transform:none!important}
   .js-only{display:none!important}
 </style></noscript>
 
 <style>
-/* ============================================================
-   TOKENS
-   ============================================================ */
-:root{
-  /* color — todos los pares texto/fondo verificados a WCAG AA */
-  --navy:#1E1433;      /* fondo oscuro */
-  --navy-deep:#160E26;
-  --navy-soft:#2A1D45;
-  --purple:#5B3F8C;    /* 8.3:1 sobre crema — acción primaria */
-  --purple-d:#48306F;
-  --lav:#C4ABE0;       /* 8.7:1 sobre navy — solo sobre oscuro */
-  --mist:#F0EBF5;
-  --cream:#FAF8F5;
-  --gold:#C9A84C;      /* 7.8:1 sobre navy — SOLO sobre oscuro */
-  --gold-d:#8B6914;    /* 4.8:1 sobre crema — el dorado para fondo claro */
-  --gold-soft:#F7F0DC;
-  --ink:#2A2530;       /* texto principal  14.4:1 */
-  --ink-2:#5C5666;     /* texto secundario  6.7:1 */
-  --ink-3:#6E6879;     /* texto terciario   5.1:1 */
-  --line:#E4DFDA;
-  --line-2:#EFEBE6;
-  --sage:#4F7A63;      /* 4.6:1 */
-  --sage-soft:#EDF3EF;
-  --blue:#3F6E97;      /* 5.1:1 */
-  --blue-soft:#EAF1F7;
-  --rose:#A8545A;
-
-  /* espacio — escala de 8 */
-  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem; --s7:6rem;
-
-  --r1:10px; --r2:16px; --r3:24px; --pill:999px;
-  --sh:0 1px 2px rgba(30,20,51,.04), 0 10px 28px -14px rgba(30,20,51,.14);
-  --sh-lg:0 2px 6px rgba(30,20,51,.05), 0 28px 56px -24px rgba(30,20,51,.22);
-
-  --ff-d:'Fraunces', Georgia, 'Times New Roman', serif;
-  --ff-b:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-  --maxw:1080px;
-  --prose:680px;
-  --hd:60px; /* alto del header */
-}
-
-/* ============================================================
-   BASE
-   ============================================================ */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
-body{
-  font-family:var(--ff-b);
-  font-size:16px;line-height:1.7;
-  background:var(--cream);color:var(--ink);
-  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-  overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
-:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
-.dark :focus-visible,.on-dark :focus-visible{outline-color:var(--gold)}
-::selection{background:var(--mist);color:var(--navy)}
-
-.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--purple);color:#fff;padding:12px 20px;border-radius:0 0 var(--r1) 0;font-size:14px;font-weight:500}
-.skip:focus{left:0}
-
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3);width:100%}
-.prose{max-width:var(--prose);margin-inline:auto}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-/* ============================================================
-   TIPOGRAFÍA
-   ============================================================ */
-.display{font-family:var(--ff-d);font-weight:400;font-size:clamp(2.25rem,1.4rem + 3.6vw,3.75rem);line-height:1.06;letter-spacing:-.02em;font-variation-settings:'opsz' 100}
-.h2{font-family:var(--ff-d);font-weight:400;font-size:clamp(1.7rem,1.2rem + 1.9vw,2.4rem);line-height:1.15;letter-spacing:-.015em;font-variation-settings:'opsz' 60}
-.h3{font-family:var(--ff-d);font-weight:500;font-size:1.25rem;line-height:1.3;letter-spacing:-.01em}
-.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d)}
-.on-dark .eyebrow,.dark .eyebrow{color:var(--gold)}
-.lead{font-size:clamp(1rem,.95rem + .25vw,1.125rem);line-height:1.65;color:var(--ink-2)}
-.muted{color:var(--ink-2)}
-.small{font-size:.875rem;line-height:1.6;color:var(--ink-3)}
-.rule{width:48px;height:2px;background:var(--gold-d);opacity:.55;border-radius:2px}
-.on-dark .rule{background:var(--gold);opacity:.7}
-
-/* ============================================================
-   BOTONES
-   ============================================================ */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:14px 28px;border-radius:var(--pill);
-  font-size:.9375rem;font-weight:500;letter-spacing:.01em;
-  transition:transform .18s ease, background-color .18s ease, box-shadow .18s ease, border-color .18s ease;
-  text-align:center;line-height:1.2;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0)}
-.btn-primary{background:var(--purple);color:#fff;box-shadow:0 6px 18px -8px rgba(91,63,140,.7)}
-.btn-primary:hover{background:var(--purple-d);box-shadow:0 10px 24px -8px rgba(91,63,140,.75)}
-.btn-outline{border:1.5px solid var(--purple);color:var(--purple);background:transparent}
-.btn-outline:hover{background:var(--purple);color:#fff}
-.on-dark .btn-primary{background:var(--gold);color:var(--navy);box-shadow:0 6px 18px -8px rgba(201,168,76,.6)}
-.on-dark .btn-primary:hover{background:#D8B95E}
-.on-dark .btn-outline{border-color:var(--gold);color:var(--gold)}
-.on-dark .btn-outline:hover{background:var(--gold);color:var(--navy)}
-.btn-sm{padding:9px 18px;font-size:.8125rem}
-.btn-block{display:flex;width:100%}
-.btn svg{flex-shrink:0}
-
-/* ============================================================
-   HEADER
-   ============================================================ */
-.hdr{
-  position:sticky;top:0;z-index:100;
-  background:rgba(250,248,245,.86);backdrop-filter:saturate(180%) blur(14px);
-  border-bottom:1px solid var(--line-2);
-}
-.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:var(--hd);max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3)}
-.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.brand-name{font-family:var(--ff-d);font-size:1rem;font-weight:500;letter-spacing:-.01em;color:var(--navy);white-space:nowrap}
-.nav{display:flex;gap:var(--s3);align-items:center}
-.nav a{
-  font-size:.875rem;color:var(--ink-2);padding:6px 2px;position:relative;
-  transition:color .18s ease;white-space:nowrap;
-}
-.nav a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--purple);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.16,1,.3,1)}
-.nav a:hover{color:var(--navy)}
-.nav a[aria-current="page"]{color:var(--purple);font-weight:500}
-.nav a[aria-current="page"]::after,.nav a:hover::after{transform:scaleX(1)}
-.hdr-cta{flex-shrink:0}
-
-/* Desplegable "Servicios": Individuales / Grupales.
-   Abre con hover en desktop y con click/teclado en cualquier dispositivo. */
-.nav-drop{position:relative}
-.nav-drop-btn{display:inline-flex;align-items:center;gap:5px;font-size:.875rem;color:var(--ink-2);padding:6px 2px;position:relative;white-space:nowrap;transition:color .18s ease}
-.nav-drop-btn::after{content:'';position:absolute;left:0;right:15px;bottom:0;height:2px;background:var(--purple);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.16,1,.3,1)}
-.nav-drop-btn:hover{color:var(--navy)}
-.nav-drop-btn[data-active]{color:var(--purple);font-weight:500}
-.nav-drop-btn[data-active]::after,.nav-drop-btn:hover::after{transform:scaleX(1)}
-.nav-drop-btn svg{transition:transform .22s ease}
-.nav-drop-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
-.nav-drop-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);min-width:272px;background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);box-shadow:var(--sh-lg);padding:6px;z-index:120}
-.nav-drop-menu[hidden]{display:none}
-/* puente invisible para que el hover no se corte al bajar el mouse */
-.nav-drop-menu::before{content:'';position:absolute;bottom:100%;left:0;right:0;height:14px}
-.nav-drop-menu a{display:block;padding:10px 12px;border-radius:var(--r1);transition:background-color .16s ease}
-.nav-drop-menu a::after{display:none}
-.nav-drop-menu a:hover{background:var(--mist)}
-.nav-drop-menu b{display:block;font-size:.875rem;font-weight:500;color:var(--navy);margin-bottom:1px}
-.nav-drop-menu span{display:block;font-size:.75rem;color:var(--ink-3);line-height:1.4}
-.nav-drop-menu .pronto{font-style:normal;font-size:.625rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:var(--mist);padding:2px 7px;border-radius:var(--pill);margin-left:6px;vertical-align:1px}
-
-/* ============================================================
-   MARQUEE
-   ============================================================ */
-.marquee{overflow:hidden;background:var(--navy);padding:11px 0;white-space:nowrap;--mq-dur:38s}
-.marquee-in{display:inline-flex;gap:0;animation:mq var(--mq-dur) linear infinite;will-change:transform}
-.marquee:hover .marquee-in{animation-play-state:paused}
-.marquee i{font-style:normal;font-size:.6875rem;color:var(--lav);letter-spacing:.16em;text-transform:uppercase;opacity:.85}
-.marquee .sep{color:var(--gold);margin:0 18px;opacity:.9}
-@keyframes mq{to{transform:translateX(-33.333%)}}
-
-/* ============================================================
-   SECCIONES / BANDAS
-   ============================================================ */
-.sec{padding-block:var(--s6)}
-.sec-tight{padding-block:var(--s5)}
-.band-mist{background:var(--mist)}
-.band-dark{background:var(--navy);color:var(--cream)}
-.band-dark .h2,.band-dark .display{color:var(--cream)}
-.band-dark .lead,.band-dark .muted{color:var(--lav);opacity:.88}
-.band-dark .small{color:var(--lav);opacity:.7}
-.sec-head{margin-bottom:var(--s4)}
-.sec-head .eyebrow{display:block;margin-bottom:10px}
-.sec-head .h2{margin-bottom:12px}
-.sec-head .lead{max-width:52ch}
-.sec-head.center{text-align:center}
-.sec-head.center .lead{margin-inline:auto}
-.sec-head.center .rule{margin:16px auto 0}
-.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);flex-wrap:wrap}
-.link-more{font-size:.875rem;color:var(--purple);font-weight:500;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
-.link-more:hover{text-decoration:underline;text-underline-offset:3px}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero{position:relative;text-align:center;padding:var(--s6) 0 var(--s6);overflow:hidden}
-.hero::before{
-  content:'';position:absolute;inset:-30% 0 auto;height:130%;
-  background:radial-gradient(60% 46% at 50% 22%, rgba(196,171,224,.30), rgba(250,248,245,0) 70%);
-  pointer-events:none;
-}
-.hero>*{position:relative}
-.hero-mark{margin:0 auto var(--s3)}
-.hero .eyebrow{display:block;margin-bottom:var(--s2)}
-.hero .display{margin-bottom:var(--s3);max-width:16ch;margin-inline:auto}
-.hero .lead{max-width:48ch;margin:0 auto var(--s4)}
-.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.trust{
-  display:flex;justify-content:center;gap:var(--s1) var(--s3);flex-wrap:wrap;
-  margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--line);
-  max-width:760px;margin-inline:auto;
-}
-.trust li{list-style:none;display:flex;align-items:center;gap:7px;font-size:.8125rem;color:var(--ink-2)}
-.trust svg{flex-shrink:0;color:var(--sage)}
-.hero-sub{padding-bottom:var(--s5)}
-.hero-sub .display{font-size:clamp(2rem,1.4rem + 2.6vw,3.1rem)}
+/* Los tokens, el reset, el header y el pie viven en estilos.css.
+   Acá queda solo lo propio de esta página. */
 
 /* ============================================================
    QUIÉN SOY
@@ -313,98 +117,6 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .about-quote{font-family:var(--ff-d);font-style:italic;font-size:1.0625rem;color:var(--ink-2);padding-left:var(--s2);border-left:2px solid var(--gold-d);margin-top:var(--s3)}
 
 /* ============================================================
-   PARA QUIÉN
-   ============================================================ */
-.forwho{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s2) var(--s4)}
-.forwho li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:.9375rem;line-height:1.55;color:var(--ink)}
-.forwho .bullet{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-top:1px;box-shadow:0 1px 3px rgba(30,20,51,.07)}
-
-/* ============================================================
-   SERVICIOS (grid home)
-   ============================================================ */
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--s2)}
-.svc-card{
-  background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);
-  padding:var(--s3);display:flex;flex-direction:column;gap:8px;
-  transition:transform .2s cubic-bezier(.16,1,.3,1), box-shadow .2s ease, border-color .2s ease;
-  position:relative;
-}
-.svc-card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:var(--lav)}
-.svc-card .ico{width:42px;height:42px;border-radius:var(--r1);display:grid;place-items:center;background:var(--mist);margin-bottom:4px}
-.svc-card.is-feat .ico{background:var(--purple)}
-.svc-card h3{font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.25}
-.svc-card p{font-size:.875rem;color:var(--ink-2);line-height:1.5;flex:1}
-.svc-card .go{font-size:.8125rem;color:var(--purple);font-weight:500;display:inline-flex;align-items:center;gap:4px}
-.svc-card .stretch::after{content:'';position:absolute;inset:0;border-radius:var(--r2)}
-/* herramientas todavía no disponibles: la tarjeta es un botón que abre el modal */
-.svc-card.is-soon{background:#fff;border-style:dashed;border-color:var(--line);text-align:left;width:100%;font:inherit;color:inherit;cursor:pointer}
-.svc-card.is-soon:hover{border-color:var(--lav);border-style:solid;transform:translateY(-3px);box-shadow:var(--sh)}
-.soon-tag{align-self:flex-start;font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);background:var(--mist);padding:3px 10px;border-radius:var(--pill)}
-.soon-tag.is-live{color:var(--sage);background:var(--sage-soft)}
-/* Herramienta publicada y destacada: banda oscura, arriba de todo */
-.tool-hero{display:flex;gap:var(--s3);align-items:center;background:var(--navy);border-radius:var(--r3);padding:var(--s4) var(--s3);color:var(--cream);position:relative;overflow:hidden;transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s ease}
-.tool-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(60% 80% at 12% 0%,rgba(196,171,224,.18),transparent 70%)}
-.tool-hero>*{position:relative}
-.tool-hero:hover{transform:translateY(-3px);box-shadow:var(--sh-lg)}
-.tool-hero-ico{width:62px;height:62px;border-radius:50%;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);display:grid;place-items:center;flex-shrink:0}
-.tool-hero-txt{flex:1;min-width:0}
-.tool-hero-txt .soon-tag{background:rgba(79,122,99,.22);color:#9FD3B4;margin-bottom:8px;display:inline-block}
-.tool-hero-h{display:block;font-family:var(--ff-d);font-size:1.5rem;font-weight:500;line-height:1.2;margin-bottom:6px}
-.tool-hero-p{display:block;font-size:.9375rem;line-height:1.6;color:var(--lav);opacity:.9;max-width:60ch}
-.tool-hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-size:.9375rem;font-weight:600;padding:13px 24px;border-radius:var(--pill);flex-shrink:0;white-space:nowrap}
-.tool-hero:hover .tool-hero-cta{background:#D8B95E}
-@media(max-width:820px){
-  .tool-hero{flex-direction:column;align-items:flex-start;gap:var(--s2)}
-  .tool-hero-cta{width:100%;justify-content:center}
-}
-
-/* ============================================================
-   MODAL (herramientas) — usa <dialog>: foco y Escape gratis
-   ============================================================ */
-/* margin:auto es lo que centra un <dialog>; el reset global lo pisa, hay que reponerlo */
-.modal{border:none;padding:0;margin:auto;background:transparent;color:var(--ink);width:100%;max-width:min(520px,calc(100vw - 2rem))}
-.modal::backdrop{background:rgba(30,20,51,.55);backdrop-filter:blur(3px)}
-.modal-in{position:relative;background:#fff;border-radius:var(--r3);padding:var(--s4) var(--s3) var(--s3);box-shadow:var(--sh-lg);max-height:86vh;overflow-y:auto}
-.modal-x{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--ink-2);transition:background-color .16s ease}
-.modal-x:hover{background:var(--mist);color:var(--navy)}
-.modal-in h3{font-family:var(--ff-d);font-size:1.375rem;font-weight:500;line-height:1.2;margin:10px 0 8px}
-.modal-lead{font-size:.9375rem;line-height:1.6;color:var(--ink-2);margin-bottom:var(--s3)}
-.modal-steps{list-style:none;counter-reset:ms;display:grid;gap:10px;margin-bottom:var(--s3)}
-.modal-steps li{display:flex;gap:10px;font-size:.9375rem;line-height:1.5;color:var(--ink-2)}
-.modal-steps li::before{counter-increment:ms;content:counter(ms);flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--mist);color:var(--purple);font-size:.75rem;font-weight:600;display:grid;place-items:center;margin-top:1px}
-@media(prefers-reduced-motion:no-preference){
-  .modal[open]{animation:mIn .22s cubic-bezier(.16,1,.3,1)}
-  @keyframes mIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-}
-
-/* ============================================================
-   PASOS (cómo es una sesión)
-   ============================================================ */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:var(--s3);counter-reset:st}
-.step{position:relative;padding-top:var(--s3);border-top:1px solid rgba(196,171,224,.28)}
-.step::before{
-  counter-increment:st;content:counter(st,decimal-leading-zero);
-  font-family:var(--ff-d);font-size:1.75rem;color:var(--gold);display:block;margin-bottom:8px;line-height:1;
-}
-.step h3{font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:6px}
-.step p{font-size:.875rem;line-height:1.6;color:var(--lav);opacity:.82}
-
-/* ============================================================
-   PRECIOS
-   ============================================================ */
-.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s2)}
-.price-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);padding:var(--s3);display:flex;flex-direction:column;gap:6px;position:relative}
-.price-card.is-feat{border:1.5px solid var(--purple);box-shadow:var(--sh)}
-.price-tag{position:absolute;top:-11px;left:var(--s3);background:var(--purple);color:#fff;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:var(--pill)}
-/* min-height: mantiene los valores alineados aunque el nombre ocupe 2 líneas */
-.price-name{font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.35;min-height:2.7em}
-.price-meta{font-size:.8125rem;color:var(--ink-3);line-height:1.4;min-height:2.8em}
-.price-val{font-family:var(--ff-d);font-size:1.6rem;font-weight:500;color:var(--purple);margin-top:6px;line-height:1.1}
-.price-val small{font-family:var(--ff-b);font-size:.8125rem;font-weight:400;color:var(--ink-3);display:block;margin-top:2px}
-.price-card .btn{margin-top:auto;padding-top:12px;padding-bottom:12px}
-.price-note{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-3);text-align:center;max-width:58ch;margin-inline:auto}
-
-/* ============================================================
    TESTIMONIOS
    ============================================================ */
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s2)}
@@ -416,268 +128,87 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .quote .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--ff-d);font-size:.9375rem;color:var(--purple);background:var(--mist);flex-shrink:0}
 .quote .who{font-weight:500;color:var(--ink)}
 
-/* ============================================================
-   ACORDEÓN (servicios detalle + FAQ)
-   ============================================================ */
-.acc{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);margin-bottom:12px;overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease}
-.acc:hover{border-color:var(--lav)}
-.acc.is-feat{border:1.5px solid var(--purple)}
-.acc-h{margin:0;font:inherit}
-.acc-btn{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;padding:var(--s3)}
-.acc-btn:focus-visible{outline-offset:-3px}
-.acc-ico{width:44px;height:44px;border-radius:var(--r1);display:grid;place-items:center;background:var(--mist);flex-shrink:0}
-.acc.is-feat .acc-ico{background:var(--purple)}
-.acc-meta{flex:1;min-width:0}
-.acc-kicker{display:flex;align-items:center;gap:8px;margin-bottom:2px}
-.acc-num{font-size:.6875rem;font-weight:600;letter-spacing:.16em;color:var(--gold-d)}
-.badge{font-size:.6875rem;font-weight:600;background:var(--sage-soft);color:var(--sage);padding:2px 8px;border-radius:5px;letter-spacing:.02em}
-.acc-title{display:block;font-family:var(--ff-d);font-size:1.1875rem;font-weight:500;line-height:1.25;margin-bottom:2px}
-.acc-hook{display:block;font-size:.875rem;color:var(--ink-2);line-height:1.5}
-.acc-toggle{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0;margin-top:6px;transition:transform .28s cubic-bezier(.16,1,.3,1),background-color .2s ease}
-.acc-btn[aria-expanded="true"] .acc-toggle{transform:rotate(45deg);background:var(--mist);border-color:transparent}
-.acc-panel{padding:0 var(--s3) var(--s3);border-top:1px solid var(--line-2)}
-.acc-panel[hidden]{display:none}
-.acc-panel>*:first-child{margin-top:var(--s3)}
-.acc-panel .desc{font-size:.9375rem;line-height:1.7;color:var(--ink-2);margin-bottom:var(--s3)}
-.sub-h{font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
-.list-check,.list-dot{list-style:none;margin-bottom:var(--s3);display:grid;gap:7px}
-.list-check li,.list-dot li{display:flex;gap:9px;align-items:flex-start;font-size:.9375rem;line-height:1.5;color:var(--ink-2)}
-.list-check svg{flex-shrink:0;margin-top:4px;color:var(--sage)}
-.list-dot li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold-d);flex-shrink:0;margin-top:9px}
-.pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--s3)}
-.pill{font-size:.75rem;background:var(--mist);color:var(--purple);padding:4px 11px;border-radius:6px;font-weight:500}
-.pill-warm{background:var(--gold-soft);color:var(--gold-d)}
-.note{background:var(--sage-soft);border-left:3px solid var(--sage);padding:12px 14px;border-radius:0 var(--r1) var(--r1) 0;margin-bottom:var(--s3)}
-.note p{font-size:.875rem;line-height:1.6;color:var(--ink-2)}
-.acc-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:var(--s3);font-size:.9375rem}
-.acc-price b{font-family:var(--ff-d);font-size:1.25rem;font-weight:500;color:var(--purple)}
-
-/* FAQ */
-.faq .acc-btn{padding:var(--s2) var(--s3);align-items:center}
-.faq .acc-title{font-size:1rem;margin:0}
-.faq .acc-panel{padding-bottom:var(--s3)}
-.faq .acc-panel p{font-size:.9375rem;line-height:1.7;color:var(--ink-2)}
-.faq .acc-panel p+p{margin-top:10px}
-
-/* ============================================================
-   LUNA + LEAD MAGNET
-   ============================================================ */
-.moon-lead{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s3);align-items:stretch}
-.moon{
-  background:var(--navy);border-radius:var(--r3);padding:var(--s4) var(--s3);
-  text-align:center;position:relative;overflow:hidden;
-}
-.moon::before{content:'';position:absolute;inset:0;background:radial-gradient(70% 55% at 50% 0%, rgba(196,171,224,.16), transparent 70%)}
-.moon>*{position:relative}
-.moon .eyebrow{display:block;margin-bottom:8px}
-.moon-date{font-family:var(--ff-d);font-size:1.5rem;font-weight:400;color:var(--cream);margin-bottom:var(--s3)}
-.ev-lista{display:grid;gap:10px;margin-bottom:var(--s3);text-align:left;max-width:30ch;margin-inline:auto}
-.ev-item{border-left:2px solid var(--gold);padding-left:12px}
-.ev-item b{display:block;font-size:.9375rem;font-weight:500;color:var(--cream);line-height:1.3}
-.ev-item span{display:block;font-size:.8125rem;color:var(--lav);opacity:.75}
-.cd{display:flex;gap:var(--s2);justify-content:center;align-items:flex-start;margin-bottom:var(--s3)}
-.cd-u{min-width:56px}
-.cd-n{font-family:var(--ff-d);font-size:2.25rem;font-weight:400;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
-.cd-l{font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);opacity:.75;margin-top:6px}
-.cd-s{font-family:var(--ff-d);font-size:2rem;color:var(--lav);opacity:.35;line-height:1.1}
-.moon-desc{font-size:.9375rem;line-height:1.6;color:var(--lav);opacity:.85;margin-bottom:var(--s3);max-width:34ch;margin-inline:auto}
-
-.lead-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--r3);padding:var(--s4) var(--s3);text-align:center;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--sh)}
-.lead-card .ico-round{width:46px;height:46px;border-radius:50%;background:var(--mist);display:grid;place-items:center;margin:0 auto var(--s2)}
-.lead-card h3{font-family:var(--ff-d);font-size:1.25rem;font-weight:500;margin-bottom:8px}
-.lead-card p{font-size:.9375rem;color:var(--ink-2);line-height:1.55;margin-bottom:var(--s3);max-width:36ch;margin-inline:auto}
-.form-row{display:flex;gap:8px;flex-wrap:wrap;max-width:420px;margin:0 auto}
-.form-row input{
-  flex:1;min-width:180px;padding:13px 16px;border:1px solid var(--line);border-radius:var(--pill);
-  font-family:inherit;font-size:.9375rem;background:var(--cream);color:var(--ink);
-}
-.form-row input::placeholder{color:var(--ink-3)}
-.form-row input:focus{outline:2px solid var(--purple);outline-offset:1px;border-color:transparent}
-.form-hp{position:absolute;left:-9999px}
-.form-msg{font-size:.8125rem;margin-top:12px;min-height:1.2em}
-.form-msg.ok{color:var(--sage);font-weight:500}
-.form-msg.err{color:var(--rose)}
-.form-legal{font-size:.75rem;color:var(--ink-3);margin-top:10px}
-
-/* ============================================================
-   CTA FINAL
-   ============================================================ */
-.cta{text-align:center;padding-block:var(--s6)}
-.cta .h2{max-width:20ch;margin:var(--s2) auto var(--s2)}
-.cta .lead{margin-bottom:var(--s4)}
-.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-
-/* ============================================================
-   TALLERES
-   ============================================================ */
-.taller{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);padding:var(--s3);margin-bottom:12px;box-shadow:var(--sh)}
-.taller h2{font-family:var(--ff-d);font-size:1.1875rem;font-weight:500;line-height:1.3;margin-bottom:4px}
-.taller .desc{font-size:.9375rem;color:var(--ink-2);line-height:1.55;margin-bottom:12px}
-.taller-foot{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);flex-wrap:wrap}
-.status{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px}
-.status::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
-.status.open{color:#2D7A4F}
-.status.soon{color:var(--ink-3)}
-
-/* ============================================================
-   BLOG
-   ============================================================ */
-.posts{display:grid;gap:12px}
-.post{
-  background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);padding:var(--s3);
-  display:flex;gap:var(--s3);align-items:center;position:relative;
-  transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s ease,border-color .2s ease;
-}
-.post:hover{transform:translateY(-2px);box-shadow:var(--sh);border-color:var(--lav)}
-.post .thumb{width:62px;height:62px;border-radius:var(--r1);display:grid;place-items:center;flex-shrink:0}
-.post-cat{display:flex;align-items:center;gap:7px;margin-bottom:4px;flex-wrap:wrap}
-.post-cat .d{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.post-cat span{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
-.post h2{font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.3;margin-bottom:4px}
-/* toda la tarjeta es clickeable, pero el link accesible sigue siendo el título */
-.post h2 a::after{content:'';position:absolute;inset:0;border-radius:var(--r2)}
-.post .meta{font-size:.8125rem;color:var(--ink-3)}
-.post .chev{color:var(--line);flex-shrink:0}
-.post:hover .chev{color:var(--purple)}
-.soon-list{list-style:none;display:grid;gap:10px;margin-top:var(--s2)}
-.soon-list li{display:flex;gap:12px;align-items:baseline;font-size:.9375rem;color:var(--ink-2);padding-bottom:10px;border-bottom:1px dashed var(--line)}
-.soon-list .c{font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);flex-shrink:0;min-width:88px}
-
-/* ARTÍCULO */
-.art-back{display:inline-flex;align-items:center;gap:6px;font-size:.875rem;color:var(--purple);font-weight:500;padding:var(--s3) 0 0}
-.art-back:hover{text-decoration:underline;text-underline-offset:3px}
-.art{padding-block:var(--s3) var(--s6)}
-.art .display{font-size:clamp(1.9rem,1.3rem + 2.4vw,2.75rem);margin-bottom:14px}
-.art-dek{font-size:1.0625rem;line-height:1.6;color:var(--ink-2);margin-bottom:var(--s4)}
-.art-author{display:flex;align-items:center;gap:12px;padding-bottom:var(--s3);border-bottom:1px solid var(--line);margin-bottom:var(--s4)}
-.art-author .av{width:40px;height:40px;border-radius:50%;background:var(--mist);display:grid;place-items:center;flex-shrink:0}
-.art-author b{display:block;font-size:.9375rem;font-weight:500}
-.art-author time{font-size:.8125rem;color:var(--ink-3)}
-.art h2{font-family:var(--ff-d);font-size:1.5rem;font-weight:500;line-height:1.25;margin:var(--s5) 0 var(--s2)}
-.art p{font-size:1.0625rem;line-height:1.8;color:var(--ink-2);margin-bottom:var(--s2)}
-.art .card-dark{background:var(--navy);border-radius:var(--r2);padding:var(--s4) var(--s3);text-align:center;margin-block:var(--s4)}
-.art .card-dark .eyebrow{display:block;margin-bottom:8px;color:var(--gold)}
-.art .card-dark strong{display:block;font-family:var(--ff-d);font-size:1.375rem;font-weight:400;color:var(--cream);margin-bottom:4px}
-.art .card-dark em{font-style:normal;font-size:.875rem;color:var(--lav);opacity:.8}
-.art .card-avoid,.art .card-do{border-radius:var(--r2);padding:var(--s3);margin-block:var(--s4)}
-.art .card-avoid{background:var(--mist)}
-.art .card-do{background:var(--sage-soft)}
-.art .card-avoid .sub-h{color:var(--purple)}
-.art .card-do .sub-h{color:var(--sage)}
-.art .card-avoid ul,.art .card-do ul{list-style:none;display:grid;gap:8px}
-.art .card-avoid li,.art .card-do li{display:flex;gap:9px;align-items:flex-start;font-size:.9375rem;line-height:1.55;color:var(--ink-2)}
-.art .card-avoid li .x{color:var(--rose);font-weight:600;flex-shrink:0;line-height:1.55}
-.art .card-do li svg{flex-shrink:0;margin-top:4px;color:var(--sage)}
-.art .card-cta{background:#fff;border:1.5px solid var(--purple);border-radius:var(--r2);padding:var(--s4) var(--s3);text-align:center;margin-block:var(--s4)}
-.art .card-cta .ico-round{width:46px;height:46px;border-radius:50%;background:var(--mist);display:grid;place-items:center;margin:0 auto 12px}
-.art .card-cta h3{font-family:var(--ff-d);font-size:1.1875rem;font-weight:500;margin-bottom:8px}
-.art .card-cta p{font-size:.9375rem;margin-bottom:var(--s3)}
-.art .ritual{border-left:2px solid var(--gold-d);padding-left:var(--s3);margin-block:var(--s4);display:grid;gap:var(--s3)}
-.art .ritual .n{font-family:var(--ff-d);font-size:1.375rem;color:var(--gold-d);line-height:1}
-.art .ritual h4{font-size:1rem;font-weight:600;display:inline;margin-left:8px}
-.art .ritual p{font-size:.9375rem;margin:6px 0 0;line-height:1.6}
-.art .tags{display:flex;gap:8px;flex-wrap:wrap;padding-top:var(--s3);border-top:1px solid var(--line);margin-top:var(--s5)}
-.art .tags .pill{background:var(--blue-soft);color:var(--blue)}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.ftr{background:var(--navy);color:var(--lav);padding-block:var(--s5) var(--s4);text-align:center}
-.ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin:12px 0 4px}
-.ftr-tag{font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s3)}
-.ftr-nav{display:flex;justify-content:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s3);font-size:.875rem}
-.ftr-nav a{color:var(--lav);opacity:.8}
-.ftr-nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
-.ftr-social{display:flex;justify-content:center;gap:10px;margin-bottom:var(--s3)}
-.ftr-social a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(196,171,224,.28);display:grid;place-items:center;color:var(--lav);transition:background-color .2s ease,color .2s ease,border-color .2s ease}
-.ftr-social a:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
-.ftr-copy{font-size:.75rem;color:var(--lav);opacity:.5}
-.ftr-copy a{text-decoration:underline;text-underline-offset:2px}
-
-/* ============================================================
-   BARRA STICKY MÓVIL
-   ============================================================ */
-.mbar{
-  position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;gap:8px;
-  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-  background:rgba(250,248,245,.94);backdrop-filter:blur(14px);
-  border-top:1px solid var(--line);
-  transform:translateY(0);transition:transform .3s cubic-bezier(.16,1,.3,1);
-}
-.mbar.hide{transform:translateY(110%)}
-.mbar .btn{flex:1;padding:13px 14px;font-size:.875rem}
-
-/* ============================================================
-   PÁGINAS / SPLASH / REVEAL
-   ============================================================ */
-.page{display:none}
-.page.active{display:block}
-[data-page-title],section[id]{scroll-margin-top:80px}
-[data-page-title]:focus{outline:none}
-
-.splash{position:fixed;inset:0;z-index:300;background:var(--cream);display:grid;place-content:center;justify-items:center;gap:12px;transition:opacity .3s ease,visibility .3s}
-.splash.out{opacity:0;visibility:hidden}
-.splash-mark{animation:spIn .5s cubic-bezier(.16,1,.3,1) both}
-.splash-name{font-family:var(--ff-d);font-size:1.5rem;color:var(--navy);animation:spUp .5s .12s cubic-bezier(.16,1,.3,1) both}
-.splash-tag{font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);animation:spUp .5s .2s cubic-bezier(.16,1,.3,1) both}
-@keyframes spIn{from{opacity:0;transform:scale(.75)}to{opacity:1;transform:none}}
-@keyframes spUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-
-[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
-[data-reveal].in{opacity:1;transform:none}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 @media(max-width:900px){
   .about{grid-template-columns:1fr;gap:var(--s4)}
   .portrait{aspect-ratio:3/2;max-height:380px}
   .portrait img{object-position:center 22%}
 }
-@media(max-width:720px){
-  :root{--s5:2.25rem;--s6:3rem;--s7:4rem}
-  .hdr-cta{display:none}
-  .nav{gap:var(--s2)}
-  .nav a,.nav-drop-btn{font-size:.8125rem}
-  .nav-drop-menu{left:auto;right:0;transform:none;min-width:min(268px,calc(100vw - 32px))}
-  .brand-name{display:none}
-  .mbar{display:flex}
-  body{padding-bottom:74px}
-  .wrap{padding-inline:var(--s2)}
-  .hero{padding-block:var(--s5) var(--s5)}
-  .trust{margin-top:var(--s4);gap:10px var(--s2);justify-content:flex-start;text-align:left}
-  .post{gap:var(--s2);padding:var(--s2)}
-  .post .thumb{width:52px;height:52px}
-  .acc-btn{padding:var(--s2)}
-  .acc-panel{padding-inline:var(--s2)}
-  .art p{font-size:1rem}
-  .cd-u{min-width:48px}
-  .cd-n{font-size:1.875rem}
-}
-@media(max-width:400px){
-  .nav{gap:12px}
-  .nav a{font-size:.75rem}
-}
-
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-  [data-reveal]{opacity:1!important;transform:none!important}
-  .marquee-in{animation:none}
-  .btn:hover,.svc-card:hover,.post:hover{transform:none}
-}
-
-@media print{
-  .hdr,.mbar,.marquee,.splash,.ftr-social,.hero-actions,.cta-actions{display:none!important}
-  .page{display:block!important}
-  body{background:#fff;color:#000;padding-bottom:0}
-  .band-dark,.moon{background:#fff!important;color:#000!important;border:1px solid #ccc}
-}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://atravesdemi.com/#sitio",
+      "name": "A través de Mí",
+      "url": "https://atravesdemi.com/",
+      "inLanguage": "es",
+      "publisher": {"@id": "https://atravesdemi.com/#negocio"}
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://atravesdemi.com/#negocio",
+      "name": "A través de Mí",
+      "description": "Método ATM, armonización psicofísica, tarot evolutivo y carta natal. Atención por videollamada a Latinoamérica y España.",
+      "url": "https://atravesdemi.com/",
+      "image": "https://atravesdemi.com/og-image.jpg",
+      "telephone": "+5493512040561",
+      "priceRange": "$$",
+      "slogan": "Autoconocimiento · Integración · Transformación",
+      "sameAs": ["https://www.instagram.com/a.traves.demi"],
+      "address": {"@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR"},
+      "areaServed": [
+        {"@type":"Country","name":"Argentina"},
+        {"@type":"Country","name":"Uruguay"},
+        {"@type":"Country","name":"Chile"},
+        {"@type":"Country","name":"México"},
+        {"@type":"Country","name":"Colombia"},
+        {"@type":"Country","name":"Perú"},
+        {"@type":"Country","name":"España"}
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceLocation": {"@type": "VirtualLocation", "name": "Videollamada"},
+        "serviceUrl": "https://atravesdemi.com/servicios"
+      },
+      "founder": {"@id": "https://atravesdemi.com/#mayra"},
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Método ATM","url":"https://atravesdemi.com/servicios#metodo-atm","description":"Acompañamiento integrativo que combina psicofísica, tarot, astrología y meditación según lo que cada persona necesita."}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Armonización psicofísica","url":"https://atravesdemi.com/servicios#psicofisica","description":"Diagnóstico, neutralización y armonización de los campos energéticos emocional, sensorial, intelectual y físico."}}
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://atravesdemi.com/#mayra",
+      "name": "Mayra",
+      "jobTitle": "Técnica psicofísica",
+      "url": "https://atravesdemi.com/#quien-soy",
+      "worksFor": {"@id": "https://atravesdemi.com/#negocio"},
+      "knowsAbout": [
+        "Armonización psicofísica",
+        "Método ATM",
+        "Tarot evolutivo",
+        "Tarot de Marsella",
+        "Carta natal",
+        "Astrología tropical",
+        "Meditación",
+        "Bienestar animal"
+      ],
+      "knowsLanguage": {"@type": "Language", "name": "Español"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <a class="skip" href="#main">Saltar al contenido</a>
-
 <div class="splash" id="splash" aria-hidden="true">
   <div class="splash-mark">
     <svg width="76" height="70" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
@@ -686,36 +217,43 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   <div class="splash-tag">Autoconocimiento · Integración · Transformación</div>
 </div>
 
+<!-- ══════ HEADER — idéntico en TODAS las páginas ══════
+     Si lo cambiás acá, hay que pegarlo igual en las demás.
+     Lo que varía por página (el ítem activo) lo pone sitio.js.
+
+     En desktop es una barra horizontal. En móvil, la hamburguesa
+     queda a la izquierda, el logo al medio, y el mismo <nav> se
+     despliega abajo como panel. Es el mismo HTML: solo cambia el CSS. -->
 <header class="hdr">
   <div class="hdr-in">
-    <a href="#/" class="brand" aria-label="A través de Mí — inicio">
+    <button class="nav-hamb" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
       <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
       <span class="brand-name">A través de Mí</span>
     </a>
     <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#/" data-route="">Inicio</a>
-      <div class="nav-drop" id="nav-drop">
-        <button class="nav-drop-btn" id="nav-drop-btn" aria-expanded="false" aria-controls="nav-drop-menu" aria-haspopup="true" data-route="servicios">
-          Servicios
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="nav-drop-menu" id="nav-drop-menu" role="menu" hidden>
-          <a href="#/servicios" role="menuitem"><b>Individuales</b><span>Método ATM, psicofísica, tarot y carta natal</span></a>
-          <a href="#/talleres" role="menuitem"><b>Grupales</b><span>Talleres y encuentros con cupo limitado</span></a>
+      <a href="index.html" data-nav="home">Inicio</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="servicios.html" data-nav="servicios">Servicios</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-servicios" aria-haspopup="true" aria-label="Ver los servicios"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-servicios" role="menu" hidden>
+          <a href="servicios.html" role="menuitem"><b>Individuales</b><span>Método ATM, armonización, tarot y carta natal</span></a>
+          <a href="talleres.html" role="menuitem"><b>Grupales</b><span>Talleres y encuentros con cupo limitado</span></a>
         </div>
       </div>
       <div class="nav-drop">
-        <button class="nav-drop-btn" aria-expanded="false" aria-controls="nav-drop-herr" aria-haspopup="true" data-route="herramientas">
-          Herramientas
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="nav-drop-menu" id="nav-drop-herr" role="menu" hidden>
+        <a class="nav-drop-btn" href="herramientas.html" data-nav="herramientas">Herramientas</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-herramientas" aria-haspopup="true" aria-label="Ver las herramientas"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-herramientas" role="menu" hidden>
           <a href="carta-natal.html" role="menuitem"><b>Carta natal</b><span>Tu rueda del cielo completa, gratis</span></a>
           <a href="tarot.html" role="menuitem"><b>Las cartas</b><span>Mensaje del día y tirada de tarot</span></a>
           <a href="calendario-lunar.html" role="menuitem"><b>Calendario lunar</b><span>Fases, signos y retrógrados, mes a mes</span></a>
         </div>
       </div>
-      <a href="#/blog" data-route="blog">Blog</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a class="btn btn-primary btn-block nav-cta" data-wa data-loc="menu-movil" href="#">Escribime por WhatsApp</a>
     </nav>
     <a class="btn btn-primary btn-sm hdr-cta" data-wa data-loc="header" href="#">Escribime</a>
   </div>
@@ -725,55 +263,51 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
 <main id="main">
 
-<!-- ══════════════════════════ HOME ══════════════════════════ -->
-<div class="page active" id="page-home">
-
   <section class="hero">
     <div class="wrap">
       <svg class="hero-mark" width="60" height="55" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
       <span class="eyebrow">Autoconocimiento · Integración · Transformación</span>
-      <h1 class="display" data-page-title tabindex="-1">El camino hacia vos empieza acá.</h1>
+      <h1 class="display">El camino hacia vos empieza acá.</h1>
       <p class="lead">No predigo tu futuro: te ayudo a entender tu presente.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" data-wa data-loc="hero-comenzar" data-text="Hola Mayra, quiero comenzar. Me gustaría que charlemos." href="#">Quiero comenzar</a>
-        <a class="btn btn-outline" href="#/servicios">Conocé los servicios</a>
+        <a class="btn btn-outline" href="servicios.html">Conocé los servicios</a>
       </div>
       <ul class="trust">
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Profesional psicofísica</span></li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Online y presencial en Buenos Aires</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>La primera charla no tiene costo</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Técnica psicofísica</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Por videollamada a Latinoamérica y España</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>La primera charla no tiene costo</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- QUIÉN SOY — subido a la posición 2: la confianza va antes del pedido -->
+  <!-- QUIÉN SOY — en la posición 2: la confianza va antes del pedido -->
   <section class="sec" id="quien-soy">
     <div class="wrap about" data-reveal>
       <div class="portrait">
-        <img src="mayra.jpg" alt="Mayra, profesional psicofísica" loading="lazy" decoding="async"
+        <img src="mayra.jpg" alt="Mayra, técnica psicofísica" loading="lazy" decoding="async"
              onerror="this.closest('.portrait').classList.add('no-img');this.remove()">
-        <span class="portrait-badge">Psicofísica</span>
       </div>
       <div class="about-body">
         <span class="eyebrow">Quién soy</span>
         <h2 class="h2">Mayra</h2>
-        <p class="about-role">Profesional psicofísica</p>
+        <p class="about-role">Técnica psicofísica</p>
         <!-- BORRADOR: texto redactado a partir del acta (enfoque integrativo). Reemplazar por el aprobado. -->
-        <p class="muted">Desde chica descubrí que podía percibir lo que muchos no veían. Con el tiempo, esa sensibilidad dejó de ser una duda y se volvió mi forma de trabajar.</p>
-        <p class="muted">Me formé en psicofísica, tarot, astrología y meditación, pero no trabajo desde una técnica única: parto de lo que vos necesitás y combino las herramientas que ese proceso pide. De ahí nace el Método ATM.</p>
+        <p class="muted">Desde chica descubrí que podía percibir lo que muchos no veían. Con el tiempo, esa sensibilidad dejó de ser una duda y se volvió una certeza que me permitió descubrirme y acompañar a otros en su proceso evolutivo.</p>
+        <p class="muted">Me formé en psicofísica, tarot, astrología y meditación, logrando obtener una técnica única: parto de lo que vos necesitás y combino las herramientas que ese proceso pide. De ahí nace el Método ATM.</p>
         <ul class="creds">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Profesional psicofísica</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Formación en tarot evolutivo, astrología y meditación</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Atención online y presencial en Buenos Aires</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Trabajo también con animales</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Descubrí tu potencial</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Eliminá tu incertidumbre</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Autosuficiencia y autovaloración</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Asistencia animal</span></li>
         </ul>
         <p class="about-quote">Uniendo lo invisible con lo visible</p>
-        <p style="margin-top:var(--s3)"><a class="link-more" href="#/#experiencias">Leé lo que cuentan quienes ya vinieron <span aria-hidden="true">›</span></a></p>
+        <p style="margin-top:var(--s3)"><a class="link-more" href="#experiencias">Leé lo que cuentan quienes ya vinieron <span aria-hidden="true">›</span></a></p>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS (Para quién es y Cómo es una sesión → movidos a Servicios) -->
+  <!-- SERVICIOS -->
   <section class="sec">
     <div class="wrap" data-reveal>
       <div class="sec-head head-row">
@@ -781,14 +315,62 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
           <span class="eyebrow">Servicios</span>
           <h2 class="h2">Cada uno es un camino distinto hacia el mismo lugar</h2>
         </div>
-        <a class="link-more" href="#/servicios">Ver todos <span aria-hidden="true">›</span></a>
+        <a class="link-more" href="servicios.html">Ver todos <span aria-hidden="true">›</span></a>
       </div>
-      <div class="svc-grid" id="svc-grid"></div>
+      <div class="svc-grid">
+        <article class="svc-card is-feat">
+          <span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#FAF8F5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c1.2 7 3 8.8 10 10-7 1.2-8.8 3-10 10-1.2-7-3-8.8-10-10 7-1.2 8.8-3 10-10Z"/></svg></span>
+          <h3>Método ATM</h3>
+          <p>Método propio único y personalizado para acompañarte</p>
+          <a class="go stretch" href="servicios.html#metodo-atm">Ver detalle <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="svc-card">
+          <span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+          <h3>Armonización</h3>
+          <p>Equilibrá tu campo energético</p>
+          <a class="go stretch" href="servicios.html#psicofisica">Ver detalle <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS GRATUITAS
+       Están acá porque la home es la página más enlazada del sitio:
+       desde acá los buscadores llegan a las tres herramientas. -->
+  <section class="sec band-mist">
+    <div class="wrap" data-reveal>
+      <div class="sec-head head-row">
+        <div>
+          <span class="eyebrow">Gratis y sin registro</span>
+          <h2 class="h2">Probá por tu cuenta antes de escribirme</h2>
+        </div>
+        <a class="link-more" href="herramientas.html">Ver todas <span aria-hidden="true">›</span></a>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card">
+          <span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg></span>
+          <h3>Tu carta natal</h3>
+          <p>La rueda del cielo completa, con tu Sol, tu Luna y tu Ascendente explicados</p>
+          <a class="go stretch" href="carta-natal.html">Calcular mi carta <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="svc-card">
+          <span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="11" height="16" rx="2"/><path d="M17.5 5.6 21 6.9a1.6 1.6 0 0 1 1 2l-3.4 9.6a1.6 1.6 0 0 1-2 1L14 18.5"/></svg></span>
+          <h3>Las cartas</h3>
+          <p>El mensaje del oráculo para hoy, o un arcano mayor del tarot de Marsella</p>
+          <a class="go stretch" href="tarot.html">Sacar mi carta <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="svc-card">
+          <span class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span>
+          <h3>Calendario lunar</h3>
+          <p>Las fases, los signos y los planetas retrógrados, mes a mes hasta 2030</p>
+          <a class="go stretch" href="calendario-lunar.html">Ver el calendario <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- TESTIMONIOS -->
-  <section class="sec band-mist" id="experiencias">
+  <section class="sec" id="experiencias">
     <div class="wrap" data-reveal>
       <div class="sec-head center">
         <span class="eyebrow">Experiencias</span>
@@ -814,8 +396,6 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
     </div>
   </section>
 
-  <!-- (FAQ → movido a Servicios · Luna y guía gratuita → movidos a Herramientas) -->
-
   <!-- CTA FINAL -->
   <section class="cta band-dark on-dark" id="cta-final">
     <div class="wrap">
@@ -824,1144 +404,83 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
       <p class="lead">Charlar no tiene costo.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" data-wa data-loc="cta-final" href="#">Escribime por WhatsApp</a>
-        <a class="btn btn-outline" href="#/servicios">Ver servicios y valores</a>
+        <a class="btn btn-outline" href="servicios.html#valores">Ver servicios y valores</a>
       </div>
     </div>
   </section>
-</div>
-
-<!-- ══════════════════════════ SERVICIOS ══════════════════════════ -->
-<div class="page" id="page-servicios">
-  <section class="hero hero-sub">
-    <div class="wrap">
-      <span class="eyebrow">Servicios</span>
-      <h1 class="display" data-page-title tabindex="-1">Tu cuerpo, tu energía y tu alma hablan.</h1>
-      <p class="lead">Cada servicio es un camino distinto hacia el mismo lugar: vos. Tocá cualquiera para ver el detalle completo.</p>
-      <div class="rule" style="margin:var(--s3) auto 0"></div>
-    </div>
-  </section>
-
-  <!-- PARA QUIÉN ES (movido desde la home) -->
-  <section class="sec-tight band-mist">
-    <div class="wrap" data-reveal>
-      <div class="sec-head center">
-        <span class="eyebrow">Para quién es</span>
-        <h2 class="h2">¿Te suena alguna de estas?</h2>
-        <p class="lead">Si te reconocés en dos o más, hay algo pidiendo atención.</p>
-      </div>
-      <ul class="forwho">
-        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Tensión, ansiedad o agotamiento sin causa médica clara</span></li>
-        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Dolores de cabeza, mareos o falta de concentración</span></li>
-        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Estás en un punto muerto o tenés que tomar una decisión difícil</span></li>
-        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Repetís los mismos patrones y no sabés por qué</span></li>
-        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Querés complementar un tratamiento médico o psicológico</span></li>
-        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Tu mascota también necesita equilibrio</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="sec-tight">
-    <div class="wrap prose">
-      <div class="lead-card" style="margin-bottom:var(--s4)">
-        <span class="eyebrow">¿No sabés por dónde empezar?</span>
-        <p style="margin-top:8px">Contame qué te está pasando y te sugiero el camino ideal, sin costo.</p>
-        <div><a class="btn btn-primary" data-wa data-loc="servicios-top" href="#">Escribime por WhatsApp</a></div>
-      </div>
-      <div id="svc-list"></div>
-    </div>
-  </section>
-
-  <!-- CÓMO ES UNA SESIÓN (movido desde la home) -->
-  <section class="sec band-dark on-dark">
-    <div class="wrap" data-reveal>
-      <div class="sec-head center">
-        <span class="eyebrow">Cómo funciona</span>
-        <h2 class="h2">Cómo es una sesión</h2>
-        <p class="lead">Sin rituales complicados ni compromisos. Esto es todo lo que pasa.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <h3>Escribís</h3>
-          <p>Me contás por WhatsApp qué te está pasando. Esta primera charla no tiene costo ni te compromete a nada.</p>
-        </div>
-        <div class="step">
-          <h3>Coordinamos</h3>
-          <p>Te sugiero el camino que mejor se adapta a vos y elegimos día, horario y modalidad: online o presencial.</p>
-        </div>
-        <div class="step">
-          <h3>La sesión</h3>
-          <p>No hace falta que te desvistas ni que hagas nada especial: solo relajarte y respirar. La sesión de psicofísica dura entre 15 y 20 minutos.</p>
-        </div>
-        <div class="step">
-          <h3>Después</h3>
-          <p>Te comparto lo que percibí y pautas simples para sostener el equilibrio en tu día a día. La mayoría nota cambios desde la primera sesión.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALORES (movido desde la home) -->
-  <section class="sec" id="valores">
-    <div class="wrap" data-reveal>
-      <div class="sec-head center">
-        <span class="eyebrow">Valores</span>
-        <h2 class="h2">Transparencia desde el primer día</h2>
-        <p class="lead">Para que no tengas que escribir solo para preguntar cuánto sale.</p>
-      </div>
-      <div class="price-grid" id="price-grid"></div>
-      <p class="price-note" id="price-note"></p>
-    </div>
-  </section>
-
-  <!-- FAQ (movido desde la home) -->
-  <section class="sec band-mist" id="faq-sec">
-    <div class="wrap prose" data-reveal>
-      <div class="sec-head center">
-        <span class="eyebrow">Preguntas frecuentes</span>
-        <h2 class="h2">Lo que casi todos me preguntan</h2>
-      </div>
-      <div class="faq" id="faq"></div>
-    </div>
-  </section>
-
-  <section class="cta band-dark on-dark">
-    <div class="wrap">
-      <h2 class="h2">Cada camino empieza con un paso.</h2>
-      <p class="lead">Charlar no tiene costo.</p>
-      <div class="cta-actions">
-        <a class="btn btn-primary" data-wa data-loc="servicios-cta" href="#">Contactame</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ══════════════════════════ TALLERES ══════════════════════════ -->
-<div class="page" id="page-talleres">
-  <section class="hero hero-sub">
-    <div class="wrap">
-      <span class="eyebrow">Cursos y talleres</span>
-      <h1 class="display" data-page-title tabindex="-1">Aprendé a conectar con vos.</h1>
-      <p class="lead">Espacios grupales para profundizar. Cupos limitados para mantener la intimidad.</p>
-      <div class="rule" style="margin:var(--s3) auto 0"></div>
-    </div>
-  </section>
-
-  <section class="sec-tight" style="padding-top:0">
-    <div class="wrap prose"><div id="taller-list"></div></div>
-  </section>
-
-  <section class="sec-tight">
-    <div class="wrap prose">
-      <div class="lead-card">
-        <span class="eyebrow">Lista de espera</span>
-        <p style="margin-top:8px">Te aviso apenas abran nuevos talleres y fechas.</p>
-        <div><a class="btn btn-primary" data-wa data-loc="talleres-lista" data-text="Hola Mayra, quiero sumarme a la lista de espera de talleres" href="#">Sumarme a la lista</a></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ══════════════════════════ HERRAMIENTAS ══════════════════════════ -->
-<div class="page" id="page-herramientas">
-  <section class="hero hero-sub">
-    <div class="wrap">
-      <span class="eyebrow">Herramientas gratuitas</span>
-      <h1 class="display" data-page-title tabindex="-1">Empezá por tu cuenta, sin costo.</h1>
-      <p class="lead">Recursos abiertos para que te acerques a tu proceso a tu ritmo. Cuando quieras profundizar, ahí estoy.</p>
-      <div class="rule" style="margin:var(--s3) auto 0"></div>
-    </div>
-  </section>
-
-  <!-- CARTA NATAL — herramienta disponible, destacada -->
-  <section class="sec-tight" style="padding-top:0">
-    <div class="wrap" data-reveal>
-      <a class="tool-hero" href="carta-natal.html" data-loc="herramienta-carta-natal">
-        <span class="tool-hero-ico">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg>
-        </span>
-        <span class="tool-hero-txt">
-          <span class="soon-tag is-live">Disponible</span>
-          <span class="tool-hero-h">Tu carta natal, gratis</span>
-          <span class="tool-hero-p">Cargá fecha, hora y lugar de nacimiento y mirá tu rueda del cielo completa: los diez planetas, Quirón, los nodos y Lilith, con tu Sol, tu Luna y tu Ascendente explicados.</span>
-        </span>
-        <span class="tool-hero-cta">Calcular mi carta <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </section>
-
-  <!-- CALENDARIO LUNAR -->
-  <section class="sec-tight" style="padding-top:0">
-    <div class="wrap" data-reveal>
-      <a class="tool-hero" href="calendario-lunar.html" data-loc="herramienta-calendario">
-        <span class="tool-hero-ico">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        </span>
-        <span class="tool-hero-txt">
-          <span class="soon-tag is-live">Disponible</span>
-          <span class="tool-hero-h">Calendario lunar</span>
-          <span class="tool-hero-p">Mes a mes: la fase de la Luna cada día, por qué signo transita y a qué hora cambia. Más las lunas nuevas y llenas, y qué planetas entran retrógrados.</span>
-        </span>
-        <span class="tool-hero-cta">Ver el calendario <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </section>
-
-  <!-- LAS CARTAS (mensaje del día + tirada de tarot, en tarot.html) -->
-  <section class="sec-tight" style="padding-top:0">
-    <div class="wrap" data-reveal>
-      <a class="tool-hero" href="tarot.html" data-loc="herramienta-tarot">
-        <span class="tool-hero-ico">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="11" height="16" rx="2"/><path d="M17.5 5.6 21 6.9a1.6 1.6 0 0 1 1 2l-3.4 9.6a1.6 1.6 0 0 1-2 1L14 18.5"/></svg>
-        </span>
-        <span class="tool-hero-txt">
-          <span class="soon-tag is-live">Disponible</span>
-          <span class="tool-hero-h">Las cartas</span>
-          <span class="tool-hero-p">Diez segundos para tu pregunta mientras se mezcla el mazo. Después elegís: un mensaje del oráculo para hoy, o un arcano mayor del tarot de Marsella para lo que estás atravesando.</span>
-        </span>
-        <span class="tool-hero-cta">Sacar mi carta <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </section>
-
-
-  <!-- LUNA + GUÍA (movidos desde la home) -->
-  <section class="sec-tight" style="padding-top:0">
-    <div class="wrap moon-lead" data-reveal>
-      <div class="moon on-dark">
-        <span class="eyebrow" id="ev-mes">Eventos del mes</span>
-        <div id="ev-lista" class="ev-lista"><p class="moon-desc">Cargando…</p></div>
-        <a class="btn btn-outline btn-sm" href="calendario-lunar.html">Ver el calendario completo</a>
-      </div>
-
-      <div class="lead-card">
-        <div class="ico-round"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-        <h3>Guía gratuita</h3>
-        <p>5 señales de que tu cuerpo te está pidiendo una reconexión energética.</p>
-        <form id="lead-form" novalidate>
-          <div class="form-row">
-            <label class="sr" for="lead-email">Tu email</label>
-            <input type="email" id="lead-email" name="email" placeholder="tu@email.com" autocomplete="email" required>
-            <input type="text" class="form-hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button type="submit" class="btn btn-primary">Enviármela</button>
-          </div>
-          <p class="form-msg" id="lead-msg" role="status" aria-live="polite"></p>
-          <p class="form-legal">También te la puedo mandar por <a data-wa data-loc="lead-magnet" data-text="Hola Mayra, quiero la guía gratuita" href="#" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px">WhatsApp</a>. Sin spam, solo contenido útil.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRÓXIMAMENTE: los tres módulos interactivos de la fase siguiente -->
-  <section class="sec">
-    <div class="wrap" data-reveal>
-      <div class="sec-head center">
-        <span class="eyebrow">En camino</span>
-        <h2 class="h2">Lo que viene</h2>
-        <p class="lead">Tres herramientas interactivas que estoy preparando.</p>
-      </div>
-      <div class="svc-grid" id="tools-grid"></div>
-      <p class="price-note">Tocá cualquiera para ver cómo va a funcionar.</p>
-    </div>
-  </section>
-  <div id="tools-modals"></div>
-
-  <section class="cta band-dark on-dark">
-    <div class="wrap">
-      <h2 class="h2">¿Querés una lectura personalizada?</h2>
-      <p class="lead">Las herramientas te dan una primera pista. El resto lo vemos juntas.</p>
-      <div class="cta-actions">
-        <a class="btn btn-primary" data-wa data-loc="herramientas-cta" data-text="Hola Mayra, quiero comenzar. Me gustaría que charlemos." href="#">Quiero comenzar</a>
-        <a class="btn btn-outline" href="#/servicios">Conocé los servicios</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ══════════════════════════ BLOG ══════════════════════════ -->
-<div class="page" id="page-blog">
-  <div id="blog-index">
-    <section class="hero hero-sub">
-      <div class="wrap">
-        <span class="eyebrow">Blog</span>
-        <h1 class="display" data-page-title tabindex="-1">Herramientas para tu camino interior.</h1>
-        <div class="rule" style="margin:var(--s3) auto 0"></div>
-      </div>
-    </section>
-    <section class="sec-tight" style="padding-top:0">
-      <div class="wrap prose">
-        <div class="posts" id="post-list"></div>
-        <div id="soon-wrap" style="margin-top:var(--s5)">
-          <span class="eyebrow">Próximos artículos</span>
-          <ul class="soon-list" id="soon-list"></ul>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div id="blog-article" hidden></div>
-</div>
 
 </main>
 
+<!-- ══════ PIE — idéntico en TODAS las páginas ══════
+     Cuatro columnas en escritorio, apiladas en móvil.
+     Además de orientar, reparte enlaces internos a las 10 páginas
+     desde cualquier página del sitio. -->
 <footer class="ftr on-dark">
   <div class="wrap">
-    <svg width="34" height="31" viewBox="0 0 48 44" fill="none" style="margin:0 auto" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
-    <p class="ftr-name">A través de Mí</p>
-    <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
-    <nav class="ftr-nav" aria-label="Pie de página">
-      <a href="#/">Inicio</a>
-      <a href="#/servicios">Servicios</a>
-      <a href="#/talleres">Talleres</a>
-      <a href="#/servicios#valores">Valores</a>
-      <a href="#/herramientas">Herramientas</a>
-      <a href="#/blog">Blog</a>
-      <a href="recomendaciones.html">Dejá tu experiencia</a>
-    </nav>
-    <div class="ftr-social" id="ftr-social">
-      <a href="https://instagram.com/a.traves.demi" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a data-wa data-loc="footer" href="#" aria-label="WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
-      </a>
+    <div class="ftr-cols">
+
+      <div class="ftr-marca">
+        <svg width="34" height="31" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+        <p class="ftr-name">A través de Mí</p>
+        <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+        <p class="ftr-desc">Atiendo por videollamada a Latinoamérica y España. La primera charla no tiene costo.</p>
+        <div class="ftr-social" id="ftr-social">
+          <a href="https://instagram.com/a.traves.demi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a data-wa data-loc="footer" href="#" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="ftr-col" aria-label="Servicios">
+        <h2>Servicios</h2>
+        <ul>
+          <li><a href="servicios.html#metodo-atm">Método ATM</a></li>
+          <li><a href="servicios.html#psicofisica">Armonización</a></li>
+          <li><a href="talleres.html">Talleres grupales</a></li>
+          <li><a href="servicios.html#valores">Valores</a></li>
+          <li><a href="servicios.html#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Herramientas gratuitas">
+        <h2>Gratis y sin registro</h2>
+        <ul>
+          <li><a href="carta-natal.html">Tu carta natal</a></li>
+          <li><a href="tarot.html">Mensaje del día</a></li>
+          <li><a href="tarot.html#arcanos">Los 22 arcanos</a></li>
+          <li><a href="calendario-lunar.html">Calendario lunar</a></li>
+          <li><a href="herramientas.html">Ver todas</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Más">
+        <h2>Más</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#quien-soy">Quién soy</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="mercurio-retrogrado.html">Mercurio retrógrado</a></li>
+          <li><a href="recomendaciones.html">Dejá tu experiencia</a></li>
+        </ul>
+      </nav>
+
     </div>
-    <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span> · <a data-wa data-loc="footer-tel" id="ftr-tel" href="#">+54 9 351 204-0561</a></p>
-    <p class="ftr-copy" style="margin-top:8px;max-width:56ch;margin-inline:auto">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+
+    <div class="ftr-pie">
+      <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span> · <a data-wa data-loc="footer-tel" id="ftr-tel" href="#">+54 9 351 204-0561</a></p>
+      <p class="ftr-legal">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+    </div>
   </div>
 </footer>
 
 <div class="mbar js-only" id="mbar">
-  <a class="btn btn-outline" href="#/servicios">Ver servicios</a>
+  <a class="btn btn-outline" href="servicios.html">Ver servicios</a>
   <a class="btn btn-primary" data-wa data-loc="barra-movil" href="#">Escribime</a>
 </div>
 
-<script>
-(function(){
-'use strict';
-
-/* ══════════════════════════════════════════════════════════════
-   CONFIGURACIÓN — lo único que hace falta editar
-   ══════════════════════════════════════════════════════════════ */
-const CONFIG = {
-  // Formato para wa.me: 54 (país) + 9 (móvil) + 351 (Córdoba) + número, sin espacios.
-  // Cambiarlo acá actualiza el pie de página y TODOS los links de WhatsApp.
-  tel: '5493512040561',
-
-  // Texto visible del teléfono en el pie. Debe coincidir con `tel`.
-  telVisible: '+54 9 351 204-0561',
-
-  // Endpoint del formulario de email (Formspree, Getform, Basin…).
-  // Ej: 'https://formspree.io/f/xxxxxxxx'. Vacío = cae a WhatsApp.
-  formEndpoint: '',
-
-  // ID de Google Analytics 4. Ej: 'G-XXXXXXXXXX'. Vacío = sin analytics.
-  ga4: '',
-
-  // Perfil de TikTok. Vacío = no se muestra el ícono.
-  tiktok: '',
-
-  moneda: '$'
-};
-
-/* ══════════════════════════════════════════════════════════════
-   DATOS
-   ══════════════════════════════════════════════════════════════ */
-
-// PRECIOS: poné el número en `precio` (ej: precio: 25000).
-// Si lo dejás vacío se muestra "A consultar".
-const services = [
-  {
-    id:'metodo-atm', icon:'sparkle', num:'01', featured:true,
-    name:'Método ATM',
-    badge:'Método propio',
-    hook:'Todas mis herramientas, ordenadas alrededor de tu objetivo',
-    short:'Todas las herramientas, un solo camino',
-    precio:'', duracion:'Proceso a medida', modalidad:'Online o presencial',
-    desc:'No empieza por la técnica: empieza por vos. Psicofísica, tarot, astrología y meditación puestas a trabajar juntas, hacia eso que querés lograr, sanar o entender de una vez. Vos ponés el objetivo; con qué lo trabajamos, lo elijo yo.',
-    incluye:[
-      'Una charla inicial para poner en claro adónde querés llegar',
-      'Un recorrido diseñado para ese objetivo, no un paquete cerrado',
-      'Psicofísica, tarot, astrología y meditación, combinadas cuando hacen falta',
-      'Seguimiento entre sesiones, para que el proceso no se enfríe'
-    ],
-    paraVos:[
-      'Tenés un objetivo concreto y querés un plan, no una sesión suelta',
-      'Hay algo que necesitás sanar y no sabés por dónde entrarle',
-      'Probaste sesiones sueltas y te quedaste con gusto a poco',
-      'Preferís que la herramienta la elija yo'
-    ],
-    tags:['Acompañamiento','Online o presencial','A tu medida'],
-    nota:'Es un complemento y no reemplaza tratamientos médicos, psicológicos ni psiquiátricos.'
-  },
-  {
-    id:'psicofisica', icon:'zap', num:'02',
-    name:'Psicofísica',
-    hook:'Equilibrá tu campo energético en una sola sesión',
-    short:'Equilibrá tu campo energético',
-    precio:'', duracion:'15–20 min', modalidad:'Online o presencial',
-    desc:'Diagnostica, neutraliza y armoniza tus campos energéticos: emocional, sensorial, intelectual y físico.',
-    incluye:[
-      'Calibrado según la Resonancia Schumann',
-      'Tratamiento emocional: estrés, angustia, fobias y bloqueos',
-      'Complemento de enfermedades somáticas y psicosomáticas',
-      'Neutralización de dolores y malestares',
-      'Limpieza de energías nocivas externas'
-    ],
-    paraVos:[
-      'Tenés tensión, ansiedad o agotamiento sin causa médica',
-      'Sufrís dolores de cabeza, mareos o falta de concentración',
-      'Necesitás complementar un tratamiento médico',
-      'Tu mascota también necesita equilibrio'
-    ],
-    tags:['Presencial','15–20 min','Online','Animales'],
-    nota:'Se complementa con todas las terapias médicas, psicológicas y psiquiátricas: no las reemplaza. Los resultados suelen ser evidentes desde la primera sesión.'
-  },
-];
-
-const talleres = [
-  {name:'Conectá con tu guía interior', desc:'Taller vivencial de 3 encuentros para desarrollar tu intuición y aprender a escucharla.', fecha:'Abril 2026', cupos:'8 lugares', estado:'open'},
-  {name:'Introducción al tarot evolutivo', desc:'Aprendé a leer las cartas como herramienta de autoconocimiento, desde cero.', fecha:'Mayo 2026', cupos:'12 lugares', estado:'soon'}
-];
-
-const faqs = [
-  {q:'¿Qué es exactamente la armonización psicofísica?',
-   a:['Es un método profesional que trabaja sobre tus campos energéticos —emocional, sensorial, intelectual y físico— para diagnosticar, neutralizar y reequilibrar aquello que está alterado.',
-      'No es masaje ni imposición de manos. No hace falta que te desvistas: solo relajarte. Una sesión dura entre 15 y 20 minutos.']},
-  {q:'¿Reemplaza a un tratamiento médico o psicológico?',
-   a:['No, y es importante que quede claro: es un complemento. Se integra con todas las terapias médicas, psicológicas y psiquiátricas, y nunca te voy a pedir que dejes un tratamiento.',
-      'Si estás en tratamiento, contáselo a tu profesional de cabecera. La armonización suma, no sustituye.']},
-  {q:'¿Funciona a distancia?',
-   a:['Sí. La armonización psicofísica y todas las lecturas se pueden hacer a distancia con los mismos resultados. Coordinamos un horario y vos solo necesitás un lugar tranquilo donde nadie te interrumpa.']},
-  {q:'¿Cuántas sesiones voy a necesitar?',
-   a:['Depende de qué traigas y hace cuánto lo venís cargando. La mayoría de las personas nota cambios desde la primera sesión.',
-      'Nunca vas a salir de una sesión con un paquete cerrado ni con presión para volver. Lo conversamos según cómo te sentís.']},
-  {q:'¿Necesito creer en algo para que funcione?',
-   a:['No. No te pido fe ni que adhieras a ninguna creencia. Muchas de las personas que atiendo llegan escépticas y con curiosidad, y eso está perfecto.',
-      'Solo te pido apertura para registrar cómo te sentís antes y después.']},
-  {q:'¿Atendés animales?',
-   a:['Sí. Los animales responden muy bien a la armonización energética, sobre todo en cuadros de estrés, miedo, mudanzas o recuperación post-operatoria. Se puede trabajar de forma presencial o a distancia.']},
-  {q:'¿Cómo agendo y cómo se paga?',
-   a:['Escribime por WhatsApp y coordinamos día, horario y modalidad. Esa primera charla no tiene costo ni te compromete a nada.',
-      'Las formas de pago y el valor vigente te los confirmo al agendar, antes de que reserves.']}
-];
-
-const posts = [
-  {
-    slug:'mercurio-retrogrado',
-    cat:'Astrología', color:'#3F6E97', bg:'#EAF1F7', icon:'clock',
-    title:'Mercurio retrógrado: guía de supervivencia',
-    dek:'No es el fin del mundo. Es una invitación a frenar, revisar y reconectar.',
-    tipo:'Herramienta', min:5, fecha:'27 de marzo de 2026', fechaISO:'2026-03-27',
-    tags:['Mercurio retrógrado','Cáncer','Astrología 2026'],
-    blocks:[
-      ['dark',{eyebrow:'Próximo Mercurio retrógrado', title:'7 al 31 de julio de 2026', sub:'En Cáncer — emociones, hogar, familia'}],
-      ['h2','¿Qué es realmente Mercurio retrógrado?'],
-      ['p','Desde la Tierra, parece que Mercurio "retrocede" en su órbita. No es que el planeta vaya realmente para atrás: es una ilusión óptica. Pero en astrología esa ilusión tiene un efecto muy concreto: todo lo que Mercurio rige —comunicación, tecnología, contratos, viajes— tiende a ralentizarse, trabarse o pedir revisión.'],
-      ['p','Esto no es necesariamente malo. Pensalo así: es como si el universo te pusiera en modo avión por unas semanas. Te obliga a frenar. Y cuando frenás, podés ver cosas que en la velocidad del día a día se te escapan.'],
-      ['avoid',{title:'Qué evitar durante el retrógrado', items:[
-        'Firmar contratos importantes sin releerlos dos veces',
-        'Comprar tecnología cara: celulares, computadoras',
-        'Empezar relaciones o proyectos desde la impulsividad',
-        'Dar por sentado que el otro entendió lo que quisiste decir'
-      ]}],
-      ['do',{title:'Qué sí hacer (y aprovechar)', items:[
-        'Revisar proyectos pendientes y cerrar ciclos abiertos',
-        'Reconectar con personas del pasado que te hacen bien',
-        'Meditar, escribir, escuchar a tu cuerpo',
-        'Hacer backup de tus archivos y revisar tus finanzas',
-        'Practicar la paciencia como ejercicio espiritual'
-      ]}],
-      ['h2','Este retrógrado en Cáncer'],
-      ['p','Cuando Mercurio retrograda en Cáncer, los temas que se revisan son emocionales: la relación con tu familia, tu hogar, tus raíces, y esas conversaciones que nunca tuviste pero necesitás tener.'],
-      ['p','No lo resistas. Cáncer te pide que te cuides, que te des permiso de sentir y que honres de dónde venís. Es un momento poderoso para la armonización emocional.'],
-      ['cta',{title:'¿Querés prepararte para este retrógrado?', text:'Una sesión de armonización psicofísica te ayuda a limpiar las cargas emocionales acumuladas.', label:'Ver armonización psicofísica', href:'#/servicios'}],
-      ['h2','Un ritual simple para Mercurio retrógrado'],
-      ['p','Este es un ritual que podés hacer en tu casa. Solo vos y un momento de silencio.'],
-      ['steps',[
-        {h:'Elegí un momento tranquilo', p:'Antes de dormir o al despertar. Apagá el celular.'},
-        {h:'Escribí tres cosas que querés soltar', p:'Pensamientos, hábitos, relaciones, miedos. No las juzgues.'},
-        {h:'Escribí tres cosas que querés revisar', p:'¿Qué dejaste pendiente? ¿Qué conversación te debés?'},
-        {h:'Leé las dos listas en voz alta', p:'Escucharte tiene un poder que subestimamos.'},
-        {h:'Quemá o rompé la primera lista', p:'Lo que soltás, lo soltás. La segunda la revisás al terminar el retrógrado.'}
-      ]],
-      ['cta',{title:'¿Cómo afecta este retrógrado a tu signo?', text:'Puedo hacerte una lectura personalizada de tarot o de tu carta natal.', label:'Agendar una lectura', wa:'Hola Mayra, quiero agendar una lectura para este Mercurio retrógrado'}]
-    ]
-  }
-];
-
-const proximos = [
-  {cat:'Psicofísica', title:'Qué es la Resonancia Schumann y cómo te afecta'},
-  {cat:'Tarot', title:'Las 3 cartas que más asustan (y no deberían)'},
-  {cat:'Energía', title:'Ritual de luna llena para soltar'}
-];
-
-// (las lunaciones ahora salen de datos/lunar.json)
-
-
-/* ══════════════════════════════════════════════════════════════
-   HELPERS
-   ══════════════════════════════════════════════════════════════ */
-const $  = function(s,c){ return (c||document).querySelector(s); };
-const $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
-const esc = function(s){
-  return String(s).replace(/[&<>"']/g, function(m){
-    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];
-  });
-};
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-const ICONS = {
-  sparkle:'<path d="M12 2c1.2 7 3 8.8 10 10-7 1.2-8.8 3-10 10-1.2-7-3-8.8-10-10 7-1.2 8.8-3 10-10Z"/>',
-  zap:'<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
-  cards:'<rect x="3" y="3" width="11" height="16" rx="2"/><path d="M17.5 5.6 21 6.9a1.6 1.6 0 0 1 1 2l-3.4 9.6a1.6 1.6 0 0 1-2 1L14 18.5"/>',
-  planet:'<circle cx="12" cy="11" r="5.2"/><path d="M4.6 16.6c-1.9 1.6-2.9 3-2.5 3.8.7 1.2 5.1-.2 9.9-3s8.2-6.1 7.5-7.3c-.4-.8-2.1-.7-4.4.1"/>',
-  wheel:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/>',
-  calendar:'<rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/>',
-  star:'<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2z"/>',
-  clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
-  check:'<path d="M20 6 9 17l-5-5"/>',
-  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>'
-};
-function ic(name, color, size){
-  return '<svg width="'+(size||20)+'" height="'+(size||20)+'" viewBox="0 0 24 24" fill="none" stroke="'+(color||'#5B3F8C')+'" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICONS[name]+'</svg>';
-}
-function waLink(text){
-  return 'https://wa.me/'+CONFIG.tel+'?text='+encodeURIComponent(text || 'Hola Mayra, me gustaría hacerte una consulta.');
-}
-function money(v){
-  if(v === '' || v === null || v === undefined) return null;
-  return CONFIG.moneda + Number(v).toLocaleString('es-AR');
-}
-
-/* ── Analytics ─────────────────────────────────────────────── */
-window.dataLayer = window.dataLayer || [];
-function track(name, params){
-  var p = Object.assign({}, params || {});
-  window.dataLayer.push(Object.assign({event:name}, p));
-  if(typeof window.gtag === 'function') window.gtag('event', name, p);
-}
-if(CONFIG.ga4){
-  var gs = document.createElement('script');
-  gs.async = true;
-  gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + CONFIG.ga4;
-  document.head.appendChild(gs);
-  window.gtag = function(){ window.dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', CONFIG.ga4, {send_page_view:false});
-}
-
-/* ══════════════════════════════════════════════════════════════
-   WHATSAPP (links centralizados + tracking)
-   ══════════════════════════════════════════════════════════════ */
-function wireWa(root){
-  $$('[data-wa]', root).forEach(function(a){ a.href = waLink(a.dataset.text); });
-}
-wireWa(document);
-document.addEventListener('click', function(e){
-  var a = e.target.closest('a[href*="wa.me"]');
-  if(!a) return;
-  track('whatsapp_click', {ubicacion: a.dataset.loc || 'desconocida', texto: (a.textContent||'').trim().slice(0,40)});
-});
-
-/* ══════════════════════════════════════════════════════════════
-   MARQUEE
-   ══════════════════════════════════════════════════════════════ */
-(function(){
-  var items = ['Método ATM','Psicofísica','Tarot evolutivo','Carta natal','Equilibrio energético','Bienestar animal','Buenos Aires'];
-  var html = '';
-  for(var r=0;r<3;r++){
-    items.forEach(function(i){ html += '<i>'+esc(i)+'<span class="sep">·</span></i>'; });
-  }
-  $('#marquee').innerHTML = html;
-})();
-
-/* ══════════════════════════════════════════════════════════════
-   EVENTOS DEL MES — se leen de datos/lunar.json, sin librería
-   ══════════════════════════════════════════════════════════════ */
-var MESES_N = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto',
-               'septiembre','octubre','noviembre','diciembre'];
-var SIGNOS_N = ['Aries','Tauro','Géminis','Cáncer','Leo','Virgo','Libra','Escorpio',
-                'Sagitario','Capricornio','Acuario','Piscis'];
-var EV_NOM = {nueva:'Luna nueva', llena:'Luna llena',
-              creciente:'Cuarto creciente', menguante:'Cuarto menguante'};
-var eventosPedidos = false;
-
-function pintarEventosMes(json){
-  var h = new Date();
-  var clave = h.getFullYear() + '-' + String(h.getMonth()+1).padStart(2,'0');
-  var m = json.meses[clave];
-  var cont = $('#ev-lista');
-  if(!m){ cont.innerHTML = '<p class="moon-desc">Mirá el calendario completo para ver los eventos.</p>'; return; }
-  $('#ev-mes').textContent = 'Eventos de ' + MESES_N[h.getMonth()];
-  var hoy = h.getDate();
-  // primero lo que todavía no pasó; si ya pasó todo, se muestra el mes entero
-  var futuros = m.eventos.filter(function(e){ return e.d >= hoy; });
-  var lista = (futuros.length ? futuros : m.eventos).slice(0,4);
-  cont.innerHTML = lista.map(function(e){
-    var titulo = e.p
-      ? e.p + (e.t === 'retro' ? ' entra retrógrado' : ' vuelve directo')
-      : EV_NOM[e.t] + ' en ' + SIGNOS_N[e.s];
-    return '<div class="ev-item"><b>' + esc(titulo) + '</b>' +
-           '<span>' + e.d + ' de ' + MESES_N[h.getMonth()] + ' · ' + e.h + ' h</span></div>';
-  }).join('');
-}
-
-function cargarEventos(){
-  if(eventosPedidos) return;
-  eventosPedidos = true;
-  fetch('datos/lunar.json')
-    .then(function(r){ return r.json(); })
-    .then(pintarEventosMes)
-    .catch(function(){
-      $('#ev-lista').innerHTML = '<p class="moon-desc">No pude cargar los eventos. Mirá el calendario completo.</p>';
-    });
-}
-
-
-/* ══════════════════════════════════════════════════════════════
-   SERVICIOS — grid del home
-   ══════════════════════════════════════════════════════════════ */
-$('#svc-grid').innerHTML = services.map(function(s){
-  return '<article class="svc-card'+(s.featured?' is-feat':'')+'">'+
-    '<span class="ico">'+ic(s.icon, s.featured?'#FAF8F5':'#5B3F8C', 19)+'</span>'+
-    '<h3>'+esc(s.name)+'</h3>'+
-    '<p>'+esc(s.short)+'</p>'+
-    '<a class="go stretch" href="#/servicios" data-svc="'+s.id+'">Ver detalle '+ic('arrow','#5B3F8C',14)+'</a>'+
-  '</article>';
-}).join('');
-
-/* ══════════════════════════════════════════════════════════════
-   SERVICIOS — acordeón (página /servicios)
-   ══════════════════════════════════════════════════════════════ */
-$('#svc-list').innerHTML = services.map(function(s){
-  var pid = 'svc-panel-'+s.id, bid = 'svc-btn-'+s.id;
-  var precio = money(s.precio);
-  return '<div class="acc'+(s.featured?' is-feat':'')+'" id="acc-'+s.id+'">'+
-    '<h2 class="acc-h"><button class="acc-btn" id="'+bid+'" aria-expanded="false" aria-controls="'+pid+'" data-svc-btn="'+s.id+'">'+
-      '<span class="acc-ico">'+ic(s.icon, s.featured?'#FAF8F5':'#5B3F8C', 21)+'</span>'+
-      '<span class="acc-meta">'+
-        '<span class="acc-kicker"><span class="acc-num">'+s.num+'</span>'+(s.badge?'<span class="badge">'+esc(s.badge)+'</span>':'')+'</span>'+
-        '<span class="acc-title">'+esc(s.name)+'</span>'+
-        '<span class="acc-hook">'+esc(s.hook)+'</span>'+
-      '</span>'+
-      '<span class="acc-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5C5666" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>'+
-    '</button></h2>'+
-    '<div class="acc-panel" id="'+pid+'" role="region" aria-labelledby="'+bid+'" hidden>'+
-      '<p class="desc">'+esc(s.desc)+'</p>'+
-      '<p class="acc-price"><b>'+(precio || 'A consultar')+'</b><span class="small">'+esc(s.duracion)+' · '+esc(s.modalidad)+'</span></p>'+
-      (s.incluye ? '<p class="sub-h">Qué incluye</p><ul class="list-check">'+s.incluye.map(function(x){ return '<li>'+ic('check','#4F7A63',15)+'<span>'+esc(x)+'</span></li>'; }).join('')+'</ul>' : '')+
-      '<p class="sub-h">Es para vos si…</p><ul class="list-dot">'+s.paraVos.map(function(x){ return '<li><span>'+esc(x)+'</span></li>'; }).join('')+'</ul>'+
-      '<div class="pills">'+s.tags.map(function(t){ return '<span class="pill">'+esc(t)+'</span>'; }).join('')+'</div>'+
-      (s.nota ? '<div class="note"><p>'+esc(s.nota)+'</p></div>' : '')+
-      '<a class="btn btn-primary btn-block" data-loc="servicio-'+s.id+'" href="'+waLink('Hola Mayra, quiero agendar una sesión de '+s.name+'.')+'">Agendar sesión</a>'+
-    '</div>'+
-  '</div>';
-}).join('');
-
-/* ══════════════════════════════════════════════════════════════
-   PRECIOS
-   ══════════════════════════════════════════════════════════════ */
-(function(){
-  var hayPrecios = services.some(function(s){ return money(s.precio); });
-  $('#price-grid').innerHTML = services.map(function(s){
-    var p = money(s.precio);
-    return '<div class="price-card'+(s.featured?' is-feat':'')+'">'+
-      (s.featured?'<span class="price-tag">Más elegido</span>':'')+
-      '<p class="price-name">'+esc(s.name)+'</p>'+
-      '<p class="price-meta">'+esc(s.duracion)+' · '+esc(s.modalidad)+'</p>'+
-      '<p class="price-val">'+(p || 'A consultar')+'<small>'+(p?'por sesión':'te lo confirmo al agendar')+'</small></p>'+
-      '<a class="btn '+(s.featured?'btn-primary':'btn-outline')+'" data-loc="precio-'+s.id+'" href="'+waLink('Hola Mayra, quiero agendar '+s.name+'.')+'">Reservar</a>'+
-    '</div>';
-  }).join('');
-  $('#price-note').textContent = hayPrecios
-    ? 'Los valores se actualizan periódicamente. Te confirmo el valor vigente y las formas de pago antes de que reserves.'
-    : 'Te paso el valor vigente y las formas de pago por WhatsApp, antes de que reserves. La primera charla no tiene costo.';
-})();
-
-/* ══════════════════════════════════════════════════════════════
-   FAQ (+ schema FAQPage)
-   ══════════════════════════════════════════════════════════════ */
-$('#faq').innerHTML = faqs.map(function(f,i){
-  var pid='faq-p-'+i, bid='faq-b-'+i;
-  return '<div class="acc">'+
-    '<h3 class="acc-h"><button class="acc-btn" id="'+bid+'" aria-expanded="false" aria-controls="'+pid+'" data-faq="'+i+'">'+
-      '<span class="acc-meta"><span class="acc-title">'+esc(f.q)+'</span></span>'+
-      '<span class="acc-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5C5666" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>'+
-    '</button></h3>'+
-    '<div class="acc-panel" id="'+pid+'" role="region" aria-labelledby="'+bid+'" hidden>'+
-      f.a.map(function(p){ return '<p>'+esc(p)+'</p>'; }).join('')+
-    '</div>'+
-  '</div>';
-}).join('');
-
-(function(){
-  var s = document.createElement('script');
-  s.type = 'application/ld+json';
-  s.textContent = JSON.stringify({
-    '@context':'https://schema.org','@type':'FAQPage',
-    mainEntity: faqs.map(function(f){
-      return {'@type':'Question', name:f.q, acceptedAnswer:{'@type':'Answer', text:f.a.join(' ')}};
-    })
-  });
-  document.head.appendChild(s);
-})();
-
-/* ══════════════════════════════════════════════════════════════
-   ACORDEONES — son <button>, así que funcionan con teclado
-   ══════════════════════════════════════════════════════════════ */
-document.addEventListener('click', function(e){
-  var btn = e.target.closest('.acc-btn');
-  if(!btn) return;
-  var panel = document.getElementById(btn.getAttribute('aria-controls'));
-  if(!panel) return;
-  var open = btn.getAttribute('aria-expanded') === 'true';
-  btn.setAttribute('aria-expanded', String(!open));
-  panel.hidden = open;
-  if(!open){
-    if(btn.dataset.svcBtn) track('servicio_abierto', {servicio: btn.dataset.svcBtn});
-    if(btn.dataset.faq !== undefined) track('faq_abierta', {pregunta: faqs[+btn.dataset.faq].q});
-  }
-});
-
-/* ══════════════════════════════════════════════════════════════
-   TALLERES
-   ══════════════════════════════════════════════════════════════ */
-$('#taller-list').innerHTML = talleres.map(function(t){
-  var abierto = t.estado === 'open';
-  var txt = abierto
-    ? 'Hola Mayra, quiero inscribirme al taller "'+t.name+'".'
-    : 'Hola Mayra, avisame cuando abran las inscripciones al taller "'+t.name+'".';
-  return '<article class="taller">'+
-    '<h2>'+esc(t.name)+'</h2>'+
-    '<p class="desc">'+esc(t.desc)+'</p>'+
-    '<div class="pills"><span class="pill pill-warm">'+esc(t.fecha)+'</span><span class="pill">'+esc(t.cupos)+'</span></div>'+
-    '<div class="taller-foot">'+
-      '<span class="status '+t.estado+'">'+(abierto?'Inscripciones abiertas':'Próximamente')+'</span>'+
-      '<a class="btn btn-sm '+(abierto?'btn-primary':'btn-outline')+'" data-loc="taller" href="'+waLink(txt)+'">'+(abierto?'Inscribirme':'Avisame')+'</a>'+
-    '</div>'+
-  '</article>';
-}).join('');
-
-/* ══════════════════════════════════════════════════════════════
-   BLOG
-   ══════════════════════════════════════════════════════════════ */
-$('#post-list').innerHTML = posts.map(function(p){
-  return '<article class="post">'+
-    '<span class="thumb" style="background:'+p.bg+'">'+ic(p.icon, p.color, 24)+'</span>'+
-    '<div style="flex:1;min-width:0">'+
-      '<div class="post-cat"><span class="d" style="background:'+p.color+'"></span><span style="color:'+p.color+'">'+esc(p.cat)+'</span></div>'+
-      '<h2><a href="#/blog/'+p.slug+'">'+esc(p.title)+'</a></h2>'+
-      '<p class="meta">'+esc(p.tipo)+' · '+p.min+' min de lectura</p>'+
-    '</div>'+
-    '<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>'+
-  '</article>';
-}).join('');
-
-$('#soon-list').innerHTML = proximos.map(function(p){
-  return '<li><span class="c">'+esc(p.cat)+'</span><span>'+esc(p.title)+'</span></li>';
-}).join('');
-
-/* ── Renderer de artículos por bloques ─────────────────────── */
-function renderBlocks(blocks){
-  return blocks.map(function(b){
-    var t = b[0], v = b[1];
-    if(t === 'h2')  return '<h2>'+esc(v)+'</h2>';
-    if(t === 'p')   return '<p>'+esc(v)+'</p>';
-    if(t === 'dark') return '<div class="card-dark on-dark"><span class="eyebrow">'+esc(v.eyebrow)+'</span><strong>'+esc(v.title)+'</strong><em>'+esc(v.sub)+'</em></div>';
-    if(t === 'avoid') return '<div class="card-avoid"><p class="sub-h">'+esc(v.title)+'</p><ul>'+v.items.map(function(i){ return '<li><span class="x" aria-hidden="true">✕</span><span>'+esc(i)+'</span></li>'; }).join('')+'</ul></div>';
-    if(t === 'do') return '<div class="card-do"><p class="sub-h">'+esc(v.title)+'</p><ul>'+v.items.map(function(i){ return '<li>'+ic('check','#4F7A63',15)+'<span>'+esc(i)+'</span></li>'; }).join('')+'</ul></div>';
-    if(t === 'steps') return '<div class="ritual">'+v.map(function(s,i){ return '<div><span class="n">'+(i+1)+'</span><h4>'+esc(s.h)+'</h4><p>'+esc(s.p)+'</p></div>'; }).join('')+'</div>';
-    if(t === 'cta'){
-      var href = v.wa ? waLink(v.wa) : v.href;
-      return '<div class="card-cta"><div class="ico-round">'+ic('zap','#5B3F8C',20)+'</div>'+
-        '<h3>'+esc(v.title)+'</h3><p>'+esc(v.text)+'</p>'+
-        '<a class="btn btn-primary" data-loc="articulo-cta" href="'+href+'">'+esc(v.label)+'</a></div>';
-    }
-    return '';
-  }).join('');
-}
-
-function renderArticle(post){
-  return '<div class="wrap prose">'+
-    '<a class="art-back" href="#/blog">'+
-      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Volver al blog</a>'+
-    '<article class="art">'+
-      '<div class="post-cat" style="margin-bottom:14px">'+
-        '<span class="d" style="background:'+post.color+'"></span>'+
-        '<span style="color:'+post.color+'">'+esc(post.cat)+'</span>'+
-        '<span style="color:var(--ink-3);font-size:.75rem;letter-spacing:0;text-transform:none;font-weight:400">· '+esc(post.tipo)+' · '+post.min+' min</span>'+
-      '</div>'+
-      '<h1 class="display" data-page-title tabindex="-1">'+esc(post.title)+'</h1>'+
-      '<p class="art-dek">'+esc(post.dek)+'</p>'+
-      '<div class="art-author">'+
-        '<span class="av"><svg width="20" height="18" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg></span>'+
-        '<span><b>A través de Mí</b><time datetime="'+post.fechaISO+'">'+esc(post.fecha)+'</time></span>'+
-      '</div>'+
-      renderBlocks(post.blocks)+
-      '<div class="tags">'+post.tags.map(function(t){ return '<span class="pill">'+esc(t)+'</span>'; }).join('')+'</div>'+
-      '<div class="lead-card" style="margin-top:var(--s4)">'+
-        '<span class="eyebrow">No te pierdas el próximo artículo</span>'+
-        '<p style="margin-top:8px">Recibí herramientas y guías directo en tu WhatsApp.</p>'+
-        '<div><a class="btn btn-primary" data-loc="articulo-suscribir" href="'+waLink('Hola Mayra, quiero recibir los artículos.')+'">Sumarme a la lista</a></div>'+
-      '</div>'+
-    '</article>'+
-  '</div>';
-}
-
-/* ══════════════════════════════════════════════════════════════
-   FORMULARIO DE EMAIL
-   ══════════════════════════════════════════════════════════════ */
-(function(){
-  var form = $('#lead-form'), msg = $('#lead-msg'), input = $('#lead-email');
-  function say(text, cls){ msg.textContent = text; msg.className = 'form-msg ' + (cls || ''); }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(form.querySelector('[name="_gotcha"]').value) return;   // honeypot anti-spam
-    var email = input.value.trim();
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
-      say('Revisá el email, parece incompleto.', 'err');
-      input.focus();
-      return;
-    }
-    track('lead_submit', {origen:'guia-gratuita'});
-
-    if(!CONFIG.formEndpoint){
-      say('Te abro WhatsApp para mandártela ahora mismo.', 'ok');
-      window.open(waLink('Hola Mayra, quiero la guía gratuita. Mi email es ' + email), '_blank', 'noopener');
-      return;
-    }
-    say('Enviando…');
-    fetch(CONFIG.formEndpoint, {
-      method:'POST',
-      headers:{'Accept':'application/json'},
-      body:new FormData(form)
-    }).then(function(r){
-      if(!r.ok) throw new Error('http ' + r.status);
-      form.reset();
-      say('¡Listo! Revisá tu casilla en unos minutos.', 'ok');
-    }).catch(function(){
-      say('No pude enviarlo. Escribime por WhatsApp y te la mando.', 'err');
-    });
-  });
-})();
-
-/* ══════════════════════════════════════════════════════════════
-   HERRAMIENTAS EN CAMINO — tarjeta + modal explicando cómo será
-   ══════════════════════════════════════════════════════════════ */
-// Ya no queda ninguna herramienta anunciada: las tres están publicadas.
-const tools = [
-];
-
-// Sin herramientas pendientes, la sección entera se oculta
-if(!tools.length){
-  var secVacia = $('#tools-grid') && $('#tools-grid').closest('section');
-  if(secVacia) secVacia.hidden = true;
-}
-$('#tools-grid').innerHTML = tools.map(function(t){
-  var contenido = '<span class="ico">'+ic(t.icon,'#5B3F8C',19)+'</span>'+
-    '<h3>'+esc(t.name)+'</h3>'+
-    '<p>'+esc(t.short)+'</p>';
-  // Con href la herramienta ya existe y la tarjeta es un link; sin href, abre el modal
-  return t.href
-    ? '<a class="svc-card is-live" href="'+t.href+'" data-loc="herramienta-'+t.id+'">'+
-        contenido+'<span class="soon-tag is-live">Probala ahora</span></a>'
-    : '<button class="svc-card is-soon" type="button" data-tool="'+t.id+'" aria-haspopup="dialog">'+
-        contenido+'<span class="soon-tag">Próximamente</span></button>';
-}).join('');
-
-$('#tools-modals').innerHTML = tools.filter(function(t){ return !t.href; }).map(function(t){
-  return '<dialog class="modal" id="modal-'+t.id+'" aria-labelledby="mt-'+t.id+'">'+
-    '<div class="modal-in">'+
-      '<button class="modal-x" type="button" data-close aria-label="Cerrar">'+
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>'+
-      '</button>'+
-      '<span class="soon-tag">Próximamente</span>'+
-      '<h3 id="mt-'+t.id+'">'+esc(t.name)+'</h3>'+
-      '<p class="modal-lead">'+esc(t.lead)+'</p>'+
-      '<p class="sub-h">Cómo va a funcionar</p>'+
-      '<ol class="modal-steps">'+t.pasos.map(function(p){ return '<li><span>'+esc(p)+'</span></li>'; }).join('')+'</ol>'+
-      '<div class="note"><p>'+esc(t.nota)+'</p></div>'+
-      '<a class="btn btn-primary btn-block" data-loc="herramienta-'+t.id+'" href="'+waLink('Hola Mayra, avisame cuando esté lista la herramienta "'+t.name+'".')+'">Avisame cuando esté lista</a>'+
-    '</div>'+
-  '</dialog>';
-}).join('');
-
-document.addEventListener('click', function(e){
-  var opener = e.target.closest('[data-tool]');
-  if(opener){
-    var dlg = document.getElementById('modal-'+opener.dataset.tool);
-    if(dlg && dlg.showModal){
-      dlg.showModal();
-      track('herramienta_abierta', {herramienta: opener.dataset.tool});
-    }
-    return;
-  }
-  var closer = e.target.closest('[data-close]');
-  if(closer){ closer.closest('dialog').close(); return; }
-  // click en el fondo oscuro cierra
-  if(e.target.tagName === 'DIALOG') e.target.close();
-});
-
-/* ══════════════════════════════════════════════════════════════
-   DESPLEGABLE DE NAVEGACIÓN (Servicios → Individuales / Grupales)
-   Hover en desktop, click y teclado en todos lados.
-   ══════════════════════════════════════════════════════════════ */
-var hoverFino = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-var navDrops = $$('.nav-drop');
-
-function closeNavDrop(){
-  navDrops.forEach(function(d){
-    var b = $('.nav-drop-btn', d), m = $('.nav-drop-menu', d);
-    if(b){ b.setAttribute('aria-expanded','false'); }
-    if(m){ m.hidden = true; }
-    clearTimeout(d._t);
-  });
-}
-navDrops.forEach(function(drop){
-  var btn = $('.nav-drop-btn', drop), menu = $('.nav-drop-menu', drop);
-  if(!btn || !menu) return;
-  function abrir(){
-    closeNavDrop();                     // solo un menú abierto por vez
-    clearTimeout(drop._t);
-    btn.setAttribute('aria-expanded','true');
-    menu.hidden = false;
-  }
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    if(btn.getAttribute('aria-expanded') === 'true') closeNavDrop(); else abrir();
-  });
-  if(hoverFino){
-    drop.addEventListener('mouseenter', abrir);
-    drop.addEventListener('mouseleave', function(){ drop._t = setTimeout(closeNavDrop, 180); });
-  }
-  drop.addEventListener('keydown', function(e){
-    if(e.key === 'Escape'){ closeNavDrop(); btn.focus(); }
-  });
-});
-document.addEventListener('click', function(e){
-  if(!e.target.closest('.nav-drop')) closeNavDrop();
-});
-
-/* ══════════════════════════════════════════════════════════════
-   ROUTER
-   ══════════════════════════════════════════════════════════════ */
-var ROUTES = {
-  '': {
-    page:'home',
-    title:'A través de Mí — Psicofísica, Astrología y Tarot en Buenos Aires',
-    desc:'Profesional psicofísica. Método ATM, psicofísica, tarot evolutivo y carta natal. Online y presencial en Buenos Aires.'
-  },
-  'servicios': {
-    page:'servicios',
-    title:'Servicios — Método ATM, Psicofísica, Tarot y Carta natal | A través de Mí',
-    desc:'Método ATM, psicofísica, tarot evolutivo y carta natal. Qué incluye cada servicio, para quién es, cuánto sale y cómo agendar.'
-  },
-  'talleres': {
-    page:'talleres',
-    title:'Talleres y cursos — A través de Mí',
-    desc:'Espacios grupales para profundizar en tu autoconocimiento. Cupos limitados para mantener la intimidad.'
-  },
-  'herramientas': {
-    page:'herramientas',
-    title:'Herramientas gratuitas — Calendario lunar y guías | A través de Mí',
-    desc:'Calendario lunar, guía gratuita y herramientas de autoconocimiento sin costo. Tarot, rueda del cielo y eventos astrológicos, próximamente.'
-  },
-  'blog': {
-    page:'blog',
-    title:'Blog — Herramientas para tu camino interior | A través de Mí',
-    desc:'Artículos sobre psicofísica, astrología, tarot y energía. Herramientas concretas para tu día a día.'
-  }
-};
-
-function setMeta(name, value, attr){
-  var el = document.querySelector('meta['+(attr||'name')+'="'+name+'"]');
-  if(el) el.setAttribute('content', value);
-}
-
-// Mantiene un único <h1> en el documento: el de la vista activa.
-// El .closest('[hidden]') importa en /blog: el índice y el artículo viven
-// en la misma .page, y solo uno de los dos está visible por vez.
-function setHeadingLevels(activePageId){
-  $$('[data-page-title]').forEach(function(el){
-    var page = el.closest('.page');
-    var visible = page && page.id === activePageId && !el.closest('[hidden]');
-    var want = visible ? 'H1' : 'H2';
-    if(el.tagName === want) return;
-    var n = document.createElement(want);
-    for(var i=0;i<el.attributes.length;i++){
-      n.setAttribute(el.attributes[i].name, el.attributes[i].value);
-    }
-    n.innerHTML = el.innerHTML;
-    el.replaceWith(n);
-  });
-}
-
-function parseHash(){
-  var raw = location.hash.replace(/^#\/?/, '');
-  var bits = raw.split('#');
-  var parts = bits[0].split('/').filter(Boolean);
-  return {seg: parts[0] || '', slug: parts[1] || '', anchor: bits[1] || ''};
-}
-
-var firstRender = true;
-
-function route(){
-  var p = parseHash();
-  var r = ROUTES[p.seg] || ROUTES[''];
-  var pageId = 'page-' + r.page;
-  var activeSeg = ROUTES[p.seg] ? p.seg : '';
-
-  $$('.page').forEach(function(el){ el.classList.toggle('active', el.id === pageId); });
-  // "Servicios" queda marcado también en /talleres, porque Grupales vive ahí
-  $$('#nav [data-route]').forEach(function(el){
-    var on = el.dataset.route === activeSeg ||
-             (el.dataset.route === 'servicios' && activeSeg === 'talleres');
-    if(el.tagName === 'BUTTON'){
-      if(on) el.setAttribute('data-active',''); else el.removeAttribute('data-active');
-    }else if(on){ el.setAttribute('aria-current','page'); }
-    else{ el.removeAttribute('aria-current'); }
-  });
-  closeNavDrop();
-
-  var title = r.title, desc = r.desc;
-  var url = 'https://atravesdemi.com/' + (activeSeg ? '#/'+activeSeg : '');
-
-  var index = $('#blog-index'), art = $('#blog-article');
-  if(r.page === 'blog'){
-    var post = p.slug ? posts.filter(function(x){ return x.slug === p.slug; })[0] : null;
-    if(post){
-      art.innerHTML = renderArticle(post);
-      wireWa(art);
-      art.hidden = false;
-      index.hidden = true;
-      title = post.title + ' — A través de Mí';
-      desc  = post.dek;
-      url  += '/' + post.slug;
-      track('articulo_visto', {slug: post.slug});
-    }else{
-      art.hidden = true;
-      art.innerHTML = '';
-      index.hidden = false;
-    }
-  }
-
-  setHeadingLevels(pageId);
-
-  document.title = title;
-  setMeta('description', desc);
-  setMeta('og:title', title, 'property');
-  setMeta('og:description', desc, 'property');
-  setMeta('og:url', url, 'property');
-  setMeta('twitter:title', title);
-  setMeta('twitter:description', desc);
-  var can = document.querySelector('link[rel="canonical"]');
-  if(can) can.href = url;
-
-  track('page_view', {ruta: location.hash || '#/'});
-  if(r.page === 'herramientas') cargarEventos();
-
-  if(p.anchor && document.getElementById(p.anchor)){
-    document.getElementById(p.anchor).scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'start'});
-  }else if(!firstRender){
-    window.scrollTo({top:0, behavior: reduceMotion?'auto':'smooth'});
-    var h = $('#'+pageId+' [data-page-title]') || document.getElementById(pageId);
-    if(h && h.focus) setTimeout(function(){ h.focus({preventScroll:true}); }, reduceMotion?0:320);
-  }
-  firstRender = false;
-  observeReveals();
-}
-
-window.addEventListener('hashchange', route);
-
-// Deep-link: al tocar una tarjeta del home, abre ese servicio en /servicios
-document.addEventListener('click', function(e){
-  var a = e.target.closest('[data-svc]');
-  if(!a) return;
-  var id = a.dataset.svc;
-  setTimeout(function(){
-    var btn = $('#svc-btn-'+id);
-    if(btn && btn.getAttribute('aria-expanded') === 'false'){
-      btn.click();
-      btn.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
-    }
-  }, 140);
-});
-
-/* ══════════════════════════════════════════════════════════════
-   REVEAL ON SCROLL
-   ══════════════════════════════════════════════════════════════ */
-var revealObserver = null;
-function observeReveals(){
-  if(reduceMotion || !('IntersectionObserver' in window)){
-    $$('[data-reveal]').forEach(function(el){ el.classList.add('in'); });
-    return;
-  }
-  if(!revealObserver){
-    revealObserver = new IntersectionObserver(function(entries, obs){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add('in'); obs.unobserve(en.target); }
-      });
-    }, {rootMargin:'0px 0px -8% 0px', threshold:.05});
-  }
-  $$('[data-reveal]:not(.in)').forEach(function(el){ revealObserver.observe(el); });
-}
-
-/* ══════════════════════════════════════════════════════════════
-   BARRA MÓVIL — se esconde cuando el CTA final está a la vista
-   ══════════════════════════════════════════════════════════════ */
-(function(){
-  var bar = $('#mbar'), target = $('#cta-final');
-  if(!bar || !target || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ bar.classList.toggle('hide', en.isIntersecting); });
-  }, {threshold:.25}).observe(target);
-})();
-
-/* ══════════════════════════════════════════════════════════════
-   SPLASH — 800 ms, una vez por sesión, saltable
-   ══════════════════════════════════════════════════════════════ */
-(function(){
-  var sp = $('#splash');
-  if(!sp) return;
-  var seen = false;
-  try{ seen = sessionStorage.getItem('atm_splash') === '1'; }catch(err){}
-  var deepLink = location.hash && location.hash !== '#/' && location.hash !== '#';
-
-  if(reduceMotion || seen || deepLink){ sp.remove(); return; }
-  try{ sessionStorage.setItem('atm_splash','1'); }catch(err){}
-
-  var done = false;
-  function kill(){
-    if(done) return;
-    done = true;
-    sp.classList.add('out');
-    setTimeout(function(){ sp.remove(); }, 320);
-  }
-  setTimeout(kill, 800);
-  window.addEventListener('pointerdown', kill, {once:true});
-  window.addEventListener('keydown', kill, {once:true});
-  window.addEventListener('wheel', kill, {once:true, passive:true});
-})();
-
-/* ══════════════════════════════════════════════════════════════
-   MISC
-   ══════════════════════════════════════════════════════════════ */
-$('#year').textContent = new Date().getFullYear();
-
-// El teléfono visible del pie sale de CONFIG, para que no se desincronice del link
-if(CONFIG.telVisible) $('#ftr-tel').textContent = CONFIG.telVisible;
-
-if(CONFIG.tiktok){
-  var tk = document.createElement('a');
-  tk.href = CONFIG.tiktok; tk.target = '_blank'; tk.rel = 'noopener';
-  tk.setAttribute('aria-label','TikTok');
-  tk.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.8V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.1A3 3 0 1 0 13 15V4h3z"/></svg>';
-  $('#ftr-social').appendChild(tk);
-}
-
-route();
-
-})();
-</script>
+<script src="sitio.js"></script>
 </body>
 </html>

@@ -8,13 +8,13 @@
 
 <title>Tu carta natal gratis — Rueda del cielo | A través de Mí</title>
 <meta name="description" content="Calculá tu carta natal gratis: rueda zodiacal, planetas, Quirón, nodos y Lilith. Tu Sol, Luna y Ascendente explicados. Online, sin registro.">
-<link rel="canonical" href="https://atravesdemi.com/carta-natal.html">
+<link rel="canonical" href="https://atravesdemi.com/carta-natal">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <meta property="og:site_name" content="A través de Mí">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta property="og:url" content="https://atravesdemi.com/carta-natal.html">
+<meta property="og:url" content="https://atravesdemi.com/carta-natal">
 <meta property="og:title" content="Tu carta natal gratis — Rueda del cielo">
 <meta property="og:description" content="Cargá tu fecha, hora y lugar de nacimiento y mirá tu carta natal completa. Sin registro y sin costo.">
 <meta property="og:image" content="https://atravesdemi.com/og-image.jpg">
@@ -28,45 +28,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
 
+<link rel="stylesheet" href="estilos.css">
+
+<noscript><style>
+  #splash{display:none!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .js-only{display:none!important}
+</style></noscript>
+
 <style>
-:root{
-  --navy:#1E1433;--purple:#5B3F8C;--purple-d:#48306F;--lav:#C4ABE0;--mist:#F0EBF5;--cream:#FAF8F5;
-  --gold:#C9A84C;--gold-d:#8B6914;--gold-soft:#F7F0DC;
-  --ink:#2A2530;--ink-2:#5C5666;--ink-3:#6E6879;--line:#E4DFDA;--line-2:#EFEBE6;
-  --sage:#4F7A63;--sage-soft:#EDF3EF;--blue:#3F6E97;--blue-soft:#EAF1F7;--rose:#A8545A;
-  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;--s5:3rem;--s6:4rem;
-  --r1:10px;--r2:16px;--r3:24px;--pill:999px;
-  --sh:0 1px 2px rgba(30,20,51,.04),0 10px 28px -14px rgba(30,20,51,.14);
-  --sh-lg:0 2px 6px rgba(30,20,51,.05),0 28px 56px -24px rgba(30,20,51,.22);
-  --ff-d:'Fraunces',Georgia,serif;--ff-b:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-  --maxw:1080px;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-[hidden]{display:none!important}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
-body{font-family:var(--ff-b);font-size:16px;line-height:1.7;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
-:focus-visible{outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
-.skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--purple);color:#fff;padding:12px 20px;border-radius:0 0 var(--r1) 0;font-size:14px;font-weight:500}
-.skip:focus{left:0}
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3);width:100%}
-
-/* Header / footer, iguales al sitio */
-.hdr{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line-2)}
-.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:60px;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--s3)}
-.brand{display:flex;align-items:center;gap:10px}
-.brand-name{font-family:var(--ff-d);font-size:1rem;font-weight:500;color:var(--navy);white-space:nowrap}
-.nav{display:flex;gap:var(--s3)}
-.nav a{font-size:.875rem;color:var(--ink-2)}
-.nav a:hover{color:var(--navy)}
-.ftr{background:var(--navy);color:var(--lav);padding-block:var(--s5) var(--s4);text-align:center;margin-top:var(--s6)}
-.ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin:12px 0 4px}
-.ftr-tag{font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s3)}
-.ftr-nav{display:flex;justify-content:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s3);font-size:.875rem}
-.ftr-nav a{color:var(--lav);opacity:.8}
-.ftr-copy{font-size:.75rem;color:var(--lav);opacity:.5}
-
+/* Los tokens, el reset, el header y el pie viven en estilos.css.
+   Acá queda solo lo propio de esta página. */
 .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:10px}
 h1{font-family:var(--ff-d);font-weight:400;font-size:clamp(2.1rem,1.4rem + 2.8vw,3.2rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:14px}
 .h2{font-family:var(--ff-d);font-weight:400;font-size:clamp(1.6rem,1.2rem + 1.7vw,2.2rem);line-height:1.15;letter-spacing:-.015em}
@@ -225,23 +197,169 @@ td.gr{font-variant-numeric:tabular-nums;white-space:nowrap}
   .oferta{padding:var(--s4) var(--s2);border-radius:var(--r2)}
 }
 @media(prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} .btn:hover{transform:none} }
+
+/* ============================================================
+   LOS 36 TEXTOS DE SIGNOS, EN HTML
+   Se generan del mismo objeto var TEXTO que usa la herramienta.
+   Están escritos acá porque los rastreadores de IA no ejecutan
+   JavaScript: si vivieran solo en el objeto, nadie que pregunte
+   "qué significa Luna en Escorpio" llegaría a esta página.
+   ============================================================ */
+.signos{display:grid;gap:10px;max-width:720px;margin-inline:auto}
+.signos details{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);overflow:hidden;transition:border-color .2s ease}
+.signos details:hover{border-color:var(--lav)}
+.signos summary{
+  display:flex;gap:12px;align-items:center;justify-content:space-between;
+  padding:12px var(--s3);cursor:pointer;list-style:none;
+  font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;color:var(--ink);
+}
+.signos summary::-webkit-details-marker{display:none}
+.signos summary:focus-visible{outline:2px solid var(--purple);outline-offset:-3px}
+.signos summary::after{
+  content:'';flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid var(--line);
+  background:no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C5666' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");
+  transition:transform .28s cubic-bezier(.16,1,.3,1),background-color .2s ease;
+}
+.signos details[open] summary::after{transform:rotate(45deg);background-color:var(--mist);border-color:transparent}
+.signos p{padding:0 var(--s3) var(--s3);font-size:.9375rem;line-height:1.7;color:var(--ink-2)}
+.signos-grupo{margin-bottom:var(--s5)}
+.signos-grupo>h3{
+  font-family:var(--ff-d);font-size:1.25rem;font-weight:500;text-align:center;
+  margin-bottom:6px;color:var(--purple);
+}
+.signos-grupo>p.qué{font-size:.9375rem;color:var(--ink-2);text-align:center;max-width:52ch;margin:0 auto var(--s3);line-height:1.6}
+
+/* ============================================================
+   FAQ — <details> nativo: plega sin una línea de JavaScript
+   ============================================================ */
+.faq{display:grid;gap:12px;max-width:660px;margin-inline:auto}
+.faq details{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);overflow:hidden;transition:border-color .2s ease}
+.faq details:hover{border-color:var(--lav)}
+.faq summary{
+  display:flex;gap:14px;align-items:center;justify-content:space-between;
+  padding:var(--s2) var(--s3);cursor:pointer;list-style:none;
+  font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.35;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:focus-visible{outline:2px solid var(--purple);outline-offset:-3px}
+.faq summary::after{
+  content:'';flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);
+  background:no-repeat center/12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C5666' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");
+  transition:transform .28s cubic-bezier(.16,1,.3,1),background-color .2s ease;
+}
+.faq details[open] summary::after{transform:rotate(45deg);background-color:var(--mist);border-color:transparent}
+.faq .faq-a{padding:0 var(--s3) var(--s3);border-top:1px solid var(--line-2)}
+.faq .faq-a p{font-size:.9375rem;line-height:1.7;color:var(--ink-2)}
+.faq .faq-a p:first-child{margin-top:var(--s3)}
+.faq .faq-a p+p{margin-top:10px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://atravesdemi.com/"},
+        {"@type":"ListItem","position":2,"name":"Herramientas","item":"https://atravesdemi.com/herramientas"},
+        {"@type":"ListItem","position":3,"name":"Carta natal","item":"https://atravesdemi.com/carta-natal"}
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://atravesdemi.com/carta-natal#app",
+      "name": "Carta natal gratis",
+      "url": "https://atravesdemi.com/carta-natal",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Cualquier navegador web",
+      "inLanguage": "es",
+      "isAccessibleForFree": true,
+      "description": "Calcula la carta natal completa a partir de la fecha, la hora y el lugar de nacimiento: los diez planetas, Quirón, los nodos lunares y Lilith, en zodíaco tropical y casas Placidus. El cálculo ocurre en el navegador y los datos no se envían a ningún servidor.",
+      "featureList": [
+        "Rueda del cielo dibujada con las doce casas",
+        "Los diez planetas más Quirón, los nodos lunares y Lilith",
+        "Zodíaco tropical y casas Placidus",
+        "Zona horaria deducida de las coordenadas, con los cambios históricos de horario de verano",
+        "Sol, Luna y Ascendente explicados en castellano",
+        "Sin registro: los datos de nacimiento no salen del navegador"
+      ],
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "ARS"},
+      "provider": {"@type":"ProfessionalService","name":"A través de Mí","url":"https://atravesdemi.com/"}
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://atravesdemi.com/carta-natal#como",
+      "name": "Cómo calcular tu carta natal gratis",
+      "description": "Los tres datos que hacen falta y qué hacer con el resultado.",
+      "totalTime": "PT2M",
+      "inLanguage": "es",
+      "tool": {"@type":"HowToTool","name":"Un navegador web"},
+      "step": [
+        {"@type":"HowToStep","position":1,"name":"Cargá tu fecha de nacimiento","text":"Día, mes y año. Es el dato que ubica al Sol y a los planetas lentos."},
+        {"@type":"HowToStep","position":2,"name":"Cargá la hora","text":"La hora define el Ascendente y las doce casas. Si te desvías veinte minutos, el Ascendente puede cambiar de signo: buscala en la partida de nacimiento antes de estimarla."},
+        {"@type":"HowToStep","position":3,"name":"Elegí la ciudad","text":"De la ciudad salen las coordenadas y la zona horaria, con los cambios históricos de horario de verano ya contemplados."},
+        {"@type":"HowToStep","position":4,"name":"Mirá la rueda y las tres piezas","text":"La rueda muestra los diez planetas más Quirón, los nodos y Lilith. Abajo quedan explicados tu Sol, tu Luna y tu Ascendente."}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://atravesdemi.com/carta-natal#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"¿Guardan mis datos de nacimiento?","acceptedAnswer":{"@type":"Answer","text":"No. La carta se calcula dentro de tu navegador: la fecha, la hora y el lugar de nacimiento no se envían a ningún servidor ni quedan guardados en ninguna base de datos. Si cerrás la pestaña, no queda nada."}},
+        {"@type":"Question","name":"¿Qué pasa si no sé la hora exacta de mi nacimiento?","acceptedAnswer":{"@type":"Answer","text":"El Sol y los planetas lentos van a estar bien igual. Lo que se vuelve incierto es el Ascendente y las casas: veinte minutos de diferencia pueden cambiar el Ascendente de signo. Conviene buscar la hora en la partida de nacimiento antes de estimarla."}},
+        {"@type":"Question","name":"¿Qué sistema de casas y qué zodíaco usa?","acceptedAnswer":{"@type":"Answer","text":"Casas Placidus y zodíaco tropical, las convenciones más habituales en la astrología occidental. Los resultados coinciden con los de astro.com."}},
+        {"@type":"Question","name":"¿Incluye Quirón, los nodos y Lilith?","acceptedAnswer":{"@type":"Answer","text":"Sí. Además de los diez planetas —Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno y Plutón— la rueda incluye Quirón, los nodos lunares y Lilith."}},
+        {"@type":"Question","name":"¿Cómo maneja el horario de verano?","acceptedAnswer":{"@type":"Answer","text":"La zona horaria se deduce de las coordenadas de la ciudad que elegís, contemplando los cambios históricos de horario de verano. Para alguien nacido en Argentina en 1974, por ejemplo, se usa el horario que regía ese año, no el actual."}},
+        {"@type":"Question","name":"¿Qué son el Sol, la Luna y el Ascendente?","acceptedAnswer":{"@type":"Answer","text":"El Sol es el propósito: para qué viniste. La Luna es la necesidad emocional: qué te calma y qué te desborda. El Ascendente es la puerta de entrada: cómo te presentás y cómo te lee alguien que recién te conoce. Son las tres piezas que más se sienten en el día a día."}},
+        {"@type":"Question","name":"¿La carta natal predice el futuro?","acceptedAnswer":{"@type":"Answer","text":"No. Es un mapa del cielo en el momento en que nacías: describe tendencias y tensiones, no hechos. No dice qué va a pasar ni reemplaza ninguna decisión propia."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 
+<!-- ══════ HEADER — idéntico en TODAS las páginas ══════
+     Si lo cambiás acá, hay que pegarlo igual en las demás.
+     Lo que varía por página (el ítem activo) lo pone sitio.js.
+
+     En desktop es una barra horizontal. En móvil, la hamburguesa
+     queda a la izquierda, el logo al medio, y el mismo <nav> se
+     despliega abajo como panel. Es el mismo HTML: solo cambia el CSS. -->
 <header class="hdr">
   <div class="hdr-in">
+    <button class="nav-hamb" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
       <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
       <span class="brand-name">A través de Mí</span>
     </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="index.html#/">Inicio</a>
-      <a href="index.html#/servicios">Servicios</a>
-      <a href="index.html#/herramientas">Herramientas</a>
-      <a href="index.html#/blog">Blog</a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html" data-nav="home">Inicio</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="servicios.html" data-nav="servicios">Servicios</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-servicios" aria-haspopup="true" aria-label="Ver los servicios"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-servicios" role="menu" hidden>
+          <a href="servicios.html" role="menuitem"><b>Individuales</b><span>Método ATM, armonización, tarot y carta natal</span></a>
+          <a href="talleres.html" role="menuitem"><b>Grupales</b><span>Talleres y encuentros con cupo limitado</span></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="herramientas.html" data-nav="herramientas">Herramientas</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-herramientas" aria-haspopup="true" aria-label="Ver las herramientas"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-herramientas" role="menu" hidden>
+          <a href="carta-natal.html" role="menuitem"><b>Carta natal</b><span>Tu rueda del cielo completa, gratis</span></a>
+          <a href="tarot.html" role="menuitem"><b>Las cartas</b><span>Mensaje del día y tirada de tarot</span></a>
+          <a href="calendario-lunar.html" role="menuitem"><b>Calendario lunar</b><span>Fases, signos y retrógrados, mes a mes</span></a>
+        </div>
+      </div>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a class="btn btn-primary btn-block nav-cta" data-wa data-loc="menu-movil" href="#">Escribime por WhatsApp</a>
     </nav>
+    <a class="btn btn-primary btn-sm hdr-cta" data-wa data-loc="header" href="#">Escribime</a>
   </div>
 </header>
 
@@ -384,25 +502,310 @@ td.gr{font-variant-numeric:tabular-nums;white-space:nowrap}
       </figure>
     </section>
   </section>
+  <!-- LOS 36 TEXTOS
+       Generados del objeto var TEXTO de más abajo. Si los reescribís
+       ahí, hay que regenerar esta sección (o al revés). Son el mismo
+       texto que muestra la herramienta al calcular una carta.
+       ⚠️ Siguen siendo el borrador, no la voz de Mayra. -->
+  <section class="wrap" id="signos" style="margin-top:var(--s6)">
+    <div class="sec-head center">
+      <span class="eyebrow">Las tres piezas</span>
+      <h2 class="h2">Qué significa cada signo</h2>
+      <p class="lead">Si ya sabés tu Sol, tu Luna o tu Ascendente, buscalos acá. Si no, calculá tu carta arriba y te los digo.</p>
+    </div>
+        <div class="signos-grupo">
+          <h3>Tu Sol</h3>
+          <p class="qué">El propósito: para qué viniste. Es el signo que casi todos conocen, el de la fecha de nacimiento.</p>
+          <div class="signos">
+          <details>
+            <summary>Sol en Aries</summary>
+            <p>Viniste a aprender a arrancar. Tu energía se enciende cuando algo empieza y se apaga cuando hay que sostener la rutina. Tu desafío no es tener coraje: es tener paciencia.</p>
+          </details>
+          <details>
+            <summary>Sol en Tauro</summary>
+            <p>Necesitás que las cosas tengan cuerpo: que se toquen, que duren, que se disfruten. Construís despacio y bien. Tu desafío es soltar lo que ya no sirve, aunque te haya costado conseguirlo.</p>
+          </details>
+          <details>
+            <summary>Sol en Géminis</summary>
+            <p>Tu manera de existir es preguntando. Aprendés rápido, te aburrís rápido y conectás ideas que otros no ven juntas. Tu desafío es profundizar en algo antes de saltar a lo siguiente.</p>
+          </details>
+          <details>
+            <summary>Sol en Cáncer</summary>
+            <p>Todo lo procesás desde el afecto: lo que sentís es tu forma de saber. Cuidás y contenés casi sin darte cuenta. Tu desafío es cuidarte a vos con esa misma dedicación.</p>
+          </details>
+          <details>
+            <summary>Sol en Leo</summary>
+            <p>Necesitás crear algo que lleve tu marca y que alguien lo vea. No es vanidad, es tu manera de existir. Tu desafío es brillar sin depender de que te aplaudan.</p>
+          </details>
+          <details>
+            <summary>Sol en Virgo</summary>
+            <p>Ves el detalle que falta y el error que nadie notó. Servís, ordenás, mejorás. Tu desafío es aceptar que algo puede estar bien sin estar perfecto. Sobre todo vos.</p>
+          </details>
+          <details>
+            <summary>Sol en Libra</summary>
+            <p>Te construís en el vínculo: pensás mejor cuando hay alguien enfrente. Buscás justicia y belleza en partes iguales. Tu desafío es sostener tu posición aunque desarme la armonía.</p>
+          </details>
+          <details>
+            <summary>Sol en Escorpio</summary>
+            <p>No te alcanza la superficie: necesitás saber qué hay abajo. Atravesás crisis que a otros los romperían y salís transformado. Tu desafío es confiar antes de tener todas las pruebas.</p>
+          </details>
+          <details>
+            <summary>Sol en Sagitario</summary>
+            <p>Necesitás sentido: hacer algo solo porque toca te seca. Buscás horizonte, viaje, idea grande. Tu desafío es comprometerte con algo concreto sin sentir que perdés libertad.</p>
+          </details>
+          <details>
+            <summary>Sol en Capricornio</summary>
+            <p>Tenés una meta aunque no la digas, y una paciencia que a otros les falta. Construís para que dure. Tu desafío es disfrutar el camino y no solamente el resultado.</p>
+          </details>
+          <details>
+            <summary>Sol en Acuario</summary>
+            <p>Ves desde afuera lo que otros ven desde adentro. Te incomoda lo que se hace porque siempre fue así. Tu desafío es acercarte sin sentir que perdés independencia.</p>
+          </details>
+          <details>
+            <summary>Sol en Piscis</summary>
+            <p>Percibís lo que no se dice. Tenés una sensibilidad que es don o desborde según cómo la cuides. Tu desafío es poner límites sin sentir que estás traicionando a alguien.</p>
+          </details>
+          </div>
+        </div>
+        <div class="signos-grupo">
+          <h3>Tu Luna</h3>
+          <p class="qué">La necesidad emocional: qué te calma y qué te desborda. Cambia de signo cada dos días y medio, así que hace falta la fecha, no solo el mes.</p>
+          <div class="signos">
+          <details>
+            <summary>Luna en Aries</summary>
+            <p>Necesitás actuar para calmarte. Te enojás rápido y se te pasa rápido, y te hace mal quedarte con algo guardado. Pedí espacio para moverte cuando algo te desborda.</p>
+          </details>
+          <details>
+            <summary>Luna en Tauro</summary>
+            <p>Te calma lo concreto: comida rica, tu cama, una rutina que no cambie. Necesitás sentir que no te van a mover el piso. Los cambios bruscos te cuestan más de lo que admitís.</p>
+          </details>
+          <details>
+            <summary>Luna en Géminis</summary>
+            <p>Necesitás hablar lo que sentís para entender qué estás sintiendo. El silencio te angustia más que el conflicto. Buscá a alguien que te deje pensar en voz alta.</p>
+          </details>
+          <details>
+            <summary>Luna en Cáncer</summary>
+            <p>Sentís todo con una intensidad que a veces te sobrepasa, y tenés memoria emocional larga. Necesitás un lugar y personas donde no tengas que actuar de nada.</p>
+          </details>
+          <details>
+            <summary>Luna en Leo</summary>
+            <p>Necesitás que te registren: que alguien note cómo estás sin que tengas que explicarlo. Cuando te sentís invisible te apagás, y ahí es justo cuando más necesitás que te busquen.</p>
+          </details>
+          <details>
+            <summary>Luna en Virgo</summary>
+            <p>Ordenás para calmarte: cuando algo te angustia, resolvés tareas. Necesitás sentirte útil, y te cuesta pedir ayuda porque preferís no molestar a nadie.</p>
+          </details>
+          <details>
+            <summary>Luna en Libra</summary>
+            <p>Necesitás paz en tus vínculos para estar bien. El conflicto te desestabiliza más de lo normal. Cuidado con ceder tanto que después no sepas qué era lo que querías.</p>
+          </details>
+          <details>
+            <summary>Luna en Escorpio</summary>
+            <p>Sentís en profundidad o no sentís. Necesitás intimidad real, no charla de superficie. Te cuesta confiar, y cuando confiás lo hacés entero.</p>
+          </details>
+          <details>
+            <summary>Luna en Sagitario</summary>
+            <p>Te calma el aire: salir, viajar, cambiar de escenario. Te ahoga sentirte atrapado. Necesitás creer que hay algo más grande que lo que estás viviendo ahora.</p>
+          </details>
+          <details>
+            <summary>Luna en Capricornio</summary>
+            <p>Aprendiste temprano a arreglártelas y ahora te cuesta mostrarte frágil. Necesitás sentirte capaz. Pedir ayuda no te resta nada: te descansa.</p>
+          </details>
+          <details>
+            <summary>Luna en Acuario</summary>
+            <p>Necesitás espacio. Cuando algo te desborda te desconectás para mirarlo desde afuera. No es frialdad, es tu manera de procesar, pero avisá que estás haciendo eso.</p>
+          </details>
+          <details>
+            <summary>Luna en Piscis</summary>
+            <p>Absorbés el clima emocional de donde estés y no siempre distinguís qué es tuyo. Necesitás soledad, silencio o algo artístico para volver a tu centro.</p>
+          </details>
+          </div>
+        </div>
+        <div class="signos-grupo">
+          <h3>Tu Ascendente</h3>
+          <p class="qué">La puerta de entrada: cómo te presentás y cómo te lee alguien que recién te conoce. Depende de la hora exacta.</p>
+          <div class="signos">
+          <details>
+            <summary>Ascendente en Aries</summary>
+            <p>Llegás con energía y vas de frente. Te leen decidido, a veces impaciente. Tu manera de entrar a los lugares es haciendo, no observando.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Tauro</summary>
+            <p>Transmitís calma y solidez. La gente se siente segura cerca tuyo y te cuenta cosas rápido. Te tomás tu tiempo para entrar en confianza, y eso también se nota.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Géminis</summary>
+            <p>Caés simpático y curioso: preguntás, conectás, hacés reír. Te leen liviano, aunque adentro estés procesando bastante más de lo que mostrás.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Cáncer</summary>
+            <p>Se te nota el cuidado. Te perciben cálido y protector, y suelen buscarte cuando están mal. Te cuesta el primer acercamiento, pero después no soltás.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Leo</summary>
+            <p>Entrás y se nota. Tenés presencia aunque no hagas nada especial. Te leen seguro y generoso, y esperan de vos más iniciativa de la que a veces querés dar.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Virgo</summary>
+            <p>Transmitís prolijidad y criterio: te consultan y confían en tu juicio. Podés parecer reservado al principio, pero no es distancia, es que estás observando.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Libra</summary>
+            <p>Caés bien casi sin intentarlo. Tenés registro del otro y sentido estético. El riesgo es que te lean complaciente cuando en realidad estás midiendo el terreno.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Escorpio</summary>
+            <p>Generás una impresión fuerte: o atraés o incomodás, rara vez pasás desapercibido. La gente intuye que hay más de lo que mostrás, y tiene razón.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Sagitario</summary>
+            <p>Llegás con humor y con ganas. Te leen optimista y directo, a veces demasiado directo. Transmitís que estás de paso aunque te quedes.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Capricornio</summary>
+            <p>Te leen serio y confiable antes de conocerte. Proyectás más edad y más autoridad de la que sentís tener. Aflojás recién cuando confiás.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Acuario</summary>
+            <p>Se nota que sos distinto y no te molesta. Te leen independiente y un poco inasible: cercano en el trato, reservado en lo íntimo.</p>
+          </details>
+          <details>
+            <summary>Ascendente en Piscis</summary>
+            <p>Transmitís suavidad y la gente baja la guardia con vos. Te leen sensible y sin filo. Te camuflás en cada ambiente, y a veces te perdés ahí.</p>
+          </details>
+          </div>
+        </div>
+  </section>
+
+  <!-- FAQ — el mismo texto que declara el FAQPage del <head>. -->
+  <section class="wrap" id="faq" style="margin-top:var(--s5)">
+    <div class="sec-head center">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="h2">Sobre esta carta natal</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Guardan mis datos de nacimiento?</summary>
+        <div class="faq-a">
+          <p>No. La carta se calcula dentro de tu navegador: la fecha, la hora y el lugar de nacimiento no se envían a ningún servidor ni quedan guardados en ninguna base de datos.</p>
+          <p>Si cerrás la pestaña, no queda nada.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué pasa si no sé la hora exacta de mi nacimiento?</summary>
+        <div class="faq-a">
+          <p>El Sol y los planetas lentos van a estar bien igual. Lo que se vuelve incierto es el Ascendente y las casas: veinte minutos de diferencia pueden cambiar el Ascendente de signo.</p>
+          <p>Conviene buscar la hora en la partida de nacimiento antes de estimarla.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué sistema de casas y qué zodíaco usa?</summary>
+        <div class="faq-a">
+          <p>Casas Placidus y zodíaco tropical, las convenciones más habituales en la astrología occidental. Los resultados coinciden con los de astro.com.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Incluye Quirón, los nodos y Lilith?</summary>
+        <div class="faq-a">
+          <p>Sí. Además de los diez planetas —Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno y Plutón— la rueda incluye Quirón, los nodos lunares y Lilith.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo maneja el horario de verano?</summary>
+        <div class="faq-a">
+          <p>La zona horaria se deduce de las coordenadas de la ciudad que elegís, contemplando los cambios históricos de horario de verano.</p>
+          <p>Para alguien nacido en Argentina en 1974, por ejemplo, se usa el horario que regía ese año, no el actual.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué son el Sol, la Luna y el Ascendente?</summary>
+        <div class="faq-a">
+          <p>El Sol es el propósito: para qué viniste. La Luna es la necesidad emocional: qué te calma y qué te desborda. El Ascendente es la puerta de entrada: cómo te presentás y cómo te lee alguien que recién te conoce.</p>
+          <p>Son las tres piezas que más se sienten en el día a día, y por eso son las que explica esta herramienta.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿La carta natal predice el futuro?</summary>
+        <div class="faq-a">
+          <p>No. Es un mapa del cielo en el momento en que nacías: describe tendencias y tensiones, no hechos. No dice qué va a pasar ni reemplaza ninguna decisión propia.</p>
+        </div>
+      </details>
+    </div>
+  </section>
 </main>
 
-<footer class="ftr">
+<!-- ══════ PIE — idéntico en TODAS las páginas ══════
+     Cuatro columnas en escritorio, apiladas en móvil.
+     Además de orientar, reparte enlaces internos a las 10 páginas
+     desde cualquier página del sitio. -->
+<footer class="ftr on-dark">
   <div class="wrap">
-    <svg width="34" height="31" viewBox="0 0 48 44" fill="none" style="margin:0 auto" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
-    <p class="ftr-name">A través de Mí</p>
-    <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
-    <nav class="ftr-nav" aria-label="Pie de página">
-      <a href="index.html#/">Inicio</a>
-      <a href="index.html#/servicios">Servicios</a>
-      <a href="index.html#/herramientas">Herramientas</a>
-      <a href="index.html#/blog">Blog</a>
-    </nav>
-    <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span></p>
-    <p class="ftr-copy" style="margin-top:8px;max-width:56ch;margin-inline:auto">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+    <div class="ftr-cols">
+
+      <div class="ftr-marca">
+        <svg width="34" height="31" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+        <p class="ftr-name">A través de Mí</p>
+        <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+        <p class="ftr-desc">Atiendo por videollamada a Latinoamérica y España. La primera charla no tiene costo.</p>
+        <div class="ftr-social" id="ftr-social">
+          <a href="https://instagram.com/a.traves.demi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a data-wa data-loc="footer" href="#" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="ftr-col" aria-label="Servicios">
+        <h2>Servicios</h2>
+        <ul>
+          <li><a href="servicios.html#metodo-atm">Método ATM</a></li>
+          <li><a href="servicios.html#psicofisica">Armonización</a></li>
+          <li><a href="talleres.html">Talleres grupales</a></li>
+          <li><a href="servicios.html#valores">Valores</a></li>
+          <li><a href="servicios.html#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Herramientas gratuitas">
+        <h2>Gratis y sin registro</h2>
+        <ul>
+          <li><a href="carta-natal.html">Tu carta natal</a></li>
+          <li><a href="tarot.html">Mensaje del día</a></li>
+          <li><a href="tarot.html#arcanos">Los 22 arcanos</a></li>
+          <li><a href="calendario-lunar.html">Calendario lunar</a></li>
+          <li><a href="herramientas.html">Ver todas</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Más">
+        <h2>Más</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#quien-soy">Quién soy</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="mercurio-retrogrado.html">Mercurio retrógrado</a></li>
+          <li><a href="recomendaciones.html">Dejá tu experiencia</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="ftr-pie">
+      <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span> · <a data-wa data-loc="footer-tel" id="ftr-tel" href="#">+54 9 351 204-0561</a></p>
+      <p class="ftr-legal">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+    </div>
   </div>
 </footer>
 
 <script src="vendor/circular-natal-horoscope.js"></script>
+<div class="mbar js-only" id="mbar">
+  <a class="btn btn-outline" href="servicios.html">Ver servicios</a>
+  <a class="btn btn-primary" data-wa data-loc="barra-movil" href="#">Escribime</a>
+</div>
+
+<script src="sitio.js"></script>
 <script>
 (function(){
 'use strict';
@@ -410,37 +813,18 @@ td.gr{font-variant-numeric:tabular-nums;white-space:nowrap}
 /* ══════════════════════════════════════════════════════════════
    ⚙️ CONFIGURACIÓN
    ══════════════════════════════════════════════════════════════ */
-var CONFIG = {
-  tel: '5493512040561',
-
-  // ⚠️ REVISAR CON MAYRA. Poné el número (ej: 35000) y aparece solo.
-  // Vacío = muestra "A consultar".
-  precioDocumento: '',
-  precioSesion: '',
-
-  // Textos de entrega. Ajustar a lo que Mayra pueda sostener.
-  entregaDocumento: 'Lo recibís por WhatsApp o mail',
-  duracionSesion: 'Una sesión de 30 a 45 minutos, uno a uno, online o presencial',
-
-  ga4: ''
-};
+/* Precios y textos de ESTA página. El resto de CONFIG (teléfono,
+   analytics) viene de sitio.js, que se carga antes. */
+// ⚠️ REVISAR CON MAYRA. Poné el número (ej: 35000) y aparece solo.
+CONFIG.precioDocumento  = '';
+CONFIG.precioSesion     = '';
+CONFIG.entregaDocumento = 'Lo recibís por WhatsApp o mail';
+CONFIG.duracionSesion   = 'Una sesión de 30 a 45 minutos, uno a uno, por videollamada';
 
 var LIB = window.CNH || {};
 var Origin = LIB.Origin, Horoscope = LIB.Horoscope;
 
-/* ── Analytics ─────────────────────────────────────────────── */
-window.dataLayer = window.dataLayer || [];
-function track(n,p){ window.dataLayer.push(Object.assign({event:n}, p||{})); if(typeof window.gtag==='function') window.gtag('event',n,p||{}); }
-if(CONFIG.ga4){
-  var gs=document.createElement('script'); gs.async=true;
-  gs.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.ga4; document.head.appendChild(gs);
-  window.gtag=function(){window.dataLayer.push(arguments);};
-  window.gtag('js',new Date()); window.gtag('config',CONFIG.ga4);
-}
-document.addEventListener('click',function(e){
-  var a=e.target.closest('a[href*="wa.me"]'); if(!a) return;
-  track('whatsapp_click',{ubicacion:a.id||'carta-natal'});
-});
+/* Analytics y el rastreo de clicks a WhatsApp viven en sitio.js */
 
 /* ── Ciudades ──────────────────────────────────────────────── */
 // CABA usa la coordenada del atlas astrológico (58°27'W / 34°36'S), la misma que astro.com.
@@ -551,7 +935,6 @@ var RIGE = {
 var COLOR_ASP = {conjunction:'#8B6914',opposition:'#A8545A',square:'#A8545A',trine:'#3F6E97',sextile:'#4F7A63'};
 var DASH_ASP  = {square:'4 3',sextile:'4 3'};
 
-var $ = function(s){ return document.querySelector(s); };
 var RAD = Math.PI/180;
 function norm(d){ d%=360; return d<0?d+360:d; }
 function signoDe(l){ return Math.floor(norm(l)/30); }

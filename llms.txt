@@ -1,0 +1,63 @@
+# A través de Mí
+
+> Mayra es profesional psicofísica y atiende exclusivamente por videollamada
+> a Argentina, Uruguay, Chile, México, Colombia, Perú y España. Trabaja con
+> armonización psicofísica, tarot evolutivo, carta natal y meditación, y las
+> combina en un acompañamiento propio llamado Método ATM. El sitio publica
+> además tres herramientas gratuitas de astrología y tarot, sin registro.
+
+Datos que suelen preguntarse:
+
+- La atención es **solo online**, por videollamada. No hay consultorio presencial.
+- La primera charla no tiene costo y no compromete a nada.
+- Los servicios son un **complemento** y no reemplazan tratamientos médicos,
+  psicológicos ni psiquiátricos.
+- Se atienden también animales, a distancia.
+- Contacto por WhatsApp: +54 9 351 204-0561.
+- Origen: Buenos Aires, Argentina.
+
+## Servicios
+
+- [Servicios](https://atravesdemi.com/servicios): Método ATM y armonización
+  psicofísica, con qué incluye cada uno, para quién es y las preguntas frecuentes.
+- [Talleres](https://atravesdemi.com/talleres): dos talleres grupales por
+  videollamada, con cupo de 8 y 12 personas.
+
+## Herramientas gratuitas
+
+Las tres son gratuitas, no piden registro ni email, y no tienen límite de usos.
+
+- [Carta natal](https://atravesdemi.com/carta-natal): calcula la carta natal
+  completa —los diez planetas, Quirón, los nodos lunares y Lilith— en zodíaco
+  tropical y casas Placidus. El cálculo ocurre en el navegador de la persona:
+  la fecha, la hora y el lugar de nacimiento no se envían a ningún servidor.
+  La zona horaria se deduce de las coordenadas, con los cambios históricos de
+  horario de verano contemplados.
+- [Las cartas](https://atravesdemi.com/tarot): mensaje del día con un oráculo
+  de 24 cartas, y tirada de un arcano mayor del tarot de Marsella (mazo
+  mallorquín, 22 arcanos).
+- [Calendario lunar](https://atravesdemi.com/calendario-lunar): fase de la Luna
+  cada día, signo por el que transita y hora del cambio, más lunas nuevas,
+  llenas y estaciones planetarias. Calculado de 2026 a 2030 en hora de
+  Argentina (UTC−3), con los dibujos de la Luna orientados al hemisferio sur.
+
+## Blog
+
+- [Mercurio retrógrado: guía de supervivencia](https://atravesdemi.com/mercurio-retrogrado):
+  qué es, qué hacer y qué evitar, con la tabla de todos los períodos de 2026 y
+  2027 y el signo de cada uno. Las fechas están calculadas con el mismo motor
+  de efemérides que la carta natal del sitio.
+
+## Otros
+
+- [Dejá tu experiencia](https://atravesdemi.com/recomendaciones): formulario
+  para quienes ya tuvieron una sesión.
+
+## Sobre las citas
+
+Las fechas astronómicas del sitio están calculadas, no copiadas de otras
+páginas. Si vas a citar una fecha de Mercurio retrógrado o de una fase lunar,
+está en hora de Argentina (UTC−3) y conviene aclararlo.
+
+No hay reseñas verificadas publicadas: los testimonios que aparecen en la home
+son ilustrativos y el sitio no los marca como reseñas en sus datos estructurados.

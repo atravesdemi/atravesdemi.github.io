@@ -1,0 +1,30 @@
+# A través de Mí — https://atravesdemi.com
+# Todo abierto, incluidos los rastreadores de IA: que citen el sitio
+# es exactamente lo que buscamos.
+
+User-agent: *
+Allow: /
+
+# Los declaramos aparte para que quede explícito, no porque haga falta.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://atravesdemi.com/sitemap.xml

@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E1433" media="(prefers-color-scheme: dark)">
+<title>Método ATM, psicofísica y tarot online | A través de Mí</title>
+<meta name="description" content="Sesiones online de Método ATM, armonización psicofísica, tarot evolutivo y carta natal. Atiendo por videollamada a toda Latinoamérica y España.">
+<link rel="canonical" href="https://atravesdemi.com/servicios">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Mayra — A través de Mí">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A través de Mí">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://atravesdemi.com/servicios">
+<meta property="og:title" content="Servicios: Método ATM, psicofísica y tarot online">
+<meta property="og:description" content="Cada servicio es un camino distinto hacia el mismo lugar: vos. Sesiones por videollamada para toda Latinoamérica y España.">
+<meta property="og:image" content="https://atravesdemi.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400..600&display=swap">
+<link rel="stylesheet" href="estilos.css">
+
+<noscript><style>
+  #splash{display:none!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .js-only{display:none!important}
+</style></noscript>
+
+<style>
+/* Los tokens, el reset, el header y el pie viven en estilos.css.
+   Acá queda solo lo propio de esta página. */
+
+/* ============================================================
+   PARA QUIÉN
+   ============================================================ */
+.forwho{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s2) var(--s4)}
+.forwho li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:.9375rem;line-height:1.55;color:var(--ink)}
+.forwho .bullet{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-top:1px;box-shadow:0 1px 3px rgba(30,20,51,.07)}
+
+/* ============================================================
+   SERVICIO — ficha completa, siempre abierta
+   Antes era un acordeón pintado por JavaScript. Ahora el texto
+   está en el HTML: lo leen los buscadores y las IA, y sigue
+   estando si el JavaScript falla.
+   ============================================================ */
+.svc{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);margin-bottom:var(--s3);overflow:hidden}
+.svc.is-feat{border:1.5px solid var(--purple);box-shadow:var(--sh)}
+.svc-head{display:flex;gap:14px;align-items:flex-start;padding:var(--s3)}
+.svc-ico{width:44px;height:44px;border-radius:var(--r1);display:grid;place-items:center;background:var(--mist);flex-shrink:0}
+.svc.is-feat .svc-ico{background:var(--purple)}
+.svc-meta{flex:1;min-width:0}
+.svc-kicker{display:flex;align-items:center;gap:8px;margin-bottom:2px}
+.svc-num{font-size:.6875rem;font-weight:600;letter-spacing:.16em;color:var(--gold-d)}
+.badge{font-size:.6875rem;font-weight:600;background:var(--sage-soft);color:var(--sage);padding:2px 8px;border-radius:5px;letter-spacing:.02em}
+.svc-title{display:block;font-family:var(--ff-d);font-size:1.375rem;font-weight:500;line-height:1.2;margin-bottom:3px}
+.svc-hook{display:block;font-size:.9375rem;color:var(--ink-2);line-height:1.5}
+.svc-body{padding:0 var(--s3) var(--s3);border-top:1px solid var(--line-2)}
+.svc-body>*:first-child{margin-top:var(--s3)}
+.svc-body .desc{font-size:.9375rem;line-height:1.7;color:var(--ink-2);margin-bottom:var(--s3)}
+.svc-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:var(--s3);font-size:.9375rem}
+.svc-price b{font-family:var(--ff-d);font-size:1.25rem;font-weight:500;color:var(--purple)}
+.sub-h{font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+.list-check,.list-dot{list-style:none;margin-bottom:var(--s3);display:grid;gap:7px}
+.list-check li,.list-dot li{display:flex;gap:9px;align-items:flex-start;font-size:.9375rem;line-height:1.5;color:var(--ink-2)}
+.list-check svg{flex-shrink:0;margin-top:4px;color:var(--sage)}
+.list-dot li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold-d);flex-shrink:0;margin-top:9px}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--s3)}
+.pill{font-size:.75rem;background:var(--mist);color:var(--purple);padding:4px 11px;border-radius:6px;font-weight:500}
+.note{background:var(--sage-soft);border-left:3px solid var(--sage);padding:12px 14px;border-radius:0 var(--r1) var(--r1) 0;margin-bottom:var(--s3)}
+.note p{font-size:.875rem;line-height:1.6;color:var(--ink-2)}
+
+/* ============================================================
+   PASOS (cómo es una sesión)
+   ============================================================ */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:var(--s3);counter-reset:st}
+.step{position:relative;padding-top:var(--s3);border-top:1px solid rgba(196,171,224,.28)}
+.step::before{
+  counter-increment:st;content:counter(st,decimal-leading-zero);
+  font-family:var(--ff-d);font-size:1.75rem;color:var(--gold);display:block;margin-bottom:8px;line-height:1;
+}
+.step h3{font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:6px}
+.step p{font-size:.875rem;line-height:1.6;color:var(--lav);opacity:.82}
+
+/* ============================================================
+   PRECIOS
+   ============================================================ */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s2)}
+.price-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);padding:var(--s3);display:flex;flex-direction:column;gap:6px;position:relative}
+.price-card.is-feat{border:1.5px solid var(--purple);box-shadow:var(--sh)}
+.price-tag{position:absolute;top:-11px;left:var(--s3);background:var(--purple);color:#fff;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:var(--pill)}
+/* min-height: mantiene los valores alineados aunque el nombre ocupe 2 líneas */
+.price-name{font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.35;min-height:2.7em}
+.price-meta{font-size:.8125rem;color:var(--ink-3);line-height:1.4;min-height:2.8em}
+.price-val{font-family:var(--ff-d);font-size:1.6rem;font-weight:500;color:var(--purple);margin-top:6px;line-height:1.1}
+.price-val small{font-family:var(--ff-b);font-size:.8125rem;font-weight:400;color:var(--ink-3);display:block;margin-top:2px}
+.price-card .btn{margin-top:auto;padding-top:12px;padding-bottom:12px}
+.price-note{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-3);text-align:center;max-width:58ch;margin-inline:auto}
+
+/* ============================================================
+   FAQ — <details> nativo: plega sin una línea de JavaScript
+   ============================================================ */
+.faq{display:grid;gap:12px}
+.faq details{background:#fff;border:1px solid var(--line-2);border-radius:var(--r2);overflow:hidden;transition:border-color .2s ease}
+.faq details:hover{border-color:var(--lav)}
+.faq summary{
+  display:flex;gap:14px;align-items:center;justify-content:space-between;
+  padding:var(--s2) var(--s3);cursor:pointer;list-style:none;
+  font-family:var(--ff-d);font-size:1.0625rem;font-weight:500;line-height:1.35;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:focus-visible{outline:2px solid var(--purple);outline-offset:-3px}
+.faq summary::after{
+  content:'';flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);
+  background:no-repeat center/12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C5666' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");
+  transition:transform .28s cubic-bezier(.16,1,.3,1),background-color .2s ease;
+}
+.faq details[open] summary::after{transform:rotate(45deg);background-color:var(--mist);border-color:transparent}
+.faq .faq-a{padding:0 var(--s3) var(--s3);border-top:1px solid var(--line-2)}
+.faq .faq-a p{font-size:.9375rem;line-height:1.7;color:var(--ink-2)}
+.faq .faq-a p:first-child{margin-top:var(--s3)}
+.faq .faq-a p+p{margin-top:10px}
+
+@media(max-width:720px){
+  .svc-head,.svc-body{padding-inline:var(--s2)}
+  .faq summary{padding-inline:var(--s2);font-size:1rem}
+  .faq .faq-a{padding-inline:var(--s2)}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://atravesdemi.com/"},
+        {"@type":"ListItem","position":2,"name":"Servicios","item":"https://atravesdemi.com/servicios"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://atravesdemi.com/servicios#metodo-atm",
+      "name": "Método ATM",
+      "serviceType": "Acompañamiento integral de autoconocimiento",
+      "description": "Psicofísica, tarot, astrología y meditación puestas a trabajar juntas alrededor de un objetivo concreto. La persona pone el objetivo; la elección de la herramienta es de la terapeuta.",
+      "url": "https://atravesdemi.com/servicios#metodo-atm",
+      "provider": {"@type":"ProfessionalService","name":"A través de Mí","url":"https://atravesdemi.com/"},
+      "areaServed": [
+        {"@type":"Country","name":"Argentina"},
+        {"@type":"Country","name":"Uruguay"},
+        {"@type":"Country","name":"Chile"},
+        {"@type":"Country","name":"México"},
+        {"@type":"Country","name":"Colombia"},
+        {"@type":"Country","name":"Perú"},
+        {"@type":"Country","name":"España"}
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceLocation": {"@type":"VirtualLocation","name":"Videollamada"},
+        "serviceUrl": "https://atravesdemi.com/servicios#metodo-atm"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": "https://atravesdemi.com/servicios#valores",
+        "priceCurrency": "ARS",
+        "description": "Valor a consultar por WhatsApp. La primera charla no tiene costo."
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://atravesdemi.com/servicios#psicofisica",
+      "name": "Armonización psicofísica",
+      "serviceType": "Armonización energética complementaria",
+      "description": "Diagnostica, neutraliza y armoniza los campos energéticos emocional, sensorial, intelectual y físico. Una sesión dura entre 15 y 20 minutos y se realiza por videollamada.",
+      "url": "https://atravesdemi.com/servicios#psicofisica",
+      "provider": {"@type":"ProfessionalService","name":"A través de Mí","url":"https://atravesdemi.com/"},
+      "areaServed": [
+        {"@type":"Country","name":"Argentina"},
+        {"@type":"Country","name":"Uruguay"},
+        {"@type":"Country","name":"Chile"},
+        {"@type":"Country","name":"México"},
+        {"@type":"Country","name":"Colombia"},
+        {"@type":"Country","name":"Perú"},
+        {"@type":"Country","name":"España"}
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceLocation": {"@type":"VirtualLocation","name":"Videollamada"},
+        "serviceUrl": "https://atravesdemi.com/servicios#psicofisica"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": "https://atravesdemi.com/servicios#valores",
+        "priceCurrency": "ARS",
+        "description": "Valor a consultar por WhatsApp. La primera charla no tiene costo."
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://atravesdemi.com/servicios#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"¿Qué es exactamente la armonización psicofísica?","acceptedAnswer":{"@type":"Answer","text":"Es un método profesional que trabaja sobre los campos energéticos —emocional, sensorial, intelectual y físico— para diagnosticar, neutralizar y reequilibrar aquello que está alterado. No es masaje ni imposición de manos. No hace falta desvestirse: solo relajarse. Una sesión dura entre 15 y 20 minutos."}},
+        {"@type":"Question","name":"¿Reemplaza a un tratamiento médico o psicológico?","acceptedAnswer":{"@type":"Answer","text":"No: es un complemento. Se integra con todas las terapias médicas, psicológicas y psiquiátricas, y nunca se pide dejar un tratamiento en curso. Si estás en tratamiento, conviene contárselo a tu profesional de cabecera. La armonización suma, no sustituye."}},
+        {"@type":"Question","name":"¿Funciona por videollamada, a distancia?","acceptedAnswer":{"@type":"Answer","text":"Sí, y de hecho es la única modalidad: toda la atención es online. La armonización psicofísica y todas las lecturas se hacen a distancia con los mismos resultados. Se coordina un horario y solo hace falta un lugar tranquilo donde nadie interrumpa. Se atiende a Argentina, Uruguay, Chile, México, Colombia, Perú y España."}},
+        {"@type":"Question","name":"¿Cuántas sesiones voy a necesitar?","acceptedAnswer":{"@type":"Answer","text":"Depende de qué traigas y hace cuánto lo venís cargando. La mayoría de las personas nota cambios desde la primera sesión. Nunca se sale de una sesión con un paquete cerrado ni con presión para volver."}},
+        {"@type":"Question","name":"¿Necesito creer en algo para que funcione?","acceptedAnswer":{"@type":"Answer","text":"No. No se pide fe ni adhesión a ninguna creencia. Muchas de las personas que llegan lo hacen escépticas y con curiosidad. Lo único que se pide es apertura para registrar cómo te sentís antes y después."}},
+        {"@type":"Question","name":"¿Atendés animales?","acceptedAnswer":{"@type":"Answer","text":"Sí. Los animales responden muy bien a la armonización energética, sobre todo en cuadros de estrés, miedo, mudanzas o recuperación post-operatoria. Se trabaja a distancia, con la misma efectividad."}},
+        {"@type":"Question","name":"¿Cómo agendo y cómo se paga?","acceptedAnswer":{"@type":"Answer","text":"Escribiendo por WhatsApp se coordina día y horario. Esa primera charla no tiene costo ni compromete a nada. Las formas de pago y el valor vigente se confirman al agendar, antes de reservar."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+<!-- ══════ HEADER — idéntico en TODAS las páginas ══════
+     Si lo cambiás acá, hay que pegarlo igual en las demás.
+     Lo que varía por página (el ítem activo) lo pone sitio.js.
+
+     En desktop es una barra horizontal. En móvil, la hamburguesa
+     queda a la izquierda, el logo al medio, y el mismo <nav> se
+     despliega abajo como panel. Es el mismo HTML: solo cambia el CSS. -->
+<header class="hdr">
+  <div class="hdr-in">
+    <button class="nav-hamb" aria-expanded="false" aria-controls="nav" aria-label="Abrir el menú">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="brand" aria-label="A través de Mí — inicio">
+      <svg width="26" height="24" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#5B3F8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+      <span class="brand-name">A través de Mí</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html" data-nav="home">Inicio</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="servicios.html" data-nav="servicios">Servicios</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-servicios" aria-haspopup="true" aria-label="Ver los servicios"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-servicios" role="menu" hidden>
+          <a href="servicios.html" role="menuitem"><b>Individuales</b><span>Método ATM, armonización, tarot y carta natal</span></a>
+          <a href="talleres.html" role="menuitem"><b>Grupales</b><span>Talleres y encuentros con cupo limitado</span></a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="herramientas.html" data-nav="herramientas">Herramientas</a>
+        <button class="nav-drop-toggle" aria-expanded="false" aria-controls="nd-herramientas" aria-haspopup="true" aria-label="Ver las herramientas"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu" id="nd-herramientas" role="menu" hidden>
+          <a href="carta-natal.html" role="menuitem"><b>Carta natal</b><span>Tu rueda del cielo completa, gratis</span></a>
+          <a href="tarot.html" role="menuitem"><b>Las cartas</b><span>Mensaje del día y tirada de tarot</span></a>
+          <a href="calendario-lunar.html" role="menuitem"><b>Calendario lunar</b><span>Fases, signos y retrógrados, mes a mes</span></a>
+        </div>
+      </div>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a class="btn btn-primary btn-block nav-cta" data-wa data-loc="menu-movil" href="#">Escribime por WhatsApp</a>
+    </nav>
+    <a class="btn btn-primary btn-sm hdr-cta" data-wa data-loc="header" href="#">Escribime</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero hero-sub">
+    <div class="wrap">
+      <span class="eyebrow">Servicios</span>
+      <h1 class="display">Tu cuerpo, tu energía y tu alma hablan.</h1>
+      <p class="lead">Cada servicio es un camino distinto hacia el mismo lugar: vos. Método ATM, armonización psicofísica, tarot evolutivo y carta natal, todo por videollamada.</p>
+      <div class="rule" style="margin:var(--s3) auto 0"></div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN ES -->
+  <section class="sec-tight band-mist">
+    <div class="wrap" data-reveal>
+      <div class="sec-head center">
+        <span class="eyebrow">Para quién es</span>
+        <h2 class="h2">¿Te suena alguna de estas?</h2>
+        <p class="lead">Si te reconocés en dos o más, hay algo pidiendo atención.</p>
+      </div>
+      <ul class="forwho">
+        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Tensión, ansiedad o agotamiento sin causa médica clara</span></li>
+        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Dolores de cabeza, mareos o falta de concentración</span></li>
+        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Estás en un punto muerto o tenés que tomar una decisión difícil</span></li>
+        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Repetís los mismos patrones y no sabés por qué</span></li>
+        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Querés complementar un tratamiento médico o psicológico</span></li>
+        <li><span class="bullet"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Tu mascota también necesita equilibrio</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LOS SERVICIOS -->
+  <section class="sec-tight">
+    <div class="wrap prose">
+      <div class="lead-card" style="margin-bottom:var(--s4)">
+        <span class="eyebrow">¿No sabés por dónde empezar?</span>
+        <p style="margin-top:8px">Contame qué te está pasando y te sugiero el camino ideal, sin costo.</p>
+        <div><a class="btn btn-primary" data-wa data-loc="servicios-top" href="#">Escribime por WhatsApp</a></div>
+      </div>
+
+      <article class="svc is-feat" id="metodo-atm">
+        <div class="svc-head">
+          <span class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#FAF8F5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c1.2 7 3 8.8 10 10-7 1.2-8.8 3-10 10-1.2-7-3-8.8-10-10 7-1.2 8.8-3 10-10Z"/></svg></span>
+          <span class="svc-meta">
+            <span class="svc-kicker"><span class="svc-num">01</span><span class="badge">Método propio</span></span>
+            <h2 class="svc-title">Método ATM</h2>
+            <span class="svc-hook">Método propio único y personalizado para acompañarte</span>
+          </span>
+        </div>
+        <div class="svc-body">
+          <p class="desc">No empieza por la técnica: empieza por vos. Psicofísica, tarot, astrología y meditación puestas a trabajar juntas, hacia eso que querés lograr, sanar o entender de una vez. Vos ponés el objetivo; con qué lo trabajamos, lo elijo yo.</p>
+          <p class="svc-price"><b>A consultar</b><span class="small">Proceso a medida · Por videollamada</span></p>
+          <p class="sub-h">Qué incluye</p>
+          <ul class="list-check">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Una charla inicial para poner en claro adónde querés llegar</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Un recorrido diseñado para ese objetivo, no un paquete cerrado</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Psicofísica, tarot, astrología y meditación, combinadas cuando hacen falta</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Seguimiento entre sesiones, para que el proceso no se enfríe</span></li>
+          </ul>
+          <p class="sub-h">Es para vos si…</p>
+          <ul class="list-dot">
+            <li><span>Tenés un objetivo concreto y querés un plan, no una sesión suelta</span></li>
+            <li><span>Hay algo que necesitás sanar y no sabés por dónde entrarle</span></li>
+            <li><span>Probaste sesiones sueltas y te quedaste con gusto a poco</span></li>
+            <li><span>Preferís que la herramienta la elija yo</span></li>
+          </ul>
+          <div class="pills"><span class="pill">Acompañamiento</span><span class="pill">Por videollamada</span><span class="pill">A tu medida</span></div>
+          <div class="note"><p>Es un complemento y no reemplaza tratamientos médicos, psicológicos ni psiquiátricos.</p></div>
+          <a class="btn btn-primary btn-block" data-wa data-loc="servicio-metodo-atm" data-text="Hola Mayra, quiero agendar una sesión de Método ATM." href="#">Agendar sesión</a>
+        </div>
+      </article>
+
+      <article class="svc" id="psicofisica">
+        <div class="svc-head">
+          <span class="svc-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#5B3F8C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+          <span class="svc-meta">
+            <span class="svc-kicker"><span class="svc-num">02</span></span>
+            <h2 class="svc-title">Armonización</h2>
+            <span class="svc-hook">Equilibrá tu campo energético en una sola sesión</span>
+          </span>
+        </div>
+        <div class="svc-body">
+          <p class="desc">Diagnostica, neutraliza y armoniza tus campos energéticos: emocional, sensorial, intelectual y físico.</p>
+          <p class="svc-price"><b>A consultar</b><span class="small">15–20 min · Por videollamada</span></p>
+          <p class="sub-h">Qué incluye</p>
+          <ul class="list-check">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Calibrado según la Resonancia Schumann</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tratamiento emocional: estrés, angustia, fobias y bloqueos</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Complemento de enfermedades somáticas y psicosomáticas</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Neutralización de dolores y malestares</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Limpieza de energías nocivas externas</span></li>
+          </ul>
+          <p class="sub-h">Es para vos si…</p>
+          <ul class="list-dot">
+            <li><span>Tenés tensión, ansiedad o agotamiento sin causa médica</span></li>
+            <li><span>Sufrís dolores de cabeza, mareos o falta de concentración</span></li>
+            <li><span>Necesitás complementar un tratamiento médico</span></li>
+            <li><span>Tu mascota también necesita equilibrio</span></li>
+          </ul>
+          <div class="pills"><span class="pill">Por videollamada</span><span class="pill">15–20 min</span><span class="pill">Animales</span></div>
+          <div class="note"><p>Se complementa con todas las terapias médicas, psicológicas y psiquiátricas: no las reemplaza. Los resultados suelen ser evidentes desde la primera sesión.</p></div>
+          <a class="btn btn-primary btn-block" data-wa data-loc="servicio-psicofisica" data-text="Hola Mayra, quiero agendar una sesión de Armonización." href="#">Agendar sesión</a>
+        </div>
+      </article>
+
+      <p class="price-note" style="margin-top:var(--s4)">También hay herramientas gratuitas para explorar por tu cuenta: <a href="carta-natal.html">tu carta natal</a>, <a href="tarot.html">el mensaje del día y la tirada de tarot</a> y el <a href="calendario-lunar.html">calendario lunar</a>. Y si preferís trabajar en grupo, mirá los <a href="talleres.html">talleres</a>.</p>
+    </div>
+  </section>
+
+  <!-- CÓMO ES UNA SESIÓN -->
+  <section class="sec band-dark on-dark">
+    <div class="wrap" data-reveal>
+      <div class="sec-head center">
+        <span class="eyebrow">Cómo funciona</span>
+        <h2 class="h2">Cómo es una sesión</h2>
+        <p class="lead">Sin rituales complicados ni compromisos. Esto es todo lo que pasa.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>Escribís</h3>
+          <p>Me contás por WhatsApp qué te está pasando. Esta primera charla no tiene costo ni te compromete a nada.</p>
+        </div>
+        <div class="step">
+          <h3>Coordinamos</h3>
+          <p>Te sugiero el camino que mejor se adapta a vos y elegimos día y horario. Nos vemos por videollamada, estés donde estés.</p>
+        </div>
+        <div class="step">
+          <h3>La sesión</h3>
+          <p>No hace falta que hagas nada especial: solo buscar un lugar tranquilo, relajarte y respirar. La sesión de psicofísica dura entre 15 y 20 minutos.</p>
+        </div>
+        <div class="step">
+          <h3>Después</h3>
+          <p>Te comparto lo que percibí y pautas simples para sostener el equilibrio en tu día a día. La mayoría nota cambios desde la primera sesión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="sec" id="valores">
+    <div class="wrap" data-reveal>
+      <div class="sec-head center">
+        <span class="eyebrow">Valores</span>
+        <h2 class="h2">Transparencia desde el primer día</h2>
+        <p class="lead">Para que no tengas que escribir solo para preguntar cuánto sale.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card is-feat">
+          <span class="price-tag">Más elegido</span>
+          <p class="price-name">Método ATM</p>
+          <p class="price-meta">Proceso a medida · Por videollamada</p>
+          <p class="price-val">A consultar<small>te lo confirmo al agendar</small></p>
+          <a class="btn btn-primary" data-wa data-loc="precio-metodo-atm" data-text="Hola Mayra, quiero agendar Método ATM." href="#">Reservar</a>
+        </div>
+        <div class="price-card">
+          <p class="price-name">Armonización</p>
+          <p class="price-meta">15–20 min · Por videollamada</p>
+          <p class="price-val">A consultar<small>te lo confirmo al agendar</small></p>
+          <a class="btn btn-outline" data-wa data-loc="precio-psicofisica" data-text="Hola Mayra, quiero agendar Armonización." href="#">Reservar</a>
+        </div>
+      </div>
+      <p class="price-note">Te paso el valor vigente y las formas de pago por WhatsApp, antes de que reserves. La primera charla no tiene costo.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec band-mist" id="faq">
+    <div class="wrap prose" data-reveal>
+      <div class="sec-head center">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="h2">Lo que casi todos me preguntan</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>¿Qué es exactamente la armonización psicofísica?</summary>
+          <div class="faq-a">
+            <p>Es un método profesional que trabaja sobre tus campos energéticos —emocional, sensorial, intelectual y físico— para diagnosticar, neutralizar y reequilibrar aquello que está alterado.</p>
+            <p>No es masaje ni imposición de manos. No hace falta que te desvistas: solo relajarte. Una sesión dura entre 15 y 20 minutos.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Reemplaza a un tratamiento médico o psicológico?</summary>
+          <div class="faq-a">
+            <p>No, y es importante que quede claro: es un complemento. Se integra con todas las terapias médicas, psicológicas y psiquiátricas, y nunca te voy a pedir que dejes un tratamiento.</p>
+            <p>Si estás en tratamiento, contáselo a tu profesional de cabecera. La armonización suma, no sustituye.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Funciona por videollamada, a distancia?</summary>
+          <div class="faq-a">
+            <p>Sí, y de hecho es la única modalidad: toda la atención es online. La armonización psicofísica y todas las lecturas se hacen a distancia con los mismos resultados. Coordinamos un horario y vos solo necesitás un lugar tranquilo donde nadie te interrumpa.</p>
+            <p>Atiendo a Argentina, Uruguay, Chile, México, Colombia, Perú y España. Ajustamos el horario a tu huso.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cuántas sesiones voy a necesitar?</summary>
+          <div class="faq-a">
+            <p>Depende de qué traigas y hace cuánto lo venís cargando. La mayoría de las personas nota cambios desde la primera sesión.</p>
+            <p>Nunca vas a salir de una sesión con un paquete cerrado ni con presión para volver. Lo conversamos según cómo te sentís.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Necesito creer en algo para que funcione?</summary>
+          <div class="faq-a">
+            <p>No. No te pido fe ni que adhieras a ninguna creencia. Muchas de las personas que atiendo llegan escépticas y con curiosidad, y eso está perfecto.</p>
+            <p>Solo te pido apertura para registrar cómo te sentís antes y después.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Atendés animales?</summary>
+          <div class="faq-a">
+            <p>Sí. Los animales responden muy bien a la armonización energética, sobre todo en cuadros de estrés, miedo, mudanzas o recuperación post-operatoria. Se trabaja a distancia, con la misma efectividad.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cómo agendo y cómo se paga?</summary>
+          <div class="faq-a">
+            <p>Escribime por WhatsApp y coordinamos día y horario. Esa primera charla no tiene costo ni te compromete a nada.</p>
+            <p>Las formas de pago y el valor vigente te los confirmo al agendar, antes de que reserves.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta band-dark on-dark" id="cta-final">
+    <div class="wrap">
+      <h2 class="h2">Cada camino empieza con un paso.</h2>
+      <p class="lead">Charlar no tiene costo.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" data-wa data-loc="servicios-cta" href="#">Contactame</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════ PIE — idéntico en TODAS las páginas ══════
+     Cuatro columnas en escritorio, apiladas en móvil.
+     Además de orientar, reparte enlaces internos a las 10 páginas
+     desde cualquier página del sitio. -->
+<footer class="ftr on-dark">
+  <div class="wrap">
+    <div class="ftr-cols">
+
+      <div class="ftr-marca">
+        <svg width="34" height="31" viewBox="0 0 48 44" fill="none" aria-hidden="true"><path d="M6 42V14C6 4 12 0 24 0s18 4 18 14v28" stroke="#C4ABE0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 13L24.7 20.4L28.2 17.8L25.6 21.3L33 22L25.6 22.7L28.2 26.2L24.7 23.6L24 31L23.3 23.6L19.8 26.2L22.4 22.7L15 22L22.4 21.3L19.8 17.8L23.3 20.4Z" fill="#C9A84C"/></svg>
+        <p class="ftr-name">A través de Mí</p>
+        <p class="ftr-tag">Autoconocimiento · Integración · Transformación</p>
+        <p class="ftr-desc">Atiendo por videollamada a Latinoamérica y España. La primera charla no tiene costo.</p>
+        <div class="ftr-social" id="ftr-social">
+          <a href="https://instagram.com/a.traves.demi" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a data-wa data-loc="footer" href="#" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="ftr-col" aria-label="Servicios">
+        <h2>Servicios</h2>
+        <ul>
+          <li><a href="servicios.html#metodo-atm">Método ATM</a></li>
+          <li><a href="servicios.html#psicofisica">Armonización</a></li>
+          <li><a href="talleres.html">Talleres grupales</a></li>
+          <li><a href="servicios.html#valores">Valores</a></li>
+          <li><a href="servicios.html#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Herramientas gratuitas">
+        <h2>Gratis y sin registro</h2>
+        <ul>
+          <li><a href="carta-natal.html">Tu carta natal</a></li>
+          <li><a href="tarot.html">Mensaje del día</a></li>
+          <li><a href="tarot.html#arcanos">Los 22 arcanos</a></li>
+          <li><a href="calendario-lunar.html">Calendario lunar</a></li>
+          <li><a href="herramientas.html">Ver todas</a></li>
+        </ul>
+      </nav>
+
+      <nav class="ftr-col" aria-label="Más">
+        <h2>Más</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#quien-soy">Quién soy</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="mercurio-retrogrado.html">Mercurio retrógrado</a></li>
+          <li><a href="recomendaciones.html">Dejá tu experiencia</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="ftr-pie">
+      <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span> · <a data-wa data-loc="footer-tel" id="ftr-tel" href="#">+54 9 351 204-0561</a></p>
+      <p class="ftr-legal">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar js-only" id="mbar">
+  <a class="btn btn-outline" href="servicios.html">Ver servicios</a>
+  <a class="btn btn-primary" data-wa data-loc="barra-movil" href="#">Escribime</a>
+</div>
+
+<script src="sitio.js"></script>
+</body>
+</html>
