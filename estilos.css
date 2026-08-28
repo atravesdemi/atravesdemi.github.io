@@ -2,7 +2,7 @@
    A través de Mí — estilos compartidos por todas las páginas
    ══════════════════════════════════════════════════════════════
    Acá va SOLO lo que usan dos páginas o más: tokens, base,
-   tipografía, botones, header, pie, barra móvil, splash y reveals.
+   tipografía, botones, header, pie, splash y reveals.
    Lo que usa una sola página vive en su propio <style>: la rueda
    natal, la grilla del calendario, las proporciones de las cartas.
 
@@ -319,19 +319,6 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .ftr-legal{font-size:.75rem;color:var(--lav);opacity:.45;margin-top:8px;max-width:56ch;margin-inline:auto;line-height:1.6}
 
 /* ============================================================
-   BARRA STICKY MÓVIL
-   ============================================================ */
-.mbar{
-  position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;gap:8px;
-  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-  background:rgba(250,248,245,.94);backdrop-filter:blur(14px);
-  border-top:1px solid var(--line);
-  transform:translateY(0);transition:transform .3s cubic-bezier(.16,1,.3,1);
-}
-.mbar.hide{transform:translateY(110%)}
-.mbar .btn{flex:1;padding:13px 14px;font-size:.875rem}
-
-/* ============================================================
    PÁGINAS / SPLASH / REVEAL
    ============================================================ */
 [data-page-title],section[id]{scroll-margin-top:80px}
@@ -419,8 +406,6 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   .ftr-marca{grid-column:1 / -1}
   .ftr-desc{max-width:none}
 
-  .mbar{display:flex}
-  body{padding-bottom:74px}
   .wrap{padding-inline:1.25rem}
 
   /* Ritmo vertical más compacto. En escritorio el aire entre bandas
@@ -443,7 +428,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   .btn:hover,.svc-card:hover{transform:none}
 }
 @media print{
-  .hdr,.mbar,.marquee,.splash,.ftr-social,.hero-actions,.cta-actions,.nav-hamb{display:none!important}
+  .hdr,.marquee,.splash,.ftr-social,.hero-actions,.cta-actions,.nav-hamb{display:none!important}
   body{background:#fff;color:#000;padding-bottom:0}
   .band-dark,.moon{background:#fff!important;color:#000!important;border:1px solid #ccc}
 }

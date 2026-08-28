@@ -30,7 +30,7 @@ metés en un array de JS, es invisible para las IA que citan.
   Compartidos por todas las páginas
   ─────────────────────────────────
   estilos.css     Tokens, reset, tipografía, botones, header, pie,
-                  barra móvil, splash. Si cambiás un color de marca,
+                  splash. Si cambiás un color de marca,
                   se cambia acá y afecta a todo el sitio.
   sitio.js        CONFIG (teléfono, endpoints), los ayudantes, los
                   desplegables del menú, el menú hamburguesa, el año

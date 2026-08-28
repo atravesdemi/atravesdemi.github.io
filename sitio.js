@@ -267,21 +267,6 @@ function observeReveals(){
 observeReveals();
 
 /* ══════════════════════════════════════════════════════════════
-   BARRA MÓVIL
-   Se esconde al llegar al CTA final. Si la página no tiene CTA
-   final, queda visible siempre en vez de romperse.
-   ══════════════════════════════════════════════════════════════ */
-(function(){
-  var bar = $('#mbar');
-  if(!bar) return;
-  var target = $('#cta-final');
-  if(!target || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ bar.classList.toggle('hide', en.isIntersecting); });
-  }, {threshold:.25}).observe(target);
-})();
-
-/* ══════════════════════════════════════════════════════════════
    SPLASH — 800 ms, una vez por sesión, saltable
    Decide por la URL, no por el hash: sin esto aparecería en
    todas las páginas del sitio y no solo al entrar por la puerta.
