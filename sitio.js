@@ -15,11 +15,8 @@
    ══════════════════════════════════════════════════════════════ */
 var CONFIG = {
   // Formato para wa.me: 54 (país) + 9 (móvil) + 351 (Córdoba) + número, sin espacios.
-  // Cambiarlo acá actualiza el pie y TODOS los links de WhatsApp del sitio.
+  // Cambiarlo acá actualiza TODOS los links de WhatsApp del sitio.
   tel: '5493512040561',
-
-  // Texto visible del teléfono en el pie. Debe coincidir con `tel`.
-  telVisible: '+54 9 351 204-0561',
 
   // Endpoint del formulario de email (Formspree, Getform, Basin…).
   // Ej: 'https://formspree.io/f/xxxxxxxx'. Vacío = cae a WhatsApp.
@@ -315,7 +312,6 @@ observeReveals();
    PIE
    ══════════════════════════════════════════════════════════════ */
 setText('#year', new Date().getFullYear());
-if(CONFIG.telVisible) setText('#ftr-tel', CONFIG.telVisible);
 
 if(CONFIG.tiktok && $('#ftr-social')){
   var tk = document.createElement('a');

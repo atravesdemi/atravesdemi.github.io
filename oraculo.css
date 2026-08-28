@@ -1,0 +1,85 @@
+/* ══════════════════════════════════════════════════════════════
+   EL RITUAL DE LAS CARTAS — estilos compartidos
+   ══════════════════════════════════════════════════════════════
+   Lo usan dos páginas: tarot.html (los dos botones de tirada) e
+   index.html (el anuncio del mensaje del día). Vive acá para que
+   no haya dos copias que se desincronicen.
+
+   El markup del <dialog> lo inyecta oraculo.js: así tampoco hay
+   dos copias del HTML. No pierde nada de SEO, porque un overlay
+   interactivo no es contenido indexable.
+
+   Depende de los tokens de estilos.css (--navy, --gold, --lav…).
+   ══════════════════════════════════════════════════════════════ */
+
+
+
+/* ── Modal del ritual ──────────────────────────────────────── */
+.modal{border:none;padding:0;margin:auto;background:transparent;color:var(--cream);width:100%;max-width:min(460px,calc(100vw - 2rem))}
+.modal::backdrop{background:rgba(16,10,30,.84);backdrop-filter:blur(6px)}
+.modal-in{position:relative;background:linear-gradient(160deg,#26183F,#1A1029);border:1px solid rgba(196,171,224,.18);
+          border-radius:var(--r3);padding:var(--s4) var(--s3) var(--s3);text-align:center;box-shadow:0 30px 80px -30px #000;
+          max-height:88vh;overflow-y:auto}
+.modal-x{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--lav);opacity:.6}
+.modal-x:hover{opacity:1;background:rgba(255,255,255,.07)}
+.modal-in h3{font-family:var(--ff-d);font-size:1.5rem;font-weight:400;color:var(--cream);margin:6px 0 8px}
+.modal-in .sub{font-size:.9375rem;line-height:1.55;color:var(--lav);opacity:.85;max-width:34ch;margin:0 auto}
+
+.preg{margin:var(--s3) auto 0;max-width:32ch;text-align:left}
+.preg label{display:block;font-size:.8125rem;color:var(--lav);opacity:.8;margin-bottom:6px}
+.preg input{width:100%;padding:11px 13px;border:1px solid rgba(196,171,224,.28);border-radius:var(--r1);
+            background:rgba(255,255,255,.06);color:var(--cream);font-family:inherit;font-size:.9375rem}
+.preg input::placeholder{color:var(--lav);opacity:.45}
+.preg input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:transparent}
+.preg .op{font-size:.75rem;color:var(--lav);opacity:.55;margin-top:6px}
+
+.escena{position:relative;height:210px;margin:var(--s3) 0 var(--s2)}
+.mazo{position:absolute;inset:0}
+.mazo b{position:absolute;left:50%;top:50%;width:92px;height:150px;margin:-75px 0 0 -46px;border-radius:9px;
+        background:var(--dorso);border:1px solid rgba(201,168,76,.4);box-shadow:0 12px 30px -12px #000}
+.mazo.mezclando b{animation:mezcla 1.15s ease-in-out infinite}
+.mazo.mezclando b:nth-child(2){animation-delay:.09s}
+.mazo.mezclando b:nth-child(3){animation-delay:.18s}
+.mazo.mezclando b:nth-child(4){animation-delay:.27s}
+.mazo.mezclando b:nth-child(5){animation-delay:.36s}
+@keyframes mezcla{0%,100%{transform:rotate(0) translate(0,0)}22%{transform:rotate(-15deg) translate(-42px,-12px)}
+  48%{transform:rotate(10deg) translate(36px,8px)}74%{transform:rotate(-6deg) translate(-16px,12px)}}
+.chispas{position:absolute;inset:-10%;pointer-events:none}
+.chispas s{position:absolute;width:11px;height:11px;text-decoration:none;opacity:0;
+  background:radial-gradient(circle,#F2DF9E 0 22%,transparent 24%);animation:chispa 1.9s ease-in-out infinite}
+.chispas s::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(#F2DF9E,#F2DF9E) center/1.5px 100% no-repeat,
+             linear-gradient(#F2DF9E,#F2DF9E) center/100% 1.5px no-repeat}
+@keyframes chispa{0%{opacity:0;transform:scale(.2) rotate(0)}45%{opacity:.95;transform:scale(1) rotate(70deg)}100%{opacity:0;transform:scale(.3) rotate(150deg)}}
+.timer{font-family:var(--ff-d);font-size:2.75rem;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.timer small{display:block;font-family:var(--ff-b);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lav);opacity:.6;margin-top:8px}
+
+/* La carta: el oráculo es 2:3 y el tarot de Marsella 1:1,94 */
+.carta{perspective:1200px;margin:0 auto var(--s3);width:min(230px,58vw);aspect-ratio:2/3}
+.carta.arcano{aspect-ratio:78/151}
+.flip{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.2,.85,.25,1)}
+.flip.girada{transform:rotateY(180deg)}
+.flip>*{position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;overflow:hidden}
+.dorso{background:var(--dorso);border:1px solid rgba(201,168,76,.4)}
+.cara{transform:rotateY(180deg);background:#fff;border:1px solid rgba(201,168,76,.5);display:grid;place-items:center}
+.cara img{width:100%;height:100%;object-fit:cover;display:block}
+.cara .ph{padding:var(--s2);text-align:center;color:var(--purple);font-size:.8125rem}
+.nombre{font-family:var(--ff-d);font-size:1.5rem;color:var(--gold);margin-bottom:6px;line-height:1.15}
+.num{font-size:.75rem;letter-spacing:.18em;color:var(--lav);opacity:.6;margin-bottom:10px}
+.clave{font-size:.9375rem;line-height:1.55;color:var(--cream);max-width:32ch;margin:0 auto var(--s3)}
+.tu-preg{font-size:.8125rem;color:var(--lav);opacity:.75;font-style:italic;margin-bottom:var(--s3);max-width:32ch;margin-inline:auto}
+.nota{font-size:.75rem;color:var(--lav);opacity:.55;margin-top:12px}
+@media(prefers-reduced-motion:reduce){
+  .mazo.mezclando b{animation:none}
+  .chispas{display:none}
+  .flip{transition:none}
+}
+
+/* ── El anuncio: primer paso, solo cuando entra desde el home ──
+   Existe para que el conteo NO arranque solo. cartaDelDia() escribe
+   en localStorage la primera vez que corre: si el ritual empezara
+   sin permiso y la persona cerrara el modal, se habría gastado su
+   carta del día sin verla. */
+.anuncio .sub{margin-bottom:var(--s3)}
+.anun-no{display:block;margin:12px auto 0;font-size:.8125rem;color:var(--lav);opacity:.6;text-decoration:underline;text-underline-offset:3px}
+.anun-no:hover{opacity:.95}

@@ -79,11 +79,9 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
 .permiso .nota{font-size:.8125rem;color:var(--ink-3);margin-top:10px;padding-left:28px}
 .sep{height:1px;background:var(--line-2);margin:var(--s4) 0}
 .sec-t{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);margin-bottom:var(--s2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 32px;border-radius:var(--pill);font-size:1rem;font-weight:500;cursor:pointer;font-family:inherit;transition:transform .18s,background-color .18s,box-shadow .18s}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--purple);color:#fff;box-shadow:0 6px 18px -8px rgba(91,63,140,.7)}
-.btn-primary:hover{background:var(--purple-d)}
-.btn-block{display:flex;width:100%}
+/* Los botones y el header viven en estilos.css: repetirlos acá los pisaba.
+   Lo único propio es que el botón de enviar va más grande. */
+#enviar,.gracias .btn{padding:15px 32px;font-size:1rem}
 .btn[disabled]{opacity:.6;cursor:default;transform:none}
 .err-campo{color:var(--rose);font-size:.8125rem;font-weight:500;margin-top:6px}
 .err-global{color:var(--rose);font-size:.9375rem;font-weight:500;text-align:center;margin-top:var(--s2)}
@@ -97,7 +95,6 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
 .gracias p{font-size:1.0625rem;color:var(--ink-2);max-width:44ch;margin:0 auto var(--s3)}
 
 @media(max-width:640px){
-  .brand-name{display:none}
   .wrap{padding-inline:var(--s2)}
   form{padding:var(--s3) var(--s2)}
   .dosc{grid-template-columns:1fr}
@@ -333,7 +330,7 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
     </div>
 
     <div class="ftr-pie">
-      <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span> · <a data-wa data-loc="footer-tel" id="ftr-tel" href="#">+54 9 351 204-0561</a></p>
+      <p class="ftr-copy">Buenos Aires, Argentina · <span id="year">2026</span></p>
       <p class="ftr-legal">Los servicios ofrecidos son un complemento y no reemplazan tratamientos médicos, psicológicos ni psiquiátricos.</p>
     </div>
   </div>

@@ -111,6 +111,13 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .on-dark .btn-primary:hover{background:#D8B95E}
 .on-dark .btn-outline{border-color:var(--gold);color:var(--gold)}
 .on-dark .btn-outline:hover{background:var(--gold);color:var(--navy)}
+/* Variantes que usan el ritual de las cartas y la página de tarot.
+   Viven acá y no en oraculo.css porque son variantes de botón, no
+   del modal: cualquier página puede necesitarlas. */
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#D8B95E}
+.btn-lav{background:var(--purple);color:#fff}
+.btn-lav:hover{background:var(--purple-d)}
 .btn-sm{padding:9px 18px;font-size:.8125rem}
 .btn-block{display:flex;width:100%}
 .btn svg{flex-shrink:0}
@@ -288,7 +295,9 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:var(--s5) var(--s4);
   text-align:left;padding-bottom:var(--s4);
 }
-.ftr-marca svg{display:block;margin-bottom:12px}
+/* Solo la marca: los SVG de .ftr-social se centran solos en su círculo
+   y un margen abajo los descentraba. */
+.ftr-marca > svg{display:block;margin-bottom:12px}
 .ftr-name{font-family:var(--ff-d);font-size:1.125rem;color:var(--cream);margin-bottom:4px}
 .ftr-tag{font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;line-height:1.6}
 .ftr-desc{font-size:.8125rem;line-height:1.6;color:var(--lav);opacity:.72;max-width:34ch;margin-bottom:var(--s3)}

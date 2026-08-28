@@ -33,8 +33,14 @@ metés en un array de JS, es invisible para las IA que citan.
                   barra móvil, splash. Si cambiás un color de marca,
                   se cambia acá y afecta a todo el sitio.
   sitio.js        CONFIG (teléfono, endpoints), los ayudantes, los
-                  desplegables del menú, el año del pie, los links
-                  de WhatsApp, el splash y los reveals.
+                  desplegables del menú, el menú hamburguesa, el año
+                  del pie, los links de WhatsApp, el splash y los
+                  reveals.
+  oraculo.css     El ritual de las cartas: modal, mazo, chispas, carta.
+  oraculo.js      La lógica del ritual y los dos mazos (24 del oráculo,
+                  22 arcanos). Inyecta el <dialog> desde JavaScript, así
+                  no hay dos copias del HTML.
+                  Lo usan tarot.html y index.html.
 
   Páginas
   ───────
@@ -100,10 +106,10 @@ o se rompe la simetría.
 ───────────────────────────────────────────────────────────────
 
   El teléfono de WhatsApp
-    sitio.js, arriba: CONFIG.tel y CONFIG.telVisible.
+    sitio.js, arriba: CONFIG.tel.
     Cambiás una vez y se actualizan todos los links del sitio.
-    En 404.html el número está escrito a mano, porque esa página no
-    carga sitio.js: hay que cambiarlo también ahí.
+    El número no se muestra escrito en ningún lado: se llega por los
+    botones "Escribime" y por el ícono de WhatsApp del pie.
 
   Los precios
     servicios.html: los textos "A consultar" en las fichas de
@@ -135,6 +141,32 @@ o se rompe la simetría.
        (headline, datePublished, dateModified).
     3. Agregar la tarjeta en blog.html y el nodo blogPost al JSON-LD.
     4. Agregar la URL a sitemap.xml.
+
+  Las cartas del oráculo o los arcanos
+    Los dos mazos están en oraculo.js, arriba: var ORACULO y var TAROT.
+    Si cambiás un nombre o agregás una carta, se actualiza en las dos
+    páginas de una sola vez.
+    ⚠️ Si tocás var TAROT, hay que regenerar a mano la lista de los 22
+    arcanos que está escrita en el HTML de tarot.html (sección
+    id="arcanos"). Son dos lugares porque esa lista tiene que estar en
+    el HTML para que la lean los buscadores y las IA.
+
+  El anuncio del mensaje del día en el home
+    Está al final de index.html. Aparece una vez por día, cuando la
+    persona scrollea hasta "Quién soy" y pasa 8 segundos leyéndolo.
+    Para que salga antes o después, cambiá DEMORA en ese bloque:
+    está en milisegundos, así que 8000 son 8 segundos.
+    El reloj cuenta sólo mientras la sección está a la vista y la
+    pestaña al frente: si scrollea de largo o cambia de pestaña se
+    pausa y sigue cuando vuelve.
+    ⚠️ No lo pases a que aparezca al entrar. Un modal que tapa el
+    contenido en la primera pantalla es lo que Google llama
+    "interstitial intrusivo" y cuenta en contra en la experiencia de
+    página. Además el home ya tiene un splash de 800 ms.
+    Otro detalle: el conteo NO arranca solo. cartaDelDia() escribe en
+    localStorage la primera vez que corre, así que si el ritual empezara
+    sin permiso y la persona cerrara el modal, se le habría gastado la
+    carta del día sin verla. Por eso hay un paso de invitación primero.
 
   Un taller nuevo
     talleres.html: copiar un <article class="taller"> y agregar su
