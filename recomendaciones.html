@@ -93,6 +93,17 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
 .gracias .ico{width:64px;height:64px;border-radius:50%;background:var(--sage-soft);display:grid;place-items:center;margin:0 auto var(--s3)}
 .gracias h2{font-family:var(--ff-d);font-size:1.75rem;font-weight:400;margin-bottom:12px}
 .gracias p{font-size:1.0625rem;color:var(--ink-2);max-width:44ch;margin:0 auto var(--s3)}
+.codigo{display:inline-block;background:var(--mist);border:1px dashed var(--purple);border-radius:var(--r2);padding:var(--s2) var(--s3);margin:0 auto var(--s3)}
+.codigo span{display:block;font-size:.8125rem;color:var(--ink-3);margin-bottom:4px}
+.codigo strong{font-family:var(--ff-d);font-size:1.5rem;font-weight:500;letter-spacing:.08em;color:var(--navy)}
+/* Selector de estrellas */
+/* Las estrellas van en orden inverso en el HTML y se muestran con row-reverse:
+   así ~ ilumina las de la izquierda al elegir una */
+.estrellas{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:6px;margin-top:6px}
+.estrellas label{cursor:pointer;font-size:2rem;line-height:1;color:var(--line);transition:color .16s}
+.estrellas input{position:absolute;opacity:0;pointer-events:none}
+.estrellas label:has(input:checked),.estrellas label:has(input:checked) ~ label{color:var(--gold)}
+.estrellas label:has(input:focus-visible){outline:2px solid var(--purple);outline-offset:3px;border-radius:4px}
 
 @media(max-width:640px){
   .wrap{padding-inline:var(--s2)}
@@ -163,6 +174,18 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
 
   <section class="wrap prose" style="padding-bottom:var(--s5)">
     <form id="f" novalidate action="https://api.web3forms.com/submit" method="POST" target="rec-sink">
+
+      <div class="campo" data-req id="campo-estrellas">
+        <p class="q" id="q-estrellas">¿Cómo fue tu experiencia?</p>
+        <p class="ayuda">Del 1 al 5, siendo 5 lo mejor. Tu calificación siempre es bienvenida, sea la que sea.</p>
+        <div class="estrellas" role="radiogroup" aria-labelledby="q-estrellas">
+          <label><input type="radio" name="estrellas" value="5" aria-label="5 estrellas">★</label>
+          <label><input type="radio" name="estrellas" value="4" aria-label="4 estrellas">★</label>
+          <label><input type="radio" name="estrellas" value="3" aria-label="3 estrellas">★</label>
+          <label><input type="radio" name="estrellas" value="2" aria-label="2 estrellas">★</label>
+          <label><input type="radio" name="estrellas" value="1" aria-label="1 estrella">★</label>
+        </div>
+      </div>
 
       <div class="campo">
         <label class="q" for="servicio"><span class="n">01</span>¿Qué trabajamos?<span class="opcional">Opcional</span></label>
@@ -254,6 +277,7 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
       <input type="hidden" name="access_key" value="eccd5c89-5f2a-45eb-bebe-33a1690e3d0e">
       <input type="hidden" name="subject" value="Nueva reseña — A través de Mí">
       <input type="hidden" name="permiso_publicar" id="permiso-txt" value="No">
+      <input type="hidden" name="codigo_descuento" id="codigo-campo" value="">
       <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
       <div style="margin-top:var(--s4)">
@@ -268,6 +292,10 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
       </div>
       <h2>Gracias, de corazón.</h2>
       <p id="gracias-txt">Ya me llegó. Leer esto es de las mejores partes de lo que hago.</p>
+      <div class="codigo" id="codigo-box" hidden>
+        <span>Tu 15% de descuento para la próxima sesión</span>
+        <strong id="codigo-txt"></strong>
+      </div>
       <a class="btn btn-primary" href="index.html">Volver al inicio</a>
     </div>
   </section>
@@ -359,6 +387,9 @@ function marcarMal(campo, mal){ if(campo) campo.classList.toggle('mal', !!mal); 
 
 function validar(){
   var problemas = [];
+  var estrella = form.querySelector('input[name="estrellas"]:checked');
+  marcarMal($('#campo-estrellas'), !estrella);
+  if(!estrella) problemas.push($('#campo-estrellas').querySelector('input'));
   ['antes','palabra1','palabra2','palabra3','cambio','nombre'].forEach(function(n){
     var e = form.elements[n], campo = e.closest('.campo');
     var vacio = !String(e.value||'').trim();
@@ -375,6 +406,18 @@ function validar(){
   return true;
 }
 
+// Código legible: primer nombre + 15 + 2 caracteres al azar (sin 0/O/1/I).
+// Ej: LUCAS15K7. Va en el envío, así queda registrado en el email.
+function armarCodigo(nombre){
+  var base = String(nombre || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toUpperCase().replace(/[^A-Z]/g, '').slice(0, 8) || 'GRACIAS';
+  var letras = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789', suf = '';
+  for(var i = 0; i < 2; i++) suf += letras.charAt(Math.floor(Math.random() * letras.length));
+  return base + '15' + suf;
+}
+
+var codigo = '';
+
 function agradecer(){
   form.hidden = true;
   $('#gracias').hidden = false;
@@ -388,6 +431,10 @@ form.addEventListener('submit', function(e){
   // Un checkbox sin tildar no viaja: así el email dice Sí/No explícito
   $('#permiso-txt').value = $('#permiso').checked ? 'Sí' : 'No';
 
+  // Código de descuento: se genera acá y se guarda en el envío
+  codigo = armarCodigo(val('nombre'));
+  $('#codigo-campo').value = codigo;
+
   btn.disabled = true;
   btn.textContent = 'Enviando…';
 
@@ -395,7 +442,12 @@ form.addEventListener('submit', function(e){
   // no hay CORS, y no navega la página.
   var listo = false;
   var sink = $('#rec-sink');
-  function ok(){ if(listo) return; listo = true; agradecer(); }
+  function ok(){
+    if(listo) return; listo = true;
+    $('#codigo-txt').textContent = codigo;
+    $('#codigo-box').hidden = false;
+    agradecer();
+  }
   sink.addEventListener('load', ok, {once:true});
   setTimeout(ok, 6000);   // por si el iframe no dispara load
 
