@@ -250,7 +250,7 @@ Sin esto tres cosas quedan a medias, y son de las más importantes:
 
 | dónde | qué falta | si queda vacío |
 |---|---|---|
-| ~~`recomendaciones.html`, `CONFIG.endpoint`~~ | **Resuelto (7 nov 2026):** la encuesta ahora manda cada reseña por email vía Formspree (`formspree.io/p/<proyecto>/f/resenas`), sin pasar por WhatsApp ni por la planilla | — |
+| ~~`recomendaciones.html`, `CONFIG.endpoint`~~ | **Resuelto (7 nov 2026):** la encuesta ahora manda cada reseña por email vía Web3Forms (`api.web3forms.com/submit`, access key en el `<form>`), sin pasar por WhatsApp ni por la planilla | — |
 | `sitio.js`, `CONFIG.formEndpoint` | Formspree, Getform o similar | la guía gratuita cae a WhatsApp |
 | `sitio.js`, `CONFIG.ga4` | el ID `G-XXXXXXXXXX` | sin analytics: no hay forma de medir si todo esto funcionó |
 

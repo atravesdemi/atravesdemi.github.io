@@ -162,7 +162,7 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
   </section>
 
   <section class="wrap prose" style="padding-bottom:var(--s5)">
-    <form id="f" novalidate action="https://formspree.io/p/3129913490274254299/f/resenas" method="POST" target="rec-sink">
+    <form id="f" novalidate action="https://api.web3forms.com/submit" method="POST" target="rec-sink">
 
       <div class="campo">
         <label class="q" for="servicio"><span class="n">01</span>¿Qué trabajamos?<span class="opcional">Opcional</span></label>
@@ -251,9 +251,10 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
         <p class="err-campo" id="err-permiso" hidden>Necesito tu permiso o tu nombre para seguir.</p>
       </div>
 
-      <input type="hidden" name="_subject" value="Nueva reseña — A través de Mí">
+      <input type="hidden" name="access_key" value="eccd5c89-5f2a-45eb-bebe-33a1690e3d0e">
+      <input type="hidden" name="subject" value="Nueva reseña — A través de Mí">
       <input type="hidden" name="permiso_publicar" id="permiso-txt" value="No">
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
       <div style="margin-top:var(--s4)">
         <button type="submit" class="btn btn-primary btn-block" id="enviar">Enviar mi experiencia</button>
@@ -348,7 +349,7 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
 /* ══════════════════════════════════════════════════════════════
    ⚙️ CONFIGURACIÓN
    ══════════════════════════════════════════════════════════════ */
-/* El destino (action) está en el <form>: formulario "resenas" de Formspree.
+/* El destino (action) y la access_key están en el <form>: Web3Forms.
    Cada reseña llega por email. (La guía gratuita usa CONFIG.formEndpoint.) */
 
 var form = $('#f'), err = $('#err'), btn = $('#enviar');
