@@ -241,10 +241,9 @@ sección solo aparecen en links nuevos.
 ───────────────────────────────────────────────────────────────
 
   Nada de aggregateRating ni Review en los datos estructurados.
-  Los tres testimonios de la home son ilustrativos, no reseñas
-  reales. Marcarlos como reseñas es falsear datos estructurados y
-  Google lo penaliza. Cuando recomendaciones.html junte testimonios
-  reales con permiso, ahí sí corresponde.
+  Los testimonios de la home salen de datos/testimonios.json, que solo
+  tiene reseñas reales aprobadas con permiso (ver ESTADO.md). Marcarlas
+  como Review sigue sin ser buena idea sin una revisión previa.
 
   Nada de contadores de descuento que se reinician.
   Es urgencia falsa, la gente la detecta, y en un trabajo que se

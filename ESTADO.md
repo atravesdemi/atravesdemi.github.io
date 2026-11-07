@@ -95,6 +95,28 @@ como origen: una entidad sin lugar es más débil para Google y para las IA.
   acompañada"), contra el criterio de no dar por sentado que quien lee es mujer.
   Ahora son "Tenés protección" y "No estás solo en esto".
 
+## Experiencias publicadas (7 nov 2026)
+
+Los tres testimonios ilustrativos de la home se reemplazaron por un carrusel
+que lee `datos/testimonios.json`. Ese archivo arranca vacío: mientras esté así,
+la sección "Experiencias" se oculta y el link de "Servicios" pasa a
+"Dejá tu experiencia".
+
+**Flujo:** cada semana Mayra revisa las reseñas que llegaron por email y le
+pasa a Claude las que cumplen: 5 estrellas y permiso "Sí". Claude las agrega
+al JSON. Nada se publica sin revisión.
+
+Formato de cada entrada:
+
+```json
+{ "nombre": "Lucas", "edad": 30, "mostrar": "Nombre y edad",
+  "estrellas": 5, "palabras": ["Liberador", "Liviandad", "Claridad"],
+  "aporte": "Me dejó el camino más claro para poder avanzar en mis objetivos" }
+```
+
+`mostrar` acepta "Nombre y edad", "Solo nombre", "Inicial" o "Anonimo".
+Las reseñas sin calificación (como las anteriores a las estrellas) no entran.
+
 ## Ronda de ajustes del 20 de agosto (feedback de Juan)
 
 **Copy de la home.** Se sacó la pill "Psicofísica" de la foto, "Profesional

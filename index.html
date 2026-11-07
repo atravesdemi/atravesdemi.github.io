@@ -118,16 +118,28 @@
 .about-quote{font-family:var(--ff-d);font-style:italic;font-size:1.0625rem;color:var(--ink-2);padding-left:var(--s2);border-left:2px solid var(--gold-d);margin-top:var(--s3)}
 
 /* ============================================================
-   TESTIMONIOS
+   EXPERIENCIAS (carrusel tipo chat, datos en datos/testimonios.json)
    ============================================================ */
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s2)}
-.quote{background:#fff;border-radius:var(--r2);padding:var(--s3);display:flex;flex-direction:column;gap:var(--s2);box-shadow:var(--sh)}
-.quote blockquote{font-family:var(--ff-d);font-size:1.0625rem;line-height:1.5;color:var(--ink);flex:1}
-.quote blockquote::before{content:'\201C';color:var(--gold-d);opacity:.5}
-.quote blockquote::after{content:'\201D';color:var(--gold-d);opacity:.5}
-.quote figcaption{display:flex;align-items:center;gap:10px;font-size:.8125rem;color:var(--ink-2)}
-.quote .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--ff-d);font-size:.9375rem;color:var(--purple);background:var(--mist);flex-shrink:0}
-.quote .who{font-weight:500;color:var(--ink)}
+.carrusel{max-width:560px;margin:0 auto}
+.carr-vista{display:grid}
+.carr-slide{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s;background:var(--mist);border-radius:var(--r3);padding:var(--s3)}
+.carr-slide.on{opacity:1;visibility:visible}
+.carr-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:var(--s2)}
+.carr-stars{color:var(--gold-d);letter-spacing:2px;font-size:1rem}
+.carr-tag{font-size:.8125rem;background:#fff;border:1px solid var(--line);border-radius:var(--pill);padding:3px 10px;color:var(--ink-2)}
+.chat{display:flex;flex-direction:column;gap:10px}
+.burbuja{max-width:88%;padding:12px 16px;border-radius:18px;font-size:1rem;line-height:1.55;box-shadow:var(--sh)}
+.burbuja p{margin:0;white-space:pre-line}
+.burbuja-in{background:#fff;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.burbuja-out{background:var(--purple);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.burbuja-quien{display:block;font-size:.8125rem;font-weight:600;color:var(--ink-3);margin-bottom:4px}
+.carr-ctrl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:var(--s3)}
+.carr-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--purple);background:#fff;color:var(--purple);font-size:1.25rem;line-height:1;display:grid;place-items:center;cursor:pointer}
+.carr-btn:hover{background:var(--purple);color:#fff}
+.carr-dots{display:flex;gap:8px}
+.carr-dot{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+.carr-dot[aria-current="true"]{background:var(--purple)}
+@media(prefers-reduced-motion:reduce){.carr-slide{transition:none}}
 
 @media(max-width:900px){
   .about{grid-template-columns:1fr;gap:var(--s4)}
@@ -303,7 +315,7 @@
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Asistencia animal</span></li>
         </ul>
         <p class="about-quote">Uniendo lo invisible con lo visible</p>
-        <p style="margin-top:var(--s3)"><a class="link-more" href="#experiencias">Leé lo que cuentan quienes ya vinieron <span aria-hidden="true">›</span></a></p>
+        <p style="margin-top:var(--s3)"><a class="link-more" id="link-exp" href="#experiencias">Leé lo que cuentan quienes ya vinieron <span aria-hidden="true">›</span></a></p>
       </div>
     </div>
   </section>
@@ -377,19 +389,13 @@
         <span class="eyebrow">Experiencias</span>
         <h2 class="h2">Lo que cuentan quienes ya vinieron</h2>
       </div>
-      <div class="quotes">
-        <figure class="quote">
-          <blockquote>Entré con una tensión en los hombros y la espalda de semanas, y salí sintiéndome otra persona.</blockquote>
-          <figcaption><span class="av" aria-hidden="true">L</span><span><span class="who">Lucía, 35</span> · Psicofísica</span></figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>Las cartas me mostraron lo que yo no podía, o no quería, ver sola.</blockquote>
-          <figcaption><span class="av" aria-hidden="true">C</span><span><span class="who">Camila, 28</span> · Tarot evolutivo</span></figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>Muchas piezas que no entendía de mi vida encajaron por primera vez.</blockquote>
-          <figcaption><span class="av" aria-hidden="true">V</span><span><span class="who">Valentina, 34</span> · Carta natal</span></figcaption>
-        </figure>
+      <div class="carrusel" id="carrusel" role="region" aria-roledescription="carrusel" aria-label="Experiencias publicadas">
+        <div class="carr-vista" id="carr-vista"></div>
+        <div class="carr-ctrl" id="carr-ctrl" hidden>
+          <button type="button" class="carr-btn" id="carr-prev" aria-label="Experiencia anterior">‹</button>
+          <div class="carr-dots" id="carr-dots"></div>
+          <button type="button" class="carr-btn" id="carr-next" aria-label="Experiencia siguiente">›</button>
+        </div>
       </div>
       <p style="text-align:center;margin-top:var(--s3)">
         <a class="link-more" href="recomendaciones.html">¿Ya viniste? Contame cómo te fue <span aria-hidden="true">›</span></a>
@@ -558,6 +564,108 @@
     });
   }, {threshold:0.25});
   obs.observe(disparo);
+})();
+</script>
+<script>
+/* Carrusel de experiencias: lee datos/testimonios.json (ya aprobadas y con
+   permiso) y las muestra de a una como chat. Si está vacío, la sección se oculta. */
+(function(){
+  var sec = document.getElementById('experiencias');
+  var vista = document.getElementById('carr-vista');
+  var ctrl = document.getElementById('carr-ctrl');
+  var dotsBox = document.getElementById('carr-dots');
+  var linkExp = document.getElementById('link-exp');
+  var slides = [], dots = [], idx = 0, timer = null, pausado = false;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function nombreMostrado(t){
+    var n = t.nombre || '';
+    if(t.mostrar === 'Anonimo') return 'Anónimo';
+    if(t.mostrar === 'Inicial') return n ? n.charAt(0) + '.' : 'Anónimo';
+    if(t.mostrar === 'Solo nombre') return n || 'Anónimo';
+    return (n || 'Anónimo') + (t.edad ? ', ' + t.edad : '');
+  }
+
+  function el(tag, cls, txt){
+    var e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(txt != null) e.textContent = txt;
+    return e;
+  }
+
+  function armar(t){
+    var art = el('article', 'carr-slide');
+    art.setAttribute('aria-roledescription', 'diapositiva');
+
+    var meta = el('div', 'carr-meta');
+    var n = Math.max(0, Math.min(5, parseInt(t.estrellas, 10) || 0));
+    var st = el('span', 'carr-stars', '★'.repeat(n) + '☆'.repeat(5 - n));
+    st.setAttribute('aria-label', n + ' de 5 estrellas');
+    meta.appendChild(st);
+    (t.palabras || []).slice(0, 3).forEach(function(p){ meta.appendChild(el('span', 'carr-tag', p)); });
+    art.appendChild(meta);
+
+    var chat = el('div', 'chat');
+    var b1 = el('div', 'burbuja burbuja-in');
+    b1.appendChild(el('span', 'burbuja-quien', nombreMostrado(t)));
+    b1.appendChild(el('p', null, t.aporte || ''));
+    chat.appendChild(b1);
+    var b2 = el('div', 'burbuja burbuja-out');
+    b2.appendChild(el('p', null, 'Gracias por contarlo ❤️'));
+    chat.appendChild(b2);
+    art.appendChild(chat);
+    return art;
+  }
+
+  function mostrar(i){
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, k){ s.classList.toggle('on', k === idx); s.setAttribute('aria-hidden', k === idx ? 'false' : 'true'); });
+    dots.forEach(function(d, k){ d.setAttribute('aria-current', k === idx ? 'true' : 'false'); });
+  }
+
+  function arrancar(){
+    if(reduce || slides.length < 2) return;
+    clearInterval(timer);
+    timer = setInterval(function(){ if(!pausado) mostrar(idx + 1); }, 7000);
+  }
+
+  function construir(items){
+    if(!Array.isArray(items) || !items.length){
+      sec.hidden = true;
+      if(linkExp){ linkExp.href = 'recomendaciones.html'; linkExp.textContent = 'Dejá tu experiencia'; }
+      return;
+    }
+    items.forEach(function(t){
+      var s = armar(t);
+      slides.push(s);
+      vista.appendChild(s);
+    });
+    slides.forEach(function(_, k){
+      var d = el('button', 'carr-dot');
+      d.type = 'button';
+      d.setAttribute('aria-label', 'Ver experiencia ' + (k + 1));
+      d.addEventListener('click', function(){ mostrar(k); arrancar(); });
+      dots.push(d);
+      dotsBox.appendChild(d);
+    });
+    if(slides.length > 1){
+      ctrl.hidden = false;
+      document.getElementById('carr-prev').addEventListener('click', function(){ mostrar(idx - 1); arrancar(); });
+      document.getElementById('carr-next').addEventListener('click', function(){ mostrar(idx + 1); arrancar(); });
+    }
+    mostrar(0);
+    arrancar();
+    var car = document.getElementById('carrusel');
+    car.addEventListener('mouseenter', function(){ pausado = true; });
+    car.addEventListener('mouseleave', function(){ pausado = false; });
+    car.addEventListener('focusin', function(){ pausado = true; });
+    car.addEventListener('focusout', function(){ pausado = false; });
+  }
+
+  fetch('datos/testimonios.json', {cache: 'no-cache'})
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(construir)
+    .catch(function(){ construir([]); });
 })();
 </script>
 </body>
