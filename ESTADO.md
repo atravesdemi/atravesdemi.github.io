@@ -250,11 +250,11 @@ Sin esto tres cosas quedan a medias, y son de las más importantes:
 
 | dónde | qué falta | si queda vacío |
 |---|---|---|
-| `recomendaciones.html`, `CONFIG.endpoint` | el Web App de Google Apps Script (termina en `/exec`) | la encuesta cae a WhatsApp en vez de ir a la planilla |
+| ~~`recomendaciones.html`, `CONFIG.endpoint`~~ | **Resuelto (7 nov 2026):** la encuesta ahora manda cada reseña por email vía Formspree (`formspree.io/p/<proyecto>/f/resenas`), sin pasar por WhatsApp ni por la planilla | — |
 | `sitio.js`, `CONFIG.formEndpoint` | Formspree, Getform o similar | la guía gratuita cae a WhatsApp |
 | `sitio.js`, `CONFIG.ga4` | el ID `G-XXXXXXXXXX` | sin analytics: no hay forma de medir si todo esto funcionó |
 
-Lo del Apps Script quedó a medias cuando Juan configuraba la planilla.
+El Apps Script se descartó: las reseñas llegan por email. Para publicar una, mirar "Cómo aparecer" y "permiso_publicar" en el mail; solo con Sí se pega en el HTML.
 
 ### Después de desplegar
 

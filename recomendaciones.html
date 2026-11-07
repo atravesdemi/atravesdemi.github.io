@@ -162,7 +162,7 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
   </section>
 
   <section class="wrap prose" style="padding-bottom:var(--s5)">
-    <form id="f" novalidate>
+    <form id="f" novalidate action="https://formspree.io/p/3129913490274254299/f/resenas" method="POST" target="rec-sink">
 
       <div class="campo">
         <label class="q" for="servicio"><span class="n">01</span>¿Qué trabajamos?<span class="opcional">Opcional</span></label>
@@ -250,6 +250,10 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
         <p class="nota">Si no marcás esta casilla igual me llega y la leo, pero no la publico. Podés pedirme que la saque cuando quieras.</p>
         <p class="err-campo" id="err-permiso" hidden>Necesito tu permiso o tu nombre para seguir.</p>
       </div>
+
+      <input type="hidden" name="_subject" value="Nueva reseña — A través de Mí">
+      <input type="hidden" name="permiso_publicar" id="permiso-txt" value="No">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
       <div style="margin-top:var(--s4)">
         <button type="submit" class="btn btn-primary btn-block" id="enviar">Enviar mi experiencia</button>
@@ -344,10 +348,8 @@ label.sub{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-2);ma
 /* ══════════════════════════════════════════════════════════════
    ⚙️ CONFIGURACIÓN
    ══════════════════════════════════════════════════════════════ */
-/* Endpoint de ESTA página. El teléfono viene de sitio.js. */
-// ⚠️ PEGAR ACÁ la URL del Web App de Google Apps Script (termina en /exec).
-// Mientras esté vacío, el formulario arma un mensaje de WhatsApp.
-CONFIG.endpoint = '';
+/* El destino (action) está en el <form>: formulario "resenas" de Formspree.
+   Cada reseña llega por email. (La guía gratuita usa CONFIG.formEndpoint.) */
 
 var form = $('#f'), err = $('#err'), btn = $('#enviar');
 
@@ -372,31 +374,8 @@ function validar(){
   return true;
 }
 
-function armarTexto(){
-  var l = [];
-  l.push('Mi experiencia con Mayra');
-  l.push('');
-  if(val('servicio')) l.push('Servicio: ' + val('servicio'));
-  l.push('Nombre: ' + val('nombre') + (val('edad') ? ', ' + val('edad') : ''));
-  var m = form.querySelector('input[name="mostrar"]:checked');
-  l.push('Cómo aparecer: ' + (m ? m.value : '—'));
-  l.push('Permiso para publicar: ' + ($('#permiso').checked ? 'Sí' : 'No'));
-  l.push('');
-  l.push('¿Qué me llevó a consultar?');   l.push(val('motivo'));
-  if(val('antes')){ l.push(''); l.push('¿Cómo me sentía antes?'); l.push(val('antes')); }
-  var p = [val('palabra1'), val('palabra2'), val('palabra3')].filter(Boolean);
-  if(p.length){ l.push(''); l.push('En tres palabras: ' + p.join(', ')); }
-  l.push(''); l.push('¿Qué fue lo que más me aportó?'); l.push(val('aporte'));
-  if(val('cambio')){ l.push(''); l.push('¿Qué cambió?'); l.push(val('cambio')); }
-  if(val('mensaje')){ l.push(''); l.push('Lo que le diría a quien era antes:'); l.push(val('mensaje')); }
-  return l.join('\n');
-}
-
-function agradecer(porWhatsapp){
+function agradecer(){
   form.hidden = true;
-  if(porWhatsapp){
-    $('#gracias-txt').textContent = 'Te abrí WhatsApp con tus respuestas listas para enviar. Dale a mandar y me llega.';
-  }
   $('#gracias').hidden = false;
   $('#gracias').scrollIntoView({behavior:'smooth', block:'center'});
 }
@@ -405,26 +384,17 @@ form.addEventListener('submit', function(e){
   e.preventDefault();
   if(!validar()) return;
 
-  if(!CONFIG.endpoint){
-    // Sin endpoint configurado: se manda por WhatsApp
-    window.open('https://wa.me/' + CONFIG.tel + '?text=' + encodeURIComponent(armarTexto()), '_blank', 'noopener');
-    agradecer(true);
-    return;
-  }
+  // Un checkbox sin tildar no viaja: así el email dice Sí/No explícito
+  $('#permiso-txt').value = $('#permiso').checked ? 'Sí' : 'No';
 
   btn.disabled = true;
   btn.textContent = 'Enviando…';
 
-  // Envío nativo hacia el iframe oculto: no hay fetch, no hay CORS,
-  // y funciona igual aunque el navegador bloquee scripts de terceros.
-  form.action = CONFIG.endpoint;
-  form.method = 'POST';
-  form.target = 'rec-sink';
-  form.setAttribute('enctype', 'application/x-www-form-urlencoded');
-
+  // Envío nativo hacia el iframe oculto (target en el <form>): no hay fetch,
+  // no hay CORS, y no navega la página.
   var listo = false;
   var sink = $('#rec-sink');
-  function ok(){ if(listo) return; listo = true; agradecer(false); }
+  function ok(){ if(listo) return; listo = true; agradecer(); }
   sink.addEventListener('load', ok, {once:true});
   setTimeout(ok, 6000);   // por si el iframe no dispara load
 
