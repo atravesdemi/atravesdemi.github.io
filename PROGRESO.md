@@ -29,6 +29,14 @@ el commit y una línea por cambio:
 
 ## Bitácora
 
+## 2026-11-08 · 89b6fe5 · Ajustes de textos, oferta y 4 experiencias
+- Consentimiento nuevo debajo del tilde en `recomendaciones.html`.
+- Home: subtítulo nuevo, tercer tilde "Empezamos con una charla para conocernos", "Ganá claridad", línea en "Asistencia animal" y "Escribime y lo charlamos".
+- Talleres: "Introducción al péndulo" (enero 2027) y tarot pasa a febrero 2027. Faltan las imágenes de las cards.
+- Servicios: banner de oferta con reloj de ciclos de 5 días ($30.000, antes $50.000) en valores y en las cards.
+- Carrusel: Sole, Lucero y Pedro sumados a `datos/testimonios.json`. Sin estrellas cuando no hay calificación.
+- Pendiente: "Conectá con tu guía interior" sigue con fecha de abril 2026.
+
 ## 2026-11-07 · bba971b · Experiencia de Ale en el carrusel
 - Se agregó la reseña de Ale ("Ale, 35", 5 estrellas, con permiso) a `datos/testimonios.json`.
 - Publicado junto con el carrusel (bc66acc).
