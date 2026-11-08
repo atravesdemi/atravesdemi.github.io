@@ -6,5 +6,26 @@
     "estrellas": 5,
     "palabras": [],
     "aporte": "Sentí como si hubiera estado empantanada mentalmente y de repente encontrara la salida. Me sirvió muchísimo, me sentí aliviada, con claridad."
+  },
+  {
+    "nombre": "Sole",
+    "edad": 34,
+    "mostrar": "Nombre y edad",
+    "palabras": ["Tranquilidad", "Paz", "Amor propio"],
+    "aporte": "Llegué en un momento muy difícil: mal, alterada y triste. Con Mayra encontré estabilidad y una mirada distinta: que todo tiene solución y que no hay que bajar los brazos. Hoy siento tranquilidad, paz y amor propio."
+  },
+  {
+    "nombre": "Lucero",
+    "edad": 24,
+    "mostrar": "Anonimo",
+    "palabras": ["Increíble", "Lucidez", "Consciencia"],
+    "aporte": "Llegué con la energía muy baja, con tristeza, enojo y pensamientos de escasez. Con Mayra volví a sentirme yo, en una conciencia más elevada. Me dio ligereza, claridad para decidir lo que venía posponiendo y más confianza en mi intuición y en mi energía femenina. Sentí un cambio real, por dentro y por fuera: más agradecimiento y la certeza de mi propio valor."
+  },
+  {
+    "nombre": "Pedro",
+    "edad": 27,
+    "mostrar": "Nombre y edad",
+    "palabras": ["Alivio", "Calma", "Seguridad"],
+    "aporte": "Llegué con inestabilidad emocional, muchas dudas y una energía pesada en casa. Me sentía saturado, sobrepensando y tenso. Las devoluciones fueron muy acertadas: me recordaron lo importante de escucharme, de atender a mi sentir más que a mi mente. Hoy siento alivio, calma y bienestar."
   }
 ]

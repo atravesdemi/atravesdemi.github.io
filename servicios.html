@@ -102,6 +102,9 @@
 .price-val small{font-family:var(--ff-b);font-size:.8125rem;font-weight:400;color:var(--ink-3);display:block;margin-top:2px}
 .price-card .btn{margin-top:auto;padding-top:12px;padding-bottom:12px}
 .price-note{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-3);text-align:center;max-width:58ch;margin-inline:auto}
+.precio-old{color:var(--ink-3);font-weight:400;font-size:.8em;margin-right:6px;text-decoration:line-through;text-decoration-thickness:1.5px}
+.oferta{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;max-width:58ch;margin:0 auto var(--s3);padding:10px 18px;border-radius:var(--pill);background:var(--gold-soft);color:var(--gold-d);font-size:.875rem;text-align:center}
+.oferta strong{font-weight:600}
 
 /* ============================================================
    FAQ — <details> nativo: plega sin una línea de JavaScript
@@ -172,7 +175,7 @@
         "availability": "https://schema.org/InStock",
         "url": "https://atravesdemi.com/servicios#valores",
         "priceCurrency": "ARS",
-        "description": "Valor a consultar por WhatsApp. La primera charla no tiene costo."
+        "description": "Sesión a $30.000 por tiempo limitado (valor de esta semana, antes $50.000). La primera charla no tiene costo."
       }
     },
     {
@@ -202,7 +205,7 @@
         "availability": "https://schema.org/InStock",
         "url": "https://atravesdemi.com/servicios#valores",
         "priceCurrency": "ARS",
-        "description": "Valor a consultar por WhatsApp. La primera charla no tiene costo."
+        "description": "Sesión a $30.000 por tiempo limitado (valor de esta semana, antes $50.000). La primera charla no tiene costo."
       }
     },
     {
@@ -317,7 +320,7 @@
         </div>
         <div class="svc-body">
           <p class="desc">No empieza por la técnica: empieza por vos. Psicofísica, tarot, astrología y meditación puestas a trabajar juntas, hacia eso que querés lograr, sanar o entender de una vez. Vos ponés el objetivo; con qué lo trabajamos, lo elijo yo.</p>
-          <p class="svc-price"><b>A consultar</b><span class="small">Proceso a medida · Por videollamada</span></p>
+          <p class="svc-price"><s class="precio-old">$50.000</s><b>$30.000</b><span class="small">por sesión · Proceso a medida · Por videollamada</span></p>
           <p class="sub-h">Qué incluye</p>
           <ul class="list-check">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Una charla inicial para poner en claro adónde querés llegar</span></li>
@@ -349,7 +352,7 @@
         </div>
         <div class="svc-body">
           <p class="desc">Diagnostica, neutraliza y armoniza tus campos energéticos: emocional, sensorial, intelectual y físico.</p>
-          <p class="svc-price"><b>A consultar</b><span class="small">15–20 min · Por videollamada</span></p>
+          <p class="svc-price"><s class="precio-old">$50.000</s><b>$30.000</b><span class="small">por sesión · 15–20 min · Por videollamada</span></p>
           <p class="sub-h">Qué incluye</p>
           <ul class="list-check">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F7A63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Calibrado según la Resonancia Schumann</span></li>
@@ -412,22 +415,26 @@
         <h2 class="h2">Transparencia desde el primer día</h2>
         <p class="lead">Para que no tengas que escribir solo para preguntar cuánto sale.</p>
       </div>
+      <div class="oferta" role="status">
+        <span>Valor especial por solo esta semana</span>
+        <strong id="oferta-reloj">Quedan 5 días</strong>
+      </div>
       <div class="price-grid">
         <div class="price-card is-feat">
           <span class="price-tag">Más elegido</span>
           <p class="price-name">Método ATM</p>
           <p class="price-meta">Proceso a medida · Por videollamada</p>
-          <p class="price-val">A consultar<small>te lo confirmo al agendar</small></p>
+          <p class="price-val"><s class="precio-old">$50.000</s> $30.000<small>por sesión · te confirmo formas de pago al agendar</small></p>
           <a class="btn btn-primary" data-wa data-loc="precio-metodo-atm" data-text="Hola Mayra, quiero agendar Método ATM." href="#">Reservar</a>
         </div>
         <div class="price-card">
           <p class="price-name">Armonización</p>
           <p class="price-meta">15–20 min · Por videollamada</p>
-          <p class="price-val">A consultar<small>te lo confirmo al agendar</small></p>
+          <p class="price-val"><s class="precio-old">$50.000</s> $30.000<small>por sesión · te confirmo formas de pago al agendar</small></p>
           <a class="btn btn-outline" data-wa data-loc="precio-psicofisica" data-text="Hola Mayra, quiero agendar Armonización." href="#">Reservar</a>
         </div>
       </div>
-      <p class="price-note">Te paso el valor vigente y las formas de pago por WhatsApp, antes de que reserves. La primera charla no tiene costo.</p>
+      <p class="price-note">El valor de la oferta se renueva cada 5 días. Las formas de pago se confirman por WhatsApp antes de que reserves. Empezamos con una charla para conocernos.</p>
     </div>
   </section>
 
@@ -569,5 +576,25 @@
 </footer>
 
 <script src="sitio.js"></script>
+<script>
+/* Oferta por ciclos de 5 días: el reloj se reinicia solo al terminar cada ciclo. */
+(function(){
+  var el = document.getElementById('oferta-reloj');
+  if(!el) return;
+  var INICIO = Date.UTC(2026, 10, 8, 3, 0, 0); /* 8 nov 2026, 00:00 Argentina */
+  var CICLO = 5 * 24 * 3600 * 1000;
+  function pintar(){
+    var resta = CICLO - ((Date.now() - INICIO) % CICLO);
+    var d = Math.floor(resta / 86400000);
+    var h = Math.floor((resta % 86400000) / 3600000);
+    var m = Math.floor((resta % 3600000) / 60000);
+    var txt = d > 0 ? 'Quedan ' + d + (d === 1 ? ' día' : ' días') + ' y ' + h + ' h'
+                    : 'Quedan ' + h + ' h ' + m + ' min';
+    el.textContent = txt;
+  }
+  pintar();
+  setInterval(pintar, 60000);
+})();
+</script>
 </body>
 </html>
