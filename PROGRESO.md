@@ -29,6 +29,12 @@ el commit y una línea por cambio:
 
 ## Bitácora
 
+## 2026-11-08 · 9846d51 · Frases de contacto y tildes del home
+- Se quitó la aclaración de renovación de la oferta en `servicios.html`.
+- "La primera charla no tiene costo" pasa a "Empezamos con una charla para conocernos" en todas las páginas, footers, datos estructurados y `llms.txt`.
+- "Charlar no tiene costo" pasa a "Escribime y lo charlamos".
+- Tres tildes del home: el segundo dice solo "Por videollamada".
+
 ## 2026-11-08 · 89b6fe5 · Ajustes de textos, oferta y 4 experiencias
 - Consentimiento nuevo debajo del tilde en `recomendaciones.html`.
 - Home: subtítulo nuevo, tercer tilde "Empezamos con una charla para conocernos", "Ganá claridad", línea en "Asistencia animal" y "Escribime y lo charlamos".
